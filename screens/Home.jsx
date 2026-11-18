@@ -2,6 +2,9 @@ import { grammarLessons } from '../data/grammar.js';
 import { phrases } from '../data/phrases.js';
 import { stories } from '../data/reading.js';
 import { words } from '../data/words.js';
+import { writingPrompts } from '../data/writing.js';
+import { affixes, confusables, irregularVerbs } from '../data/knowledge.js';
+import { clozes, errorFixes, grammarFills, sevenFives } from '../data/examTypes.js';
 import { wordCounts } from '../useStudy.js';
 import { addDays, dayKey, formatDateCn, greeting } from '../utils.js';
 import { Icon, ProgressRing, SectionTitle, SpeakButton } from '../ui.jsx';
@@ -31,6 +34,8 @@ export default function Home({ data, todayData, liveStreak, onNavigate, onOpenSe
   const writingDone = Object.keys(data.writingDone).length;
   const readingDone = Object.values(data.reading).reduce((sum, item) => sum + (item.read || []).length, 0);
   const totalReading = stories.reduce((sum, story) => sum + story.paragraphs.length, 0);
+  const knowledgeCount = irregularVerbs.length + affixes.length + confusables.length;
+  const examCount = grammarFills.length + clozes.length + sevenFives.length + errorFixes.length;
 
   const checklist = [
     {
@@ -76,7 +81,8 @@ export default function Home({ data, todayData, liveStreak, onNavigate, onOpenSe
     { id: 'dictation', title: '默写', en: 'Dictation', desc: '听音拼写，检验记忆', icon: 'headphones', tint: 'amber', onClick: () => onNavigate('words', { mode: 'dictation' }) },
     { id: 'grammar', title: '语法', en: 'Grammar', desc: `${grammarLessons.length - grammarDone} 节待解锁`, icon: 'book', tint: 'blue', onClick: () => onNavigate('grammar') },
     { id: 'phrases', title: '短语', en: 'Phrases', desc: `${phraseDone} / ${phrases.length} 已掌握`, icon: 'layers', tint: 'rose', onClick: () => onNavigate('studio', { view: 'phrases' }) },
-    { id: 'writing', title: '作文', en: 'Writing', desc: `${writingDone} / 4 篇练笔`, icon: 'pen', tint: 'violet', onClick: () => onNavigate('studio', { view: 'writing' }) },
+    { id: 'writing', title: '作文', en: 'Writing', desc: `${writingDone} / ${writingPrompts.length} 篇练笔`, icon: 'pen', tint: 'violet', onClick: () => onNavigate('studio', { view: 'writing' }) },
+    { id: 'lab', title: '提分', en: 'Exam Boost', desc: `${knowledgeCount} 条速查 · ${examCount} 篇题型`, icon: 'trophy', tint: 'blue', onClick: () => onNavigate('lab') },
     { id: 'reading', title: '原著', en: 'Reading', desc: `${readingDone} / ${totalReading} 段已读`, icon: 'bookmark', tint: 'teal', onClick: () => onNavigate('reading') },
   ];
 
@@ -136,7 +142,7 @@ export default function Home({ data, todayData, liveStreak, onNavigate, onOpenSe
       </section>
 
       <section className="card checklist-card">
-        <SectionTitle action={<span className="muted tiny">{checklist.filter((item) => item.done).length} / 4 完成</span>}>
+        <SectionTitle action={<span className="muted tiny">{checklist.filter((item) => item.done).length} / {checklist.length} 完成</span>}>
           今日清单
         </SectionTitle>
         <div className="checklist">

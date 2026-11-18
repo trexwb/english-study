@@ -4,8 +4,9 @@
 所有断言失败即中止该文件，绝不落盘半成品。"""
 import os, sys
 
-APP = "/Users/wbtrex/website/localServer/node/trexwb/git/english-study/data"
-PACKS = "/Users/wbtrex/website/localServer/node/trexwb/git/dsh-wb-free-model/epacks"
+HERE = os.path.dirname(os.path.abspath(__file__))
+APP = os.path.join(HERE, "..", "data")
+PACKS = HERE
 
 EOF_ANCHOR = "__EOF__"
 

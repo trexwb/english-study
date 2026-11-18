@@ -1,0 +1,592 @@
+  {
+    id: 'g21',
+    title: '疑问句：一般疑问与特殊疑问的语序',
+    en: 'Questions: Yes/No Forms and Wh- Word Order',
+    level: '基础',
+    exam: '中考',
+    mins: 6,
+    intro: '疑问句只看一件事：疑问词或助动词站在句首之后，剩下的还要不要倒装。先判断你在问主语，还是问动作的对象。',
+    sections: [
+      {
+        h: '一般疑问句：把 be 或助动词搬到主语前面',
+        body: '先看句子里有没有 be 动词或助动词：有就直接提前，没有就请 do / does / did 帮忙。用了 did，后面的动词要回到原形。回答用 Yes, 主语 + 助动词或 No, 主语 + 助动词 + not，不把整个句子重复一遍。',
+        examples: [
+          { en: 'Are you ready for the maths test?', zh: '你准备好数学测验了吗？' },
+          { en: 'Does your brother work in a hospital?', zh: '你哥哥在医院工作吗？' },
+        ],
+      },
+      {
+        h: '特殊疑问句：疑问词 + 一般疑问句语序',
+        body: 'what / where / when / why / how / who / whose 放句首，后面照搬一般疑问句的倒装：疑问词 + 助动词 + 主语 + 动词。先想清楚问的是时间、地点、原因还是方式，再根据时间标志词决定用哪个助动词。',
+        examples: [
+          { en: 'Why were you late for the morning reading?', zh: '你晨读为什么迟到了？' },
+          { en: 'How did she learn to make dumplings?', zh: '她是怎么学会包饺子的？' },
+        ],
+      },
+      {
+        h: '疑问词作主语时，不倒装',
+        body: '当 who / what / whose / which 自己就是主语或主语的定语，句子按陈述语序排：疑问词 + 动词 + 其余成分。判断方法是把答案放回主语位置，若能说通，说明问的是主语，不要再加 do。',
+        examples: [
+          { en: 'Who broke the window of the lab?', zh: '谁把实验室的窗户打破了？' },
+          { en: 'What makes the sky look orange at sunset?', zh: '是什么让日落时的天空看起来发橙？' },
+        ],
+      },
+    ],
+    pitfall: '两种语序最容易用反：问宾语时忘了倒装，写成 What you bought yesterday?，应是 What did you buy yesterday?；问主语时又硬加助动词，写成 Who did break the window?，正常问法是 Who broke the window?',
+    quiz: [
+      {
+        q: '____ your cousin live in Suzhou?',
+        opts: ['Does', 'Do', 'Is', 'Are'],
+        a: 0,
+        explain: '主语 your cousin 是第三人称单数，实义动词 live 前需要助动词 does 提到句首。',
+      },
+      {
+        q: 'Which of the following is a correct question?',
+        opts: ['Where you bought that scarf?', 'Where did you buy that scarf?', 'Where do you buy that scarf?', 'Where bought you that scarf?'],
+        a: 1,
+        explain: '疑问词作宾语时要倒装：疑问词 + 助动词 did + 主语 + 动词原形。',
+      },
+      {
+        q: '— ____ in the box? — Nothing but some old coins.',
+        opts: ['What does', 'What is', 'What are', 'What do'],
+        a: 1,
+        explain: 'what 在这里问的是主语，用陈述语序 What is，不需要助动词 do。',
+      },
+      {
+        q: '— ____ you see the fireworks last Saturday? — No, but I watched the video online.',
+        opts: ['Were', 'Did', 'Do', 'Have'],
+        a: 1,
+        explain: 'last Saturday 是明确的过去时间，借助动词 did 提问，后面的 see 保持原形。',
+      },
+      {
+        q: '— ____ of the two plans sounds more practical? — The first one, I think.',
+        opts: ['What', 'Who', 'Which', 'How'],
+        a: 2,
+        explain: '在两者之中做选择用 which，which 作主语，后面直接接动词 sounds。',
+      },
+      {
+        q: '— How ____ do you write in your English diary? — Almost every night.',
+        opts: ['many', 'much', 'often', 'far'],
+        a: 2,
+        explain: '回答 every night 说的是频率，所以问句用 how often。',
+      },
+    ],
+  },
+  {
+    id: 'g22',
+    title: '反意疑问句：前肯后否的尾巴',
+    en: 'Question Tags',
+    level: '基础',
+    exam: '中考',
+    mins: 6,
+    intro: '反意疑问句就是把句子切成两半：前面陈述，后面小声确认。助动词照抄前面，否定只放在其中一半。',
+    sections: [
+      {
+        h: '基本口诀：前肯后否，主语换成代词',
+        body: '陈述部分肯定，尾巴就用否定。用哪个助动词、哪个时态，照抄陈述部分；主语换成 he / she / it / they 这类代词。谓语是实义动词时借 do / does / did，是 be 或情态动词时直接把它们提前。',
+        examples: [
+          { en: 'Lily can speak a little French, can’t she?', zh: '莉莉会说一点法语，不是吗？' },
+          { en: 'The twins visited the science museum yesterday, didn’t they?', zh: '这对双胞胎昨天参观了科学博物馆，对吧？' },
+        ],
+      },
+      {
+        h: '句子里有否定词，尾巴就变肯定',
+        body: 'never、seldom、hardly、hardly ever、few、little、no one 这些词已经把意思否定过一次，所以尾巴要用肯定形式。判断时先找这些半否定词，再看主语和时态，别被中文的“很少”骗过去。',
+        examples: [
+          { en: 'There is little meat left in the fridge, is there?', zh: '冰箱里几乎没剩什么肉了，是吗？' },
+          { en: 'He has never tried hot and spicy noodles, has he?', zh: '他从来没吃过麻辣面，是吗？' },
+        ],
+      },
+      {
+        h: '几种必须背下来的特殊尾巴',
+        body: '祈使句后面通常接 will you?，表示请对方做某事，否定的祈使句同样用 will you。Let’s 开头说“咱们一起做”，接 shall we?；Let me 或 Let him 不包括听话人，仍用 will you。This is / That is 作主语时用 isn’t it，I am 后面用 aren’t I。',
+        examples: [
+          { en: 'Let’s tidy the reading room after school, shall we?', zh: '放学后我们把阅览室整理一下，好吗？' },
+          { en: 'Don’t forget to lock the bike, will you?', zh: '别忘了锁自行车，好吗？' },
+        ],
+      },
+    ],
+    pitfall: '回答前否后肯的反意疑问句时，Yes 和 No 按事实说，不按对方的口气说：You didn’t finish the report, did you? 确实没写完要答 No, I didn’t，其实写完了要答 Yes, I did。中文的“是的/不是”在这里最容易翻错。',
+    quiz: [
+      {
+        q: 'Your grandparents took a long walk in the park after supper, ____?',
+        opts: ['did they', 'don’t they', 'didn’t they', 'do they'],
+        a: 2,
+        explain: '前面是肯定的一般过去时，尾巴用否定 didn’t，主语换成 they。',
+      },
+      {
+        q: 'Tom hardly ever watches the news on TV, ____?',
+        opts: ['does he', 'doesn’t he', 'is he', 'isn’t he'],
+        a: 0,
+        explain: 'hardly ever 已含否定，尾巴用肯定；谓语是实义动词 watches，所以借 does。',
+      },
+      {
+        q: 'Let’s go cycling along the river this Saturday, ____?',
+        opts: ['will you', 'shall we', 'shall you', 'won’t you'],
+        a: 1,
+        explain: 'Let’s 包括听话人一起做事，固定用 shall we。',
+      },
+      {
+        q: 'I am a little late for the meeting, ____?',
+        opts: ['am I', 'aren’t I', 'isn’t I', 'don’t I'],
+        a: 1,
+        explain: 'I am 的否定尾巴只能用 aren’t I，这是固定的例外。',
+      },
+      {
+        q: 'Pass me the salt from the table, ____?',
+        opts: ['shall we', 'do you', 'will you', 'won’t you'],
+        a: 2,
+        explain: '肯定祈使句请对方做事，尾巴用 will you。',
+      },
+      {
+        q: '— You didn’t break the glass, did you? — ____. The cat did it.',
+        opts: ['Yes, I didn’t', 'No, I didn’t', 'Yes, I did', 'No, I did'],
+        a: 1,
+        explain: '事实是“我没打碎”，按事实答 No，且 No 后面要跟否定形式 didn’t。',
+      },
+    ],
+  },
+  {
+    id: 'g23',
+    title: '祈使句与感叹句',
+    en: 'Imperatives and Exclamations',
+    level: '基础',
+    exam: '中考',
+    mins: 6,
+    intro: '祈使句从动词原形开始，感叹句只看一个位置：感叹词后面紧跟的是名词还是形容词。',
+    sections: [
+      {
+        h: '祈使句：动词原形开头，否定用 Don’t',
+        body: '表请求、命令、提醒时，句子从动词原形开始，主语 you 一般省掉。否定用 Don’t + 动词原形，语气更重时可用 Never。想客气一点就加 please，放句首或句末都可以，后面的结构不变。',
+        examples: [
+          { en: 'Please turn off the lights when you leave the lab.', zh: '离开实验室时请把灯关掉。' },
+          { en: 'Don’t run in the hallway between classes.', zh: '课间不要在走廊里跑。' },
+        ],
+      },
+      {
+        h: 'Let 家族与“祈使句 + and / or”',
+        body: 'Let’s + 动词原形说“咱们一起做”，包括听话人；Let me 或 Let him 做的事与听话人无关。and 连接好结果，or 相当于“否则、不然”，前面仍是动词原形开头的祈使句。',
+        examples: [
+          { en: 'Let’s ask the guide for a ten-minute break.', zh: '我们跟导游申请休息十分钟吧。' },
+          { en: 'Put your coat on, or you will catch a cold out there.', zh: '把外套穿上，不然在外面会着凉的。' },
+        ],
+      },
+      {
+        h: '感叹句：What 管名词，How 管形容词或副词',
+        body: '看紧跟在感叹词后面的那个成分：是名词短语就用 What，可数名词单数要带 a / an，不可数和复数不带冠词；是形容词或副词就用 How。后面再补上主语和谓语，也可以省略只留半句。',
+        examples: [
+          { en: 'What a wonderful concert it was!', zh: '那是一场多么精彩的音乐会啊！' },
+          { en: 'How quickly the children are growing!', zh: '孩子们长得真快啊！' },
+        ],
+      },
+    ],
+    pitfall: '选 What 还是 How，看形容词后面还有没有名词：有名词用 What，形容词自己收尾用 How。所以是 What delicious food it is!（food 是不可数名词，不加 a），却是 How delicious the food is!',
+    quiz: [
+      {
+        q: '____ more vegetables and fruit, and you will feel better soon.',
+        opts: ['To eat', 'Eat', 'Eating', 'Eaten'],
+        a: 1,
+        explain: '祈使句 + and + 陈述句，开头要用动词原形 Eat。',
+      },
+      {
+        q: '____ swim in the river alone, or you may get into real danger.',
+        opts: ['Not to', 'No', 'Don’t', 'Not'],
+        a: 2,
+        explain: '否定祈使句用 Don’t + 动词原形，or 后面说明后果。',
+      },
+      {
+        q: '____ amazing story about a lost dog it is!',
+        opts: ['What', 'What an', 'How', 'What a'],
+        a: 1,
+        explain: '核心是名词 story，可数单数前要加冠词，amazing 以元音音素开头，用 What an。',
+      },
+      {
+        q: '____ excited the young fans were when the singer came out!',
+        opts: ['What', 'What an', 'How', 'Such'],
+        a: 2,
+        explain: 'excited 是形容词且后面没有名词，用 How + 形容词 + 主语 + 谓语。',
+      },
+      {
+        q: '____ delicious food the cook prepared for the whole class!',
+        opts: ['What', 'What a', 'How', 'How a'],
+        a: 0,
+        explain: 'food 是不可数名词，用 What 直接修饰名词短语，不能加 a。',
+      },
+      {
+        q: '____ your little sister cross the road first; she is only four.',
+        opts: ['Let’s', 'Let', 'To let', 'Lets'],
+        a: 1,
+        explain: '这里是 Let + 宾语 + 动词原形，让某人做某事；Let’s 等于 Let us，意思不符。',
+      },
+    ],
+  },
+  {
+    id: 'g24',
+    title: '代词：some / any / one / both 的分工',
+    en: 'Pronouns: Some, Any, One, Both',
+    level: '基础',
+    exam: '中考',
+    mins: 7,
+    intro: '代词题先问两句：范围是两个还是三个以上？指的是同一个东西还是同类里的另一个？',
+    sections: [
+      {
+        h: 'some 与 any：不只看肯定和否定',
+        body: '常规是肯定句用 some，否定句和疑问句用 any。两条常见例外：请求、建议、希望对方答“好”时，问句也用 some；any 在否定句里表示“任何一个”，比 no + 名词更简洁。somebody / anything 这类复合代词，修饰词 else 要后置。',
+        examples: [
+          { en: 'Would you like some hot water first?', zh: '你要不要先来点热水？' },
+          { en: 'I didn’t see anybody waiting outside.', zh: '我没看到任何人在外面等。' },
+        ],
+      },
+      {
+        h: 'one / it / that / those：到底指哪一个',
+        body: 'it 指前面提到过的同一个东西，one 指同一类里的另一个，即同类不同物。比较句里为避免重复，that 代替前面的单数或不可数名词，those 代替复数名词。one 前面还能再加形容词，构成 a new one。',
+        examples: [
+          { en: 'My umbrella is broken, so I need to buy a new one.', zh: '我的伞坏了，得买把新的。' },
+          { en: 'The traffic in Tokyo is heavier than that in my city.', zh: '东京的交通比我们的城市更堵。' },
+        ],
+      },
+      {
+        h: 'both / either / neither 与 all / none / everything',
+        body: '两者范围用 both（都）、either（任一个）、neither（都不）；三者以上用 all、any、none。both 作主语用复数谓语，neither of、each of、every 一类用单数谓语。nothing、everything 等复合不定代词作主语时谓语也用单数。',
+        examples: [
+          { en: 'Neither of my two cousins likes getting up early.', zh: '我的两个表弟都不喜欢早起。' },
+          { en: 'Everything in the kitchen smells wonderful.', zh: '厨房里的一切闻起来都很香。' },
+        ],
+      },
+    ],
+    pitfall: 'one 和 it 常被换着用：I lost my dictionary. I bought it again. 逻辑不通，因为原来那本并没有回来，要说 I bought a new one。另外 every、each、everyone 之后的动词一律用单数：Everyone has a ticket.',
+    quiz: [
+      {
+        q: '— Is there ____ milk left in the bottle? — No, but we can buy some now.',
+        opts: ['some', 'any', 'no', 'many'],
+        a: 1,
+        explain: '普通疑问句用 any；milk 不可数，所以不能用 many。',
+      },
+      {
+        q: '— Would you like ____ tea? — Yes, please. It is cold outside.',
+        opts: ['any', 'some', 'many', 'few'],
+        a: 1,
+        explain: '表示招待、建议并期待对方接受时，疑问句里用 some。',
+      },
+      {
+        q: 'I have lost my umbrella, so I need to buy a new ____.',
+        opts: ['it', 'that', 'one', 'this'],
+        a: 2,
+        explain: '要买的是同一类里的另一把伞，用 one 代替 umbrella；it 指原来那把。',
+      },
+      {
+        q: 'The weather in Sanya is much warmer than ____ in Harbin in winter.',
+        opts: ['one', 'those', 'that', 'it'],
+        a: 2,
+        explain: '比较的是同一个不可数名词 weather，用 that 避免重复；those 只代替复数。',
+      },
+      {
+        q: '— Which of the two books did you read? — ____. I returned both to the library unread.',
+        opts: ['Neither', 'Both', 'Either', 'None'],
+        a: 0,
+        explain: '两本都没读，两者全否定用 Neither；None 用于三个以上。',
+      },
+      {
+        q: '— Is there ____ in the schoolbag? — Yes, an old dictionary and some cards.',
+        opts: ['anything else', 'else anything', 'something else', 'nothing else'],
+        a: 0,
+        explain: '疑问句用 anything，且 else 要放在复合不定代词之后：anything else。',
+      },
+    ],
+  },
+  {
+    id: 'g25',
+    title: '数词：基数、序数、分数与时间',
+    en: 'Numbers, Fractions and Time',
+    level: '基础',
+    exam: '中考',
+    mins: 7,
+    intro: '数词的坑集中在两处：拼写变化和主谓一致。数字本身不决定动词，后面的名词才决定。',
+    sections: [
+      {
+        h: '基数变序数：拼写有三处坑',
+        body: '序数词一般在基数后加 -th，但 one 变 first、two 变 second、three 变 third 要整体换形；five 变 fifth、twelve 变 twelfth 要改字母；整十词的 -y 变 -ieth。几十几变序数时只变最后一个个位。序数前通常加 the，表示顺序或日期。',
+        examples: [
+          { en: 'My piano class is on the fifth floor, not the ninth.', zh: '我的钢琴课在五楼，不是九楼。' },
+          { en: 'He was the third student to hand in the paper.', zh: '他是第三个交卷的学生。' },
+        ],
+      },
+      {
+        h: '分数与百分数：分子基数，分母序数',
+        body: '分子用基数词，分母用序数词；分子大于一时，分母加 s，如 two thirds。分数或百分数后面接 of + 名词时，谓语的单复数看 of 后面的名词，不看数字本身。',
+        examples: [
+          { en: 'Two thirds of the students in our class are girls.', zh: '我们班三分之二的学生是女生。' },
+          { en: 'Only ten percent of the water in the lake is clean.', zh: '湖里只有百分之十的水是干净的。' },
+        ],
+      },
+      {
+        h: '时间、日期与 hundred 的用法限制',
+        body: '具体数字后的 hundred、thousand、million 不加 s、不接 of，说 two hundred students；表示不确定的“好几百”才用 hundreds of。整点用 o’clock，半点用 half past，刻钟用 a quarter past 或 a quarter to。英式日期读 the twenty-fifth of May，美式读 May the twenty-fifth；一段路程用复数所有格 ten minutes’ walk。',
+        examples: [
+          { en: 'About two thousand visitors came to the show last Saturday.', zh: '上周六大约有两千名观众来看演出。' },
+          { en: 'It is about ten minutes’ walk from my home to the school gate.', zh: '从我家到学校大门大约步行十分钟。' },
+        ],
+      },
+    ],
+    pitfall: '具体数字后加 s 是最典型的错：two hundreds students 要说 two hundred students；反过来，hundreds of 前面不能再放具体数字，不写 two hundreds of people。分数题的谓语要跟 of 后面的名词走：Two thirds of the cake was eaten.',
+    quiz: [
+      {
+        q: 'September is the ____ month of the year, when the new term begins.',
+        opts: ['nine', 'ninth', 'ninety', 'nineth'],
+        a: 1,
+        explain: '序数词 ninth 直接在 nine 后加 th，不去 e；月份前用 the。',
+      },
+      {
+        q: 'Hurry up! It is ____ eight already, and the film has been on for a while.',
+        opts: ['past half', 'half past', 'to half', 'half to'],
+        a: 1,
+        explain: '半点用 half past + 钟点，half past eight 是八点半。',
+      },
+      {
+        q: '____ of the teachers in our school are under thirty-five years old.',
+        opts: ['Two third', 'Second three', 'Two thirds', 'Thirds two'],
+        a: 2,
+        explain: '分子基数 two，分母序数且大于一要加 s，成为 two thirds；谓语随 teachers 用复数。',
+      },
+      {
+        q: 'Sixty percent of the electricity in this building ____ from the wind farm at the port.',
+        opts: ['come', 'comes', 'are coming', 'is come'],
+        a: 1,
+        explain: 'percent of 后的 electricity 是不可数名词，谓语用单数 comes。',
+      },
+      {
+        q: '— How many people came to the science talk yesterday? — About ____.',
+        opts: ['hundred of', 'two hundred', 'two hundreds', 'two hundreds of'],
+        a: 1,
+        explain: '有具体数字时 hundred 不加 s、也不接 of，答 About two hundred。',
+      },
+      {
+        q: '— When is the school leavers’ party? — It is on ____.',
+        opts: ['the twenty-five of May', 'May the twenty-five', 'the twenty-fifth of May', 'twenty-fifth May'],
+        a: 2,
+        explain: '日期要用序数，且几十几只变个位：the twenty-fifth of May。',
+      },
+    ],
+  },
+  {
+    id: 'g26',
+    title: 'There be 句型与存现句',
+    en: 'There Be and Existential Sentences',
+    level: '基础',
+    exam: '中考',
+    mins: 6,
+    intro: 'There be 的真主语在后面，所以动词的单复数、时态和尾巴都跟着后面那个最近的名词走。',
+    sections: [
+      {
+        h: '就近原则：be 跟着最近的名词',
+        body: 'There be 表示“某处有某物”，there 只是引导词，没有实义。后面并列几个主语时，离 be 最近的那个名词决定单复数，这就是就近原则，不是把总数加起来算。',
+        examples: [
+          { en: 'There is a map of China and two posters on the wall.', zh: '墙上有一张中国地图和两张海报。' },
+          { en: 'There are two posters and a map of China on the wall.', zh: '墙上有两张海报和一张中国地图。' },
+        ],
+      },
+      {
+        h: '时态全部压在 be 上',
+        body: '过去、将来、完成都靠变化 be：There was / were、There will be、There is going to be、There has been；有情态动词时用 must be、may be。表“有”时不能用 have，中文“那里有一个”很容易被直译成 There has。',
+        examples: [
+          { en: 'There will be a football match between Class One and Class Two next Friday.', zh: '下周五一班和二班之间将有一场足球赛。' },
+          { en: 'There is going to be a parents’ meeting this evening.', zh: '今晚要开一次家长会。' },
+        ],
+      },
+      {
+        h: '疑问、否定与反意疑问仍用 there',
+        body: '提问时把 be 提到 there 前面：Are there any…? Is there a…? 否定在 be 后加 not，或用 no + 名词。反意疑问的尾巴继续用 there，不能换成 it；陈述部分出现 nothing、no one、little 这类否定含义词时，尾巴用肯定。',
+        examples: [
+          { en: 'Are there any empty seats near the window?', zh: '靠窗还有空座位吗？' },
+          { en: 'There was only one ticket left, wasn’t there?', zh: '只剩一张票了，不是吗？' },
+        ],
+      },
+    ],
+    pitfall: '接“单数 + 复数”时别按整句的总数选动词，要看离 be 最近的那个名词：There is a pen and two exercise books on the desk. 另外尾巴不能用 it，There is nothing in the room, isn’t it? 是错的，应写成 is there?',
+    quiz: [
+      {
+        q: '— What is in your schoolbag? — ____ a dictionary and three picture books.',
+        opts: ['There are', 'There is', 'There have', 'It is'],
+        a: 1,
+        explain: '就近原则看最近的名词 a dictionary，是单数，所以用 There is。',
+      },
+      {
+        q: '— What is in your schoolbag? — ____ three picture books and a dictionary.',
+        opts: ['They are', 'There is', 'There have', 'There are'],
+        a: 3,
+        explain: '这次离 be 最近的是复数 three picture books，所以用 There are。',
+      },
+      {
+        q: '— ____ any empty seats near the stage? — Yes, there are two.',
+        opts: ['Are there', 'Is there', 'There are', 'Have there'],
+        a: 0,
+        explain: '疑问句把 be 提到 there 前；seats 是复数，用 Are there。',
+      },
+      {
+        q: 'There ____ a speech contest in the hall next Monday afternoon.',
+        opts: ['will be', 'will have', 'is going to have', 'are'],
+        a: 0,
+        explain: '存现句的将来时用 There will be，不能用 have 表示“有”。',
+      },
+      {
+        q: 'There is nothing left in the fridge for dinner, ____?',
+        opts: ['isn’t it', 'is there', 'isn’t there', 'was there'],
+        a: 1,
+        explain: 'nothing 已表否定，尾巴用肯定，且主语位置仍保留 there。',
+      },
+      {
+        q: 'Long long ago there ____ a small fishing village by the river.',
+        opts: ['had', 'is', 'were', 'was'],
+        a: 3,
+        explain: '故事开头讲过去，真正的主语 a small fishing village 是单数，用 was。',
+      },
+    ],
+  },
+  {
+    id: 'g27',
+    title: '并列句：and / but / or / so 与关联连词',
+    en: 'Coordinate Clauses and Paired Conjunctions',
+    level: '进阶',
+    exam: '中考',
+    mins: 7,
+    intro: '并列句先看两个句子的关系，再选连词；连词决定不了的事，主谓一致由离动词最近的主语决定。',
+    sections: [
+      {
+        h: '四个连词各管一种关系',
+        body: 'and 表顺承或并列，but 表转折，or 表选择或“否则”，so 表结果。or 在“命令 + 后果”里最常用，中文的“不然”就是 or。两个完整句子之间要加逗号，再写连词，动词各自保留。',
+        examples: [
+          { en: 'I asked Tom to dinner, but he had already made other plans.', zh: '我请 Tom 吃晚饭，但他已经另有安排了。' },
+          { en: 'Write your name on the back, or the drawing will be lost among others.', zh: '把名字写在背面，不然这幅画会在别人的画里弄丢。' },
+        ],
+      },
+      {
+        h: '关联连词与主谓一致',
+        body: 'both…and 连接两个主语时谓语用复数，因为说的是两个人或两样东西。either…or、neither…nor、not only…but also 按就近原则，谓语跟着离它最近的那个主语走。连词要成对出现，连接的两个部分词性也要对等。',
+        examples: [
+          { en: 'Both his parents and his elder sister work in the same city.', zh: '他父母和姐姐都在同一个城市工作。' },
+          { en: 'Not only the twins but also their mother is interested in street photography.', zh: '不仅那对双胞胎，他们的妈妈也对街头摄影感兴趣。' },
+        ],
+      },
+      {
+        h: '并列句动笔前的三个检查',
+        body: '一是形式对称：and 前后同为动词原形、同为不定式或同为完整句子。二是时态呼应：后半句说过去，前半句的时间线索也要一致。三是不要只用逗号硬拼两个句子，必须带上连词。',
+        examples: [
+          { en: 'My mother asked me to wash the vegetables and set the table.', zh: '妈妈让我洗菜并且摆好餐桌。' },
+          { en: 'She closed the door quietly and sat down beside me.', zh: '她轻轻关上门，在我旁边坐下。' },
+        ],
+      },
+    ],
+    pitfall: '中文的“因为……所以……”“虽然……但是……”在英文里只能留一个：Because it was raining, so we stayed at home. 要改成 It was raining, so we stayed at home. 或 Because it was raining, we stayed at home.',
+    quiz: [
+      {
+        q: 'Hurry up, ____ you will miss the early bus to the museum.',
+        opts: ['and', 'or', 'so', 'but'],
+        a: 1,
+        explain: '祈使句 + or + 后果，or 表示“否则、不然”。',
+      },
+      {
+        q: 'I asked Tom to join us for dinner, ____ he had already made other plans.',
+        opts: ['but', 'and', 'or', 'so'],
+        a: 0,
+        explain: '前一句的邀请与后一句的已有安排是转折关系，用 but。',
+      },
+      {
+        q: 'Neither of my cousins ____ the film, so we talked about something else on the way home.',
+        opts: ['like', 'likes', 'liked', 'are liking'],
+        a: 2,
+        explain: 'so 后面的 talked 说明整句讲过去，neither of 的谓语也照过去时写 liked。',
+      },
+      {
+        q: 'Not only the twins but also their mother ____ coming to the open day.',
+        opts: ['are', 'is', 'were', 'have'],
+        a: 1,
+        explain: 'not only…but also 用就近原则，最近的主语 their mother 是单数，用 is。',
+      },
+      {
+        q: '____ my father ____ my mother is a doctor; they are both nurses.',
+        opts: ['Both; and', 'Either; or', 'Neither; nor', 'Not only; but also'],
+        a: 2,
+        explain: '两人都是护士，说明都不是医生，两者全否定用 Neither…nor，谓语按就近的单数用 is。',
+      },
+      {
+        q: 'The teacher asked us to read the dialogue aloud and ____ the new words in the dictionary.',
+        opts: ['looking up', 'set', 'looked up', 'to looking up'],
+        a: 1,
+        explain: 'and 前后要对称：to read…and (to) set，都用动词原形。',
+      },
+    ],
+  },
+  {
+    id: 'g28',
+    title: '时态补漏：将来说法、频率副词与时间标志词',
+    en: 'Future Forms, Frequency Adverbs and Time Markers',
+    level: '进阶',
+    exam: '中考',
+    mins: 8,
+    intro: '这一课补三个空：将来还不止 will 一种写法，频率副词有固定位置，ago 与 already 属于两条不同的时间线。',
+    sections: [
+      {
+        h: '表将来的三副面孔',
+        body: 'will 说临场决定和预测，be going to 说已经打好的算盘或有眼前迹象的事。位移动词 go、come、leave、arrive、start、fly 用现在进行时，可以表示已经安排好的将来。be about to + 动词原形说“马上就要”，后面不再接 tomorrow 这类远时间；be to do 说正式约定。',
+        examples: [
+          { en: 'My aunt is flying to Chengdu tomorrow morning.', zh: '我阿姨明天早上飞成都。' },
+          { en: 'We are to meet at the gate of the science museum at nine.', zh: '我们约定九点在科技馆门口集合。' },
+        ],
+      },
+      {
+        h: '频率副词的位置：实义动词前，be 之后',
+        body: 'always、usually、often、sometimes、seldom、hardly ever、never 属于频度副词，放在实义动词之前，放在 be 动词、助动词、情态动词之后。never 本身已含否定，不再另加 not。位置放错，句子就读不通了。',
+        examples: [
+          { en: 'I usually do my homework right after dinner.', zh: '我通常一吃完晚饭就写作业。' },
+          { en: 'Kate is never late for the morning reading.', zh: '凯特晨读从不迟到。' },
+        ],
+      },
+      {
+        h: 'ago / already / yet / just / still 的时间线',
+        body: 'ago 把动作钉在过去，配的是一般过去时；already、just、yet 站在现在回头看，配现在完成时。already 和 just 放在 have / has 与过去分词之间，多用于肯定句；yet 用于否定句和疑问句，常放句末。still 说“还在继续”，位置在实义动词前。',
+        examples: [
+          { en: 'I have just finished the reading task, so I can help you now.', zh: '我刚做完这个阅读任务，现在可以帮你了。' },
+          { en: 'Have you tidied up your bedroom yet?', zh: '你整理好卧室了吗？' },
+        ],
+      },
+    ],
+    pitfall: '频率副词不要插进动词和宾语之间：要说 I usually do my homework，不是 I do usually my homework。already 也不能和明确的过去时间同现：He has already left here two days ago. 是错的，改成 He left here two days ago. 或 He has already left.',
+    quiz: [
+      {
+        q: '— Where are you going this weekend? — I ____ my grandparents in the countryside.',
+        opts: ['am visiting', 'visit', 'visited', 'visiting'],
+        a: 0,
+        explain: '问句用现在进行时问已定安排，回答也用 visit 的进行时表将来，且需要 am 配主语 I。',
+      },
+      {
+        q: 'Stand back, please! The concert ____ start in a minute.',
+        opts: ['about to', 'is about to', 'are about to', 'will about'],
+        a: 1,
+        explain: '主语 the concert 是单数，用 is about to + 动词原形，说马上就要开始。',
+      },
+      {
+        q: 'Peter ____ his room on Sunday morning, so it stays tidy all week.',
+        opts: ['tidies always', 'is always tidies', 'always tidies', 'always tidy'],
+        a: 2,
+        explain: '频率副词放在实义动词之前，主语三单所以动词用 tidies，构成 always tidies。',
+      },
+      {
+        q: 'My maths teacher is ____ patient with us, even when we make the same mistake twice.',
+        opts: ['is always', 'always', 'always being', 'has always'],
+        a: 1,
+        explain: '句中已经有 be 动词 is，频率副词直接放在它后面，用 always。',
+      },
+      {
+        q: '— Have you read the novel ____? — Yes, I finished it two days ____.',
+        opts: ['already; ago', 'yet; before', 'already; later', 'yet; ago'],
+        a: 3,
+        explain: '现在完成时的疑问句末尾用 yet；two days ago 配一般过去时 finished。',
+      },
+      {
+        q: 'The students ____ to the hall for the speech competition; they will come back before four.',
+        opts: ['just have gone', 'have just been', 'have just gone', 'went just'],
+        a: 2,
+        explain: '复数主语用 have，just 放在助动词与过去分词之间；have gone 表示去了还没回来。',
+      },
+    ],
+  },

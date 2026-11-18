@@ -1,9 +1,10 @@
 #!/usr/bin/env python3
 """writing.js 中三个新插入的块（s7–s10 / m5–m8 / w5–w10）整体加 2 空格，
 与原文件 2/4 空格缩进风格一致。断言失败即中止，不落盘。"""
+import os
 import re
 
-P = "/Users/wbtrex/website/localServer/node/trexwb/git/english-study/data/writing.js"
+P = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "data", "writing.js")
 text = open(P, encoding="utf-8").read()
 
 regions = [

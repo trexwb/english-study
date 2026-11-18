@@ -4,12 +4,15 @@ import { grammarLessons } from './data/grammar.js';
 import { phrases } from './data/phrases.js';
 import { words } from './data/words.js';
 import { stories } from './data/reading.js';
+import { irregularVerbs, affixes, confusables } from './data/knowledge.js';
+import { grammarFills, clozes, sevenFives, errorFixes } from './data/examTypes.js';
 import { useStudy } from './useStudy.js';
 import { Icon, Sheet } from './ui.jsx';
 import Home from './screens/Home.jsx';
 import Words from './screens/Words.jsx';
 import Grammar from './screens/Grammar.jsx';
 import Studio from './screens/Studio.jsx';
+import Lab from './screens/Lab.jsx';
 import Reading from './screens/Reading.jsx';
 
 const tabs = [
@@ -17,6 +20,7 @@ const tabs = [
   { id: 'words', label: '单词', icon: 'cards' },
   { id: 'grammar', label: '语法', icon: 'book' },
   { id: 'studio', label: '素材', icon: 'pen' },
+  { id: 'lab', label: '提分', icon: 'trophy' },
   { id: 'reading', label: '原著', icon: 'bookmark' },
 ];
 
@@ -77,7 +81,7 @@ function Settings({ open, onClose, data, actions }) {
 
         <div className="about-block">
           <p><strong>英语小站</strong> · 离线可用</p>
-          <p>内置 {words.length} 个单词、{grammarLessons.length} 节语法、{phrases.length} 个短语、{stories.length} 篇原著选段。发音由系统语音提供，离线时也能朗读。</p>
+          <p>内置 {words.length} 个单词、{grammarLessons.length} 节语法、{phrases.length} 个短语、{irregularVerbs.length + affixes.length + confusables.length} 条知识速查、{grammarFills.length + clozes.length + sevenFives.length + errorFixes.length} 篇题型练习、{stories.length} 篇原著选段。发音由系统语音提供，离线时也能朗读。</p>
         </div>
 
         <button
@@ -127,6 +131,7 @@ export default function App() {
         {tab === 'words' && <Words data={study.data} actions={study} intent={intent} />}
         {tab === 'grammar' && <Grammar data={study.data} actions={study} />}
         {tab === 'studio' && <Studio data={study.data} actions={study} intent={intent} />}
+        {tab === 'lab' && <Lab intent={intent} />}
         {tab === 'reading' && <Reading data={study.data} actions={study} />}
       </main>
 
