@@ -216,6 +216,314 @@ export const stories = [
       { w: 'coax', p: '/koʊks/', zh: '哄劝；设法弄出' },
     ],
   },
+  {
+    id: 'oz',
+    title: 'The Wonderful Wizard of Oz',
+    zhTitle: '绿野仙踪',
+    author: 'L. Frank Baum',
+    year: 1900,
+    level: 'B1',
+    minutes: 7,
+    accent: '#2E7D5B',
+    blurb: '一阵龙卷风把多萝西的小屋连人带狗卷上了天。屋子落下的地方，人们却在向她道谢——因为屋角底下压着的女巫，脚上还穿着一双银鞋。',
+    question: '奥兹国美丽神奇，堪萨斯的家却灰暗单调。如果你是多萝西，你会留下还是回家？为什么？',
+    paragraphs: [
+      {
+        en: "Dorothy lived in the midst of the great Kansas prairies, with Uncle Henry, who was a farmer, and Aunt Em, who was the farmer's wife. Their house was small, for the lumber to build it had to be carried by wagon many miles. There were four walls, a floor and a roof, which made one room; and this room contained a rusty looking cookstove, a cupboard for the dishes, a table, three or four chairs, and the beds. Uncle Henry and Aunt Em had a big bed in one corner, and Dorothy a little bed in another corner. There was no garret at all, and no cellar—except a small hole dug in the ground, called a cyclone cellar, where the family could go in case one of those great whirlwinds arose, mighty enough to crush any building in its path. It was reached by a trap door in the middle of the floor, from which a ladder led down into the small, dark hole.",
+        zh: '多萝西和亨利叔叔、艾姆婶婶一起，住在堪萨斯大草原的正中央。亨利叔叔是个农夫，艾姆婶婶就是农夫的妻子。房子很小，因为盖房子的木料得用马车拉上好几英里才能运到。四面墙、一块地板、一个屋顶，围成了一间屋子，屋里摆着一只锈迹斑斑的炉灶、一个放碗碟的橱柜、一张桌子、三四把椅子，还有几张床。亨利叔叔和艾姆婶婶的大床占着一个角落，多萝西的小床占着另一个角落。屋里没有阁楼，也没有地窖——只有地上挖的一个小洞，叫作防风洞，一旦刮起那种足以掀翻沿途一切房屋的大旋风，一家人就可以躲进去。地板中央有一扇活板门，掀开它，一架梯子就通向那个又小又黑的洞。',
+      },
+      {
+        en: 'When Dorothy stood in the doorway and looked around, she could see nothing but the great gray prairie on every side. Not a tree nor a house broke the broad sweep of flat country that reached to the edge of the sky in all directions. The sun had baked the plowed land into a gray mass, with little cracks running through it. Even the grass was not green, for the sun had burned the tops of the long blades until they were the same gray color to be seen everywhere. Once the house had been painted, but the sun blistered the paint and the rains washed it away, and now the house was as dull and gray as everything else.',
+        zh: '多萝西站在门口朝四下里望，除了灰蒙蒙的大草原，什么也看不见。四面八方平坦的旷野一直铺到天边，一棵树、一座房子都没有。太阳把犁过的地烤成了一片灰硬的壳，上面裂着一道道细纹。连草也不是绿的，太阳把长长的草叶顶头烤焦了，放眼望去全是同一种灰色。这房子从前也刷过漆，可太阳把漆皮晒得鼓了泡，雨水又把它冲了个干净，如今它跟周围的一切一样，灰扑扑、死沉沉。',
+      },
+      {
+        en: "When Aunt Em came there to live she was a young, pretty wife. The sun and wind had changed her, too. They had taken the sparkle from her eyes and left them a sober gray; they had taken the red from her cheeks and lips, and they were gray also. She was thin and gaunt, and never smiled now. When Dorothy, who was an orphan, first came to her, Aunt Em had been so startled by the child's laughter that she would scream and press her hand upon her heart whenever Dorothy's merry voice reached her ears; and she still looked at the little girl with wonder that she could find anything to laugh at.",
+        zh: '艾姆婶婶刚嫁到这里来的时候，还是个年轻漂亮的媳妇。可是太阳和风把她也改变了。它们从她的眼睛里拿走了神采，只留下一片沉静的灰；从她的脸颊和嘴唇上拿走了红润，那里也灰了。她又瘦又削，如今再也不笑了。多萝西是个孤儿，刚来到她跟前时，艾姆婶婶被这孩子的笑声吓了一跳——只要多萝西欢快的声音传进耳朵，她就会尖叫一声，把手按在心口上；到今天，她还是纳闷地打量着这个小姑娘：她到底有什么可笑的呢？',
+      },
+      {
+        en: 'Uncle Henry never laughed. He worked hard from morning till night and did not know what joy was. He was gray also, from his long beard to his rough boots, and he looked stern and solemn, and rarely spoke.',
+        zh: '亨利叔叔从来不笑。他从早干到晚，不知道快乐是什么东西。他也是灰的，从长长的胡子一直灰到粗糙的靴子；他板着脸，一副严肃的样子，很少开口说话。',
+      },
+      {
+        en: 'It was Toto that made Dorothy laugh, and saved her from growing as gray as her other surroundings. Toto was not gray; he was a little black dog, with long silky hair and small black eyes that twinkled merrily on either side of his funny, wee nose. Toto played all day long, and Dorothy played with him, and loved him dearly.',
+        zh: '让多萝西笑出来的是托托，是它救了她，没让她变得跟四周的东西一样灰暗。托托不是灰的；它是一只小黑狗，毛长而柔滑，滑稽的小鼻子两边，一双黑豆似的眼睛笑眯眯地闪着光。托托整天玩个没够，多萝西陪着它玩，打心眼儿里疼它。',
+      },
+      {
+        en: 'Today, however, they were not playing. Uncle Henry sat upon the doorstep and looked anxiously at the sky, which was even grayer than usual. Dorothy stood in the door with Toto in her arms, and looked at the sky too. Aunt Em was washing the dishes.',
+        zh: '可是今天，他们没有玩。亨利叔叔坐在门阶上，忧心忡忡地望着天，天色比平时更灰了。多萝西抱着托托站在门口，也在望着天。艾姆婶婶正在洗盘子。',
+      },
+    ],
+    glossary: [
+      { w: 'prairies', p: '/ˈpreriz/', zh: '大草原（复数）' },
+      { w: 'cyclone', p: '/ˈsaɪkloʊn/', zh: '龙卷风；旋风' },
+      { w: 'garret', p: '/ˈɡerət/', zh: '阁楼' },
+      { w: 'cellar', p: '/ˈselər/', zh: '地窖' },
+      { w: 'crush', p: '/krʌʃ/', zh: '压坏；摧毁' },
+      { w: 'blistered', p: '/ˈblɪstərd/', zh: '（漆皮）晒得起泡（blister 的过去式）' },
+      { w: 'gaunt', p: '/ɡɔːnt/', zh: '干瘦憔悴的' },
+      { w: 'sober', p: '/ˈsoʊbər/', zh: '暗淡沉静的' },
+      { w: 'orphan', p: '/ˈɔːrfn/', zh: '孤儿' },
+      { w: 'twinkled', p: '/ˈtwɪŋkld/', zh: '闪闪发光（twinkle 的过去式）' },
+      { w: 'anxiously', p: '/ˈæŋkʃəsli/', zh: '忧虑不安地' },
+    ],
+  },
+
+  {
+    id: 'peter-pan',
+    title: 'Peter Pan',
+    zhTitle: '彼得·潘',
+    author: 'J. M. Barrie',
+    year: 1911,
+    level: 'B2',
+    minutes: 6,
+    accent: '#3D6FA8',
+    blurb: '所有的孩子都会长大，只有一个例外。一天夜里，达林家的育婴室落进了几片不该存在的树叶——还有一位会飞的男孩。',
+    question: '彼得·潘永远不长大，听起来自由，可这种自由有代价吗？你愿意做彼得，还是做温迪？',
+    paragraphs: [
+      {
+        en: "All children, except one, grow up. They soon know that they will grow up, and the way Wendy knew was this. One day when she was two years old she was playing in a garden, and she plucked another flower and ran with it to her mother. I suppose she must have looked rather delightful, for Mrs. Darling put her hand to her heart and cried, “Oh, why can't you remain like this for ever!” This was all that passed between them on the subject, but henceforth Wendy knew that she must grow up. You always know after you are two. Two is the beginning of the end.",
+        zh: '所有的孩子都要长大，只有一个例外。孩子们很快就知道自己会长大，温迪是这样知道的：两岁那年的一天，她在花园里玩耍，摘下一朵花，拿着它向妈妈跑去。我想她那样子一定可爱极了，达林太太把手按在胸口，喊道：“哦，你怎么就不能永远这样呢！”关于这件事，母女俩就说了这么多；可从那以后，温迪明白了自己非长大不可。人一过两岁就总会明白这一点。两岁，是走向终结的开端。',
+      },
+      {
+        en: 'Of course they lived at 14, and until Wendy came her mother was the chief one. She was a lovely lady, with a romantic mind and such a sweet mocking mouth. Her romantic mind was like the tiny boxes, one within the other, that come from the puzzling East, however many you discover there is always one more; and her sweet mocking mouth had one kiss on it that Wendy could never get, though there it was, perfectly conspicuous in the right-hand corner.',
+        zh: '不用说，他们住在十四号；温迪来以前，妈妈是家里的头一号。她是一位可爱的太太，有一颗浪漫的心，还有一张甜甜的、爱打趣的嘴。她那颗浪漫的心，就像从神秘的东方来的套盒，一只套着一只，你拆开多少只，里面总还有一只；她那张甜甜的爱打趣的嘴上，有一个吻，温迪怎么也拿不到，虽然它明明就在那儿，端端正正待在右边的角落里。',
+      },
+      {
+        en: 'The way Mr. Darling won her was this: the many gentlemen who had been boys when she was a girl discovered simultaneously that they loved her, and they all ran to her house to propose to her except Mr. Darling, who took a cab and nipped in first, and so he got her. He got all of her, except the innermost box and the kiss. He never knew about the box, and in time he gave up trying for the kiss. Wendy thought Napoleon could have got it, but I can picture him trying, and then going off in a passion, slamming the door.',
+        zh: '达林先生是这样赢得她的：她做姑娘的那些年代里追过她的许多男孩，后来一齐发现自己爱她，全都跑到她家去求婚；只有达林先生不同，他雇了一辆马车抢先赶到，于是娶到了她。他得到了她的全部，除了最里面那只盒子和那个吻。盒子的事他从头到尾不知道；那个吻，时间一长他也就不争了。温迪觉得，换作拿破仑也许能拿到它，可我简直能想象出他试来试去，最后气冲冲地摔门而去的模样。',
+      },
+      {
+        en: 'Mr. Darling used to boast to Wendy that her mother not only loved him but respected him. He was one of those deep ones who know about stocks and shares. Of course no one really knows, but he quite seemed to know, and he often said stocks were up and shares were down in a way that would have made any woman respect him.',
+        zh: '达林先生常在温迪面前夸口，说妈妈不但爱他，还敬重他。他是那种深藏不露、懂股票行情的人。当然，谁也不可能真懂，可他看上去相当内行，常常说股票涨了、股份跌了，那副神气足以让随便哪个女人敬重他。',
+      },
+      {
+        en: "Mrs. Darling was married in white, and at first she kept the books perfectly, almost gleefully, as if it were a game, not so much as a Brussels sprout was missing; but by and by whole cauliflowers dropped out, and instead of them there were pictures of babies without faces. She drew them when she should have been totting up. They were Mrs. Darling's guesses.",
+        zh: '达林太太是穿着白婚纱嫁过来的。起初她把家用账记得分毫不差，简直记得欢天喜地，好像那是一场游戏，连一颗抱子甘蓝都没漏过；可渐渐地，整颗整颗的花椰菜从账上不见了，账本里冒出来的，是一张张没有脸的娃娃画像——她本该算账的时候，却画起了娃娃。这些都是达林太太猜想的模样。',
+      },
+      {
+        en: 'Wendy came first, then John, then Michael.',
+        zh: '先来的是温迪，接着是约翰，再后来是迈克尔。',
+      },
+    ],
+    glossary: [
+      { w: 'plucked', p: '/plʌkt/', zh: '摘；采（pluck 的过去式）' },
+      { w: 'henceforth', p: '/ˌhensˈfɔːrθ/', zh: '从此以后' },
+      { w: 'mocking', p: '/ˈmɑːkɪŋ/', zh: '爱打趣的；揶揄的' },
+      { w: 'conspicuous', p: '/kənˈspɪkjuəs/', zh: '显眼的；惹人注意的' },
+      { w: 'simultaneously', p: '/ˌsaɪmlˈteɪniəsli/', zh: '同时地' },
+      { w: 'propose', p: '/prəˈpoʊz/', zh: '求婚' },
+      { w: 'innermost', p: '/ˈɪnərmoʊst/', zh: '最里面的' },
+      { w: 'boast', p: '/boʊst/', zh: '夸口；自夸' },
+      { w: 'gleefully', p: '/ˈɡliːfəli/', zh: '欢天喜地地' },
+      { w: 'cauliflowers', p: '/ˈkɔːliflaʊərz/', zh: '花椰菜（复数）' },
+    ],
+  },
+
+  {
+    id: 'secret-garden',
+    title: 'The Secret Garden',
+    zhTitle: '秘密花园',
+    author: 'Frances Hodgson Burnett',
+    year: 1911,
+    level: 'B2',
+    minutes: 8,
+    accent: '#A85D75',
+    blurb: '一场瘟疫过后，竟然没有一个人记得玛丽还活着。这个人人讨厌的孩子被送往约克郡一座荒凉的大宅，故事就从这场“被遗忘”开始。',
+    question: '人人都说玛丽难看又讨人厌，她也用同样的方式对待世界。你相信这样的孩子后来会改变吗？改变可能从哪里开始？',
+    paragraphs: [
+      {
+        en: 'When Mary Lennox was sent to Misselthwaite Manor to live with her uncle everybody said she was the most disagreeable-looking child ever seen. It was true, too. She had a little thin face and a little thin body, thin light hair and a sour expression. Her hair was yellow, and her face was yellow because she had been born in India and had always been ill in one way or another. Her father had held a position under the English Government and had always been busy and ill himself, and her mother had been a great beauty who cared only to go to parties and amuse herself with gay people. She had not wanted a little girl at all, and when Mary was born she handed her over to the care of an Ayah, who was made to understand that if she wished to please the Mem Sahib she must keep the child out of sight as much as possible. So when she was a sickly, fretful, ugly little baby she was kept out of the way, and when she became a sickly, fretful, toddling thing she was kept out of the way also. She never remembered seeing familiarly anything but the dark faces of her Ayah and the other native servants, and as they always obeyed her and gave her her own way in everything, because the Mem Sahib would be angry if she was disturbed by her crying, by the time she was six years old she was as tyrannical and selfish a little pig as ever lived. The young English governess who came to teach her to read and write disliked her so much that she gave up her place in three months, and when other governesses came to try to fill it they always went away in a shorter time than the first one. So if Mary had not chosen to really want to know how to read books she would never have learned her letters at all.',
+        zh: '玛丽·伦诺克斯被送到米瑟斯韦特庄园去跟舅舅一起住的时候，人人都说，从来没见过长得这么不讨人喜欢的孩子。这话倒也不假。她一张小脸又瘦又薄，身子细瘦，头发稀黄，一脸乖戾的神气。她的头发是黄的，脸也是黄的，因为她生在印度，打小就三天两头发病。她父亲在英国政府手下做事，总是又忙又病；她母亲是个大美人，一心只想着赴宴会、同寻欢作乐的人厮混。她根本不想要这个小女孩，玛丽一出生，就被交到一个印度保姆手里照看，那保姆被交代得清清楚楚：想讨太太的欢心，就得尽量别让这孩子露面。于是，她还是个病歪歪、爱哭闹、相貌丑的小婴儿时，就被挪到看不见的地方；长成个病歪歪、爱哭闹、踉踉跄跄学步的小东西时，也照样被挪到看不见的地方。她记得熟的一切，只有保姆和其他印度仆人一张张深色的脸。这些人事事顺着她，她要什么都依——因为太太一听见她哭就会发火——等她长到六岁，她已经是天下最霸道、最自私的小家伙了。来教她读书写字的年轻英国家庭教师嫌她嫌得要命，三个月就辞了工；后来又来的家庭教师，一个比一个待得更短。所以，要不是玛丽自己当真想学会读书，她连字母都认不全。',
+      },
+      {
+        en: 'One frightfully hot morning, when she was about nine years old, she awakened feeling very cross, and she became crosser still when she saw that the servant who stood by her bedside was not her Ayah.',
+        zh: '一个热得要命的早晨——她那时大约九岁——醒来就觉得心烦，再看见床边站着的佣人不是她的保姆，就更加恼火了。',
+      },
+      {
+        en: '“Why did you come?” she said to the strange woman. “I will not let you stay. Send my Ayah to me.”',
+        zh: '“你来干什么？”她对那个陌生女人说，“我不许你待在这儿。叫我的保姆来。”',
+      },
+      {
+        en: 'The woman looked frightened, but she only stammered that the Ayah could not come and when Mary threw herself into a passion and beat and kicked her, she looked only more frightened and repeated that it was not possible for the Ayah to come to Missie Sahib.',
+        zh: '那女人一脸惊慌，只是结结巴巴地说保姆来不了。玛丽撒起泼来，又打又踢，她反倒显得更怕了，一遍又一遍地说：保姆实在没法来见小姐。',
+      },
+      {
+        en: 'There was something mysterious in the air that morning. Nothing was done in its regular order and several of the native servants seemed missing, while those whom Mary saw slunk or hurried about with ashy and scared faces. But no one would tell her anything and her Ayah did not come. She was actually left alone as the morning went on, and at last she wandered out into the garden and began to play by herself under a tree near the veranda. She pretended that she was making a flower-bed, and she stuck big scarlet hibiscus blossoms into little heaps of earth, all the time growing more and more angry and muttering to herself the things she would say and the names she would call Saidie when she returned.',
+        zh: '那天早晨的空气里透着一股说不出的诡异。做什么事都没了章法，好几个印度仆人不见了踪影，玛丽能看见的那些，一个个灰着脸色、缩着肩膀慌慌张张地溜来溜去。可谁也不肯对她说半个字，她的保姆也没有来。早晨慢慢过去，她真的被撇下了，孤零零一个人。最后她晃进花园，在游廊旁边一棵树下自己玩起来。她假装在砌一座花坛，把大朵大朵鲜红的扶桑花插进一小堆一小堆的土里，火气却一路越拱越高，嘴里咕咕哝哝，盘算着等萨迪回来，要怎么数落她、骂她些什么难听的名字。',
+      },
+      {
+        en: '“Pig! Pig! Daughter of Pigs!” she said, because to call a native a pig is the worst insult of all.',
+        zh: '“猪！猪！猪生的！”她一遍又一遍地骂——在印度，骂一个本地人“猪”，是天底下最恶毒的侮辱。',
+      },
+    ],
+    glossary: [
+      { w: 'disagreeable', p: '/ˌdɪsəˈɡriːəbl/', zh: '不讨人喜欢的；难相处的' },
+      { w: 'sour', p: '/ˈsaʊər/', zh: '乖戾的；酸溜溜的' },
+      { w: 'fretful', p: '/ˈfretfl/', zh: '烦躁易怒的' },
+      { w: 'tyrannical', p: '/təˈrænɪkl/', zh: '霸道的；专横的' },
+      { w: 'governess', p: '/ˈɡʌvərnəs/', zh: '家庭女教师' },
+      { w: 'stammered', p: '/ˈstæmərd/', zh: '结结巴巴地说（stammer 的过去式）' },
+      { w: 'slunk', p: '/slʌŋk/', zh: '溜走；潜行（slink 的过去式）' },
+      { w: 'veranda', p: '/vəˈrændə/', zh: '游廊；走廊' },
+      { w: 'hibiscus', p: '/haɪˈbɪskəs/', zh: '扶桑花' },
+      { w: 'insult', p: '/ˈɪnsʌlt/', zh: '侮辱' },
+    ],
+  },
+
+  {
+    id: 'christmas-carol',
+    title: 'A Christmas Carol',
+    zhTitle: '圣诞颂歌',
+    author: 'Charles Dickens',
+    year: 1843,
+    level: 'C1',
+    minutes: 9,
+    accent: '#6D3B8E',
+    blurb: '“老马利死得像一颗门钉”，故事开篇就把话说死了。可要是死人真的死透了，七年之后，斯克鲁奇家的门环上为什么会出现马利的脸？',
+    question: '斯克鲁奇富有却把圣诞节叫作“胡扯”，穷苦的外甥却年年快乐。你觉得金钱和快乐之间是什么关系？',
+    paragraphs: [
+      {
+        en: "Marley was dead: to begin with. There is no doubt whatever about that. The register of his burial was signed by the clergyman, the clerk, the undertaker, and the chief mourner. Scrooge signed it: and Scrooge's name was good upon 'Change, for anything he chose to put his hand to. Old Marley was as dead as a door-nail.",
+        zh: '马利死了，这是开宗明义的第一句。这件事没有半点可疑。他的下葬登记簿上，牧师签了字，教堂执事签了字，承办殡葬的人签了字，主祭的送葬人也签了字。斯克鲁奇也签了名；在交易所里，“斯克鲁奇”这个名字向来作数，凡是经他手的事，没有办不成的。老马利死得像一颗门钉一样，死得透透的。',
+      },
+      {
+        en: "Mind! I don't mean to say that I know, of my own knowledge, what there is particularly dead about a door-nail. I might have been inclined, myself, to regard a coffin-nail as the deadest piece of ironmongery in the trade. But the wisdom of our ancestors is in the simile; and my unhallowed hands shall not disturb it, or the Country's done for. You will therefore permit me to repeat, emphatically, that Marley was as dead as a door-nail.",
+        zh: '注意！我并不是说，我自己就明白一颗门钉到底有什么格外“死”的地方。换成我来定，我兴许会把棺材钉当成五金行当里最死气沉沉的东西。可这个比喻是老祖宗传下来的智慧，我这双不洁净的手不敢去动它，一动，国家就要完蛋。所以请容许我把话再说一遍，加重语气：马利死得像一颗门钉。',
+      },
+      {
+        en: "Scrooge knew he was dead? Of course he did. How could it be otherwise? Scrooge and he were partners for I don't know how many years. Scrooge was his sole executor, his sole administrator, his sole assign, his sole residuary legatee, his sole friend, and sole mourner. And even Scrooge was not so dreadfully cut up by the sad event, but that he was an excellent man of business on the very day of the funeral, and solemnised it with an undoubted bargain.",
+        zh: '斯克鲁奇知道他死了吗？当然知道，不然还能怎样？斯克鲁奇跟他合伙，不知道有多少年了。斯克鲁奇是他唯一的遗嘱执行人，唯一的遗产管理人，唯一的财产受让人，唯一的剩余遗产继承人，唯一的朋友，也是唯一的送葬人。可是就连遭逢这样的大丧，斯克鲁奇也没有悲痛到耽误正事——出殡那天，他照样是个顶呱呱的生意人，还用一笔稳赚不赔的买卖，给葬礼平添了几分庄重。',
+      },
+      {
+        en: "The mention of Marley's funeral brings me back to the point I started from. There is no doubt that Marley was dead. This must be distinctly understood, or nothing wonderful can come of the story I am going to relate. If we were not perfectly convinced that Hamlet's Father died before the play began, there would be nothing more remarkable in his taking a stroll at night, in an easterly wind, upon his own ramparts, than there would be in any other middle-aged gentleman rashly turning out after dark in a breezy spot—say Saint Paul's Churchyard for instance—literally to astonish his son's weak mind.",
+        zh: '一提马利的葬礼，就把我拉回了开头的正题。马利死了，这是毫无疑问的。这一点必须弄清楚，不然我要讲的故事，就不会有半点神奇可言。假如我们不能完全相信哈姆雷特的父亲在戏开场之前就已经死了，那么，他趁夜顶着东风，在自己的城堡城垛上散步，也就跟随便哪个中年绅士天黑后一时兴起，跑到风口上——比方说圣保罗教堂墓地——存心去惊吓自己儿子脆弱的神经，没什么两样了。',
+      },
+      {
+        en: "Scrooge never painted out Old Marley's name. There it stood, years afterwards, above the warehouse door: Scrooge and Marley. The firm was known as Scrooge and Marley. Sometimes people new to the business called Scrooge Scrooge, and sometimes Marley, but he answered to both names. It was all the same to him.",
+        zh: '斯克鲁奇从没把老马利的名字从招牌上抹掉。多年以后，货栈大门上方立着的仍是那几个字：斯克鲁奇与马利。商行的字号就叫“斯克鲁奇与马利”。有时，初来乍到的人管他叫斯克鲁奇，有时又叫他马利，可他两个名字都应。对他来说，叫什么都一样。',
+      },
+      {
+        en: "Oh! But he was a tight-fisted hand at the grind-stone, Scrooge! a squeezing, wrenching, grasping, scraping, clutching, covetous, old sinner! Hard and sharp as flint, from which no steel had ever struck out generous fire; secret, and self-contained, and solitary as an oyster. The cold within him froze his old features, nipped his pointed nose, shrivelled his cheek, stiffened his gait; made his eyes red, his thin lips blue; and spoke out shrewdly in his grating voice. A frosty rime was on his head, and on his eyebrows, and his wiry chin. He carried his own low temperature always about with him; he iced his office in the dog-days; and didn't thaw it one degree at Christmas.",
+        zh: '哦！这个斯克鲁奇，可是个攥紧拳头不撒手的铁公鸡！又拧又抓，又刮又抠，贪得无厌的老罪人！像燧石一样又硬又利，从来没有什么钢铁能从这块燧石上敲出一点慷慨的火星；他藏头缩脑，独来独往，像一只牡蛎。他心里的寒冰冻僵了苍老的面孔，冻尖了尖尖的鼻子，冻皱了两颊，冻僵了步子；把眼睛冻得发红，薄薄的嘴唇冻得发青；连说话也尖声刺耳。头上、眉梢上、硬茬茬的下巴上，都挂着一层白霜。他走到哪儿，都随身带着自己的低温；三伏天里把自己的账房冻成冰窖，到了圣诞节，也不肯让它解冻一度。',
+      },
+    ],
+    glossary: [
+      { w: 'undertaker', p: '/ˈʌndərteɪkər/', zh: '殡葬承办人' },
+      { w: 'executor', p: '/ɪɡˈzekjətər/', zh: '遗嘱执行人' },
+      { w: 'legatee', p: '/ˌleɡəˈtiː/', zh: '遗产受赠人' },
+      { w: 'ramparts', p: '/ˈræmpɑːrts/', zh: '城垛；壁垒' },
+      { w: 'simile', p: '/ˈsɪməli/', zh: '明喻；比喻' },
+      { w: 'tight-fisted', p: '/ˌtaɪt ˈfɪstɪd/', zh: '吝啬的；一毛不拔的' },
+      { w: 'covetous', p: '/ˈkʌvətəs/', zh: '贪得无厌的' },
+      { w: 'flint', p: '/flɪnt/', zh: '燧石' },
+      { w: 'gait', p: '/ɡeɪt/', zh: '步态' },
+      { w: 'rime', p: '/raɪm/', zh: '白霜' },
+      { w: 'grating', p: '/ˈɡreɪtɪŋ/', zh: '刺耳的' },
+    ],
+  },
+
+  {
+    id: 'call-of-the-wild',
+    title: 'The Call of the Wild',
+    zhTitle: '野性的呼唤',
+    author: 'Jack London',
+    year: 1903,
+    level: 'B2',
+    minutes: 8,
+    accent: '#6E8B3D',
+    blurb: '巴克是法官庄园里的狗中之王，从没挨过一根棍子。一个欠了赌债的园丁把它偷偷牵出花园——北方的冰原上，正在等着它。',
+    question: '棍棒教会了巴克“服从”，却没有教会它“忠诚”。你认为规则要靠什么才真正有效——暴力，还是信任？',
+    paragraphs: [
+      {
+        en: 'Buck did not read the newspapers, or he would have known that trouble was brewing, not alone for himself, but for every tide-water dog, strong of muscle and with warm, long hair, from Puget Sound to San Diego. Because men, groping in the Arctic darkness, had found a yellow metal, and because steamship and transportation companies were booming the find, thousands of men were rushing into the Northland. These men wanted dogs, and the dogs they wanted were heavy dogs, with strong muscles by which to toil, and furry coats to protect them from the frost.',
+        zh: '巴克不看报纸，要不然它就该知道，大祸正在酝酿——遭殃的不只是它，还有从普吉特湾到圣迭戈，每一只筋骨强壮、长着暖和长毛的近海犬。因为人们在北极的黑夜里摸到了一种黄色的金属，又因为轮船公司和运输公司把这一发现炒得沸沸扬扬，成千上万的人正涌向北国。这些人要狗，而且要的是身量大、筋骨壮、能干重活的狗，一身厚毛足以抵挡严霜。',
+      },
+      {
+        en: "Buck lived at a big house in the sun-kissed Santa Clara Valley. Judge Miller's place, it was called. It stood back from the road, half hidden among the trees, through which glimpses could be caught of the wide cool veranda that ran around its four sides. The house was approached by gravelled driveways which wound about through wide-spreading lawns and under the interlacing boughs of tall poplars. At the rear things were on even a more spacious scale than at the front. There were great stables, where a dozen grooms and boys held forth, rows of vine-clad servants' cottages, an endless and orderly array of outhouses, long grape arbors, green pastures, orchards, and berry patches. Then there was the pumping plant for the artesian well, and the big cement tank where Judge Miller's boys took their morning plunge and kept cool in the hot afternoon.",
+        zh: '巴克住在阳光普照的圣克拉拉谷一座大宅里。那地方叫米勒法官的庄园。宅子离大路远远的，半掩在树影里，枝叶缝隙间，隐约看得见环绕四面的宽敞凉爽的游廊。砾石铺的车道绕过宽阔的草坪，从高大杨树交错的枝桠底下，蜿蜒着通到门前。宅子后面的气派比前面更大：有大马厩，十来个马夫和帮工在那里当差；有一排排爬满藤蔓的仆人小屋；有数也数不清、却排得整整齐齐的棚屋；有长长的葡萄架、青青的牧场、果园和浆果地。还有自流井的抽水装置，和那口大水泥池——米勒法官家的男孩子们清早在这里扎猛子，炎热的午后在这里泡水乘凉。',
+      },
+      {
+        en: 'And over this great demesne Buck ruled. Here he was born, and here he had lived the four years of his life. It was true, there were other dogs. There could not but be other dogs on so vast a place, but they did not count. They came and went, resided in the populous kennels, or lived obscurely in the recesses of the house after the fashion of Toots, the Japanese pug, or Ysabel, the Mexican hairless,—strange creatures that rarely put nose out of doors or set foot to ground. On the other hand, there were the fox terriers, a score of them at least, who yelped fearful promises at Toots and Ysabel looking out of the windows at them and protected by a legion of housemaids armed with brooms and mops.',
+        zh: '这片广大的领地，是巴克的天下。它生在这里，活了四年也都在这里。不错，庄园里也有别的狗。这么大的地方，不可能没有别的狗，可它们都算不上数。它们来来去去，不是挤在热闹的狗窝里，就是像日本哈巴狗图茨、墨西哥无毛犬伊莎贝尔那样，闷在宅子的偏僻角落里——那种怪家伙，难得把鼻子伸到门外，更难得让脚沾一沾地。另一头还有一群猎狐梗，少说二十来只，隔着窗户朝图茨和伊莎贝尔尖声狂吠，把狠话放得震天响——反正有一大群拿着扫帚拖把的女仆护着它们呢。',
+      },
+      {
+        en: "But Buck was neither house-dog nor kennel-dog. The whole realm was his. He plunged into the swimming tank or went hunting with the Judge's sons; he escorted Mollie and Alice, the Judge's daughters, on long twilight or early morning rambles; on wintry nights he lay at the Judge's feet before the roaring library fire; he carried the Judge's grandsons on his back, or rolled them in the grass, and guarded their footsteps through wild adventures down to the fountain in the stable yard, and even beyond, where the paddocks were, and the berry patches. Among the terriers he stalked imperiously, and Toots and Ysabel he utterly ignored, for he was king,—king over all creeping, crawling, flying things of Judge Miller's place, humans included.",
+        zh: '可巴克既不是看家的狗，也不是蹲窝的狗。整个庄园都是它的王国。它跳进游泳池里扎猛子，或者跟着法官的儿子们去打猎；它陪着法官的两个女儿莫莉和爱丽丝，在黄昏或清早溜达上一大圈；冬天的夜晚，它卧在法官脚边，守着书房里熊熊的炉火；它把法官的小孙子驮在背上，或者在草地上跟他们打滚，寸步不离地护着他们，从马厩院里的喷泉，一路“冒险”到更远的地方——围场那边，浆果地那边。在猎梗群里，它高视阔步、目中无人；对图茨和伊莎贝尔，它干脆不屑一顾。因为它就是王——米勒法官庄园里一切爬的、走的、飞的，都归它管，连人也算在内。',
+      },
+      {
+        en: "His father, Elmo, a huge St. Bernard, had been the Judge's inseparable companion, and Buck bid fair to follow in the way of his father. He was not so large,—he weighed only one hundred and forty pounds,—for his mother, Shep, had been a Scotch shepherd dog. Nevertheless, one hundred and forty pounds, to which was added the dignity that comes of good living and universal respect, enabled him to carry himself in right royal fashion. During the four years since his puppyhood he had lived the life of a sated aristocrat; he had a fine pride in himself, was even a trifle egotistical, as country gentlemen sometimes become because of their insular situation. But he had saved himself by not becoming a mere pampered house-dog. Hunting and kindred outdoor delights had kept down the fat and hardened his muscles; and to him, as to the cold-tubbing races, the love of water had been a tonic and a health preserver.",
+        zh: '它的父亲埃尔莫，是一条魁伟的圣伯纳犬，生前与法官形影不离；巴克看来也要步父亲的后尘了。它的块头不算顶大——体重只有一百四十磅——因为母亲希珀是一条苏格兰牧羊犬。不过，一百四十磅的体格，再加上优渥的日子和众人的敬重养出来的威仪，让它举手投足都颇有王者气派。打从小狗崽那会儿算起，这四年它过的是养尊处优的贵族生活；它自视甚高，甚至有点儿自负，就像乡下的绅士因为深居僻壤，有时会养成的那种脾气。可它到底没有沦为一只娇生惯养的看家狗。打猎和种种户外乐子压住了它的膘，也把筋骨练硬了；对它来说，就像那些坚持洗冷水澡的人一样，爱水成癖既是一剂补药，也是健康的保障。',
+      },
+      {
+        en: "And this was the manner of dog Buck was in the fall of 1897, when the Klondike strike dragged men from all the world into the frozen North. But Buck did not read the newspapers, and he did not know that Manuel, one of the gardener's helpers, was an undesirable acquaintance. Manuel had one besetting sin. He loved to play Chinese lottery. Also, in his gambling, he had one besetting weakness—faith in a system; and this made his damnation certain. For to play a system requires money, while the wages of a gardener's helper do not lap over the needs of a wife and numerous progeny.",
+        zh: '一八九七年秋天，克朗代克发现金矿，把全世界的人都拽进了冰封的北方，而巴克，就在这个时候过着前面说的那种日子。它不看报纸，所以不知道园丁帮工曼纽尔是个不可深交的家伙。曼纽尔有一个改不掉的恶习：好赌。赌起来还有一个改不掉的毛病——迷信“稳赢的章法”；这一来，他的下场就已经注定了。要知道，照章法下注是要本钱的，而一个园丁帮工的工钱，养活老婆和一大帮孩子都不够。',
+      },
+    ],
+    glossary: [
+      { w: 'brewing', p: '/ˈbruːɪŋ/', zh: '（坏事）正在酝酿（brew 的现在分词）' },
+      { w: 'toil', p: '/tɔɪl/', zh: '苦役；辛苦劳作' },
+      { w: 'demesne', p: '/dɪˈmeɪn/', zh: '领地；庄园' },
+      { w: 'imperiously', p: '/ɪmˈpɪriəsli/', zh: '威风凛凛地；傲慢地' },
+      { w: 'escorted', p: '/ɪˈskɔːrtɪd/', zh: '陪同；护送（escort 的过去式）' },
+      { w: 'inseparable', p: '/ˌɪnˈsepərəbl/', zh: '形影不离的' },
+      { w: 'aristocrat', p: '/ˈerɪstəkræt/', zh: '贵族' },
+      { w: 'pampered', p: '/ˈpæmpərd/', zh: '娇生惯养的' },
+      { w: 'tonic', p: '/ˈtɑːnɪk/', zh: '补药；强身剂' },
+      { w: 'besetting', p: '/bɪˈsetɪŋ/', zh: '不断困扰的；改不掉的' },
+      { w: 'progeny', p: '/ˈprɑːdʒəni/', zh: '子女；后代' },
+    ],
+  },
+
+  {
+    id: 'scandal-in-bohemia',
+    title: 'A Scandal in Bohemia',
+    zhTitle: '波希米亚丑闻',
+    author: 'Arthur Conan Doyle',
+    year: 1892,
+    level: 'C1',
+    minutes: 8,
+    accent: '#A03A78',
+    blurb: '福尔摩斯一生只服过一个对手：不是国王，不是大盗，而是一位女演员。国王的密信与合影都捏在她手里，婚期只剩三天。',
+    question: '福尔摩斯自称是不带感情的“推理机器”，却输给了艾琳·艾德勒。感情真是推理的敌人吗？说说你的看法。',
+    paragraphs: [
+      {
+        en: "To Sherlock Holmes she is always the woman. I have seldom heard him mention her under any other name. In his eyes she eclipses and predominates the whole of her sex. It was not that he felt any emotion akin to love for Irene Adler. All emotions, and that one particularly, were abhorrent to his cold, precise but admirably balanced mind. He was, I take it, the most perfect reasoning and observing machine that the world has seen, but as a lover he would have placed himself in a false position. He never spoke of the softer passions, save with a gibe and a sneer. They were admirable things for the observer—excellent for drawing the veil from men's motives and actions. But for the trained reasoner to admit such intrusions into his own delicate and finely adjusted temperament was to introduce a distracting factor which might throw a doubt upon all his mental results. Grit in a sensitive instrument, or a crack in one of his own high-power lenses, would not be more disturbing than a strong emotion in a nature such as his. And yet there was but one woman to him, and that woman was the late Irene Adler, of dubious and questionable memory.",
+        zh: '在舍洛克·福尔摩斯眼里，她永远是“那位女人”。我很少听他用别的称呼提起她。在他看来，她压倒了整个女性，独一无二。这并不是说，他对艾琳·艾德勒动过什么近似爱情的情感。一切情感，尤其是爱情，都让他那颗冷静、精确、却调配得恰到好处的头脑深恶痛绝。在我看来，他是世间从未有过的最完美的推理与观察机器，可要让他去做一个恋人，他就把自己摆错了位置。说起儿女情长，他从来只有讥嘲和冷笑。对观察家来说，情感是绝妙的材料——挑开人的动机和行为上那层幕布，再好用不过。可是，让这类东西闯进一个受过训练的推理者那副精巧、校准分毫的性情里，等于引进一个捣乱因子，让他的一切推论都变得可疑。灵敏的仪器里落进一粒砂，高倍镜片上裂开一道纹，都不会比一阵强烈的情感在这般天性里更碍事。然而，对他来说，女人毕竟只有一个，而她就是已故的艾琳·艾德勒——一个留下名声可疑、为人可议的女人。',
+      },
+      {
+        en: 'I had seen little of Holmes lately. My marriage had drifted us away from each other. My own complete happiness, and the home-centred interests which rise up around the man who first finds himself master of his own establishment, were sufficient to absorb all my attention, while Holmes, who loathed every form of society with his whole Bohemian soul, remained in our lodgings in Baker Street, buried among his old books, and alternating from week to week between cocaine and ambition, the drowsiness of the drug, and the fierce energy of his own keen nature. He was still, as ever, deeply attracted by the study of crime, and occupied his immense faculties and extraordinary powers of observation in following out those clues, and clearing up those mysteries which had been abandoned as hopeless by the official police.',
+        zh: '近来我很少见到福尔摩斯。我的婚姻把我们越冲越远。我自己圆满的幸福，加上一个男人头一回当家做主时冒出来的那些围着家转的牵挂，足以占去我全部的心神；而福尔摩斯呢，揣着一颗波希米亚式的灵魂，把一切社交场合恨到骨子里，仍旧守在贝克街我们那套寓所里，埋在旧书堆中间，一个星期又一个星期，在可卡因和雄心之间来回摇摆——一会儿被药力熏得昏昏沉沉，一会儿又燃起天性里那股凶猛的劲头。他一如既往，深深地迷着犯罪研究这门学问，把惊人的才干和超群的观察力，全花在追线索、破疑案上——那些案子，官方警察早已当作无头死案撒手不管了。',
+      },
+      {
+        en: 'From time to time I heard some vague account of his doings: of his summons to Odessa in the case of the Trepoff murder, of his clearing up of the singular tragedy of the Atkinson brothers at Trincomalee, and finally of the mission which he had accomplished so delicately and successfully for the reigning family of Holland. Beyond these signs of his activity, however, which I merely shared with all the readers of the daily press, I knew little of my former friend and companion.',
+        zh: '他的行踪，我偶尔听到些模糊的风声：说他应召去了敖德萨，办特列波夫谋杀案；说他在亭可马里查清了阿特金森兄弟那桩离奇的惨案；最后还说，他为荷兰王室办成了一件差事，办得漂亮又妥帖。可除了这些消息——我还不过是和所有读报的人一样听来的——对这位昔日的朋友和搭档，我就所知无几了。',
+      },
+      {
+        en: 'One night—it was on the twentieth of March, 1888—I was returning from a journey to a patient (for I had now returned to civil practice), when my way led me through Baker Street. As I passed the well-remembered door, which must always be associated in my mind with my wooing, and with the dark incidents of the Study in Scarlet, I was seized with a keen desire to see Holmes again, and to know how he was employing his extraordinary powers. His rooms were brilliantly lit, and, even as I looked up, I saw his tall, spare figure pass twice in a dark silhouette against the blind. He was pacing the room swiftly, eagerly, with his head sunk upon his chest and his hands clasped behind him. To me, who knew his every mood and habit, his attitude and manner told their own story. He was at work again. He had risen out of his drug-created dreams and was hot upon the scent of some new problem. I rang the bell and was shown up to the chamber which had formerly been in part my own.',
+        zh: '一天夜里——那是一八八八年三月二十日——我看完一个病人，出诊回来（因为我如今重新做了普通的开业医生），路上恰好经过贝克街。那扇我再熟悉不过的门，在我心里永远连着我的求婚岁月，也连着《血字的研究》里那些阴森的往事。走过门前，我心头涌起一阵强烈的渴望：想再见见福尔摩斯，想知道他那副非凡的本领如今用在了哪里。他的房间灯火通明，我抬头的一瞬，就望见他高挑清瘦的身影在窗帘上映出一道黑影，来来回回走了两趟。他正快步在屋里踱来踱去，急切而专注，头深深垂在胸前，双手笼在身后。对他的每一种心境和习惯我都了如指掌，一看这副神态就全明白了：他又有活儿干了。他已经从药物催成的迷梦里醒来，正为一个新问题嗅着味儿追得起劲。我拉了门铃，被人领上楼，进了那间从前我也住过一部分的房间。',
+      },
+      {
+        en: 'His manner was not effusive. It seldom was; but he was glad, I think, to see me. With hardly a word spoken, but with a kindly eye, he waved me to an armchair, threw across his case of cigars, and indicated a spirit case and a gasogene in the corner. Then he stood before the fire and looked me over in his singular introspective fashion.',
+        zh: '他的态度算不上热络——他向来如此；不过我想，见到我他是高兴的。几乎没有寒暄，只带着一道温和的眼神，他挥手让我坐进扶手椅，把雪茄盒推过来，又指了指墙角的酒柜和汽水架。然后他站到炉火跟前，用他那种独特的内视打量法，把我从头到脚看了一遍。',
+      },
+      {
+        en: '“Wedlock suits you,” he remarked. “I think, Watson, that you have put on seven and a half pounds since I saw you.”',
+        zh: '“结婚对你再合适不过，”他说，“华生，我看自从上次见面，你重了足足七磅半。”',
+      },
+    ],
+    glossary: [
+      { w: 'eclipse', p: '/ɪˈklɪps/', zh: '使黯然失色' },
+      { w: 'abhorrent', p: '/əbˈhɔːrənt/', zh: '令人憎恶的' },
+      { w: 'gibe', p: '/dʒaɪb/', zh: '嘲弄；挖苦' },
+      { w: 'sneer', p: '/snɪr/', zh: '冷嘲；讥笑' },
+      { w: 'temperament', p: '/ˈtemprəmənt/', zh: '性情；气质' },
+      { w: 'dubious', p: '/ˈduːbiəs/', zh: '可疑的；名声成问题的' },
+      { w: 'loathed', p: '/ˈloʊðɪd/', zh: '憎恶（loathe 的过去式）' },
+      { w: 'wooing', p: '/ˈwuːɪŋ/', zh: '求爱；求婚' },
+      { w: 'effusive', p: '/ɪˈfjuːsɪv/', zh: '热情外露的' },
+      { w: 'wedlock', p: '/ˈwedlɑːk/', zh: '婚姻' },
+    ],
+  },
 ];
 
 export const storyById = Object.fromEntries(stories.map((story) => [story.id, story]));

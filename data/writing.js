@@ -77,6 +77,65 @@ export const essayStructures = [
       { en: 'Looking back, I realize that...', zh: '回头看，我意识到……' },
     ],
   },
+  {
+    id: 's7',
+    title: '读后续写',
+    en: 'Continuation Writing',
+    when: '新高考题型：给出一篇故事原文和两句段首句，考生续写两个段落，把故事推向合理的结局。',
+    outline: ['通读原文，理清人物、时间与矛盾', '琢磨两句段首句之间的情节跳跃', '第一段承接首句推进情节，制造转折或高潮', '第二段解决问题，写出结局', '呼应原文的伏笔与情感线索', '检查时态、人称与前文是否一致'],
+    frames: [
+      { en: 'To her surprise, ...', zh: '令她惊讶的是，……' },
+      { en: 'Just then, ...', zh: '就在那时，……' },
+      { en: 'Without hesitation, ...', zh: '毫不犹豫地，……' },
+      { en: 'What happened next taught me that...', zh: '接下来发生的事让我明白……' },
+      { en: 'From that day on, ...', zh: '从那天起，……' },
+    ],
+  },
+
+  {
+    id: 's8',
+    title: '倡议书与通知',
+    en: 'Proposal and Notice',
+    when: '中考应用文：号召同学参加活动、提出节约或互助倡议，或向全班发布通知。',
+    outline: ['称呼并引出主题', '说明背景或活动目的', '提出具体倡议或安排', '交代时间、地点、报名方式等细节', '发出号召或提醒', '落款'],
+    frames: [
+      { en: 'May I have your attention, please?', zh: '请大家注意一下，好吗？' },
+      { en: 'It is our duty to...', zh: '……是我们大家的责任。' },
+      { en: "Let's work together to...", zh: '让我们一起……' },
+      { en: 'Anyone who is interested can...', zh: '任何感兴趣的同学都可以……' },
+      { en: 'Please sign up before...', zh: '请在……之前报名。' },
+    ],
+  },
+
+  {
+    id: 's9',
+    title: '演讲稿',
+    en: 'Speech',
+    when: '初高中常考：班会发言、英语比赛演讲、欢迎辞或倡议宣讲。',
+    outline: ['称呼与问候', '点明演讲主题', '分两到三点展开论述', '用例子或亲身经历支撑观点', '总结并发出呼吁', '致谢收尾'],
+    frames: [
+      { en: 'Good morning, everyone.', zh: '大家早上好。' },
+      { en: "Today I'd like to talk about...", zh: '今天我想谈谈……' },
+      { en: 'As the saying goes, ...', zh: '俗话说得好，……' },
+      { en: 'In a word, ...', zh: '总而言之，……' },
+      { en: 'Thank you for listening.', zh: '谢谢大家的聆听。' },
+    ],
+  },
+
+  {
+    id: 's10',
+    title: '概要写作',
+    en: 'Summary Writing',
+    when: '高考新题型：用约 60 词概括一篇 300 词左右的短文，写出各段要点。',
+    outline: ['逐段圈出主题句和关键词', '用自己的话改写要点，不照抄原句', '按原文顺序排列要点', '用连接词把要点串成连贯短文', '删去例子、数据等细节', '核对词数与要点是否齐全'],
+    frames: [
+      { en: 'The passage mainly talks about...', zh: '这篇文章主要讲的是……' },
+      { en: 'According to the author, ...', zh: '在作者看来，……' },
+      { en: 'The writer suggests that...', zh: '作者建议……' },
+      { en: 'The author points out that...', zh: '作者指出……' },
+      { en: 'In short, ...', zh: '简而言之，……' },
+    ],
+  },
 ];
 
 export const modelEssays = [
@@ -178,6 +237,99 @@ export const modelEssays = [
     ],
     expressions: ['As with any powerful tool...', 'The benefits are clear.', 'Yet there are real dangers.', 'The key is not whether..., but how.', 'Used with discipline, ...'],
   },
+  {
+    id: 'm5',
+    title: 'An Email to a Pen Friend about My School Life',
+    type: '书信',
+    level: 'A2',
+    words: 133,
+    prompt: 'Your British pen friend Emma wants to know about your school life. Write her an email about your school day, subjects and after-class activities.',
+    essay: [
+      'Dear Emma,',
+      'Thank you for your last email. You asked about my school life, and I am happy to tell you more.',
+      'My day starts at eight. We have four classes in the morning and two in the afternoon. My favourite subject is biology, because we often do experiments in the lab. After school, I play basketball with my friends for an hour. It is the best part of my day.',
+      'We also have a reading week every term. Last month, our class put on a short English play, and I played a king with a paper crown. It was hard, but great fun. In June we will have a school trip to a science museum, and I can hardly wait.',
+      'What is your school life like? Please write soon.',
+      'Yours,',
+      'Li Hua',
+    ],
+    zh: [
+      '亲爱的 Emma：',
+      '谢谢你的上一封邮件。你想了解我的校园生活，我很乐意多讲一些。',
+      '我的一天从八点开始，上午四节课，下午两节。我最喜欢的科目是生物，因为我们常在实验室里做实验。放学后，我和朋友们打一小时篮球，那是我一天中最快乐的时光。',
+      '每学期我们还有一个阅读周。上个月，全班排了一出英语小短剧，我戴着纸皇冠演国王。虽然挺难，但特别有意思。六月我们还要去科学博物馆参观，我已经等不及了。',
+      '你的校园生活是什么样的？盼你早点回信。',
+      '祝好，',
+      '李华',
+    ],
+    expressions: ['Thank you for your last email.', 'My favourite subject is...', 'It is the best part of my day.', 'What is your school life like?', 'Please write soon.'],
+  },
+
+  {
+    id: 'm6',
+    title: 'The Locked Door',
+    type: '读后续写',
+    level: 'B1–B2',
+    words: 167,
+    prompt: '暑假里，小雨回乡下帮奶奶收拾老屋，发现走廊尽头有一扇常年上锁的木门。她多次问起，奶奶只是摇头。一天，她看见门边的旧钉子上挂着一把小钥匙。第一段以 “Slowly, she pushed the door open and looked inside.” 开头；第二段以 “When Grandma finally arrived, ...” 开头，续写故事的结局。',
+    essay: [
+      "Slowly, she pushed the door open and looked inside. Dust danced in the thin light, and the smell of old paper filled the air. A small wooden desk stood by the window, still holding Grandpa's reading glasses and a half-finished letter. On the walls hung dozens of black-and-white photos of a young man with a bright smile. Xiaoyu's heart beat fast. She had only wanted to find her lost sketchbook, but now she felt as if she had stepped into a story nobody had told her.",
+      "When Grandma finally arrived, she did not scold Xiaoyu. Instead, she stood at the door for a long moment, then walked in and touched the desk gently. Grandpa, she explained, had written her a letter every month for forty years, and this was where he sat. They opened the windows and let the fresh wind clear the dust. From that afternoon on, the door was never locked again. Xiaoyu learned that some memories are not meant to be hidden, but shared.",
+    ],
+    zh: [
+      '她缓缓推开门，朝屋里望去。灰尘在稀薄的光线里飞舞，空气中满是旧纸张的味道。窗边立着一张小木桌，桌上还放着爷爷的老花镜和一封没写完的信。墙上挂着几十张黑白照片，照片里那个年轻人笑得一脸灿烂。小雨的心怦怦直跳。她本来只是想找回丢了的速写本，此刻却仿佛走进了一个从没人讲给她听的故事。',
+      '奶奶终于赶到时，并没有责备小雨。她在门口静静站了片刻，然后走进屋，轻轻抚摸那张桌子。她轻声解释，爷爷四十年来每个月都给她写一封信，而这就是爷爷坐过的地方。她们打开窗户，让清风拂去灰尘。从那个下午起，这扇门再也没有上过锁。小雨明白了：有些记忆不该被藏起来，而应该被分享。',
+    ],
+    expressions: ['Slowly, she pushed the door open and looked inside.', 'Dust danced in the thin light', 'Instead, ...', 'From that afternoon on, ...', '...are not meant to be hidden, but shared.'],
+  },
+
+  {
+    id: 'm7',
+    title: 'Saving Food, Saving the Future',
+    type: '倡议书',
+    level: 'B1–B2',
+    words: 160,
+    prompt: 'Much food is wasted in the school canteen. As a member of the Student Union, write a proposal to call on everyone to save food.',
+    essay: [
+      'Dear fellow students,',
+      "Have you noticed how much food ends up in the bins of our canteen? Every day, half-eaten rice, untouched vegetables and whole buns are thrown away. Behind each discarded meal are hours of farmers' labour and gallons of water. Saving food, therefore, is not a small matter; it is a duty we cannot excuse ourselves from.",
+      'Here is what we can do, starting today. First, take only as much as you can eat, and go back for more if you are still hungry. Second, if a dish does not suit your taste, say so politely instead of leaving it. Third, remind each other kindly when someone is about to waste food — a gentle word works better than an angry look.',
+      "A clean plate is not just good manners; it is respect for those who grow our food and care for our future. Let's start with the very next meal and make every grain count.",
+      'The Student Union',
+    ],
+    zh: [
+      '亲爱的同学们：',
+      '你们有没有注意到，我们食堂每天有多少饭菜被倒进泔水桶？吃了一半的米饭、没人动过的青菜、整个的馒头，都被扔掉了。每一份被浪费的饭菜背后，都是农民数小时的辛劳和大量宝贵的水。因此，节约粮食不是小事，而是我们不能推卸的责任。',
+      '从今天起，我们可以这样做：第一，按需取餐，不够再添；第二，如果某道菜不合口味，请礼貌地提出来，而不是把它剩下；第三，当有人要浪费食物时，友善地提醒一句——温和的话比生气的眼神更有用。',
+      '光盘不只是礼貌，更是对种粮人的尊重，也是对我们共同未来的负责。让我们从下一顿饭做起，珍惜每一粒粮食。',
+      '学生会',
+    ],
+    expressions: ['Have you noticed how much...', 'Here is what we can do, starting today.', 'instead of', 'a gentle word works better than an angry look', "Let's start with the very next meal."],
+  },
+
+  {
+    id: 'm8',
+    title: 'Reading Makes a Full Man',
+    type: '演讲稿',
+    level: 'B1',
+    words: 154,
+    prompt: 'Your class is holding a theme meeting about reading. Give a short speech on why reading makes a full man.',
+    essay: [
+      "Good morning, everyone. Today I'd like to talk about why reading makes a full man.",
+      'Bacon once said that reading makes a full man. I did not fully understand this until last term. Before exams, my writing always sounded flat, and my ideas ran out quickly. Then my teacher gave me a simple piece of advice: read a little every day.',
+      'I started with twenty minutes each night — stories at first, then essays and biographies. Slowly, something changed. I began to see problems from more than one side, and words I had never used started to appear in my own sentences. Books did not simply fill my head; they gave me something to say. Since then, writing has become easier, and thinking has become more fun.',
+      "Classmates, phones can feed us information, but only reading feeds the mind. Let's open a book tonight and grow a little richer every day.",
+      'Thank you for listening.',
+    ],
+    zh: [
+      '大家早上好。今天我想谈谈为什么“读书使人充实”。',
+      '培根说过，读书使人充实。直到上学期，我才真正懂得这句话。考试前，我的作文总是显得干瘪，思路很快就枯竭了。后来老师给了我一条简单的建议：每天读一点书。',
+      '我从每晚二十分钟开始，先读故事，再读散文和传记。慢慢地，一些变化发生了。我开始从不止一个角度看待问题，一些从未用过的词也开始出现在我自己的句子里。书不只是填满我的脑袋，更让我有了话可说。从那以后，写作变容易了，思考也更有乐趣了。',
+      '同学们，手机能给我们信息，但只有阅读能滋养心灵。今晚就翻开一本书吧，让自己每天都充实一点点。',
+      '谢谢大家的聆听。',
+    ],
+    expressions: ["Today I'd like to talk about...", 'a simple piece of advice', 'Slowly, something changed.', 'phones can feed us information, but only reading feeds the mind', 'Thank you for listening.'],
+  },
 ];
 
 export const writingPrompts = [
@@ -216,5 +368,64 @@ export const writingPrompts = [
     target: '150–200 词',
     tips: ['调动至少三种感官。', '用一个动态细节打破静态画面。', '写出这个地方对你的意义。'],
     checklist: ['是否有感官细节？', '是否避免了形容词堆砌？', '最后一段是否回扣主题？'],
+  },
+  {
+    id: 'w5',
+    title: '一次难忘的失败',
+    en: 'A Memorable Failure',
+    type: '记叙',
+    target: '150–200 词',
+    tips: ['用具体的时间和场景开头，直接走进失败发生的那一刻，不要从“人人都会失败”这类套话写起。', '写出失败后真实的反应：手心的汗、不敢抬头的眼神、想放弃的念头。', '结尾写清这次失败让你从此改变的一个具体做法，例如每天加练十分钟。'],
+    checklist: ['事件是否按起因、经过、结果讲清楚了？', '有没有至少一处心理或身体细节？', '结尾的感悟是否能对应故事里的具体情节？'],
+  },
+
+  {
+    id: 'w6',
+    title: '家庭作业该不该减少',
+    en: 'Should Homework Be Reduced?',
+    type: '议论',
+    target: '180–220 词',
+    tips: ['开头先用一两句摆出双方立场，再亮出自己的观点。', '每个理由都配一个校园里的实例，例如晚上十一点还在赶作业、第二天上课犯困。', '结尾给出一个折中办法，例如按学科分层布置作业，而不是简单支持某一方。'],
+    checklist: ['减与不减两方的理由是否都写到了？', '每个论点是否有具体例子支撑？', '连接词是否覆盖了并列、转折和因果？'],
+  },
+
+  {
+    id: 'w7',
+    title: '给校长的一条建议',
+    en: 'A Suggestion to My Principal',
+    type: '书信应用文',
+    target: '120–160 词',
+    tips: ['第一段说明写信目的，指出你想改进的一个具体问题，例如食堂排队时间过长。', '建议只提一条，但要写清做什么、谁来执行、预计效果。', '语气礼貌客观，先肯定学校做得好的地方，再提出建议。'],
+    checklist: ['称呼、正文与落款是否完整？', '建议是否具体可行，而不是“希望学校越来越好”这类空话？', '是否说明了这条建议能带来的具体好处？'],
+  },
+
+  {
+    id: 'w8',
+    title: '手机该不该进课堂',
+    en: 'Should Phones Be Allowed in Class?',
+    type: '议论',
+    target: '150–200 词',
+    tips: ['把“手机进课堂”落到具体用途上讨论，例如查词典、拍板书、课堂抢答。', '正反两面各写两条理由，再给出你支持的使用规则。', '结尾用一句话给出明确结论，例如“可以带进课堂，但必须按规则使用”。'],
+    checklist: ['手机在课堂上的好处和风险是否都写了？', '是否提出了明确、可执行的使用规则？', '结论是否与正文给出的理由一致？'],
+  },
+
+  {
+    id: 'w9',
+    title: '影响我最深的人',
+    en: 'The Person Who Shaped Me',
+    type: '写人记叙',
+    target: '150–200 词',
+    tips: ['不要罗列品质，用一两件具体的事来表现这个人怎样影响了你。', '加入外貌、动作或说话方式的细节，让人物立起来。', '结尾写清这个人留给你、至今仍在坚持的一个习惯或信念。'],
+    checklist: ['人物是否靠具体事件而不是形容词堆砌来塑造？', '有没有一处动作描写或人物的原话？', '“影响”是否落到了你现在的生活里？'],
+  },
+
+  {
+    id: 'w10',
+    title: '我最想学会的一项技能',
+    en: 'A Skill I Want to Master',
+    type: '记叙/说明',
+    target: '150–200 词',
+    tips: ['开头点明你想学的一项具体技能和想学它的真实原因。', '写清打算怎么学：每周时间安排、可用的资源、第一步从哪里开始。', '想象学会之后的一个场景，写出它会给你的生活带来的具体变化。'],
+    checklist: ['技能是否具体，例如游泳、做幻灯片，而不是“很多东西”？', '学习计划里有没有马上就能执行的第一步？', '是否说明了这项技能对你的意义？'],
   },
 ];

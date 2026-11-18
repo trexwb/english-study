@@ -75,7 +75,7 @@ export default function Home({ data, todayData, liveStreak, onNavigate, onOpenSe
     { id: 'learn', title: '背单词', en: 'Vocabulary', desc: `${counts.due + counts.fresh} 个待学习`, icon: 'cards', tint: 'green', onClick: () => onNavigate('words', { mode: 'study' }) },
     { id: 'dictation', title: '默写', en: 'Dictation', desc: '听音拼写，检验记忆', icon: 'headphones', tint: 'amber', onClick: () => onNavigate('words', { mode: 'dictation' }) },
     { id: 'grammar', title: '语法', en: 'Grammar', desc: `${grammarLessons.length - grammarDone} 节待解锁`, icon: 'book', tint: 'blue', onClick: () => onNavigate('grammar') },
-    { id: 'phrases', title: '短语', en: 'Phrases', desc: `${phraseDone} / 40 已掌握`, icon: 'layers', tint: 'rose', onClick: () => onNavigate('studio', { view: 'phrases' }) },
+    { id: 'phrases', title: '短语', en: 'Phrases', desc: `${phraseDone} / ${phrases.length} 已掌握`, icon: 'layers', tint: 'rose', onClick: () => onNavigate('studio', { view: 'phrases' }) },
     { id: 'writing', title: '作文', en: 'Writing', desc: `${writingDone} / 4 篇练笔`, icon: 'pen', tint: 'violet', onClick: () => onNavigate('studio', { view: 'writing' }) },
     { id: 'reading', title: '原著', en: 'Reading', desc: `${readingDone} / ${totalReading} 段已读`, icon: 'bookmark', tint: 'teal', onClick: () => onNavigate('reading') },
   ];
