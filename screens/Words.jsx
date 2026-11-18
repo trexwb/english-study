@@ -4,6 +4,8 @@ import { buildWordQueue, dictationQueue, wordCounts } from '../useStudy.js';
 import { speak } from '../utils.js';
 import { Chip, Icon, ScreenHeader, Segmented, SpeakButton } from '../ui.jsx';
 
+const LIST_PAGE = 80;
+
 const statusFor = (progress, today) => {
   if (!progress) return { label: '新词', tone: 'new' };
   if (progress.box >= 4) return { label: '已掌握', tone: 'mastered' };
@@ -188,6 +190,7 @@ export default function Words({ data, actions, intent }) {
   const [mode, setMode] = useState(intent?.mode || 'study');
   const [deck, setDeck] = useState('all');
   const [search, setSearch] = useState('');
+  const [shown, setShown] = useState(LIST_PAGE);
   const [expanded, setExpanded] = useState(null);
   const [session, setSession] = useState(null);
   const [dictDeck, setDictDeck] = useState('all');
@@ -208,6 +211,10 @@ export default function Words({ data, actions, intent }) {
   }, [data]);
   const allCounts = { ...wordCounts(data, 'all'), byDeck };
   const goal = data.settings.dailyGoal || 10;
+
+  useEffect(() => {
+    setShown(LIST_PAGE);
+  }, [deck, search]);
 
   useEffect(() => {
     if (!intent) return;
@@ -295,6 +302,8 @@ export default function Words({ data, actions, intent }) {
     if (!query) return pool;
     return pool.filter((word) => word.w.toLowerCase().includes(query) || word.zh.includes(query));
   }, [deck, search]);
+
+  const visibleWords = filteredWords.slice(0, shown);
 
   return (
     <div className="screen words-screen">
@@ -402,9 +411,11 @@ export default function Words({ data, actions, intent }) {
             {decks.map((item) => <Chip key={item.id} active={deck === item.id} onClick={() => setDeck(item.id)}>{item.name}</Chip>)}
           </div>
 
-          <p className="list-count">共 {filteredWords.length} 个单词</p>
+          <p className="list-count">
+            共 {filteredWords.length} 个单词{filteredWords.length > visibleWords.length ? `，已显示 ${visibleWords.length} 个` : ''}
+          </p>
           <div className="word-list">
-            {filteredWords.map((word) => {
+            {visibleWords.map((word) => {
               const progress = data.wordProgress[word.w];
               const status = statusFor(progress, todayKey());
               const open = expanded === word.w;
@@ -442,6 +453,12 @@ export default function Words({ data, actions, intent }) {
               </div>
             )}
           </div>
+
+          {filteredWords.length > visibleWords.length && (
+            <button type="button" className="secondary-button wide-button load-more-button" onClick={() => setShown((n) => n + LIST_PAGE)}>
+              加载更多（还剩 {filteredWords.length - visibleWords.length} 个）
+            </button>
+          )}
         </div>
       )}
 

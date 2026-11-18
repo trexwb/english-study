@@ -1,0 +1,592 @@
+  {
+    id: 'g29',
+    title: '非限制性定语从句：which / as 与介词 + which',
+    en: 'Non-restrictive Relative Clauses',
+    level: '高阶',
+    exam: '高考',
+    mins: 8,
+    intro: '逗号一加，从句就从“限定身份”变成“补充说明”。这种从句有三条硬规矩：不用 that，不省关系词，which 还能指代前面整句话。',
+    sections: [
+      {
+        h: '非限制性从句只补充信息，前面必须有逗号',
+        body: '它给主语附带补一句说明，删掉之后主句意思仍然完整，所以它与主句之间一定用逗号隔开。先行词本来就是唯一的那一个（我姑姑、这条街上的书店）时，只能用这种从句来补充。指人用 who / whom / whose，指物用 which，绝不能用 that，关系词也不能省略。',
+        examples: [
+          { en: 'My aunt, who is nearly sixty, still learns Italian online.', zh: '我姑姑快六十岁了，还在网上学意大利语。' },
+          { en: 'The little bookshop, which has stood on this street for a century, is closing next month.', zh: '那家在这条街开了一百年的小书店下个月要关门了。' },
+        ],
+      },
+      {
+        h: 'which 指整件事，as 表示“正如”',
+        body: 'which 可以指代前面一整个主句，语气里常带评价或意外。as 同样指整句，但意思是“正像、正如”，位置更灵活，能放在主句之前。高考阅读里常见的搭配有 as we expected、as often happens、as is known to all。',
+        examples: [
+          { en: 'As we had feared, the whole match was called off.', zh: '正如我们担心的那样，整场比赛被取消了。' },
+          { en: 'He passed the exam in his first month, which surprised even his own parents.', zh: '他第一个月就通过了考试，这连他父母都感到意外。' },
+        ],
+      },
+      {
+        h: '介词 + which 与“几个 + of which”',
+        body: '介词提到关系词前面时，指物只能用 which，不能换成 that；指人则用 whom。想说“其中几个、大多数”时，用 many / most / several / none + of which，指人用 of whom。这是书面表达里很好用的加分句型，但前提是句子读得通，别为了用而用。',
+        examples: [
+          { en: 'The old house in which Mo Yan grew up has become a reading room.', zh: '莫言长大的那所老房子已经变成了阅览室。' },
+          { en: 'She keeps dozens of postcards, several of which were drawn by her own students.', zh: '她留着几十张明信片，其中好几张是她自己的学生画的。' },
+        ],
+      },
+    ],
+    pitfall: '逗号后面的从句里不写 that，也不省关系词：My brother, that lives in Shanghai, is a pilot. 是错的，要改成 My brother, who lives in Shanghai, is a pilot. 另外 as 引导的“正如”从句可以放在句首，which 不行。',
+    quiz: [
+      {
+        q: 'My uncle is crazy about collecting old bus tickets, ____ I find rather hard to understand.',
+        opts: ['that', 'which', 'it', 'what'],
+        a: 1,
+        explain: '逗号后的从句指代前面整件事，非限制性定语从句只能用 which，that 不进这种从句。',
+      },
+      {
+        q: '____ everybody can see, a good habit saves more time than it costs.',
+        opts: ['Which', 'It', 'That', 'As'],
+        a: 3,
+        explain: '从句放在主句前、意思是“正如”，只能用 as；which 引导的非限制性从句不能提到句首。',
+      },
+      {
+        q: 'The little theatre, in front of ____ stood only a few wooden chairs, is now a coffee shop.',
+        opts: ['which', 'that', 'it', 'whose'],
+        a: 0,
+        explain: '介词后面指物只能用 which，that 不能紧跟介词；填 it 会让一个句子里出现两个谓语。',
+      },
+      {
+        q: 'Our English teacher, ____ has published three books about local customs, comes from a mountain village.',
+        opts: ['that', 'which', 'who', 'whom'],
+        a: 2,
+        explain: '先行词是人、关系词在从句中作主语，用 who；whom 只能作宾语，that 不能进非限制性从句。',
+      },
+      {
+        q: 'She wrote a long letter to her cousin, most of ____ was about the new school.',
+        opts: ['them', 'that', 'it', 'which'],
+        a: 3,
+        explain: 'most of 后接 which 指代那封信的内容，构成非限制性从句；填 them 就成了只用逗号相连的两个句子。',
+      },
+      {
+        q: 'The old bridge across the river, ____ dates back to the Ming Dynasty, is still open to traffic.',
+        opts: ['where', 'which', 'that', 'when'],
+        a: 1,
+        explain: '从句缺主语，用 which 指代 bridge；where 和 when 在从句里只能作状语，填进去仍然缺主语。',
+      },
+    ],
+  },
+  {
+    id: 'g30',
+    title: '同位语从句与定语从句：一句之差怎么判',
+    en: 'Appositive Clauses vs Relative Clauses',
+    level: '高阶',
+    exam: '高考',
+    mins: 8,
+    intro: '两种从句都能跟在名词后面，区别只看一件事：从句里缺不缺成分。缺成分的是定语从句，不缺的是同位语从句。',
+    sections: [
+      {
+        h: '同位语从句说出抽象名词的内容',
+        body: 'news、fact、idea、hope、question、suggestion、doubt、proof 这些抽象名词后面，可以跟一个完整的句子，说明它具体是什么。这里的 that 只起连接作用，在从句里不作任何成分，也因此在高考书面表达里不要省略。判断方法：把从句单独读一遍，主语、宾语、表语都齐了，它就是同位语从句。',
+        examples: [
+          { en: 'The fact that the little stone bridge still stands surprises the engineers.', zh: '那座小桥依然屹立这一事实让工程师们吃惊。' },
+          { en: 'His dream that one day he will teach in a mountain school never faded.', zh: '他有朝一日去山区学校教书的梦想从未褪色。' },
+        ],
+      },
+      {
+        h: '定语从句里的 that 必须顶一个成分',
+        body: '如果从句本身缺主语或宾语，关系词就要进去填这个位置，这时它是定语从句，作用是限定前面的名词。做法是把名词挪进从句读一遍：能当主语或宾语的，就是定语从句。定语从句里 that 作宾语时常可省略，同位语从句里的那个 that 却不能。指人用 who，指物用 that / which，what 两者都不能引导。',
+        examples: [
+          { en: 'The news that our monitor told us this morning proved wrong.', zh: '班长今早告诉我们的那条消息后来证明是错的。' },
+          { en: 'The suggestion that our monitor gave us this morning is useful.', zh: '班长今早给我们的那条建议很有用。' },
+        ],
+      },
+      {
+        h: 'whether 能进同位语，if 和 what 不行',
+        body: '名词本身表示悬而未决的事情时，同位语从句用 whether 表“是否”，不用 if。what 必须在从句里作成分，所以它带不出一个完整的同位语从句。when、where、who、what 也能跟在 question、idea 后面，但要按从句缺什么来选：缺状语选 when / where，缺主语宾语才选 what。',
+        examples: [
+          { en: 'I have no idea whether the museum opens on Mondays.', zh: '我不知道博物馆周一是否开放。' },
+          { en: 'The question when the new library will open is still on the board.', zh: '新图书馆何时开放，这个问题还挂在公告板上。' },
+        ],
+      },
+    ],
+    pitfall: '同位语从句的 that 别省，也别换成 what：写作里 the fact he left early 不如 the fact that he left early 稳。另外 if 不能引导同位语从句，the news if we won 是错的，表“是否”只有 whether 能跟在 news、question 后面。',
+    quiz: [
+      {
+        q: 'The fact ____ our little team beat the champions has been talked about for a whole week.',
+        opts: ['which', 'that', 'what', 'where'],
+        a: 1,
+        explain: '从句主语、宾语都齐全，空格只负责引出 fact 的内容，that 不作成分，这是同位语从句。',
+      },
+      {
+        q: 'The story ____ Grandpa told us last night turned out to be a newspaper report.',
+        opts: ['why', 'when', 'that', 'what'],
+        a: 2,
+        explain: 'told 后面缺宾语，that 顶替 story 在从句里作成分，是定语从句，口语中还可以省略。',
+      },
+      {
+        q: 'There is still some doubt ____ the opening ceremony will be held in the rain.',
+        opts: ['that', 'which', 'whether', 'what'],
+        a: 2,
+        explain: 'doubt 用于肯定句时接 whether 表“是否”；that 表示内容是确定的，与“仍有疑问”矛盾。',
+      },
+      {
+        q: 'We have not settled the question ____ the museum is open to visitors on Monday.',
+        opts: ['if', 'that', 'which', 'whether'],
+        a: 3,
+        explain: '同位语从句里表“是否”只能用 whether，if 不能引导同位语从句。',
+      },
+      {
+        q: 'His mother has no idea ____ he has put all his pocket money.',
+        opts: ['what', 'that', 'where', 'whether'],
+        a: 2,
+        explain: 'put 的宾语 all his pocket money 已经给出，从句只缺地点，所以用 where 补足 idea 的内容。',
+      },
+      {
+        q: 'Which of the following sentences is correct?',
+        opts: ['The suggestion that we plant trees on the hill is practical.', 'The suggestion if we plant trees on the hill is practical.', 'The suggestion what we plant trees on the hill is practical.', 'The suggestion who we plant trees on the hill is practical.'],
+        a: 0,
+        explain: '同位语从句用 that 引出 suggestion 的内容；if 不能引导同位语从句，what 又必须在从句里作成分。',
+      },
+    ],
+  },
+  {
+    id: 'g31',
+    title: '省略句：从句省主语、并列省重复、答句留 to',
+    en: 'Ellipsis',
+    level: '进阶',
+    exam: '高考',
+    mins: 7,
+    intro: '省略不是偷懒，而是把重复的部分删掉。三条底线：主语必须与主句一致，be 动词要在场，答句里的 to 不能丢。',
+    sections: [
+      {
+        h: '状语从句省掉“主语 + be”',
+        body: 'when、while、if、unless、once、though、as if 引导的状语从句，如果主语和主句主语相同、谓语里又有 be，就可以把“主语 + be”一起删，只留分词、形容词或不定式。删掉之后必须能原样补回去，否则不能省。被动关系留过去分词，主动关系留现在分词。',
+        examples: [
+          { en: 'When asked about the accident, the driver said nothing at all.', zh: '被问起那场事故时，司机什么也没说。' },
+          { en: 'Unless otherwise invited, do not bring anyone to the rehearsal.', zh: '除非另有邀请，否则不要带任何人来排练。' },
+        ],
+      },
+      {
+        h: '并列句里省掉重复的主语和谓语',
+        body: 'and、but、or 连接的分句，主语相同就只写一次。助动词或系动词后面与前面完全相同的动词短语也可以省，只留助动词，如 He can swim but she can’t。否定对照还常写成 not ... but ...，前半句的内容靠上下文凭着补回来。',
+        examples: [
+          { en: 'Tom washed the dishes and his sister dried them.', zh: '汤姆洗碗，他姐姐把碗擦干。' },
+          { en: 'He accepted the plan but said nothing about the cost.', zh: '他接受这个方案，但对费用一事只字未提。' },
+        ],
+      },
+      {
+        h: '答句保留 to，so 与 not 代替整句',
+        body: '省略不定式后面的动词时，to 必须留着：I’d love to、He didn’t do it, though he tried to。I hope so 与 I’m afraid not 用 so 或 not 顶替整个从句，避免重复。还要注意还原：主动句 make sb do sth 变被动后，被省掉的 to 要回来，写成 be made to do。',
+        examples: [
+          { en: 'Did you lock the door? I meant to, but I forgot.', zh: '你锁门了吗？我本打算锁，结果忘了。' },
+          { en: 'The pupil was made to repeat the whole dialogue twice.', zh: '那个小学生被迫把整段对话重复了两遍。' },
+        ],
+      },
+    ],
+    pitfall: '省主语的前提是从句主语就是主句主语。While reading the novel, the lamp went out. 错在读小说的人不是 the lamp，把主语补回去写成 While I was reading the novel 才对。另外答句里不能把 to 丢掉，I’d love 后面必须留着 to。',
+    quiz: [
+      {
+        q: 'When ____ about the trip, the children shouted with joy.',
+        opts: ['told', 'they told', 'telling', 'was told'],
+        a: 0,
+        explain: 'When told 等于 When they were told：从句主语与主句一致、谓语含 be，才能把“主语 + be”一起删；孩子们是“被告知”，用过去分词。',
+      },
+      {
+        q: 'Would you like to swim with us? I’d love ____, but I have to finish my homework first.',
+        opts: ['it', 'do', 'going', 'to'],
+        a: 3,
+        explain: '答句里省略不定式的内容时，to 必须留着，只能说 I’d love to。',
+      },
+      {
+        q: 'While ____ the old photos, she kept telling us where each one had been taken.',
+        opts: ['she looked at', 'looking at', 'looked at', 'she looking at'],
+        a: 1,
+        explain: 'While looking at 等于 While she was looking at，主语一致才能省；她主动看照片，用现在分词。',
+      },
+      {
+        q: 'Which sentence is NOT correct?',
+        opts: ['If heated, water turns into steam.', 'If it is heated, water turns into steam.', 'Heated the water, it turns into steam.', 'When heated, water turns into steam.'],
+        a: 2,
+        explain: 'Heated the water 不是省略结构，主语 it 与 heat 对不上。水是“被加热”的，正确写法是 If 或 When heated。',
+      },
+      {
+        q: 'The teacher praised Lucy for her essay and ____ Jim a few words of encouragement.',
+        opts: ['gave', 'give', 'giving', 'was given'],
+        a: 0,
+        explain: 'and 后的分句与前面主语相同，主语 the teacher 只写一次；并列的第二个谓语直接用过去式 gave。',
+      },
+      {
+        q: 'Unless ____ in advance, the tickets cannot be changed.',
+        opts: ['you book', 'booking', 'booked', 'to book'],
+        a: 2,
+        explain: 'Unless booked 等于 Unless they are booked：票是“被预订”的，用过去分词；主语与主句一致才能这样省。',
+      },
+    ],
+  },
+  {
+    id: 'g32',
+    title: '构词法（上）：前缀定方向，后缀定词性',
+    en: 'Word Formation I: Prefixes and Suffixes',
+    level: '进阶',
+    exam: '高考',
+    mins: 6,
+    intro: '生词不查词典也能猜个大概：前缀给方向，后缀给词性，中间是词根。阅读时把这三块拆开，意思就露出来了。',
+    sections: [
+      {
+        h: '否定前缀：un- / in- / im- / il- / ir- / dis- / mis-',
+        body: 'un- 最通用，常加在形容词和分词前：unfair、unknown。in- 这一组多用于拉丁来源的词，按首字母挑：im- 用在 p、b、m 前（impossible），il- 用在 l 前（illegal），ir- 用在 r 前（irregular）。dis- 否定动作或态度，如 disagree、disappear。mis- 不是“不做”，而是“做错”：misread、misunderstand。',
+        examples: [
+          { en: 'The instructions were so unclear that half the class answered the wrong questions.', zh: '题目说明太不清楚，半个班都答错了题。' },
+          { en: 'Nobody noticed that the map had been labelled wrongly.', zh: '没有人发现这张地图被标错了。' },
+        ],
+      },
+      {
+        h: '程度与方向前缀：over- / under- / re- / pre- / sub- / ex-',
+        body: 'over- 是“过头”，under- 是“不够”，两个方向正好相反：overestimate 与 underestimate、overweight 与 underweight。re- 表“再一次”，pre- 表“事先”，sub- 表“在……下面”，ex- 表“前任”。这类前缀只改意思，不改词性，词性由后面的部分决定。',
+        examples: [
+          { en: 'We overestimated the distance and walked four hours without any water.', zh: '我们高估了这段路，没带水就走了四个小时。' },
+          { en: 'The ex-manager still drops by the shop, though he retired last spring.', zh: '前任经理虽然去年春天退休了，还是常到店里来。' },
+        ],
+      },
+      {
+        h: '后缀定词性：-tion / -ment / -ance / -ness / -ity',
+        body: '动词变名词最常加 -tion 或 -sion：develop 成 development，decide 成 decision。加 -ment 的有 movement、agreement、punishment。加 -ance / -ence 的有 performance、confidence、absence。形容词变名词加 -ness 或 -ity：kind 成 kindness，able 成 ability。看到这些尾巴，先按它在该句里的语法位置验证一下是不是名词。',
+        examples: [
+          { en: 'The development of the village brought back a lot of young people.', zh: '村里的发展把许多年轻人引了回来。' },
+          { en: 'Her refusal to explain the rule made the whole class confused.', zh: '她拒绝解释这条规则，这让全班同学都很困惑。' },
+        ],
+      },
+    ],
+    pitfall: '否定前缀不能随便换：impossible 不写 unpossible，irregular 不写 unregular，这些搭配是固定的。也别以为有 un- 就一定是否定：unlike 是介词“和……不同”，mistake 是“做错”而不是“没做”。',
+    quiz: [
+      {
+        q: 'The exam instructions were ____, so half the class answered the wrong questions.',
+        opts: ['unable', 'unreading', 'unreadable', 'unreads'],
+        a: 2,
+        explain: 'readable 表“读得懂的”，前面加 un- 变否定；-able 这个后缀说明它是“能被……的”。',
+      },
+      {
+        q: 'He ____ the timetable and waited for a bus that never came.',
+        opts: ['misread', 'misunderstood', 'mistaken', 'overread'],
+        a: 0,
+        explain: 'mis- 表“做错”，misread the timetable 就是“把时刻表看错了”；misunderstand 一般接话或人的意思，不接表册。',
+      },
+      {
+        q: 'The ____ of the new rules took three months, because nobody wanted to change an old habit.',
+        opts: ['implementing', 'implementation', 'implementable', 'implement'],
+        a: 1,
+        explain: '空格在句首作主语，后面还有 of，需要名词 implementation；implementing 之后应直接跟宾语，不接 of。',
+      },
+      {
+        q: 'The tent fell because the two ropes were ____, each holding more than it could bear.',
+        opts: ['overlooked', 'underused', 'overgrown', 'overloaded'],
+        a: 3,
+        explain: 'over- 表“超出”，overloaded 是“负荷太重”，与“每根绳子都承受了太多”呼应；overgrown 指“长满”。',
+      },
+      {
+        q: 'Her ____ in front of the class grew a lot during the second term.',
+        opts: ['confidence', 'confidently', 'confident', 'confidential'],
+        a: 0,
+        explain: '物主代词 Her 后面要接名词，-ence 是 confidence 的名词后缀；confident 是形容词，confidential 意思不同。',
+      },
+      {
+        q: 'The damage is ____ to repair, so the museum ordered a copy instead.',
+        opts: ['unpossible', 'dispossible', 'impossible', 'inpossible'],
+        a: 2,
+        explain: '以 p 开头的词用 im- 表否定，impossible 是唯一成立的搭配，其余三个前缀都不能接 possible。',
+      },
+    ],
+  },
+  {
+    id: 'g33',
+    title: '构词法（下）：合成词、词性转换与写作升级',
+    en: 'Word Formation II: Compounds and Conversion',
+    level: '进阶',
+    exam: '高考',
+    mins: 6,
+    intro: '把两个现成的词拼在一起，或者让名词直接当动词用，是英语造新词最常用的两招，也是作文里让用词升一级的入口。',
+    sections: [
+      {
+        h: '合成名词与合成形容词',
+        body: '合成词有三种写法：连在一起（notebook、teenager）、带连字符（warm-hearted、after-class）、分开写（high school）。合成形容词里的名词不用复数，也不加 -s：a five-year-old boy、a ten-metre rope。合成名词变复数时只变主要的那个名词：passer-by 成 passers-by，son-in-law 成 sons-in-law。',
+        examples: [
+          { en: 'Two passers-by stopped their bikes to help the old woman pick up the apples.', zh: '两个路人停下自行车，帮那位老太太捡苹果。' },
+          { en: 'The twelve-year-old girl has already won three swimming races.', zh: '这个十二岁的女孩已经赢过三场游泳比赛了。' },
+        ],
+      },
+      {
+        h: '名词直接当动词，形容词靠后缀',
+        body: '词性转换不加任何词尾：shoulder 从“肩膀”变“用肩扛”，water 从“水”变“浇水”，empty 从“空的”变“倒空”。形容词后缀里，-ful 表“充满”，-less 表“没有”：hopeful 与 hopeless、careful 与 careless。-y、-ish、-ous 也常从名词派生：rain 成 rainy，child 成 childish，danger 成 dangerous。',
+        examples: [
+          { en: 'She shouldered her bag and left without saying goodbye.', zh: '她背起包，连再见都没说就走了。' },
+          { en: 'One careless mistake made the whole experiment useless.', zh: '一个粗心的错误让整个实验白费了。' },
+        ],
+      },
+      {
+        h: '写作里的用词升级',
+        body: '把短语换成派生词，句子立刻紧凑：full of hope 说成 hopeful，without limit 说成 limitless。形容词或名词加 -ize 变成“使……化”的动词：modernize、organize、specialize。同义词也要按书面程度换：good 换 beneficial，bad 换 harmful，many 换 numerous，get 换 obtain。',
+        examples: [
+          { en: 'The school modernized its science lab over the summer holiday.', zh: '学校暑假期间把科学实验室升级了。' },
+          { en: 'Regular exercise is beneficial to the heart, while sitting too long is harmful.', zh: '规律运动对心脏有益，久坐则有害。' },
+        ],
+      },
+    ],
+    pitfall: '合成形容词里的名词不带复数：a five-years-old boy 是错的，要写 a five-year-old boy。加后缀时也常丢字母：hope 加 less 是 hopeless 不是 hopless，care 加 less 是 careless，-ful 只有一个 l。',
+    quiz: [
+      {
+        q: 'A ____ bridge was built over the river last year.',
+        opts: ['200-metre-long', '200 metres long', '200-metres-long', '200-long-metre'],
+        a: 0,
+        explain: '带连字符的合成形容词里名词用单数，整个结构放在名词前作定语。',
+      },
+      {
+        q: 'Two ____ stopped their bikes to help the old woman pick up the apples.',
+        opts: ['passer-bys', 'passers-by', 'passers-bys', 'passerbys'],
+        a: 1,
+        explain: '合成名词变复数只变主要的那个名词，passer 变 passers，by 不动。',
+      },
+      {
+        q: 'Our new PE teacher is a ____ young man who never says no to a game.',
+        opts: ['looking-good', 'looking-nice', 'nice-looked', 'good-looking'],
+        a: 3,
+        explain: '合成形容词是“修饰成分 + 分词”，look 用现在分词表主动，good-looking 是习惯说法。',
+      },
+      {
+        q: 'The meeting went on for three hours without any decision; it seemed ____.',
+        opts: ['countless', 'limitless', 'endless', 'hopeless'],
+        a: 2,
+        explain: 'endless 是“没完没了的”，正对开了三小时还没结论；countless 修饰可数事物的数量，limitless 指“无极限”。',
+      },
+      {
+        q: 'On the way to the station she asked me to ____ her bag while she bought the tickets.',
+        opts: ['shouldered', 'shoulders', 'shoulder on', 'shoulder'],
+        a: 3,
+        explain: 'shoulder 由名词“肩膀”直接当动词用，表“用肩扛”；ask sb to 后接动词原形。',
+      },
+      {
+        q: 'The town has ____ its old market twice since 2010.',
+        opts: ['modern', 'modernized', 'modernization', 'modernise'],
+        a: 1,
+        explain: 'has 后面要用过去分词，-ize 让 modern 变成“使……现代化”的动词；modernise 是原形，接在 has 后不成立。',
+      },
+    ],
+  },
+  {
+    id: 'g34',
+    title: '情态动词表推测：must be 与 must have done',
+    en: 'Modals for Deduction',
+    level: '高阶',
+    exam: '高考',
+    mins: 8,
+    intro: '推测题只看两件事：把握有多大，推测的是现在还是过去。把握从大到小是 must、will、may / might；有把握地否定，只能交给 can’t。',
+    sections: [
+      {
+        h: '对现在：must be / can’t be / may be',
+        body: 'must do 表“肯定如此”，把握最大。can’t do 表“不可能”，是有把握的否定推测。may 与 might 表“也许”，might 更没把握，could 也能表这种可能。mustn’t 是“禁止”，needn’t 是“不必”，它们都不表推测，所以否定的推测不能用 mustn’t 顶替 can’t。',
+        examples: [
+          { en: 'The light in his office is still on, so he must be working late.', zh: '他办公室的灯还亮着，他一定在加班。' },
+          { en: 'It can’t be Auntie May at the door; she is in Guangzhou all this week.', zh: '门口不可能是梅阿姨，她这整周都在广州。' },
+        ],
+      },
+      {
+        h: '对过去：must have done / can’t have done',
+        body: '推测过去发生的事，用“情态动词 + have done”。must have done 是“一定做过”，can’t 或 couldn’t have done 是“不可能做过”，may 与 might have done 是“也许做过”。线索通常藏在前面那句的结果或证据里，时态上还要与“过去”对得上。',
+        examples: [
+          { en: 'The road was closed, so the coach must have taken the long way round.', zh: '路被封了，大巴一定绕了远路。' },
+          { en: 'You did nothing all afternoon, so you can’t have finished the report yet.', zh: '你整个下午什么都没做，不可能已经写完了报告。' },
+        ],
+      },
+      {
+        h: '与事实相反：should / could / needn’t have done',
+        body: 'should have done 是“本该做却没做”，常带责怪口气。could have done 是“当时本有条件做到，但没做成”。needn’t have done 表示“做了，其实没必要”，而 didn’t need to do 表示“没必要做，所以没做”。这一组是高考单选题和短文改错的高频考点。',
+        examples: [
+          { en: 'I should have checked the time; I arrived twenty minutes late.', zh: '我本该先看一下时间的，结果迟到了二十分钟。' },
+          { en: 'You needn’t have brought coffee, since there were three boxes in the kitchen.', zh: '你其实不必带咖啡来，厨房里本来就有三箱。' },
+        ],
+      },
+    ],
+    pitfall: '把 mustn’t have done 当成“一定没做过”是错的：否定过去的推测要用 can’t 或 couldn’t have done。另外 must have done 是“我猜他做过”，should have done 是“他本该做却没做”，差一个词，事实正好相反。',
+    quiz: [
+      {
+        q: 'Look at the empty plate and the dog beside the window. It ____ the last biscuit again.',
+        opts: ['must have eaten', 'must eat', 'should eat', 'had to eat'],
+        a: 0,
+        explain: '证据就在眼前，推测的是刚才发生的事，用 must 加 have done 表“过去一定做过”。',
+      },
+      {
+        q: 'It ____ be Uncle Chen driving that car; he has never learned to drive.',
+        opts: ['needn’t', 'mustn’t', 'won’t', 'can’t'],
+        a: 3,
+        explain: '有把握地否定推测只能用 can’t；mustn’t 表“禁止”，needn’t 表“不必”，都不是推测。',
+      },
+      {
+        q: 'The letter came this morning, but I am not sure who wrote it. It ____ from my old host family.',
+        opts: ['must have come', 'can’t have come', 'might have come', 'need have come'],
+        a: 2,
+        explain: '不确定是谁写的，把握不大的过去推测用 might have done；must have done 太肯定。',
+      },
+      {
+        q: 'The ground is wet all over. It ____ all night.',
+        opts: ['may rain', 'must have rained', 'had rained', 'must be raining'],
+        a: 1,
+        explain: '现在的地面是证据，推测的是过去一整夜的事，用 must have rained；must be raining 说的是此刻正在下。',
+      },
+      {
+        q: 'We carried six bottles of water for a ten-minute walk. We ____ them.',
+        opts: ['mustn’t have taken', 'can’t have taken', 'needn’t have taken', 'shouldn’t take'],
+        a: 2,
+        explain: '水确实带了，只是本无必要，用 needn’t have done；can’t have taken 会否认真带过这件事。',
+      },
+      {
+        q: 'You had the whole afternoon free. You ____ me a hand, but you went out to play football.',
+        opts: ['should help', 'must have helped', 'had to help', 'could have helped'],
+        a: 3,
+        explain: '当时有条件帮忙却没有做，用 could have done；该责备“本该帮”要用 should have helped。',
+      },
+    ],
+  },
+  {
+    id: 'g35',
+    title: '时态补全：完成进行时、过去将来与将来两处时限',
+    en: 'Further Tenses: Perfect Continuous and Future Forms',
+    level: '高阶',
+    exam: '高考',
+    mins: 9,
+    intro: '这四个时态都能靠时间词认出来：for 和 since 找完成进行时，by 加将来时间找将来完成，this time tomorrow 找将来进行。',
+    sections: [
+      {
+        h: '现在完成进行时 have been doing',
+        body: '结构是 have / has been 加 doing，动作从过去开始、一直做到现在，往往刚停或还在继续，并留下看得见的痕迹。它与现在完成时的区别在于强调过程和时长，所以动词必须能延续：wait、rain、study、cook 可以，buy、die、join 这类瞬间动词不行，要说 has been dead 而不是 has been dying。',
+        examples: [
+          { en: 'Mum has been cooking since six, and the whole flat smells of soup.', zh: '妈妈从六点起就在做饭，整套房子都是汤的味道。' },
+          { en: 'Your eyes are red. Have you been crying again?', zh: '你眼睛红了，是不是又哭了？' },
+        ],
+      },
+      {
+        h: '过去将来时 would do 与 was going to do',
+        body: '站在过去某个时间点看以后，就是过去将来时，常出现在转述和叙事里：he said he would come。was 或 were going to 还多一层“本打算做却没做成”的意思。was to do 表“原定、注定”，was about to do 表“正要”，后两者在完形填空里也常考。',
+        examples: [
+          { en: 'Dad promised that he would take us to Tibet the following summer.', zh: '爸爸答应第二年夏天带我们去西藏。' },
+          { en: 'We were going to visit the science museum, but the tickets sold out by nine.', zh: '我们本打算去科技馆，可九点钟票就卖光了。' },
+        ],
+      },
+      {
+        h: '将来进行 will be doing 与将来完成 will have done',
+        body: 'will be doing 说将来某一时刻正在进行，信号词是 this time next Sunday、at eight tomorrow evening。will have done 说到将来某一点之前已经做完，信号词是 by the end of、by nine o’clock、by the time 加从句。by 后面如果接的是过去时间点，就要改用过去完成时。',
+        examples: [
+          { en: 'This time tomorrow I will be flying to Chengdu, so I can’t meet you tonight.', zh: '明天这个时候我正飞往成都，所以今晚见不了你。' },
+          { en: 'By the end of this term we will have learned about two thousand words.', zh: '到本学期末，我们将学完大约两千个单词。' },
+        ],
+      },
+    ],
+    pitfall: '两个高频错：一是把瞬间动词放进完成进行时，写出 He has been dying for two years，应改为 He has been dead for two years；二是看到 by the end of last term 还用将来完成，那是过去的时间点，要用过去完成时。',
+    quiz: [
+      {
+        q: 'The kitchen is in a mess and Mum is still inside. She ____ cakes all morning.',
+        opts: ['baked', 'has been baking', 'has been baked', 'is baked'],
+        a: 1,
+        explain: 'all morning 延续到说话的此刻，还留下看得见的痕迹，用 have been doing；主语是人，不用被动。',
+      },
+      {
+        q: 'This time next Sunday I ____ on the beach, so I cannot answer any emails for you.',
+        opts: ['will lie', 'have lain', 'am lying', 'will be lying'],
+        a: 3,
+        explain: 'this time next Sunday 指向将来某一时刻正在进行，用 will be doing。',
+      },
+      {
+        q: 'By the end of this term the school ____ the whole playground, so PE lessons will go on as usual.',
+        opts: ['will have resurfaced', 'will be resurfacing', 'has resurfaced', 'is resurfacing'],
+        a: 0,
+        explain: 'by 加将来时间是将来完成的信号，表示到那时动作已经完成，用 will have done。',
+      },
+      {
+        q: 'Dad promised in 2018 that he ____ us to Tibet the following summer.',
+        opts: ['will take', 'takes', 'would take', 'had taken'],
+        a: 2,
+        explain: '从 promised 这个过去时间点看以后，用 would do 表过去将来。',
+      },
+      {
+        q: 'We ____ to watch the evening show, but the tickets sold out before noon.',
+        opts: ['went', 'have gone', 'were going', 'are going'],
+        a: 2,
+        explain: 'were going to 表本打算做却没有做成，后半句票提前卖光正是它没实现的原因。',
+      },
+      {
+        q: 'The whole street is still wet. It ____ for two hours and only stopped a minute ago.',
+        opts: ['has been raining', 'is raining', 'had rained', 'would rain'],
+        a: 0,
+        explain: 'for two hours 强调持续的过程，雨刚停而痕迹还在，用现在完成进行时；had rained 会把下雨推到更早的过去。',
+      },
+    ],
+  },
+  {
+    id: 'g36',
+    title: '主将从现与从句时态配合',
+    en: 'Future in the Main Clause, Present in the Subordinate Clause',
+    level: '进阶',
+    exam: '高考',
+    mins: 7,
+    intro: '时间、条件状语从句里不出现 will，这就是主将从现。但 when 引导宾语从句、if 表示“是否”时 will 必须留着，所以先判断从句种类，再动时态。',
+    sections: [
+      {
+        h: '时间与条件从句用现在时代替将来',
+        body: 'when、while、before、after、as soon as、until、till、unless、once、the moment 引导的时间与条件状语从句，主句说将来，从句用一般现在时表示将来。要强调从句动作先完成时，从句用现在完成时。从句里不写 will，这是高考单选和语法填空最常考的一条。',
+        examples: [
+          { en: 'I will text you as soon as the film begins.', zh: '电影一开演我就给你发信息。' },
+          { en: 'Unless the weather changes, the sports meeting will be held tomorrow morning.', zh: '除非天气有变，运动会明早照常举行。' },
+        ],
+      },
+      {
+        h: '三种必须保留 will 的情况',
+        body: '第一，when 或 if 引导的不是状语从句而是宾语从句时，将来意义照常用 will。第二，从句里的 will 不表将来而表“愿意、偏要”，这时也不能改成现在时。第三，宾语从句里的“是否”由 whether 或 if 承担，它本来就与主将从现无关。',
+        examples: [
+          { en: 'Nobody knows whether the match will be put off by the rain.', zh: '没人知道比赛会不会因为下雨而推迟。' },
+          { en: 'If you will keep talking in class, at least talk in a lower voice.', zh: '你偏要在课上讲话，那至少把声音放低些。' },
+        ],
+      },
+      {
+        h: '宾语从句的时态呼应与例外',
+        body: '主句是过去时，从句要往后退一档：一般现在时变一般过去时，现在完成时变过去完成时，will 变 would。例外是客观真理和科学事实，永远用一般现在时。如果从句说的情况到现在仍然成立，也常用现在时而不退。',
+        examples: [
+          { en: 'Our teacher told us ten years ago that light travels much faster than sound.', zh: '十年前老师就告诉过我们，光比声音快得多。' },
+          { en: 'Kate said she would return my dictionary as soon as she finished the paper.', zh: '凯特说论文一写完就把我的词典还给我。' },
+        ],
+      },
+    ],
+    pitfall: '看到 when 就套主将从现最容易翻车：Do you know when he will arrive? 里的 when 从句是宾语从句，will 不能改成 arrives。同理 if 表“是否”时也保留 will：I wonder if it will snow tomorrow.',
+    quiz: [
+      {
+        q: 'I ____ you the moment the results come out.',
+        opts: ['will tell', 'tell', 'told', 'would tell'],
+        a: 0,
+        explain: 'the moment 引导时间状语从句，从句里已用 comes 表将来，将来意义落在主句的 will tell 上。',
+      },
+      {
+        q: 'Unless the weather ____, the rowing lesson will start at four as usual.',
+        opts: ['will change', 'changed', 'changes', 'is changing'],
+        a: 2,
+        explain: 'unless 条件从句里用一般现在时代替将来，主语 the weather 是第三人称单数，用 changes。',
+      },
+      {
+        q: 'Nobody knew at that time whether the plan ____ in the end.',
+        opts: ['will succeed', 'would succeed', 'succeeds', 'had succeeded'],
+        a: 1,
+        explain: 'whether 引导的是宾语从句，不受主将从现限制；主句 knew 是过去，从句从过去看将来用 would succeed。',
+      },
+      {
+        q: 'Twenty years ago our geography teacher told us that the earth ____ round.',
+        opts: ['was', 'had been', 'would be', 'is'],
+        a: 3,
+        explain: '客观真理不受主句过去时的影响，永远用一般现在时 is。',
+      },
+      {
+        q: 'The new rules will come into force as soon as they ____ by the school board next week.',
+        opts: ['approved', 'will be approved', 'approve', 'are approved'],
+        a: 3,
+        explain: 'as soon as 从句不写 will；规则是“被批准”的，用一般现在时的被动 are approved。',
+      },
+      {
+        q: 'Could you tell me if your cousin ____ to the summer camp next week?',
+        opts: ['goes', 'went', 'will go', 'go'],
+        a: 2,
+        explain: 'if 在这句里是“是否”，引导宾语从句而不是条件从句，下周的事要用 will go。',
+      },
+    ],
+  },

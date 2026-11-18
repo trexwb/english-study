@@ -3,9 +3,11 @@ import { grammarLessons, grammarById } from '../data/grammar.js';
 import { Chip, Icon, LevelBadge, ScreenHeader, SpeakButton } from '../ui.jsx';
 
 const levels = ['全部', '基础', '进阶', '高阶'];
+const exams = ['全部', '中考', '高考'];
 
 export default function Grammar({ data, actions }) {
   const [level, setLevel] = useState('全部');
+  const [exam, setExam] = useState('全部');
   const [selectedId, setSelectedId] = useState(null);
   const [step, setStep] = useState(0);
   const [picked, setPicked] = useState(null);
@@ -13,7 +15,8 @@ export default function Grammar({ data, actions }) {
   const [done, setDone] = useState(false);
 
   const selected = selectedId ? grammarById[selectedId] : null;
-  const filtered = level === '全部' ? grammarLessons : grammarLessons.filter((lesson) => lesson.level === level);
+  const byLevel = level === '全部' ? grammarLessons : grammarLessons.filter((lesson) => lesson.level === level);
+  const filtered = exam === '全部' ? byLevel : byLevel.filter((lesson) => (lesson.exam || '通用') === exam);
   const doneCount = Object.keys(data.grammarDone).length;
 
   useEffect(() => {
@@ -197,6 +200,11 @@ export default function Grammar({ data, actions }) {
         {levels.map((item) => <Chip key={item} active={level === item} onClick={() => setLevel(item)}>{item}</Chip>)}
       </div>
 
+      <div className="chip-row exam-chips">
+        {exams.map((item) => <Chip key={item} active={exam === item} onClick={() => setExam(item)}>{item === '全部' ? '全部考段' : `冲刺${item}`}</Chip>)}
+        <span className="chip-hint">{filtered.length} 节</span>
+      </div>
+
       <div className="lesson-list">
         {filtered.map((lesson) => {
           const record = data.grammarDone[lesson.id];
@@ -206,6 +214,7 @@ export default function Grammar({ data, actions }) {
               <span className="lesson-card-copy">
                 <span className="lesson-card-top">
                   <LevelBadge tone={lesson.level === '基础' ? 'green' : lesson.level === '进阶' ? 'amber' : 'rose'}>{lesson.level}</LevelBadge>
+                  {lesson.exam && lesson.exam !== '通用' && <LevelBadge tone={lesson.exam === '中考' ? 'teal' : 'blue'}>{lesson.exam}</LevelBadge>}
                   <span className="muted tiny"><Icon name="clock" size={13} /> {lesson.mins} 分钟</span>
                   {record && <span className="done-mark"><Icon name="check" size={13} /> {record.score}/{record.total}</span>}
                 </span>
