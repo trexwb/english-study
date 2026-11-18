@@ -276,6 +276,7 @@ const BLANK_RE = /___(\d+)___/g;
     for (const k of ['title', 'exam', 'mins', 'text', 'answers']) if (!item[k]) fail('examTypes.js', `${at} 缺 ${k}`);
     const blanks = blanksIn(item.text);
     const nums = (item.answers || []).map((a) => String(a.n));
+    if (blanks.length !== 10) fail('examTypes.js', `${at} 正文有 ${blanks.length} 个空，语法填空标准是 10 空`);
     if (blanks.length !== nums.length) fail('examTypes.js', `${at} 正文有 ${blanks.length} 个 ___n___，答案却有 ${nums.length} 条`);
     if (blanks.join(',') !== nums.join(',')) fail('examTypes.js', `${at} 正文空位序号 [${blanks}] 与答案序号 [${nums}] 不一致`);
     if (new Set(nums).size !== nums.length) fail('examTypes.js', `${at} 答案序号重复`);
@@ -288,6 +289,9 @@ const BLANK_RE = /___(\d+)___/g;
     for (const k of ['title', 'exam', 'mins', 'text', 'questions']) if (!item[k]) fail('examTypes.js', `${at} 缺 ${k}`);
     const blanks = blanksIn(item.text);
     const nums = (item.questions || []).map((q) => String(q.n));
+    if (nums.length !== 15 || nums.join(',') !== Array.from({ length: 15 }, (_, i) => String(i + 1)).join(',')) {
+      fail('examTypes.js', `${at} 题目序号应为 1-15 共 15 题，实际 [${nums}]（完形标准 15 空）`);
+    }
     if (blanks.join(',') !== nums.join(',')) fail('examTypes.js', `${at} 正文空位 [${blanks}] 与题目 [${nums}] 不匹配`);
     (item.questions || []).forEach((q) => {
       if (!Array.isArray(q.opts) || q.opts.length !== 4) fail('examTypes.js', `${at} 第 ${q.n} 题选项应为 4 个`);
@@ -304,10 +308,13 @@ const BLANK_RE = /___(\d+)___/g;
     for (const k of ['title', 'exam', 'mins', 'text', 'options', 'answers']) if (!item[k]) fail('examTypes.js', `${at} 缺 ${k}`);
     const gaps = blanksIn(item.text);
     const keys = (item.answers || []).map((a) => a.g);
+    const standard = ['36', '37', '38', '39', '40'];
+    if (gaps.join(',') !== standard.join(',')) fail('examTypes.js', `${at} 正文空位应严格是 36-40，实际 [${gaps}]`);
+    if ((item.answers || []).length !== 5) fail('examTypes.js', `${at} 答案 ${keys.length} 条，七选五应是 5 条`);
     if (gaps.join(',') !== keys.join(',')) fail('examTypes.js', `${at} 正文空位 [${gaps}] 与答案 [${keys}] 不一致`);
     const letters = (item.options || []).map((o) => o.k);
     if (item.options && new Set(letters).size !== letters.length) fail('examTypes.js', `${at} 选项编号重复`);
-    if ((item.options || []).length < 6) fail('examTypes.js', `${at} 选项只有 ${letters.length} 个，七选五应给 7 个`);
+    if (letters.length !== 7) fail('examTypes.js', `${at} 选项 ${letters.length} 个，七选五应给 7 个（含 2 个干扰项）`);
     (item.options || []).forEach((o) => { if (!o.en || cjk.test(o.en)) fail('examTypes.js', `${at} 选项 ${o.k} 的 en 为空或含中文`); });
     (item.answers || []).forEach((a) => {
       if (!letters.includes(a.k)) fail('examTypes.js', `${at} 空位 ${a.g} 指向不存在的选项 ${a.k}`);
@@ -327,7 +334,7 @@ const BLANK_RE = /___(\d+)___/g;
       if (!['增', '删', '改'].includes(f.type)) fail('examTypes.js', `${at} 第 ${i + 1} 处 type='${f.type}' 应为 增/删/改`);
       if (!f.from || !f.to || !f.explain) fail('examTypes.js', `${at} 第 ${i + 1} 处缺 from/to/explain`);
     });
-    if ((item.fixes || []).length < 8) fail('examTypes.js', `${at} 只有 ${(item.fixes || []).length} 处错误，短文改错标准是 10 处`);
+    if ((item.fixes || []).length !== 10) fail('examTypes.js', `${at} 有 ${(item.fixes || []).length} 处错误，短文改错标准是 10 处`);
   });
   notes.push(`题型专项：语法填空 ${grammarFills.length} / 完形 ${clozes.length} / 七选五 ${sevenFives.length} / 改错 ${errorFixes.length}`);
 }
