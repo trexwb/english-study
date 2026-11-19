@@ -1,0 +1,206 @@
+  {
+    id: 'g37',
+    title: '形容词还是副词：看修饰对象下手',
+    en: 'Adjectives or Adverbs: Decide by What They Modify',
+    level: '进阶',
+    exam: '中考',
+    mins: 6,
+    intro: '别急着背“形容词修饰名词、副词修饰动词”的口诀，先看空格在修饰谁：跟在系动词后面说状态，用形容词；跟在实义动词后面说“怎么做”，用副词。',
+    sections: [
+      {
+        h: '系动词后面接形容词',
+        body: 'look、sound、taste、smell、feel、seem、become、get、keep、stay 这些系动词描述主语的状态，后面一律用形容词：The soup tastes good.（不说 tastes well）。判断办法：系动词后面接的是“主语怎么样”，不是动作的对象。',
+        examples: [
+          { en: 'The song sounds wonderful.', zh: '这首歌听起来很棒。' },
+          { en: 'Keep the classroom clean after the art lesson.', zh: '美术课后保持教室干净。' },
+        ],
+      },
+      {
+        h: '实义动词后面接副词',
+        body: '要把动作“怎么做”说清楚，就用副词，多数由形容词加 -ly 构成，位置通常在实义动词后面，也可以放句首或句末。注意 friendly、lovely、lively 虽然 -ly 结尾，其实是形容词，不能当副词用。',
+        examples: [
+          { en: 'Please speak more slowly so that we can follow you.', zh: '请说得再慢一点，好让我们跟上。' },
+          { en: 'Lucy sings beautifully at the school talent show.', zh: '露西在校园才艺表演上唱得很动听。' },
+        ],
+      },
+      {
+        h: '两个细节：enough 的位置与 -ing / -ed',
+        body: 'enough 修饰形容词或副词时要后置：old enough；修饰名词时要前置：enough time。-ing 形容词说事物本身的性质，-ed 形容词说人的感受：The film is moving, so the audience was moved. 另外 hard 本身就是副词（study hard），hardly 反而表示“几乎不”，别按 -ly 的老套路去猜。',
+        examples: [
+          { en: 'He is old enough to ride a shared bike to school.', zh: '他已经到了能自己骑共享单车上学的年纪。' },
+          { en: 'The report is boring, so the audience looked bored.', zh: '报告很乏味，所以听众看起来很无聊。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'look、sound、taste 等系动词后接形容词，不说 taste well',
+      '修饰实义动词用副词，多数由形容词加 ly 构成',
+      'enough 修饰形容词副词要后置，修饰名词要前置',
+      'friendly、lovely 加了 ly 仍是形容词，别当副词用',
+    ],
+    pitfall: '最容易混淆的是 look：look + 形容词是“看起来”（She looks happy），look + 副词是“看的方式”（look carefully）；She looks happily 是典型错误。',
+    quiz: [
+      {
+        q: 'This T-shirt feels ____ and sells well in our school shop.',
+        opts: ['soft', 'softly', 'softer', 'softness'],
+        a: 0,
+        explain: 'feels 是系动词，后面接形容词 soft 说 T 恤摸起来的状态；softly 是副词，不能作表语。',
+      },
+      {
+        q: 'The boys are playing ____ on the playground after class.',
+        opts: ['happy', 'happily', 'happiness', 'more happily'],
+        a: 1,
+        explain: 'playing 是实义动词，要用副词 happily 修饰动作；happy 是形容词，不能直接修饰动词。',
+      },
+      {
+        q: 'We got ____ halfway through the two-hour lecture and began to doodle in our notebooks.',
+        opts: ['boring', 'bored', 'bore', 'boredom'],
+        a: 1,
+        explain: '主语 We 是人，说“感到无聊”用 -ed 形容词 bored；-ing 形容词 boring 说事物本身令人乏味。',
+      },
+      {
+        q: 'My cousin is ____ to join the school basketball team this term.',
+        opts: ['enough tall', 'tall enough', 'too tall', 'so tall'],
+        a: 1,
+        explain: 'enough 修饰形容词要后置：tall enough；too tall to do 表示“太……而不能”，与“能加入球队”的句意相反。',
+      },
+    ],
+  },
+
+  {
+    id: 'g38',
+    title: '名词：可数与不可数、复数与所有格',
+    en: 'Nouns: Countability, Plurals and Possessives',
+    level: '基础',
+    exam: '中考',
+    mins: 7,
+    intro: '名词题分三步：先判断能不能数，再决定复数怎么变，最后看是谁的东西——用 ’s 还是 of。',
+    sections: [
+      {
+        h: '可数与不可数：数不出来的名词不加 s、不加 a',
+        body: 'advice、news、information、furniture、music、homework、weather 这些名词数不出来，没有复数形式，前面也不能加 a / an。要表达“一条、一件”，把数词放在量词上：a piece of advice、two pieces of news；两杯水说 two cups of water。',
+        examples: [
+          { en: 'The coach gave us two pieces of advice before the final.', zh: '决赛前教练给了我们两条建议。' },
+          { en: 'That is a piece of good news for the whole class.', zh: '对全班来说，那是一条好消息。' },
+        ],
+      },
+      {
+        h: '复数怎么变：规则加 s，几组不规则要背',
+        body: '一般直接加 s；以 s、x、ch、sh 结尾的加 es：boxes、watches；辅音字母加 y 结尾变 ies：stories；以 o 结尾有的加 es：tomatoes、potatoes，有的只加 s：photos、pianos。不规则的按组记：child→children、foot→feet、tooth→teeth、mouse→mice、man→men；sheep、deer 单复数同形。',
+        examples: [
+          { en: 'Two babies are playing with toy sheep on the carpet.', zh: '两个婴儿在地毯上玩玩具羊。' },
+          { en: 'The dentist says I should brush my teeth twice a day.', zh: '牙医说我应该一天刷两次牙。' },
+        ],
+      },
+      {
+        h: '所有格：’s、of 短语与双重所有格',
+        body: '表示“某人的”，人用 ’s：my aunt’s home；以 s 结尾的复数只加撇号：the teachers’ office；无生命的东西用 of 短语：the window of the classroom。双重所有格 a friend of my uncle’s 指“我叔叔朋友中的一位”，比 of my uncle 更地道，也常是单选的考点。',
+        examples: [
+          { en: 'The teachers’ office is next to the library on the second floor.', zh: '教师办公室在二楼，紧挨着图书馆。' },
+          { en: 'Wang Ping is a friend of my sister’s from the choir.', zh: '王平是我姐姐在合唱团的一位朋友。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'advice、news、information 等不可数，量词用 a piece of',
+      'child 变 children、mouse 变 mice，不规则复数要背',
+      '复数以 s 结尾的所有格只加撇号，如 the teachers’ office',
+      'a friend of my uncle’s 是双重所有格，表“朋友中的一位”',
+    ],
+    pitfall: '不可数名词别加复数：不要写 advices、informations 或 a news；数量交给量词，两条建议要说 two pieces of advice，数词加在量词上。',
+    quiz: [
+      {
+        q: 'Mum bought ____ for my new desk yesterday.',
+        opts: ['two piece of furniture', 'two pieces of furnitures', 'two pieces of furniture', 'two furniture'],
+        a: 2,
+        explain: 'furniture 不可数，没有复数形式；数量由量词表达，说 two pieces of furniture。',
+      },
+      {
+        q: 'The little girl has two ____ and loves eating apples with them.',
+        opts: ['tooth', 'toothes', 'teeth', 'tooths'],
+        a: 2,
+        explain: 'tooth 的复数是不规则变化 teeth，“两颗牙”要说 two teeth，不能加 s 或 es。',
+      },
+      {
+        q: '— Whose phone is this? — It is ____.',
+        opts: ['Lily', 'Lily’s', 'of Lily', 'Lilys'],
+        a: 1,
+        explain: '问是谁的东西，人名后加 ’s 构成所有格：It is Lily’s；of Lily 语序不对，Lilys 漏了撇号。',
+      },
+      {
+        q: 'Uncle Li is ____ who often takes me fishing at the weekend.',
+        opts: ['a friend of my father', 'a father’s friend', 'a friend of my father’s', 'my father’s a friend'],
+        a: 2,
+        explain: '双重所有格 a friend of my father’s 指“我父亲朋友中的一位”，结构是 a friend of + ’s 所有格。',
+      },
+    ],
+  },
+
+  {
+    id: 'g39',
+    title: '物主代词与反身代词：my 还是 mine',
+    en: 'Possessive and Reflexive Pronouns',
+    level: '基础',
+    exam: '中考',
+    mins: 5,
+    intro: '物主代词先看空格后有没有名词：有，用 my 这一套；没有，用 mine 这一套。反身代词则跟着主语照镜子，主语是谁就反射回谁。',
+    sections: [
+      {
+        h: '空后有没有名词：my 一套，mine 一套',
+        body: 'my、your、her、our、their 后面必须跟名词：my schoolbag。mine、yours、hers、ours、theirs 独立使用，相当于“形容词性物主代词 + 名词”：This umbrella is mine。his 和 its 前后两种形式相同，不用变化。做题先看空格后有没有名词：有，选形容词性；没有，选名词性。',
+        examples: [
+          { en: 'Her idea about the class newspaper was better than ours.', zh: '她关于班报的点子比我们的更好。' },
+          { en: 'That blue bike in the rack is his, not mine.', zh: '车棚里那辆蓝自行车是他的，不是我的。' },
+        ],
+      },
+      {
+        h: '反身代词：跟着主语照镜子',
+        body: '反身代词按主语配对：I→myself、you→yourself（复数 yourselves）、he→himself、she→herself、we→ourselves、they→themselves、it→itself。动作回到主语自己身上时用它，固定搭配要背：enjoy oneself 玩得开心、by oneself 独自、teach oneself 自学、help oneself to 随便吃。',
+        examples: [
+          { en: 'We enjoyed ourselves at the school art festival last Friday.', zh: '上周五我们在校园艺术节玩得很开心。' },
+          { en: 'My brother taught himself to play the guitar from online videos.', zh: '我哥哥跟着网上视频自学弹吉他。' },
+        ],
+      },
+      {
+        h: '两条边界：别当主语，别乱替宾格',
+        body: '反身代词不能单独作主语，Myself finished the cleaning. 是错的，主语位置要用 I。宾语要用反身代词，前提是主语和宾语指同一个人——She looked at herself in the mirror（照镜子的是她自己）；如果看的是别人，就用宾格 her。',
+        examples: [
+          { en: 'I made this model plane all by myself over the weekend.', zh: '这个周末我完全靠自己做好了这架飞机模型。' },
+          { en: 'The little robot turns itself off when the battery runs low.', zh: '小机器人电量低时会自动关机。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '空后接名词用 my、your、her，独立使用用 mine、yours、hers',
+      'enjoy oneself、by oneself、teach oneself 是固定搭配',
+      '反身代词跟主语配对：we 用 ourselves，they 用 themselves',
+      '反身代词不能单独作主语，主语位置要用 I、she 等人称代词',
+    ],
+    pitfall: '主语和宾语指同一个人时才用反身代词：She bought herself a new diary.（给自己买）；给别人买要说 She bought her a diary，这里的 her 指“她”以外的另一个人。',
+    quiz: [
+      {
+        q: '— Whose chemistry notes are these? — They are ____.',
+        opts: ['my', 'me', 'mine', 'myself'],
+        a: 2,
+        explain: '空后没有名词，要用名词性物主代词 mine 独立作表语，相当于 my notes；myself 是反身代词，不能这样用。',
+      },
+      {
+        q: 'Nobody helped Lily with the poster. She finished it all by ____.',
+        opts: ['herself', 'her', 'hers', 'she'],
+        a: 0,
+        explain: 'by oneself 表示“独自”，主语是 She，反身代词用 herself；hers 是名词性物主代词，意思不通。',
+      },
+      {
+        q: 'The two exchange students introduced ____ to the whole class at the morning meeting.',
+        opts: ['theirself', 'theirselves', 'them', 'themselves'],
+        a: 3,
+        explain: '主语 the two exchange students 是复数，动作回到自己身上，用 themselves 作 introduced 的宾语；没有 theirselves 这种拼写。',
+      },
+      {
+        q: 'Please help ____ to some fruit salad, boys and girls.',
+        opts: ['yourself', 'yourselves', 'your', 'you'],
+        a: 1,
+        explain: 'boys and girls 是一群人，you 表复数，反身代词用 yourselves；help oneself to 表示“随便吃”。',
+      },
+    ],
+  },

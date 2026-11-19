@@ -11,6 +11,8 @@ export const phraseGroups = [
   { id: 'gkphrasal', name: '高考动词短语', icon: '🌀' },
   { id: 'cohesion', name: '作文衔接语', icon: '🪢' },
   { id: 'topicchunks', name: '话题语块', icon: '🧺' },
+  { id: 'zkquotes', name: '中考金句', icon: '✨' },
+  { id: 'gkquotes', name: '高考金句', icon: '🌟' },
 ];
 
 export const phrases = [

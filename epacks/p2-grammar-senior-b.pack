@@ -1,0 +1,213 @@
+  {
+    id: 'g40',
+    title: '独立主格与 with 复合结构',
+    en: 'Absolute Construction and the with Compound',
+    level: '高阶',
+    exam: '高考',
+    mins: 9,
+    intro: '一个句子只能有一套谓语。当另一个动作自带主语、又想挂进主句时，就轮到独立主格和 with 复合结构出场。',
+    sections: [
+      {
+        h: '先数谓语，再找逻辑主语',
+        body: '拿到动词提示先做三步：第一步数谓语，句中已有谓语又没有连词，这个动词就不能再用谓语形式；第二步找它前面的名词，主句主语和它一致就只写 doing 或 done，动作有自己的主语才把名词补出来；第三步定形式，主动进行用 doing，被动或已完成用 done。with 或 without 引出的名词短语走 with 复合结构，没有 with 的名词短语直接站出来，就是独立主格，两者都作原因、伴随或条件。',
+        examples: [
+          { en: 'The sun having set, we switched on the torches and kept walking.', zh: '太阳落山了，我们打开手电筒继续赶路。' },
+          { en: 'With the exams over, the whole class headed straight for the playground.', zh: '考试一结束，全班径直朝操场走去。' },
+        ],
+      },
+      {
+        h: 'with 复合结构：宾语后跟四种补语',
+        body: 'with + 宾语 + 补语，补语有四种：doing 表主动进行，done 表被动或已经完成，to do 表还没发生的动作，介词短语或形容词直接表状态。语法填空里 with 后给出动词提示时，只看宾语与动词的关系：She sat with her eyes fixed on the screen，眼睛是被“固定”住的，填过去分词 fixed；动作还没发生就填 to do。',
+        examples: [
+          { en: 'She sat with her eyes fixed on the screen, forgetting the time.', zh: '她坐在那里，双眼盯着屏幕，忘了时间。' },
+          { en: 'With two tests waiting for us next week, nobody is in the mood for a party.', zh: '下周还有两场考试等着我们，谁都没心思开派对。' },
+          { en: 'He fell asleep with the lamp still on.', zh: '他睡着了，灯还亮着。' },
+        ],
+      },
+      {
+        h: '独立主格：名词自己站出来',
+        body: '没有 with，名词直接加非谓语、形容词或介词短语，用逗号挂在主句上，就是独立主格：Weather permitting、The ground covered with pine needles。there be 变独立主格时写作 there being，常表原因。判断口诀是“名词与非谓语成对出现”：只写 doing 不带名词，那是分词作状语，属于前面非谓语一课的考点，别混。',
+        examples: [
+          { en: 'Weather permitting, the sports meeting will be held next Friday.', zh: '天气允许的话，运动会下周五举行。' },
+          { en: 'The ground covered with pine needles, the trail was hard to follow in the dark.', zh: '地面铺满松针，这条小路在黑暗里很难辨认。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '已有谓语且无连词，提示词动词降级为非谓语或独立主格',
+      'with 后动作主动进行填 doing，被动或完成填 done',
+      '还没发生的动作用 to do，如 with two tests to prepare',
+      '动作有自己的名词主语才是独立主格，主语一致只用 doing',
+    ],
+    pitfall: 'with 后的宾语不是主句主语：With the temperature rising fast, we cut the run short. 里 rising 的是 the temperature，不是 we。改错时先核对名词与动词的关系，少了名词就成了垂悬结构，多了一套谓语就成了两个句子。',
+    quiz: [
+      {
+        q: '____ no bus that evening, the whole team walked back to the school gate.',
+        opts: ['Being', 'There was', 'There being', 'It was'],
+        a: 2,
+        explain: '前面已有谓语 walked，逗号前不能再出现第二套谓语；“没有车”要说成 there being no bus，there 的 be 变成非谓语就是 being。',
+      },
+      {
+        q: 'The classroom was silent, with every eye ____ on the blackboard.',
+        opts: ['fixing', 'fixed', 'was fixing', 'to fix'],
+        a: 1,
+        explain: 'eye 是被“固定”住的一方，with 后表被动或已完成用过去分词 fixed；填 fixing 会变成目光自己去固定，was fixing 更是多出了一套谓语。',
+      },
+      {
+        q: 'The meeting ____ over, we poured out of the hall and ran to the playground.',
+        opts: ['was', 'being', 'been', 'is'],
+        a: 1,
+        explain: '主句谓语是 poured 和 ran，逗号前的 be 只能变非谓语 being，构成独立主格表原因；选 was 会多出第二套谓语。',
+      },
+      {
+        q: 'With so much homework ____ over the weekend, several students stayed behind in the classroom.',
+        opts: ['to finish', 'finishing', 'finished', 'finish'],
+        a: 0,
+        explain: '作业还没做，“有作业要做”用 to finish 表将来未发生；finished 会把作业说成已经完成，与留下补作业矛盾。',
+      },
+    ],
+  },
+
+  {
+    id: 'g41',
+    title: '倒装的变体：完全倒装与 not until 句式',
+    en: 'Inversion Variants: Full Inversion, Not until, as',
+    level: '高阶',
+    exam: '高考',
+    mins: 8,
+    intro: '否定词提前的部分倒装，前面倒装与强调一课已经讲过；这一课补齐其余触发器：完全倒装、not until、hardly...when、so...that 与让步 as。',
+    sections: [
+      {
+        h: '完全倒装：动词整个搬家',
+        body: 'here、there、out、in、up、down、now、then 这类副词打头，或 South of the village 这样的方位介词短语提前，谓语又是不及物动词（come、go、stand、lie、live）时，动词整个提到主语前，不借助动词帮忙：Here comes the bus。主语是代词时不倒装，要说 Here it comes。这与否定词提前、只把助动词提前的部分倒装正好相对。',
+        examples: [
+          { en: 'South of the village lies a small lake, where the swans spend every winter.', zh: '村子南面有一个小湖，天鹅每年冬天都在那里过冬。' },
+          { en: 'The door burst open and in rushed the football team, still in their kit.', zh: '门猛地被推开，足球队冲了进来，队服还没换下。' },
+          { en: 'Here comes the bus; we can take the front seats.', zh: '公交车来了，我们可以坐前排。' },
+        ],
+      },
+      {
+        h: 'not until 与 hardly / no sooner 句式',
+        body: 'Not until + 时间放到句首，倒装发生在主句，until 从句保持正常语序：Not until the last guest had left did the host sit down。hardly...when 与 no sooner...than 都表“刚……就……”，hardly 或 no sooner 在句首时，所在分句用过去完成时并倒装，when / than 引导的分句用一般过去时。语法填空里 not until 多以从句形式出现，此时主句并不倒装，只有 not until 整体提前才需要动语序。',
+        examples: [
+          { en: 'Not until the last guest had left did the host sit down to rest.', zh: '直到最后一位客人离开，主人才坐下歇了歇。' },
+          { en: 'Hardly had the striker touched the ball when the whistle blew.', zh: '前锋刚碰到球，哨声就响了。' },
+          { en: 'No sooner had the train stopped than the passengers crowded to the doors.', zh: '火车刚一停稳，乘客就涌向车门。' },
+        ],
+      },
+      {
+        h: 'so...that 与让步 as 的倒装',
+        body: 'so + 形容词或副词提到句首，主句倒装：So excited were the fans that they lined the street。这是 so...that 的倒装变体，so 与 such 的基本选择在状语从句一课，本课不重复。让步句把名词、形容词、副词或动词原形提到 as 或 though 前：Tired as she was、Child as she is，名词提前时冠词省掉。这些都是书面表达的加分句型，但前提是后面的结构完整，不为炫技而倒装。',
+        examples: [
+          { en: 'So excited were the fans that they lined the street for two hours.', zh: '球迷们太兴奋了，在街边守了两个小时。' },
+          { en: 'Tired as she was after the relay race, she stayed to cheer for the next heat.', zh: '接力赛之后她虽然很累，还是留下来为下一组加油。' },
+          { en: 'Try as they might, the visitors could not break through the home defence.', zh: '客队尽管想尽办法，还是攻不破主队的防线。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '方位词或介词短语提前且主语是名词，动词整个前移，不借助动词',
+      'not until 放句首只倒装主句，until 从句保持正常语序',
+      'hardly had done when 前句过去完成时，when 分句用过去时',
+      'so 提前后助动词跟主语一致；as 让步句名词提前省冠词',
+    ],
+    pitfall: '完全倒装遇到代词主语就失效：Here comes the bus 对，Here comes it 错，要说 Here it comes。not until 后的主句倒装用 did + 动词原形，不要再把动词变回过去式。',
+    quiz: [
+      {
+        q: 'From behind the bookshelf ____ a grey cat we had never seen before.',
+        opts: ['jumped', 'did jump', 'had jumped', 'did the cat jump'],
+        a: 0,
+        explain: '方位介词短语 from behind the bookshelf 提前、主语是名词，构成完全倒装，谓语 jumped 整个前移，不需要任何助动词。',
+      },
+      {
+        q: 'Not until the fog lifted ____ the mountain road again.',
+        opts: ['the trucks left', 'left the trucks', 'did the trucks leave', 'the trucks did leave'],
+        a: 2,
+        explain: 'not until 放句首只倒装主句：助动词 did 提到主语 the trucks 前，动词回到原形 leave；until 从句本身保持正常语序。',
+      },
+      {
+        q: 'Hardly ____ the shuttlecock down when the players began to argue about the line call.',
+        opts: ['did the referee call', 'the referee had called', 'had the referee called', 'the referee called'],
+        a: 2,
+        explain: 'hardly 置于句首要用过去完成时并部分倒装：had the referee called；when 引导的分句保持一般过去时 began。',
+      },
+      {
+        q: 'Child ____ she is, she can already repair a bike on her own.',
+        opts: ['although', 'as', 'because', 'if'],
+        a: 1,
+        explain: '“名词 + as + 主谓”是让步倒装：Child as she is 表示“她虽然是个孩子”，名词提前后不再用 although。',
+      },
+    ],
+  },
+
+  {
+    id: 'g42',
+    title: 'it 作形式主语与形式宾语',
+    en: 'It as Formal Subject and Formal Object',
+    level: '进阶',
+    exam: '高考',
+    mins: 7,
+    intro: '真正的主语或宾语太长时，it 先站出来占位，真身随后补上。语法填空的无提示词空，很多就落在这个 it 上。',
+    sections: [
+      {
+        h: '形式主语的三个常用骨架',
+        body: '三个骨架要背牢：It is no use / no good doing（做……没有用）、It takes sb 一段时间 to do（做某事花了谁多久）、It is said / reported / believed that...（据说、据报道）。it 不指任何具体事物，只是把真正的主语——doing、to do 或 that 从句——顶到句尾。语法填空遇到句首无提示词、后面接 is 或 was 的空，先考虑 it，再用“去掉 It is...that 句子是否完整”排除强调句。',
+        examples: [
+          { en: 'It is no use copying the answers; you will forget them the next day.', zh: '抄答案没有用，第二天你就会忘光。' },
+          { en: 'It took the whole class ten minutes to calm down after the fire drill.', zh: '消防演练结束后，全班花了十分钟才安静下来。' },
+          { en: 'It is said that the new gym will open to students this December.', zh: '据说新体育馆今年十二月对学生开放。' },
+        ],
+      },
+      {
+        h: '形式宾语：动词后先用 it 占位',
+        body: 'find、think、feel、make、consider 后面要接“宾补 + 宾语”时，先用 it 占位，真正的宾语是不定式或 that 从句，放在补语后面：I find it hard to get up early、We thought it our duty to return the wallet。这个 it 不能漏，也不能换成 that 或 this，是短文改错的高频设错点。',
+        examples: [
+          { en: 'She finds it relaxing to sketch the lake after dinner.', zh: '她发现晚饭后去湖边画素描很放松。' },
+          { en: 'We thought it our duty to return the wallet to its owner.', zh: '我们认为把钱包交还失主是自己的本分。' },
+          { en: 'The heavy rain made it impossible for us to hold the open-air concert.', zh: '大雨让我们无法举行露天音乐会。' },
+        ],
+      },
+      {
+        h: '改错与写作里的三个落点',
+        body: '第一落点：动词接“形容词 + to do”时 it 必须在场，漏了按“增”来改。第二落点：It is no use / no good 后面接 doing，写成 to argue 就错了。第三落点：区分形式主语与强调句——It was on the school bus that Li first heard about the program 去掉框架后句子完整，是强调句；It is clear that practice matters 去掉框架后不完整，是形式主语，that 从句才是真主语。',
+        examples: [
+          { en: 'It is no good arguing with the referee once the whistle has gone.', zh: '哨声一响，再跟裁判争辩也没有用。' },
+          { en: 'It was on the school bus that Li first heard about the volunteer program.', zh: '李正是在校车上第一次听说这个志愿项目的。' },
+          { en: 'It is clear that the road to success is paved with small habits.', zh: '很明显，成功之路是由一个个小习惯铺成的。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '无提示词空在句首且后接 is/was，优先考虑形式主语 it',
+      'find、think、make 后接形容词加 to do，必须先用 it 占位',
+      'It is no use 后接 doing，不接不定式',
+      '去掉 It is 和 that 后句子完整是强调句，否则是形式主语',
+    ],
+    pitfall: '形式主语的 it 不是代词，不指前文任何东西：It is helpful to read widely 里的 it 只是占位。写作和改错里最常见的错是漏掉它——I find hard to believe 必须改成 I find it hard to believe。',
+    quiz: [
+      {
+        q: '____ is no use waiting for the perfect moment; start with the first question.',
+        opts: ['That', 'It', 'This', 'There'],
+        a: 1,
+        explain: '“做某事没有用”的固定骨架是 It is no use doing：it 作形式主语，真正的主语是动名词 waiting。',
+      },
+      {
+        q: 'The coach made ____ clear that anyone late twice sits out the next match.',
+        opts: ['it', 'this', 'that', 'him'],
+        a: 0,
+        explain: '真正的宾语是后面的 that 从句，太长要先由 it 占位，构成 make it clear that 的固定写法；this 与 that 不能这样占位。',
+      },
+      {
+        q: 'It took the volunteers nearly two hours ____ the fallen books back onto the shelves.',
+        opts: ['to put', 'putting', 'put', 'putted'],
+        a: 0,
+        explain: 'It takes sb 一段时间 to do 是固定骨架，“花了近两小时”要用不定式 to put；put 的过去式和过去分词仍是 put，不存在 putted。',
+      },
+      {
+        q: 'Which sentence is correct?',
+        opts: ['I find hard to wake up early.', 'I find that hard to wake up early.', 'I find it hard to wake up early.', 'I find this hard to wake up early.'],
+        a: 2,
+        explain: 'find 接“形容词 + 不定式”作宾语时必须先用 it 占位，真宾语 to wake up early 后置；that 与 this 都不能承担占位作用。',
+      },
+    ],
+  },
