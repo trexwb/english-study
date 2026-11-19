@@ -3,7 +3,7 @@ import { phrases } from '../data/phrases.js';
 import { stories } from '../data/reading.js';
 import { words } from '../data/words.js';
 import { writingPrompts } from '../data/writing.js';
-import { affixes, confusables, irregularVerbs } from '../data/knowledge.js';
+import { affixes, confusables, irregularVerbs, wordForms } from '../data/knowledge.js';
 import { clozes, errorFixes, grammarFills, sevenFives } from '../data/examTypes.js';
 import { wordCounts } from '../useStudy.js';
 import { addDays, dayKey, formatDateCn, greeting } from '../utils.js';
@@ -34,7 +34,7 @@ export default function Home({ data, todayData, liveStreak, onNavigate, onOpenSe
   const writingDone = Object.keys(data.writingDone).length;
   const readingDone = Object.values(data.reading).reduce((sum, item) => sum + (item.read || []).length, 0);
   const totalReading = stories.reduce((sum, story) => sum + story.paragraphs.length, 0);
-  const knowledgeCount = irregularVerbs.length + affixes.length + confusables.length;
+  const knowledgeCount = irregularVerbs.length + affixes.length + confusables.length + wordForms.length;
   const examCount = grammarFills.length + clozes.length + sevenFives.length + errorFixes.length;
 
   const checklist = [

@@ -41,6 +41,10 @@ CONFIG = {
         ("p3-writing-essays.pack", "];\n\nexport const writingPrompts", r"id: '(m[^']+)'"),
         ("p3-writing-prompts.pack", "EOF", r"id: '(w[^']+)'"),
     ],
+    "knowledge.js": [
+        ("p5-wordform-a.pack", "];\n\nexport const wordFormById", r"id: '(wf[^']+)'"),
+        ("p5-wordform-b.pack", "];\n\nexport const wordFormById", r"id: '(wf[^']+)'"),
+    ],
     "examTypes.js": [
         ("p4-exam-gfill.pack", "];\n\nexport const clozes = [", r"id: '(gf[^']+)'"),
         ("p4-exam-cloze.pack", "];\n\nexport const sevenFives = [", r"id: '(uc[^']+)'"),
