@@ -6,6 +6,63 @@ import { Chip, Icon, LevelBadge, ScreenHeader, Segmented, SpeakButton } from '..
 
 const LINKING_WORDS = ['however', 'therefore', 'although', 'moreover', 'furthermore', 'in addition', 'for example', 'for instance', 'as a result', 'on the other hand', 'in contrast', 'while', 'because', 'despite', 'nevertheless', 'ultimately'];
 
+const WRITING_EXAMS = ['全部', '中考', '高考'];
+
+// 标「通用」的题型两个考段都考，所以筛选任一考段时都要带上。
+const matchExam = (item, exam) => exam === '全部' || item.exam === exam || item.exam === '通用';
+
+const examTone = (exam) => (exam === '中考' ? 'teal' : exam === '高考' ? 'blue' : 'violet');
+
+function ExamFilter({ value, onChange, counts }) {
+  return (
+    <div className="writing-exam-filter">
+      <div className="chip-row">
+        {WRITING_EXAMS.map((item) => (
+          <Chip key={item} active={value === item} onClick={() => onChange(item)}>
+            {item === '全部' ? '全部考段' : `冲刺${item}`}
+            <small className="chip-count">{counts[item]}</small>
+          </Chip>
+        ))}
+      </div>
+      {value !== '全部' && <p className="exam-filter-note">含两个考段都考的通用题型</p>}
+    </div>
+  );
+}
+
+function RecommendCard({ exam, onGo }) {
+  const picks = [
+    { view: 'templates', label: '先搭结构', item: essayStructures.find((x) => x.exam === exam) },
+    { view: 'models', label: '再读一篇', item: modelEssays.find((x) => x.exam === exam) },
+    { view: 'practice', label: '然后动笔', item: writingPrompts.find((x) => x.exam === exam) },
+  ].filter((pick) => pick.item);
+
+  if (!picks.length) return null;
+
+  return (
+    <div className="recommend-card">
+      <div className="recommend-head">
+        <span className="recommend-icon"><Icon name="sparkle" size={17} /></span>
+        <div>
+          <h3>{exam}起步路线</h3>
+          <p>按这个顺序走一遍，比漫无目的地翻模板有效。</p>
+        </div>
+      </div>
+      <div className="recommend-list">
+        {picks.map((pick, index) => (
+          <button type="button" className="recommend-row" key={pick.view} onClick={() => onGo(pick.view, pick.item.id)}>
+            <span className="recommend-step">{index + 1}</span>
+            <span className="recommend-copy">
+              <small>{pick.label}</small>
+              <strong>{pick.item.title}</strong>
+            </span>
+            <Icon name="right" size={16} />
+          </button>
+        ))}
+      </div>
+    </div>
+  );
+}
+
 function PhraseView({ data, actions }) {
   const [group, setGroup] = useState('all');
   const [index, setIndex] = useState(0);
@@ -126,6 +183,7 @@ function StructureCard({ item, index, open, onToggle }) {
           <strong>{item.title}</strong>
           <span>{item.en}</span>
         </span>
+        {item.exam && <LevelBadge tone={examTone(item.exam)}>{item.exam}</LevelBadge>}
         <span className="structure-chevron"><Icon name={open ? 'down' : 'right'} size={18} /></span>
       </button>
       {open && (
@@ -157,8 +215,14 @@ function StructureCard({ item, index, open, onToggle }) {
   );
 }
 
-function TemplatesView() {
+function TemplatesView({ exam, focusId }) {
   const [open, setOpen] = useState('s1');
+  const pool = essayStructures.filter((item) => matchExam(item, exam));
+
+  useEffect(() => {
+    if (focusId) setOpen(focusId);
+  }, [focusId]);
+
   return (
     <div className="templates-view">
       <div className="writing-intro">
@@ -168,8 +232,9 @@ function TemplatesView() {
           <p>好作文不是句子堆叠，而是清楚的结构。选一个题型，记住它的顺序和三个万能句。</p>
         </div>
       </div>
+      <p className="list-count">{pool.length} 类模板</p>
       <div className="structure-list">
-        {essayStructures.map((item, index) => (
+        {pool.map((item, index) => (
           <StructureCard key={item.id} item={item} index={index} open={open === item.id} onToggle={() => setOpen(open === item.id ? null : item.id)} />
         ))}
       </div>
@@ -177,10 +242,20 @@ function TemplatesView() {
   );
 }
 
-function ModelsView({ actions, onPractice }) {
+function ModelsView({ actions, onPractice, exam, focusId }) {
   const [selectedId, setSelectedId] = useState(null);
   const [showZh, setShowZh] = useState(false);
+  const pool = modelEssays.filter((item) => matchExam(item, exam));
   const selected = modelEssays.find((essay) => essay.id === selectedId);
+
+  useEffect(() => {
+    if (focusId) {
+      setSelectedId(focusId);
+      setShowZh(false);
+    } else {
+      setSelectedId(null);
+    }
+  }, [exam, focusId]);
 
   if (selected) {
     return (
@@ -191,8 +266,8 @@ function ModelsView({ actions, onPractice }) {
         <div className="model-detail-head">
           <div className="model-tags">
             <LevelBadge tone="amber">{selected.type}</LevelBadge>
-            <LevelBadge tone="green">{selected.level}</LevelBadge>
-            <span className="muted tiny">{selected.words} 词</span>
+            <LevelBadge tone={examTone(selected.exam)}>{selected.exam}</LevelBadge>
+            <span className="muted tiny">{selected.words} 词{selected.cefr ? ` · ${selected.cefr}` : ''}</span>
           </div>
           <h1>{selected.title}</h1>
           <p className="model-prompt">{selected.prompt}</p>
@@ -244,12 +319,14 @@ function ModelsView({ actions, onPractice }) {
           <p>留意每一段在做什么：提出观点、给理由、让步，还是收束。读结构比背句子更重要。</p>
         </div>
       </div>
+      <p className="list-count">{pool.length} 篇范文</p>
       <div className="model-list">
-        {modelEssays.map((essay) => (
+        {pool.map((essay) => (
           <button type="button" className="model-card" key={essay.id} onClick={() => { setSelectedId(essay.id); setShowZh(false); window.scrollTo({ top: 0, behavior: 'smooth' }); }}>
             <div className="model-card-top">
               <LevelBadge tone="amber">{essay.type}</LevelBadge>
-              <span className="muted tiny">{essay.words} 词 · {essay.level}</span>
+              <LevelBadge tone={examTone(essay.exam)}>{essay.exam}</LevelBadge>
+              <span className="muted tiny">{essay.words} 词{essay.cefr ? ` · ${essay.cefr}` : ''}</span>
             </div>
             <h3>{essay.title}</h3>
             <p>{essay.prompt}</p>
@@ -261,13 +338,14 @@ function ModelsView({ actions, onPractice }) {
   );
 }
 
-function PracticeView({ data, actions }) {
-  const [promptId, setPromptId] = useState(writingPrompts[0].id);
-  const [draft, setDraft] = useState(data.drafts[writingPrompts[0].id] || '');
+function PracticeView({ data, actions, exam, focusId, onPick }) {
+  const pool = writingPrompts.filter((item) => matchExam(item, exam));
+  const [promptId, setPromptId] = useState(pool[0].id);
+  const [draft, setDraft] = useState(data.drafts[pool[0].id] || '');
   const [saveState, setSaveState] = useState('saved');
   const [justDone, setJustDone] = useState(false);
 
-  const prompt = writingPrompts.find((item) => item.id === promptId) || writingPrompts[0];
+  const prompt = pool.find((item) => item.id === promptId) || pool[0];
   const words = countWords(draft);
   const paragraphs = draft.split(/\n+/).filter((paragraph) => paragraph.trim()).length;
   const numbers = (prompt.target.match(/\d+/g) || ['100']).map(Number);
@@ -287,7 +365,21 @@ function PracticeView({ data, actions }) {
     return () => clearTimeout(timer);
   }, [draft, promptId]);
 
+  // 切换考段或点推荐时，当前题目可能被筛掉；先存草稿再换题，避免丢字。
+  useEffect(() => {
+    const target = focusId && pool.some((item) => item.id === focusId)
+      ? focusId
+      : (pool.some((item) => item.id === promptId) ? promptId : pool[0].id);
+    if (target === promptId) return;
+    actions.saveDraft(promptId, draft);
+    setPromptId(target);
+    setDraft(data.drafts[target] || '');
+    setSaveState('saved');
+    setJustDone(false);
+  }, [exam, focusId]);
+
   function choosePrompt(id) {
+    onPick();
     actions.saveDraft(promptId, draft);
     setPromptId(id);
     setDraft(data.drafts[id] || '');
@@ -312,7 +404,7 @@ function PracticeView({ data, actions }) {
   return (
     <div className="practice-view">
       <div className="prompt-picker">
-        {writingPrompts.map((item) => (
+        {pool.map((item) => (
           <button type="button" key={item.id} className={`prompt-chip ${promptId === item.id ? 'active' : ''}`} onClick={() => choosePrompt(item.id)}>
             <span>{item.title}</span>
             <small>{item.type}</small>
@@ -323,6 +415,7 @@ function PracticeView({ data, actions }) {
       <div className="prompt-card">
         <div className="prompt-card-top">
           <span>{prompt.type}</span>
+          <LevelBadge tone={examTone(prompt.exam)}>{prompt.exam}</LevelBadge>
           <span>{prompt.target}</span>
         </div>
         <h2>{prompt.en}</h2>
@@ -392,6 +485,8 @@ export default function Studio({ data, actions, intent }) {
   const [view, setView] = useState(intent?.view || 'phrases');
   const [writingView, setWritingView] = useState('templates');
   const [modelPractice, setModelPractice] = useState(false);
+  const [writingExam, setWritingExam] = useState('全部');
+  const [pending, setPending] = useState(null);
 
   useEffect(() => {
     if (!intent) return;
@@ -402,6 +497,15 @@ export default function Studio({ data, actions, intent }) {
 
   const donePhrases = Object.keys(data.phraseDone).length;
   const doneWriting = Object.keys(data.writingDone).length;
+  const activeSet = writingView === 'templates' ? essayStructures : writingView === 'models' ? modelEssays : writingPrompts;
+  const examCounts = Object.fromEntries(WRITING_EXAMS.map((item) => [item, activeSet.filter((entry) => matchExam(entry, item)).length]));
+
+  function goRecommend(nextView, id) {
+    setWritingView(nextView);
+    setModelPractice(false);
+    setPending({ view: nextView, id });
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
 
   return (
     <div className="screen studio-screen">
@@ -424,21 +528,27 @@ export default function Studio({ data, actions, intent }) {
 
       {view === 'writing' && (
         <div className="writing-view">
+          <ExamFilter
+            value={writingExam}
+            onChange={(next) => { setWritingExam(next); setPending(null); }}
+            counts={examCounts}
+          />
+          {writingExam !== '全部' && <RecommendCard exam={writingExam} onGo={goRecommend} />}
           <div className="writing-subnav">
             {[
               { id: 'templates', label: '模板' },
               { id: 'models', label: '范文' },
               { id: 'practice', label: '练笔' },
             ].map((item) => (
-              <button type="button" key={item.id} className={writingView === item.id ? 'active' : ''} onClick={() => { setWritingView(item.id); setModelPractice(false); }}>
+              <button type="button" key={item.id} className={writingView === item.id ? 'active' : ''} onClick={() => { setWritingView(item.id); setModelPractice(false); setPending(null); }}>
                 {item.label}
               </button>
             ))}
           </div>
 
-          {writingView === 'templates' && <TemplatesView />}
-          {writingView === 'models' && <ModelsView actions={actions} onPractice={() => { setWritingView('practice'); setModelPractice(true); window.scrollTo({ top: 0, behavior: 'smooth' }); }} />}
-          {writingView === 'practice' && <PracticeView data={data} actions={actions} key={modelPractice ? 'model-practice' : 'practice'} />}
+          {writingView === 'templates' && <TemplatesView exam={writingExam} focusId={pending?.view === 'templates' ? pending.id : null} />}
+          {writingView === 'models' && <ModelsView actions={actions} exam={writingExam} focusId={pending?.view === 'models' ? pending.id : null} onPractice={() => { setWritingView('practice'); setModelPractice(true); setPending(null); window.scrollTo({ top: 0, behavior: 'smooth' }); }} />}
+          {writingView === 'practice' && <PracticeView data={data} actions={actions} exam={writingExam} focusId={pending?.view === 'practice' ? pending.id : null} onPick={() => setPending(null)} key={modelPractice ? 'model-practice' : 'practice'} />}
         </div>
       )}
     </div>

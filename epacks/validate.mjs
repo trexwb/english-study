@@ -14,7 +14,7 @@ const MODULES = {
   'data/grammar.js': ['grammarLessons'],
   'data/reading.js': ['stories'],
   'data/writing.js': ['essayStructures', 'modelEssays', 'writingPrompts'],
-  'data/knowledge.js': ['knowledgeTabs', 'irregularVerbs', 'affixes', 'confusables'],
+  'data/knowledge.js': ['knowledgeTabs', 'irregularVerbs', 'affixes', 'confusables', 'wordForms'],
   'data/examTypes.js': ['examTabs', 'grammarFills', 'clozes', 'sevenFives', 'errorFixes'],
 };
 
@@ -28,6 +28,58 @@ function load(rel, names) {
   const body = `${src}\nreturn { ${names.join(', ')} };`;
   // eslint-disable-next-line no-new-func
   return new Function(body)();
+}
+
+// 解析点名了某个选项、却不是标记为正确的那个：说明 a 下标或解析写错了。
+const AUX_PREFIX = /^(?:to|am|is|are|was|were|be|been|being|have|has|had|having|will|would|shall|should|can|could|may|might|must|need|not)\s+/;
+// 解析里常写词干（see / visit / modern）或带助动词的完整形式，比较前先归一到词干。
+function lemma(t) {
+  let s = String(t).toLowerCase().replace(/[’']/g, "'").replace(/n't/g, '').replace(/\s+/g, ' ').trim();
+  let prev;
+  do { prev = s; s = s.replace(AUX_PREFIX, ''); } while (s !== prev);
+  s = s.replace(/(ing|ed|en|es|s)$/, '');
+  if (/([bdgklmnprstv])\1$/.test(s)) s = s.slice(0, -1);
+  return s;
+}
+const REJECT_MARK = /相反|不符|不对|不是|而非|排除|不合|对照|对比|错误|干扰/;
+function answerMismatch(opts, a, explain) {
+  if (!Array.isArray(opts) || !explain || !Number.isInteger(a) || !opts[a]) return null;
+  const norm = (t) => String(t).toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
+  const text = norm(explain);
+  const right = lemma(opts[a]);
+  const sameFamily = (o) => {
+    const l = lemma(o);
+    return l === right || (Math.min(l.length, right.length) >= 3 && (l.startsWith(right) || right.startsWith(l)));
+  };
+  if (text.includes(norm(opts[a])) || sameFamily(opts[a])) return null;
+  // 解析明确把某选项判为错项时，点名它不算答案不一致。
+  if (REJECT_MARK.test(explain)) return null;
+  const named = opts.filter((o, i) => i !== a && norm(o).length > 2 && text.includes(norm(o)) && !sameFamily(o));
+  return named.length ? named.join(' / ') : null;
+}
+
+// 例句必须真的用到这个词（含常见变形与不规则三态），否则学生背不到语境。
+const IRREGULAR_EXTRA = {
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
+  have: ['has', 'had', 'having'],
+  do: ['does', 'did', 'done', 'doing'],
+  go: ['goes', 'went', 'gone', 'going'],
+  can: ['could'],
+  will: ['would'],
+  shall: ['should'],
+  may: ['might'],
+};
+function exampleForms(w, verbs) {
+  const forms = new Set([w, `${w}s`, `${w}es`, `${w}ed`, `${w}d`, `${w}ing`,
+    w.replace(/e$/, '') + 'ing', w.replace(/y$/, 'ied'), w.replace(/([^aeiou])y$/, '$1ies')]);
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(w)) {
+    forms.add(w + w.slice(-1) + 'ing');
+    forms.add(w + w.slice(-1) + 'ed');
+  }
+  for (const extra of IRREGULAR_EXTRA[w] || []) forms.add(extra);
+  const verb = verbs && verbs[w];
+  if (verb) for (const f of [...String(verb.past).split('/'), ...String(verb.pp).split('/')]) forms.add(f.trim());
+  return [...forms].filter(Boolean);
 }
 
 const data = {};
@@ -47,6 +99,8 @@ const ZH_END = /[。！？]["'”’]?$/;
 const BLANK_RE = /___(\d+)___/g;
 
 /* ---------- words ---------- */
+// 不规则三态供例句变形校验使用
+const verbForms = Object.fromEntries((data['data/knowledge.js'].irregularVerbs || []).map((v) => [v.base, v]));
 {
   const { decks = [], words = [] } = data['data/words.js'];
   const deckIds = new Set(decks.map((d) => d.id));
@@ -64,6 +118,9 @@ const BLANK_RE = /___(\d+)___/g;
     if (word.ex && !EN_END.test(word.ex)) fail('words.js', `${at} 的 ex 结尾没有标点`);
     if (word.exZh && !ZH_END.test(word.exZh)) fail('words.js', `${at} 的 exZh 结尾没有中文标点`);
     if (word.ex && cjk.test(word.ex)) fail('words.js', `${at} 的英文例句里混进了中文，朗读会读错`);
+    if (word.w && word.ex && !exampleForms(word.w, verbForms).some((f) => new RegExp(`\\b${f}\\b`, 'i').test(word.ex))) {
+      fail('words.js', `${at} 的例句里没有出现 ${word.w} 或其变形，语境与词条脱节`);
+    }
     if (word.w) {
       if (seen.has(word.w)) fail('words.js', `重复词条 ${word.w}（第 ${seen.get(word.w)} 与 ${index} 条，Object.fromEntries 会静默丢一条）`);
       else seen.set(word.w, index);
@@ -116,6 +173,16 @@ const BLANK_RE = /___(\d+)___/g;
     ids.add(lesson.id);
     if (lesson.level && !levels.has(lesson.level)) fail('grammar.js', `${at} 的 level='${lesson.level}' 不在筛选条里（基础/进阶/高阶）`);
     if (lesson.exam && !exams.has(lesson.exam)) fail('grammar.js', `${at} 的 exam='${lesson.exam}' 不在筛选条里（中考/高考/通用）`);
+    if (!Array.isArray(lesson.keyPoints) || lesson.keyPoints.length < 3 || lesson.keyPoints.length > 4) {
+      fail('grammar.js', `${at} keyPoints 应为 3-4 条，实际 ${Array.isArray(lesson.keyPoints) ? lesson.keyPoints.length : '无'}`);
+    } else {
+      if (new Set(lesson.keyPoints).size !== lesson.keyPoints.length) fail('grammar.js', `${at} keyPoints 有重复（React key 冲突）`);
+      lesson.keyPoints.forEach((point) => {
+        const len = [...String(point)].length;
+        if (len < 15 || len > 45) fail('grammar.js', `${at} 考点「${point}」长 ${len} 字，应在 15-45 之间`);
+        if (point === lesson.pitfall) fail('grammar.js', `${at} 考点与 pitfall 完全重复`);
+      });
+    }
     if (!Number.isFinite(lesson.mins)) fail('grammar.js', `${at} 的 mins 不是数字`);
     if (!Array.isArray(lesson.sections) || lesson.sections.length < 2) fail('grammar.js', `${at} sections 少于 2 段`);
     (lesson.sections || []).forEach((section, s) => {
@@ -141,6 +208,8 @@ const BLANK_RE = /___(\d+)___/g;
       if (!Number.isInteger(q.a) || q.a < 0 || q.a >= (q.opts || []).length) fail('grammar.js', `${qat} 的答案下标 a=${q.a} 越界`);
       if (!q.explain) fail('grammar.js', `${qat} 缺 explain`);
       if (q.q && !q.q.includes('____') && !/[?？]/.test(q.q)) fail('grammar.js', `${qat} 题干里既没有空格 ____ 也不是问句`);
+      const mismatch = answerMismatch(q.opts, q.a, q.explain);
+      if (mismatch) fail('grammar.js', `${qat} 解析点名的是「${mismatch}」，但正确项标的是「${(q.opts || [])[q.a]}」`);
     });
   });
   notes.push(`语法课 ${grammarLessons.length} 节 / 练习 ${quizzes} 题`);
@@ -157,6 +226,10 @@ const BLANK_RE = /___(\d+)___/g;
     }
     return seen;
   };
+  const writingExams = new Set(['中考', '高考', '通用']);
+  const checkExam = (item, label) => {
+    if (!writingExams.has(item.exam)) fail('writing.js', `${label} ${item.id} 的 exam='${item.exam}' 不在筛选条里（中考/高考/通用）`);
+  };
   checkIds(essayStructures, '模板');
   essayStructures.forEach((s) => {
     if (!s.title || !s.en || !s.when || !Array.isArray(s.outline) || !Array.isArray(s.frames)) {
@@ -164,11 +237,15 @@ const BLANK_RE = /___(\d+)___/g;
     }
     if (s.frames && s.frames.some((f) => !f.en || !f.zh)) fail('writing.js', `模板 ${s.id} 有 frame 缺 en/zh`);
     if (s.frames && new Set(s.frames.map((f) => f.en)).size !== s.frames.length) fail('writing.js', `模板 ${s.id} frame 文本重复`);
+    checkExam(s, '模板');
   });
   checkIds(modelEssays, '范文');
   modelEssays.forEach((m) => {
     const at = `范文 ${m.id}`;
-    for (const k of ['title', 'type', 'level', 'prompt', 'essay', 'zh']) if (m[k] === undefined) fail('writing.js', `${at} 缺 ${k}`);
+    for (const k of ['title', 'type', 'exam', 'prompt', 'essay', 'zh']) if (m[k] === undefined) fail('writing.js', `${at} 缺 ${k}`);
+    checkExam(m, '范文');
+    if (m.cefr !== undefined && !m.cefr) fail('writing.js', `${at} 的 cefr 是空值，要么写等级要么整个字段不要留`);
+    if ('level' in m) fail('writing.js', `${at} 还留着旧 level 字段，渲染层已改读 exam`);
     if (!Array.isArray(m.essay) || !Array.isArray(m.zh)) { fail('writing.js', `${at} essay/zh 不是数组`); return; }
     if (m.essay.length !== m.zh.length) fail('writing.js', `${at} 段数不等：essay ${m.essay.length} vs zh ${m.zh.length}（译文按位置索引，会错位）`);
     if (!Number.isFinite(m.words)) fail('writing.js', `${at} 的 words 不是数字`);
@@ -186,8 +263,11 @@ const BLANK_RE = /___(\d+)___/g;
     if (w.target && !/\d/.test(w.target)) fail('writing.js', `${at} 的 target '${w.target}' 不含数字，字数目标会退回默认值`);
     if (w.tips && w.tips.length < 2) fail('writing.js', `${at} tips 少于 2 条`);
     if (!Array.isArray(w.tips)) fail('writing.js', `${at} tips 不是数组`);
+    checkExam(w, '题目');
   });
+  const examTally = (list) => ['中考', '高考', '通用'].map((e) => `${e} ${list.filter((x) => x.exam === e).length}`).join('，');
   notes.push(`写作：模板 ${essayStructures.length} / 范文 ${modelEssays.length} / 题目 ${writingPrompts.length}`);
+  notes.push(`  考段分布 模板（${examTally(essayStructures)}）范文（${examTally(modelEssays)}）题目（${examTally(writingPrompts)}）`);
 }
 
 /* ---------- reading ---------- */
@@ -214,9 +294,9 @@ const BLANK_RE = /___(\d+)___/g;
 
 /* ---------- knowledge ---------- */
 {
-  const { knowledgeTabs = [], irregularVerbs = [], affixes = [], confusables = [] } = data['data/knowledge.js'];
+  const { knowledgeTabs = [], irregularVerbs = [], affixes = [], confusables = [], wordForms = [] } = data['data/knowledge.js'];
   const tabIds = new Set(knowledgeTabs.map((t) => t.id));
-  for (const need of ['verbs', 'roots', 'confuse']) if (!tabIds.has(need)) fail('knowledge.js', `knowledgeTabs 缺少 id '${need}'，Lab 屏按这个 id 切换`);
+  for (const need of ['verbs', 'roots', 'confuse', 'forms']) if (!tabIds.has(need)) fail('knowledge.js', `knowledgeTabs 缺少 id '${need}'，Lab 屏按这个 id 切换`);
   const bases = new Set();
   irregularVerbs.forEach((v, i) => {
     const at = `动词[${i}] ${v.base || '?'}`;
@@ -250,7 +330,32 @@ const BLANK_RE = /___(\d+)___/g;
       if (c.examples.some((e) => !e.en || !e.zh)) fail('knowledge.js', `${at} 有 example 缺 en/zh`);
     }
   });
-  notes.push(`知识速查：不规则动词 ${irregularVerbs.length} / 词根词缀 ${affixes.length} / 易混词 ${confusables.length}`);
+  const WF_SLOTS = ['n', 'v', 'adj', 'adv'];
+  const WF_POS = { 'n.': 'n', 'v.': 'v', 'adj.': 'adj', 'adv.': 'adv' };
+  const wfIds = new Set();
+  const wfBases = new Set();
+  wordForms.forEach((f, i) => {
+    const at = `词性转换[${i}] ${f.id || '?'}`;
+    for (const k of ['id', 'base', 'pos', 'zh', 'exam', 'tip', ...WF_SLOTS]) {
+      if (f[k] === undefined || f[k] === null) fail('knowledge.js', `${at} 缺 ${k}`);
+    }
+    if (wfIds.has(f.id)) fail('knowledge.js', `${at} 重复 id，wordFormById 会静默丢弃一条`);
+    wfIds.add(f.id);
+    if (wfBases.has(f.base)) fail('knowledge.js', `${at} 重复 base ${f.base}`);
+    wfBases.add(f.base);
+    if (!/^[a-z]+$/.test(f.base || '')) fail('knowledge.js', `${at} base 不是纯小写单词`);
+    const slot = WF_POS[f.pos];
+    if (!slot) fail('knowledge.js', `${at} pos='${f.pos}' 非法（n./v./adj./adv.）`);
+    else if (f[slot] !== f.base) fail('knowledge.js', `${at} pos 是 ${f.pos}，但 ${slot} 槽写的是 '${f[slot]}'，应等于 base`);
+    const filled = WF_SLOTS.map((k) => f[k]).filter((v) => v !== '');
+    if (filled.length < 2) fail('knowledge.js', `${at} 非空词性槽少于 2 个，查表没有意义`);
+    if (new Set(filled).size < 2) fail('knowledge.js', `${at} 各槽全是同一个词，没有任何派生形式`);
+    if (filled.some((v) => !/^[a-z]+$/.test(v))) fail('knowledge.js', `${at} 派生形式不是纯小写单词`);
+    if (!['中考', '高考'].includes(f.exam)) fail('knowledge.js', `${at} exam='${f.exam}' 不在筛选项里（中考/高考）`);
+    if (!f.tip || !filled.some((v) => f.tip.includes(v))) fail('knowledge.js', `${at} tip 没点名任何派生词，学生看不出该填哪个`);
+    if (f.zh && [...f.zh].length > 12) fail('knowledge.js', `${at} zh 超过 12 字，卡片头会挤`);
+  });
+  notes.push(`知识速查：不规则动词 ${irregularVerbs.length} / 词根词缀 ${affixes.length} / 易混词 ${confusables.length} / 词性转换 ${wordForms.length}`);
 }
 
 /* ---------- examTypes ---------- */
@@ -276,6 +381,7 @@ const BLANK_RE = /___(\d+)___/g;
     for (const k of ['title', 'exam', 'mins', 'text', 'answers']) if (!item[k]) fail('examTypes.js', `${at} 缺 ${k}`);
     const blanks = blanksIn(item.text);
     const nums = (item.answers || []).map((a) => String(a.n));
+    if (blanks.length !== 10) fail('examTypes.js', `${at} 正文有 ${blanks.length} 个空，语法填空标准是 10 空`);
     if (blanks.length !== nums.length) fail('examTypes.js', `${at} 正文有 ${blanks.length} 个 ___n___，答案却有 ${nums.length} 条`);
     if (blanks.join(',') !== nums.join(',')) fail('examTypes.js', `${at} 正文空位序号 [${blanks}] 与答案序号 [${nums}] 不一致`);
     if (new Set(nums).size !== nums.length) fail('examTypes.js', `${at} 答案序号重复`);
@@ -288,12 +394,17 @@ const BLANK_RE = /___(\d+)___/g;
     for (const k of ['title', 'exam', 'mins', 'text', 'questions']) if (!item[k]) fail('examTypes.js', `${at} 缺 ${k}`);
     const blanks = blanksIn(item.text);
     const nums = (item.questions || []).map((q) => String(q.n));
+    if (nums.length !== 15 || nums.join(',') !== Array.from({ length: 15 }, (_, i) => String(i + 1)).join(',')) {
+      fail('examTypes.js', `${at} 题目序号应为 1-15 共 15 题，实际 [${nums}]（完形标准 15 空）`);
+    }
     if (blanks.join(',') !== nums.join(',')) fail('examTypes.js', `${at} 正文空位 [${blanks}] 与题目 [${nums}] 不匹配`);
     (item.questions || []).forEach((q) => {
       if (!Array.isArray(q.opts) || q.opts.length !== 4) fail('examTypes.js', `${at} 第 ${q.n} 题选项应为 4 个`);
       else if (new Set(q.opts).size !== q.opts.length) fail('examTypes.js', `${at} 第 ${q.n} 题选项文本重复（React key 冲突）`);
       if (!Number.isInteger(q.a) || q.a < 0 || q.a >= (q.opts || []).length) fail('examTypes.js', `${at} 第 ${q.n} 题 a=${q.a} 越界`);
       if (!q.explain) fail('examTypes.js', `${at} 第 ${q.n} 题缺 explain`);
+      const mismatch = answerMismatch(q.opts, q.a, q.explain);
+      if (mismatch) fail('examTypes.js', `${at} 第 ${q.n} 题解析点名「${mismatch}」，正确项却是「${(q.opts || [])[q.a]}」`);
     });
     const positions = (item.questions || []).map((q) => q.a);
     if (positions.length > 3 && new Set(positions).size < 2) notes.push(`${at} 正确答案全落在同一个下标，学生可能蒙对`);
@@ -304,10 +415,13 @@ const BLANK_RE = /___(\d+)___/g;
     for (const k of ['title', 'exam', 'mins', 'text', 'options', 'answers']) if (!item[k]) fail('examTypes.js', `${at} 缺 ${k}`);
     const gaps = blanksIn(item.text);
     const keys = (item.answers || []).map((a) => a.g);
+    const standard = ['36', '37', '38', '39', '40'];
+    if (gaps.join(',') !== standard.join(',')) fail('examTypes.js', `${at} 正文空位应严格是 36-40，实际 [${gaps}]`);
+    if ((item.answers || []).length !== 5) fail('examTypes.js', `${at} 答案 ${keys.length} 条，七选五应是 5 条`);
     if (gaps.join(',') !== keys.join(',')) fail('examTypes.js', `${at} 正文空位 [${gaps}] 与答案 [${keys}] 不一致`);
     const letters = (item.options || []).map((o) => o.k);
     if (item.options && new Set(letters).size !== letters.length) fail('examTypes.js', `${at} 选项编号重复`);
-    if ((item.options || []).length < 6) fail('examTypes.js', `${at} 选项只有 ${letters.length} 个，七选五应给 7 个`);
+    if (letters.length !== 7) fail('examTypes.js', `${at} 选项 ${letters.length} 个，七选五应给 7 个（含 2 个干扰项）`);
     (item.options || []).forEach((o) => { if (!o.en || cjk.test(o.en)) fail('examTypes.js', `${at} 选项 ${o.k} 的 en 为空或含中文`); });
     (item.answers || []).forEach((a) => {
       if (!letters.includes(a.k)) fail('examTypes.js', `${at} 空位 ${a.g} 指向不存在的选项 ${a.k}`);
@@ -327,7 +441,7 @@ const BLANK_RE = /___(\d+)___/g;
       if (!['增', '删', '改'].includes(f.type)) fail('examTypes.js', `${at} 第 ${i + 1} 处 type='${f.type}' 应为 增/删/改`);
       if (!f.from || !f.to || !f.explain) fail('examTypes.js', `${at} 第 ${i + 1} 处缺 from/to/explain`);
     });
-    if ((item.fixes || []).length < 8) fail('examTypes.js', `${at} 只有 ${(item.fixes || []).length} 处错误，短文改错标准是 10 处`);
+    if ((item.fixes || []).length !== 10) fail('examTypes.js', `${at} 有 ${(item.fixes || []).length} 处错误，短文改错标准是 10 处`);
   });
   notes.push(`题型专项：语法填空 ${grammarFills.length} / 完形 ${clozes.length} / 七选五 ${sevenFives.length} / 改错 ${errorFixes.length}`);
 }

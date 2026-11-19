@@ -2240,6 +2240,80 @@ textarea:focus-visible {
   font-size: 10.5px;
 }
 
+.keypoint-card {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 15px;
+  border-radius: 17px;
+  background: var(--blue-soft);
+  border: 1px solid color-mix(in srgb, var(--blue) 16%, transparent);
+}
+
+.keypoint-head {
+  display: flex;
+  gap: 11px;
+  align-items: flex-start;
+}
+
+.keypoint-icon {
+  width: 30px;
+  height: 30px;
+  border-radius: 9px;
+  background: color-mix(in srgb, var(--blue) 14%, transparent);
+  color: var(--blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex: none;
+}
+
+.keypoint-head strong {
+  font-size: 11.5px;
+  color: var(--blue);
+}
+
+.keypoint-head p {
+  margin-top: 3px;
+  font-size: 10px;
+  color: var(--muted);
+}
+
+.keypoint-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  list-style: none;
+}
+
+.keypoint-list li {
+  display: flex;
+  gap: 9px;
+  align-items: flex-start;
+}
+
+.keypoint-list li > span {
+  width: 19px;
+  height: 19px;
+  flex: none;
+  margin-top: 1px;
+  border-radius: 999px;
+  border: 1px solid color-mix(in srgb, var(--blue) 26%, transparent);
+  background: var(--surface);
+  color: var(--blue);
+  font-size: 10px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.keypoint-list li > p {
+  font-size: 11px;
+  line-height: 1.65;
+  color: var(--ink-soft);
+}
+
 .pitfall-card {
   display: flex;
   gap: 11px;
@@ -2800,6 +2874,139 @@ textarea:focus-visible {
   color: var(--muted);
   line-height: 1.6;
   margin-top: 3px;
+}
+
+.writing-exam-filter {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.chip-count {
+  font-size: 10px;
+  font-weight: 600;
+  opacity: 0.72;
+}
+
+.exam-filter-note {
+  font-size: 10px;
+  color: var(--muted);
+  padding-left: 2px;
+}
+
+.recommend-card {
+  display: flex;
+  flex-direction: column;
+  gap: 11px;
+  padding: 14px;
+  border-radius: 17px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+}
+
+.recommend-head {
+  display: flex;
+  gap: 10px;
+  align-items: flex-start;
+}
+
+.recommend-icon {
+  width: 32px;
+  height: 32px;
+  flex: none;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--amber-soft);
+  color: var(--amber);
+}
+
+.recommend-head h3 {
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.recommend-head p {
+  font-size: 10.5px;
+  color: var(--muted);
+  line-height: 1.55;
+  margin-top: 3px;
+}
+
+.recommend-list {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.recommend-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  width: 100%;
+  min-height: 54px;
+  padding: 9px 12px;
+  border-radius: 13px;
+  border: 1px solid var(--line);
+  background: var(--surface-2);
+  color: var(--ink);
+  text-align: left;
+}
+
+.recommend-row:active {
+  background: var(--green-soft);
+  border-color: var(--green);
+}
+
+.recommend-step {
+  width: 22px;
+  height: 22px;
+  flex: none;
+  border-radius: 999px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  color: var(--green-deep);
+  font-size: 11px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.recommend-copy {
+  flex: 1;
+  min-width: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.recommend-copy small {
+  font-size: 9.5px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.recommend-copy strong {
+  font-size: 12.5px;
+  font-weight: 650;
+}
+
+.recommend-row > .icon {
+  flex: none;
+  color: var(--muted);
+}
+
+.structure-head .level-badge,
+.model-card-top .level-badge,
+.prompt-card-top .level-badge {
+  flex: none;
+}
+
+.model-card-top > .muted,
+.prompt-card-top > span:last-child {
+  margin-left: auto;
 }
 
 .structure-list {
@@ -4237,6 +4444,43 @@ textarea:focus-visible {
   margin-top: 14px;
 }
 
+.empty-state {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 30px 20px;
+  border-radius: 17px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  text-align: center;
+}
+
+.empty-icon {
+  width: 46px;
+  height: 46px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--muted);
+}
+
+.empty-state h3 {
+  font-size: 13px;
+  font-weight: 700;
+  color: var(--ink);
+}
+
+.empty-state p {
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 260px;
+}
+
 .lab-legend {
   font-size: 11.5px;
   color: var(--muted);
@@ -4351,6 +4595,91 @@ textarea:focus-visible {
   align-items: center;
   gap: 5px;
   font-size: 11.5px;
+  color: var(--muted);
+}
+
+.wordform-list {
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+}
+
+.wordform-card {
+  padding: 13px 14px;
+  border-radius: 16px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+}
+
+.wordform-head {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 8px;
+}
+
+.wordform-base {
+  display: inline-flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.wordform-base strong {
+  font-size: 15px;
+  letter-spacing: 0.02em;
+}
+
+.wordform-zh {
+  flex: 1;
+  min-width: 0;
+  font-size: 12px;
+  color: var(--ink-soft);
+}
+
+.wordform-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+  gap: 7px;
+  margin-top: 10px;
+}
+
+.wordform-slot {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  min-width: 0;
+  padding: 7px 9px;
+  border-radius: 10px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+}
+
+.wordform-slot small {
+  font-size: 9.5px;
+  color: var(--muted);
+  letter-spacing: 0.05em;
+}
+
+.wordform-slot span {
+  font-size: 12.5px;
+  font-weight: 600;
+  overflow-wrap: anywhere;
+}
+
+.wordform-slot.origin {
+  background: var(--green-soft);
+  border-color: color-mix(in srgb, var(--green) 34%, transparent);
+}
+
+.wordform-slot.empty span {
+  color: var(--muted);
+  font-weight: 500;
+}
+
+.wordform-tip {
+  margin-top: 9px;
+  font-size: 11.5px;
+  line-height: 1.6;
   color: var(--muted);
 }
 
@@ -4594,6 +4923,13 @@ textarea:focus-visible {
   flex-direction: column;
   gap: 14px;
   margin-top: 16px;
+}
+
+.cloze-question {
+  padding: 11px 12px;
+  border-radius: 14px;
+  border: 1px solid var(--line);
+  background: var(--surface);
 }
 
 .cloze-number {

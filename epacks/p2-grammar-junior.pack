@@ -32,6 +32,12 @@
         ],
       },
     ],
+    keyPoints: [
+      '主语三单且谓语是实义动词，句首借 Does；过去时间借 Did，动词回原形',
+      '答语是 almost every night 等频率，疑问词选 how often',
+      '两者范围内选择用 which 不用 what，which 可作主语',
+      '简答用 Yes 或 No 加主语和助动词，助动词与问句保持一致',
+    ],
     pitfall: '两种语序最容易用反：问宾语时忘了倒装，写成 What you bought yesterday?，应是 What did you buy yesterday?；问主语时又硬加助动词，写成 Who did break the window?，正常问法是 Who broke the window?',
     quiz: [
       {
@@ -105,6 +111,12 @@
           { en: 'Don’t forget to lock the bike, will you?', zh: '别忘了锁自行车，好吗？' },
         ],
       },
+    ],
+    keyPoints: [
+      '前肯后否前否后肯，尾巴助动词照抄前句时态，主语换成代词',
+      '句中有 never、hardly、few、little 等否定词，尾巴用肯定形式',
+      '祈使句尾巴用 will you，Let\'s 开头用 shall we，是固定搭配',
+      'I am 的尾巴是 aren\'t I，This is 作主语用 isn\'t it，需单独记',
     ],
     pitfall: '回答前否后肯的反意疑问句时，Yes 和 No 按事实说，不按对方的口气说：You didn’t finish the report, did you? 确实没写完要答 No, I didn’t，其实写完了要答 Yes, I did。中文的“是的/不是”在这里最容易翻错。',
     quiz: [
@@ -180,6 +192,12 @@
         ],
       },
     ],
+    keyPoints: [
+      '祈使句加 and 接好结果，加 or 接否则，句首一律用动词原形',
+      '否定祈使句用 Don\'t 加原形，句首填 Don\'t 而非 Not 或 No',
+      'What a 用于可数单数，元音音素前用 What an，如 amazing story',
+      'Let 加宾语加原形表让某人做，Let\'s 包括听话人，按句意区分',
+    ],
     pitfall: '选 What 还是 How，看形容词后面还有没有名词：有名词用 What，形容词自己收尾用 How。所以是 What delicious food it is!（food 是不可数名词，不加 a），却是 How delicious the food is!',
     quiz: [
       {
@@ -253,6 +271,12 @@
           { en: 'Everything in the kitchen smells wonderful.', zh: '厨房里的一切闻起来都很香。' },
         ],
       },
+    ],
+    keyPoints: [
+      'Would you like 等招待建议问句用 some，普通疑问否定句用 any',
+      '比较句中代替前面单数或不可数名词用 that，代替复数用 those',
+      '两者都不用 neither，三者以上都不用 none，先数范围再选词',
+      'else 放在复合不定代词之后，如 anything else，语序固定',
     ],
     pitfall: 'one 和 it 常被换着用：I lost my dictionary. I bought it again. 逻辑不通，因为原来那本并没有回来，要说 I bought a new one。另外 every、each、everyone 之后的动词一律用单数：Everyone has a ticket.',
     quiz: [
@@ -328,6 +352,12 @@
         ],
       },
     ],
+    keyPoints: [
+      'nine 变 ninth 保留 e，five 变 fifth，整十词 y 变 ieth',
+      '分数分子用基数分母用序数，分子大于一分母加 s，如 two thirds',
+      '几十几变序数只变个位：the twenty-fifth of May，日期必用序数',
+      'half past 表半点，a quarter to 表差一刻，钟点表达是单选常客',
+    ],
     pitfall: '具体数字后加 s 是最典型的错：two hundreds students 要说 two hundred students；反过来，hundreds of 前面不能再放具体数字，不写 two hundreds of people。分数题的谓语要跟 of 后面的名词走：Two thirds of the cake was eaten.',
     quiz: [
       {
@@ -401,6 +431,12 @@
           { en: 'There was only one ticket left, wasn’t there?', zh: '只剩一张票了，不是吗？' },
         ],
       },
+    ],
+    keyPoints: [
+      '表某处有用 There be 不用 have，将来时是 There will be',
+      '时间词决定 be 的形式：过去用 was/were，将来用 will be',
+      '疑问句 be 提到 there 前，如 Are there；否定在 be 后加 not',
+      '句中有 nothing、no one 等否定词时，反意疑问尾巴用肯定形式',
     ],
     pitfall: '接“单数 + 复数”时别按整句的总数选动词，要看离 be 最近的那个名词：There is a pen and two exercise books on the desk. 另外尾巴不能用 it，There is nothing in the room, isn’t it? 是错的，应写成 is there?',
     quiz: [
@@ -476,6 +512,12 @@
         ],
       },
     ],
+    keyPoints: [
+      '祈使句后 or 表否则 and 表好结果，转折用 but，结果用 so',
+      'both and 连接主语谓语用复数，neither nor 按就近原则定单复数',
+      'and 前后形式对称：同为原形、同为不定式或同为完整句子',
+      '两个完整句子之间必须有连词，只用逗号拼接是作文常见扣分点',
+    ],
     pitfall: '中文的“因为……所以……”“虽然……但是……”在英文里只能留一个：Because it was raining, so we stayed at home. 要改成 It was raining, so we stayed at home. 或 Because it was raining, we stayed at home.',
     quiz: [
       {
@@ -549,6 +591,12 @@
           { en: 'Have you tidied up your bedroom yet?', zh: '你整理好卧室了吗？' },
         ],
       },
+    ],
+    keyPoints: [
+      'go、come、leave、fly 等位移动词用进行时表已安排好的将来',
+      'be about to 表马上就要，后不接 tomorrow 等远时间词',
+      'never 本身含否定不再加 not，seldom、hardly ever 也表否定频率',
+      'already、just 放 have/has 与过去分词之间，yet 放否定疑问句末',
     ],
     pitfall: '频率副词不要插进动词和宾语之间：要说 I usually do my homework，不是 I do usually my homework。already 也不能和明确的过去时间同现：He has already left here two days ago. 是错的，改成 He left here two days ago. 或 He has already left.',
     quiz: [

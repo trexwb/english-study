@@ -32,6 +32,12 @@
         ],
       },
     ],
+    keyPoints: [
+      '逗号后从句指代前面整件事，无提示词空填 which，作主语或宾语',
+      '介词后指物填 which 指人填 whom，如 in front of which',
+      'most、many、several 加 of 后填 which 或 whom，说明其中部分',
+      'as we expected、as is known to all 表正如，是阅读高频搭配',
+    ],
     pitfall: '逗号后面的从句里不写 that，也不省关系词：My brother, that lives in Shanghai, is a pilot. 是错的，要改成 My brother, who lives in Shanghai, is a pilot. 另外 as 引导的“正如”从句可以放在句首，which 不行。',
     quiz: [
       {
@@ -105,6 +111,12 @@
           { en: 'The question when the new library will open is still on the board.', zh: '新图书馆何时开放，这个问题还挂在公告板上。' },
         ],
       },
+    ],
+    keyPoints: [
+      'news、fact、idea 等抽象名词后，从句成分齐全填 that 说明内容',
+      '从句缺主语或宾语是定语从句，指物填 that 或 which，作宾语可省',
+      'doubt 肯定句后填 whether；question 后缺状语填 when/where',
+      '把名词挪进从句读一遍，能作成分是定从，不能是同位语从句',
     ],
     pitfall: '同位语从句的 that 别省，也别换成 what：写作里 the fact he left early 不如 the fact that he left early 稳。另外 if 不能引导同位语从句，the news if we won 是错的，表“是否”只有 whether 能跟在 news、question 后面。',
     quiz: [
@@ -180,6 +192,12 @@
         ],
       },
     ],
+    keyPoints: [
+      'when、while、if、unless 后直接跟分词，是省略了主语和 be 的结构',
+      '省略后主语与动词是被动关系留 done，如 When asked；主动留 doing',
+      'and、but 后主语与前句相同可省，第二个谓语时态与前句一致',
+      '主动 make sb do 变被动后补回 to，写成 be made to do',
+    ],
     pitfall: '省主语的前提是从句主语就是主句主语。While reading the novel, the lamp went out. 错在读小说的人不是 the lamp，把主语补回去写成 While I was reading the novel 才对。另外答句里不能把 to 丢掉，I’d love 后面必须留着 to。',
     quiz: [
       {
@@ -253,6 +271,12 @@
           { en: 'Her refusal to explain the rule made the whole class confused.', zh: '她拒绝解释这条规则，这让全班同学都很困惑。' },
         ],
       },
+    ],
+    keyPoints: [
+      '空格作主语或宾语且后有 of，提示词动词要变名词，加 tion 或 ment',
+      '冠词或物主代词后填名词：confident 变 confidence',
+      'im- 用在 p、b、m 前，il- 在 l 前，ir- 在 r 前，按首字母选前缀',
+      'over- 表过头 under- 表不足，mis- 表做错，按句意选前缀方向',
     ],
     pitfall: '否定前缀不能随便换：impossible 不写 unpossible，irregular 不写 unregular，这些搭配是固定的。也别以为有 un- 就一定是否定：unlike 是介词“和……不同”，mistake 是“做错”而不是“没做”。',
     quiz: [
@@ -328,6 +352,12 @@
         ],
       },
     ],
+    keyPoints: [
+      '合成名词复数只变主体词：passers-by、sons-in-law',
+      '名词可直接作动词：shoulder 表扛、water 表浇水，按谓语位置判断',
+      'has 后填过去分词：modern 先加 ize 变动词再变 modernized',
+      '作文用 beneficial 替 good，numerous 替 many，提升书面度',
+    ],
     pitfall: '合成形容词里的名词不带复数：a five-years-old boy 是错的，要写 a five-year-old boy。加后缀时也常丢字母：hope 加 less 是 hopeless 不是 hopless，care 加 less 是 careless，-ful 只有一个 l。',
     quiz: [
       {
@@ -401,6 +431,12 @@
           { en: 'You needn’t have brought coffee, since there were three boxes in the kitchen.', zh: '你其实不必带咖啡来，厨房里本来就有三箱。' },
         ],
       },
+    ],
+    keyPoints: [
+      '眼前有证据推测过去的事，填 must have done，如地湿推夜里下过雨',
+      '把握不大的过去推测用 might have done，线索常在前句的结果里',
+      'should have done 本该做却没做，could have done 本可做成',
+      'needn\'t have done 表做了没必要，didn\'t need to 表没做',
     ],
     pitfall: '把 mustn’t have done 当成“一定没做过”是错的：否定过去的推测要用 can’t 或 couldn’t have done。另外 must have done 是“我猜他做过”，should have done 是“他本该做却没做”，差一个词，事实正好相反。',
     quiz: [
@@ -476,6 +512,12 @@
         ],
       },
     ],
+    keyPoints: [
+      'all morning 加眼前痕迹，填 have been doing 强调过程',
+      'this time next Sunday 等将来时刻点，填 will be doing',
+      'by the end of 加将来时间，填 will have done 表到那时已完成',
+      'promised 后从句用 would do；were going to 表本打算却未成',
+    ],
     pitfall: '两个高频错：一是把瞬间动词放进完成进行时，写出 He has been dying for two years，应改为 He has been dead for two years；二是看到 by the end of last term 还用将来完成，那是过去的时间点，要用过去完成时。',
     quiz: [
       {
@@ -549,6 +591,12 @@
           { en: 'Kate said she would return my dictionary as soon as she finished the paper.', zh: '凯特说论文一写完就把我的词典还给我。' },
         ],
       },
+    ],
+    keyPoints: [
+      'as soon as、until、unless 从句填一般现在时表将来',
+      '从句主语是动作承受者，填一般现在时被动，如 are approved',
+      '主句过去时从句退一档：will 变 would，现在完成变过去完成',
+      '客观真理不受主句过去时影响，earth is round 永远用一般现在时',
     ],
     pitfall: '看到 when 就套主将从现最容易翻车：Do you know when he will arrive? 里的 when 从句是宾语从句，will 不能改成 arrives。同理 if 表“是否”时也保留 will：I wonder if it will snow tomorrow.',
     quiz: [

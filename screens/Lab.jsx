@@ -1,10 +1,17 @@
 import { useMemo, useState } from 'react';
-import { affixes, confusables, irregularVerbs, knowledgeTabs } from '../data/knowledge.js';
+import { affixes, confusables, irregularVerbs, knowledgeTabs, wordForms } from '../data/knowledge.js';
 import { clozes, errorFixes, examTabs, grammarFills, sevenFives } from '../data/examTypes.js';
 import { Chip, EmptyState, Icon, LevelBadge, ScreenHeader, Segmented, SpeakButton } from '../ui.jsx';
 
 const kindLabels = { prefix: '前缀', suffix: '后缀', root: '词根' };
 const LIST_PAGE = 60;
+const FORM_PAGE = 30;
+const FORM_SLOTS = [
+  { key: 'n', pos: 'n.', label: '名词' },
+  { key: 'v', pos: 'v.', label: '动词' },
+  { key: 'adj', pos: 'adj.', label: '形容词' },
+  { key: 'adv', pos: 'adv.', label: '副词' },
+];
 
 function splitBlanks(text) {
   const parts = [];
@@ -110,6 +117,85 @@ function VerbsView() {
       {rows.length > visible.length && (
         <button type="button" className="secondary-button wide-button load-more-button" onClick={() => setShown((n) => n + LIST_PAGE)}>
           加载更多（还剩 {rows.length - visible.length} 个）
+        </button>
+      )}
+    </div>
+  );
+}
+
+function WordFormView() {
+  const [exam, setExam] = useState('全部');
+  const [query, setQuery] = useState('');
+  const [shown, setShown] = useState(FORM_PAGE);
+
+  const exams = useMemo(() => {
+    const set = new Set(wordForms.map((item) => item.exam).filter(Boolean));
+    return ['全部', ...set];
+  }, []);
+
+  const rows = useMemo(() => {
+    const pool = exam === '全部' ? wordForms : wordForms.filter((item) => item.exam === exam);
+    const key = query.trim().toLowerCase();
+    if (!key) return pool;
+    return pool.filter((item) => FORM_SLOTS.some((slot) => (item[slot.key] || '').includes(key)) || (item.zh || '').includes(query.trim()));
+  }, [exam, query]);
+
+  const visible = rows.slice(0, shown);
+
+  return (
+    <div className="lab-block">
+      <div className="search-box">
+        <Icon name="search" size={18} />
+        <input
+          value={query}
+          onChange={(event) => { setQuery(event.target.value); setShown(FORM_PAGE); }}
+          placeholder="搜任一形式或中文，如 successful"
+          aria-label="搜索词性转换"
+          autoCapitalize="none"
+          autoCorrect="off"
+          spellCheck="false"
+        />
+      </div>
+      <div className="chip-row">
+        {exams.map((item) => (
+          <Chip key={item} active={exam === item} onClick={() => { setExam(item); setShown(FORM_PAGE); }}>{item}</Chip>
+        ))}
+      </div>
+      <p className="lab-legend">题目给出的词标了底色。空格前是冠词或介词填名词，空格后是名词填形容词，修饰动词或整句填副词，作谓语填动词并注意时态语态。— 表示该词性没有常用形式。</p>
+      <p className="list-count">共 {rows.length} 组{rows.length > visible.length ? `，已显示 ${visible.length} 组` : ''}</p>
+      {visible.length === 0 ? (
+        <EmptyState title="没有这组词">换个拼写试试，也可以搜它的派生形式。</EmptyState>
+      ) : (
+        <div className="wordform-list">
+          {visible.map((item) => (
+            <div className="wordform-card" key={item.id}>
+              <div className="wordform-head">
+                <span className="wordform-base">
+                  <strong>{item.base}</strong>
+                  <SpeakButton text={item.base} small />
+                </span>
+                <span className="wordform-zh">{item.zh}</span>
+                {item.exam && <LevelBadge tone={item.exam === '中考' ? 'teal' : 'blue'}>{item.exam}</LevelBadge>}
+              </div>
+              <div className="wordform-grid">
+                {FORM_SLOTS.map((slot) => (
+                  <div
+                    className={`wordform-slot${item[slot.key] ? '' : ' empty'}${item.pos === slot.pos ? ' origin' : ''}`}
+                    key={slot.key}
+                  >
+                    <small>{slot.label}</small>
+                    <span>{item[slot.key] || '—'}</span>
+                  </div>
+                ))}
+              </div>
+              <p className="wordform-tip">{item.tip}</p>
+            </div>
+          ))}
+        </div>
+      )}
+      {rows.length > visible.length && (
+        <button type="button" className="secondary-button wide-button load-more-button" onClick={() => setShown((n) => n + FORM_PAGE)}>
+          加载更多（还剩 {rows.length - visible.length} 组）
         </button>
       )}
     </div>
@@ -481,7 +567,7 @@ export default function Lab({ intent }) {
         eyebrow="EXAM BOOST"
         title="提分"
         sub="把初高中要背的表和要练的题型放在一起查。"
-        right={<span className="header-count">{irregularVerbs.length + affixes.length + confusables.length}<small> 条速查</small></span>}
+        right={<span className="header-count">{irregularVerbs.length + affixes.length + confusables.length + wordForms.length}<small> 条速查</small></span>}
       />
 
       <Segmented
@@ -502,6 +588,7 @@ export default function Lab({ intent }) {
           {tab === 'verbs' && <VerbsView />}
           {tab === 'roots' && <AffixView />}
           {tab === 'confuse' && <ConfusableView />}
+          {tab === 'forms' && <WordFormView />}
         </>
       )}
 

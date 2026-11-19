@@ -4,7 +4,7 @@ import { grammarLessons } from './data/grammar.js';
 import { phrases } from './data/phrases.js';
 import { words } from './data/words.js';
 import { stories } from './data/reading.js';
-import { irregularVerbs, affixes, confusables } from './data/knowledge.js';
+import { irregularVerbs, affixes, confusables, wordForms } from './data/knowledge.js';
 import { grammarFills, clozes, sevenFives, errorFixes } from './data/examTypes.js';
 import { useStudy } from './useStudy.js';
 import { Icon, Sheet } from './ui.jsx';
@@ -81,7 +81,7 @@ function Settings({ open, onClose, data, actions }) {
 
         <div className="about-block">
           <p><strong>英语小站</strong> · 离线可用</p>
-          <p>内置 {words.length} 个单词、{grammarLessons.length} 节语法、{phrases.length} 个短语、{irregularVerbs.length + affixes.length + confusables.length} 条知识速查、{grammarFills.length + clozes.length + sevenFives.length + errorFixes.length} 篇题型练习、{stories.length} 篇原著选段。发音由系统语音提供，离线时也能朗读。</p>
+          <p>内置 {words.length} 个单词、{grammarLessons.length} 节语法、{phrases.length} 个短语、{irregularVerbs.length + affixes.length + confusables.length + wordForms.length} 条知识速查、{grammarFills.length + clozes.length + sevenFives.length + errorFixes.length} 篇题型练习、{stories.length} 篇原著选段。发音由系统语音提供，离线时也能朗读。</p>
         </div>
 
         <button

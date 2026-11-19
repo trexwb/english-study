@@ -109,6 +109,23 @@ export default function Grammar({ data, actions }) {
             </section>
           ))}
 
+          {selected.keyPoints?.length > 0 && (
+            <section className="keypoint-card">
+              <div className="keypoint-head">
+                <span className="keypoint-icon"><Icon name="target" size={18} /></span>
+                <div>
+                  <strong>{selected.exam && selected.exam !== '通用' ? `${selected.exam}考点` : '常考考点'}</strong>
+                  <p>这一节在卷子上怎么出现</p>
+                </div>
+              </div>
+              <ol className="keypoint-list">
+                {selected.keyPoints.map((point, index) => (
+                  <li key={point}><span>{index + 1}</span><p>{point}</p></li>
+                ))}
+              </ol>
+            </section>
+          )}
+
           <aside className="pitfall-card">
             <span className="pitfall-icon"><Icon name="sparkle" size={18} /></span>
             <div>

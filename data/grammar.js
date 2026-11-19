@@ -33,6 +33,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'every day、usually、always 提示习惯常态，选一般现在时，三单加 s',
+      'now、look、listen 提示正在进行，选 am/is/are 加 doing',
+      'every morning 与 today 同句对比，前空一般现在时，后空现在进行时',
+      'know、belong、need 等状态动词不用进行时；时刻表用一般现在时',
+    ],
     pitfall: '看到 now 不一定用进行时：Now I understand.（我现在明白了。）understand 是状态，仍用一般现在时。',
     quiz: [
       {
@@ -89,6 +95,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'yesterday、last week、ago 等明确过去时间出现，动词用过去式',
+      'already、yet、ever、never、since、for 是现在完成时的标志词',
+      'three times 表经历次数、强调对现在的影响，用 have/has 加 done',
+      'for 接时间段，since 接时间点或从句，回答 How long 问句常用',
+    ],
     pitfall: '不要写 I have seen him yesterday. 有了 yesterday 这个明确过去时间，就该用 I saw him yesterday.',
     quiz: [
       {
@@ -144,6 +156,12 @@ export const grammarLessons = [
           { en: 'She studies history at university.', zh: '她在大学学习历史。' },
         ],
       },
+    ],
+    keyPoints: [
+      'a 还是 an 看读音：an hour、an honest，但 a university',
+      '首次提到用 a/an，再次提到、有短语限定或独一无二的事物用 the',
+      '最高级和序数词前加 the；三餐、学科、球类运动前用零冠词',
+      'life、music 等抽象或不可数名词表泛指时，选不填冠词',
     ],
     pitfall: '表示“从事某种职业”时说 work as a teacher，不要漏掉 a；但系动词后表示身份时也要冠词：He is a doctor.',
     quiz: [
@@ -202,6 +220,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '年月季节前用 in，星期和具体日期前用 on，钟点前用 at',
+      '某天的上午下午用 on，如 on Sunday morning，不用 in',
+      '地点题看关系：空间内部用 in，表面接触用 on，视为一个点用 at',
+      'How long 问句答语用 for 加时间段或 since 加起点，配完成时',
+    ],
     pitfall: 'last、next、this、every 前面通常不加介词：next Monday，不是 on next Monday。',
     quiz: [
       {
@@ -257,6 +281,12 @@ export const grammarLessons = [
           { en: 'The team is working well together.', zh: '这个团队合作得很好。' },
         ],
       },
+    ],
+    keyPoints: [
+      '主语后跟 of 短语时谓语随中心词：the number of 加复数仍用单数',
+      'neither nor、not only but also 连接主语时，谓语就近一致',
+      'each、every、everyone、nobody 作主语，谓语一律用单数',
+      'team、family 等集合名词强调整体用单数，强调成员用复数',
     ],
     pitfall: '“There is / There are” 要看后面的真正主语：There are three books on the desk.',
     quiz: [
@@ -314,6 +344,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '先行词指人用 who 或 that，指物用 which 或 that，先辨人还是物',
+      '空后是名词且与先行词是所属关系，如 car 与 man，选 whose',
+      '关系词在从句中作宾语可省略；介词提前后只能用 which 或 whom',
+      '逗号隔开的非限制性从句不用 that，补充说明唯一对象要加逗号',
+    ],
     pitfall: '从句缺主语用 who/which/that，缺状语才用 where。不要说 the city where I visited，应为 the city that I visited。',
     quiz: [
       {
@@ -369,6 +405,12 @@ export const grammarLessons = [
           { en: 'The question is whether we should go.', zh: '问题是我们是否应该去。' },
         ],
       },
+    ],
+    keyPoints: [
+      '无提示词空后从句成分齐全填 that，缺主语或宾语填 what',
+      '主语从句放句首，从句缺宾语填 What 且首字母大写',
+      '空后有 or not 或从句在介词后，表是否只能填 whether 不用 if',
+      'what 相当于 the thing that，已含先行词，不能再与 that 叠用',
     ],
     pitfall: '不要写 I don’t know what is his name. 应为 what his name is，因为从句要用陈述语序。',
     quiz: [
@@ -426,6 +468,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '已有谓语且无连词时，提示词动词变非谓语：主动 doing，被动 done',
+      '空处表目的填 to do；decide、want、be likely 后固定接 to do',
+      'enjoy、avoid、finish 及介词后的提示词动词一律变 doing',
+      'be used to 的 to 是介词，后接 doing，语法填空常考此搭配',
+    ],
     pitfall: '注意逻辑主语：Walking home, I saw a rainbow. 走路的是 I；如果写 Walking home, the rain stopped. 就成了雨在走路。',
     quiz: [
       {
@@ -470,6 +518,7 @@ export const grammarLessons = [
         body: '从句用 had + 过去分词，主句用 would have + 过去分词，表示对过去的遗憾或假设。',
         examples: [
           { en: 'If she had studied harder, she would have passed.', zh: '如果她当时更努力，她本可以通过。' },
+          { en: 'If they had brought a map, they would not have lost their way.', zh: '如果他们当时带了地图，就不会迷路。' },
         ],
       },
       {
@@ -477,9 +526,16 @@ export const grammarLessons = [
         body: 'wish 后接过去式表示与现在相反，接 had done 表示与过去相反。suggest / insist / demand 后的 that 从句常用动词原形。',
         examples: [
           { en: 'I wish I knew the answer.', zh: '我真希望我知道答案。' },
+          { en: 'I wish I had taken her advice.', zh: '我真希望当时听了她的建议。' },
           { en: 'The doctor suggested that he rest for a week.', zh: '医生建议他休息一周。' },
         ],
       },
+    ],
+    keyPoints: [
+      '与现在相反：if 从句用过去式，be 一律用 were，主句 would 加原形',
+      '主句出现 would have done，从句必填 had done，表与过去相反',
+      'wish 后与现在相反用过去式，与过去相反用 had done，看时间词定',
+      'suggest、insist、demand 后的 that 从句谓语用动词原形',
     ],
     pitfall: '虚拟条件句里不要在主句再用 will：If it rains tomorrow, I will stay home. 这是真实条件，不是虚拟；虚拟才用 would。',
     quiz: [
@@ -537,6 +593,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'Never、Seldom、Hardly、Not only 置句首，助动词提到主语前',
+      'Only 加状语放句首才倒装，Only 修饰主语时不倒装，先辨修饰对象',
+      '强调句空处填 that：去掉 It is 和 that 后句子仍完整即是强调句',
+      '强调句中强调时间地点仍填 that，不填 when 或 where',
+    ],
     pitfall: '倒装只提前助动词，不要提前实义动词：Never I have seen... 错，Never have I seen... 对。',
     quiz: [
       {
@@ -592,6 +654,12 @@ export const grammarLessons = [
           { en: 'The second test was much harder.', zh: '第二次测试难得多。' },
         ],
       },
+    ],
+    keyPoints: [
+      '看到 than 用比较级：短词加 er，多音节词前加 more',
+      '最高级前加 the，后接 in 或 of 范围；one of the 最高级接复数名词',
+      '修饰比较级用 much、far、a lot，选项里的 very 不能修饰比较级',
+      '倍数放在 as 原级 as 之前，如 three times as big as，语序固定',
     ],
     pitfall: '不要说 more better 或 most easiest；比较级和最高级不能重复叠加。',
     quiz: [
@@ -649,6 +717,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '前因后果填 therefore；递进填 moreover 或 in addition',
+      '空后是名词短语填 despite，是完整句子填 although',
+      '无提示词空常考逻辑副词，先判断两句是转折、因果还是递进再选词',
+      '作文举例用 for instance 或 such as，such as 后接名词性成分',
+    ],
     pitfall: '不要写 The weather was bad, however we went out. 应改为 ...bad. However, we went out. 或 ...bad, but we went out.',
     quiz: [
       {
@@ -704,6 +778,12 @@ export const grammarLessons = [
           { en: 'The problem can be solved in more than one way.', zh: '这个问题可以用不止一种方法解决。' },
         ],
       },
+    ],
+    keyPoints: [
+      '主语是动作承受者就用被动：be 加过去分词，be 随时态和主语变化',
+      'last month 等过去时间配 was/were done，主语复数用 were',
+      '情态动词后被动是 must/should/can 加 be done，be 不能丢',
+      '被动题两步走：先由时间词定 be 的时态，再由主语单复数定 be 形式',
     ],
     pitfall: 'happen、take place 这类不及物动词没有被动语态：不要写 The accident was happened.，应为 The accident happened.',
     quiz: [
@@ -761,6 +841,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '有把握的肯定推测用 must be，否定推测用 can\'t be，不用 mustn\'t',
+      'Must 开头问句的否定回答用 needn\'t，mustn\'t 表禁止不能作答',
+      '提建议选 should；表禁止选 mustn\'t；外部规定的不得不选 have to',
+      'could 开头的请求更客气，回答仍用 can；may 表许可比 can 正式',
+    ],
     pitfall: '情态动词后直接跟动词原形：He can swims. 错，应为 He can swim；must to go 同样不对，to 也要去掉。',
     quiz: [
       {
@@ -816,6 +902,12 @@ export const grammarLessons = [
           { en: 'If I had known your number, I would have called you last night.', zh: '要是我早知道你的号码，昨晚就给你打电话了。' },
         ],
       },
+    ],
+    keyPoints: [
+      '主句有 will 且条件可能实现，if 从句填一般现在时，注意三单加 s',
+      '主句是 would do，从句填过去式，be 动词不论人称都填 were',
+      '主句是 would have done，从句填 had done，谈论无法改变的过去',
+      '给 if 从句提示词时，先看主句情态动词形式再定从句时态档位',
     ],
     pitfall: '最典型的错误是从句抢先用将来时：If it will rain tomorrow, ... 错；if 从句用一般现在时 If it rains tomorrow，will 只能出现在主句里。',
     quiz: [
@@ -873,6 +965,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'at that time 等过去时刻点，提示词动词填 was/were doing',
+      'while 从句多用进行时，插入的短暂动作用一般过去时，如 lost',
+      'by the time 加过去从句，主句填 had done，表在那之前已完成',
+      '读后续写用 was doing 铺背景、when 加短动作推进情节，叙事常用',
+    ],
     pitfall: '“过去的过去”别漏掉 had：When I got to the cinema, the film started. 像是到了才开演；写成 had started. 才表示到之前早已开演。',
     quiz: [
       {
@@ -928,6 +1026,12 @@ export const grammarLessons = [
           { en: 'The museum opens at nine and closes at five.', zh: '博物馆九点开门，五点闭馆。' },
         ],
       },
+    ],
+    keyPoints: [
+      '电话铃响、箱子重等临场决定语境，选 will 加动词原形',
+      '事先打算或有乌云等眼前迹象，选 be going to，be 随主语变化',
+      '火车电影时刻表用一般现在时表将来，如 starts、opens，三单加 s',
+      'be going to 的 be 不能丢：主语 I 用 am，单数主语用 is',
     ],
     pitfall: '已定好的安排别临时改口用 will：被问 What are you doing this weekend?，答 I will visit my grandma. 听起来像当场拍板；说 I’m visiting my grandma. 才是既有安排。',
     quiz: [
@@ -985,6 +1089,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '转述一般疑问句填 if 或 whether，空后有 or not 只能填 whether',
+      '宾语从句一律陈述语序：疑问词后接主语再接谓语，不倒装',
+      '主句过去时从句退一档，但客观真理仍用一般现在时，如光比声快',
+      'tell 后先接人再接从句；ask 可直接接 if 或 whether 从句',
+    ],
     pitfall: '主句是过去时，从句别用将来时：He said he will come. 错，应为 He said he would come；tomorrow 在转述里也要改成 the next day。',
     quiz: [
       {
@@ -1040,6 +1150,12 @@ export const grammarLessons = [
           { en: 'I remember locking the door, but it was wide open.', zh: '我记得锁过门了，可门却大开着。（已锁过）' },
         ],
       },
+    ],
+    keyPoints: [
+      'enjoy、mind、practice、keep 后接 doing，语法填空直接变 ing',
+      'decide、hope、plan、promise 后接 to do，指向未发生的事',
+      '介词后动词一律变 doing，如 be good at 或 instead of 后',
+      'remember to do 是还没做，remember doing 是已做过，按语境选',
     ],
     pitfall: 'stop 后面差一个 to，意思就反了：He stopped to smoke. 是“停下来去抽烟”，He stopped smoking. 才是“不抽了”。',
     quiz: [
@@ -1097,6 +1213,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'so 后接形容词副词，such 后接名词短语；such a 只用于可数单数',
+      '空后是完整句子填 even though，是名词短语填 despite',
+      'as 表随着，两动作同步变化，如越爬越高空气越凉，完形常考此义',
+      'so many、so much 加名词是固定搭配，此时不用 such',
+    ],
     pitfall: 'although 和 but 不能同时出现：Although he was tired, but he kept running. 错；让步从句本身已含转折，去掉 but 即可。',
     quiz: [
       {
@@ -1152,6 +1274,12 @@ export const grammarLessons = [
           { en: 'What makes the sky look orange at sunset?', zh: '是什么让日落时的天空看起来发橙？' },
         ],
       },
+    ],
+    keyPoints: [
+      '主语三单且谓语是实义动词，句首借 Does；过去时间借 Did，动词回原形',
+      '答语是 almost every night 等频率，疑问词选 how often',
+      '两者范围内选择用 which 不用 what，which 可作主语',
+      '简答用 Yes 或 No 加主语和助动词，助动词与问句保持一致',
     ],
     pitfall: '两种语序最容易用反：问宾语时忘了倒装，写成 What you bought yesterday?，应是 What did you buy yesterday?；问主语时又硬加助动词，写成 Who did break the window?，正常问法是 Who broke the window?',
     quiz: [
@@ -1227,6 +1355,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '前肯后否前否后肯，尾巴助动词照抄前句时态，主语换成代词',
+      '句中有 never、hardly、few、little 等否定词，尾巴用肯定形式',
+      '祈使句尾巴用 will you，Let\'s 开头用 shall we，是固定搭配',
+      'I am 的尾巴是 aren\'t I，This is 作主语用 isn\'t it，需单独记',
+    ],
     pitfall: '回答前否后肯的反意疑问句时，Yes 和 No 按事实说，不按对方的口气说：You didn’t finish the report, did you? 确实没写完要答 No, I didn’t，其实写完了要答 Yes, I did。中文的“是的/不是”在这里最容易翻错。',
     quiz: [
       {
@@ -1300,6 +1434,12 @@ export const grammarLessons = [
           { en: 'How quickly the children are growing!', zh: '孩子们长得真快啊！' },
         ],
       },
+    ],
+    keyPoints: [
+      '祈使句加 and 接好结果，加 or 接否则，句首一律用动词原形',
+      '否定祈使句用 Don\'t 加原形，句首填 Don\'t 而非 Not 或 No',
+      'What a 用于可数单数，元音音素前用 What an，如 amazing story',
+      'Let 加宾语加原形表让某人做，Let\'s 包括听话人，按句意区分',
     ],
     pitfall: '选 What 还是 How，看形容词后面还有没有名词：有名词用 What，形容词自己收尾用 How。所以是 What delicious food it is!（food 是不可数名词，不加 a），却是 How delicious the food is!',
     quiz: [
@@ -1375,6 +1515,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'Would you like 等招待建议问句用 some，普通疑问否定句用 any',
+      '比较句中代替前面单数或不可数名词用 that，代替复数用 those',
+      '两者都不用 neither，三者以上都不用 none，先数范围再选词',
+      'else 放在复合不定代词之后，如 anything else，语序固定',
+    ],
     pitfall: 'one 和 it 常被换着用：I lost my dictionary. I bought it again. 逻辑不通，因为原来那本并没有回来，要说 I bought a new one。另外 every、each、everyone 之后的动词一律用单数：Everyone has a ticket.',
     quiz: [
       {
@@ -1448,6 +1594,12 @@ export const grammarLessons = [
           { en: 'It is about ten minutes’ walk from my home to the school gate.', zh: '从我家到学校大门大约步行十分钟。' },
         ],
       },
+    ],
+    keyPoints: [
+      'nine 变 ninth 保留 e，five 变 fifth，整十词 y 变 ieth',
+      '分数分子用基数分母用序数，分子大于一分母加 s，如 two thirds',
+      '几十几变序数只变个位：the twenty-fifth of May，日期必用序数',
+      'half past 表半点，a quarter to 表差一刻，钟点表达是单选常客',
     ],
     pitfall: '具体数字后加 s 是最典型的错：two hundreds students 要说 two hundred students；反过来，hundreds of 前面不能再放具体数字，不写 two hundreds of people。分数题的谓语要跟 of 后面的名词走：Two thirds of the cake was eaten.',
     quiz: [
@@ -1523,6 +1675,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '表某处有用 There be 不用 have，将来时是 There will be',
+      '时间词决定 be 的形式：过去用 was/were，将来用 will be',
+      '疑问句 be 提到 there 前，如 Are there；否定在 be 后加 not',
+      '句中有 nothing、no one 等否定词时，反意疑问尾巴用肯定形式',
+    ],
     pitfall: '接“单数 + 复数”时别按整句的总数选动词，要看离 be 最近的那个名词：There is a pen and two exercise books on the desk. 另外尾巴不能用 it，There is nothing in the room, isn’t it? 是错的，应写成 is there?',
     quiz: [
       {
@@ -1596,6 +1754,12 @@ export const grammarLessons = [
           { en: 'She closed the door quietly and sat down beside me.', zh: '她轻轻关上门，在我旁边坐下。' },
         ],
       },
+    ],
+    keyPoints: [
+      '祈使句后 or 表否则 and 表好结果，转折用 but，结果用 so',
+      'both and 连接主语谓语用复数，neither nor 按就近原则定单复数',
+      'and 前后形式对称：同为原形、同为不定式或同为完整句子',
+      '两个完整句子之间必须有连词，只用逗号拼接是作文常见扣分点',
     ],
     pitfall: '中文的“因为……所以……”“虽然……但是……”在英文里只能留一个：Because it was raining, so we stayed at home. 要改成 It was raining, so we stayed at home. 或 Because it was raining, we stayed at home.',
     quiz: [
@@ -1671,6 +1835,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'go、come、leave、fly 等位移动词用进行时表已安排好的将来',
+      'be about to 表马上就要，后不接 tomorrow 等远时间词',
+      'never 本身含否定不再加 not，seldom、hardly ever 也表否定频率',
+      'already、just 放 have/has 与过去分词之间，yet 放否定疑问句末',
+    ],
     pitfall: '频率副词不要插进动词和宾语之间：要说 I usually do my homework，不是 I do usually my homework。already 也不能和明确的过去时间同现：He has already left here two days ago. 是错的，改成 He left here two days ago. 或 He has already left.',
     quiz: [
       {
@@ -1744,6 +1914,12 @@ export const grammarLessons = [
           { en: 'She keeps dozens of postcards, several of which were drawn by her own students.', zh: '她留着几十张明信片，其中好几张是她自己的学生画的。' },
         ],
       },
+    ],
+    keyPoints: [
+      '逗号后从句指代前面整件事，无提示词空填 which，作主语或宾语',
+      '介词后指物填 which 指人填 whom，如 in front of which',
+      'most、many、several 加 of 后填 which 或 whom，说明其中部分',
+      'as we expected、as is known to all 表正如，是阅读高频搭配',
     ],
     pitfall: '逗号后面的从句里不写 that，也不省关系词：My brother, that lives in Shanghai, is a pilot. 是错的，要改成 My brother, who lives in Shanghai, is a pilot. 另外 as 引导的“正如”从句可以放在句首，which 不行。',
     quiz: [
@@ -1819,6 +1995,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'news、fact、idea 等抽象名词后，从句成分齐全填 that 说明内容',
+      '从句缺主语或宾语是定语从句，指物填 that 或 which，作宾语可省',
+      'doubt 肯定句后填 whether；question 后缺状语填 when/where',
+      '把名词挪进从句读一遍，能作成分是定从，不能是同位语从句',
+    ],
     pitfall: '同位语从句的 that 别省，也别换成 what：写作里 the fact he left early 不如 the fact that he left early 稳。另外 if 不能引导同位语从句，the news if we won 是错的，表“是否”只有 whether 能跟在 news、question 后面。',
     quiz: [
       {
@@ -1892,6 +2074,12 @@ export const grammarLessons = [
           { en: 'The pupil was made to repeat the whole dialogue twice.', zh: '那个小学生被迫把整段对话重复了两遍。' },
         ],
       },
+    ],
+    keyPoints: [
+      'when、while、if、unless 后直接跟分词，是省略了主语和 be 的结构',
+      '省略后主语与动词是被动关系留 done，如 When asked；主动留 doing',
+      'and、but 后主语与前句相同可省，第二个谓语时态与前句一致',
+      '主动 make sb do 变被动后补回 to，写成 be made to do',
     ],
     pitfall: '省主语的前提是从句主语就是主句主语。While reading the novel, the lamp went out. 错在读小说的人不是 the lamp，把主语补回去写成 While I was reading the novel 才对。另外答句里不能把 to 丢掉，I’d love 后面必须留着 to。',
     quiz: [
@@ -1967,6 +2155,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '空格作主语或宾语且后有 of，提示词动词要变名词，加 tion 或 ment',
+      '冠词或物主代词后填名词：confident 变 confidence',
+      'im- 用在 p、b、m 前，il- 在 l 前，ir- 在 r 前，按首字母选前缀',
+      'over- 表过头 under- 表不足，mis- 表做错，按句意选前缀方向',
+    ],
     pitfall: '否定前缀不能随便换：impossible 不写 unpossible，irregular 不写 unregular，这些搭配是固定的。也别以为有 un- 就一定是否定：unlike 是介词“和……不同”，mistake 是“做错”而不是“没做”。',
     quiz: [
       {
@@ -2040,6 +2234,12 @@ export const grammarLessons = [
           { en: 'Regular exercise is beneficial to the heart, while sitting too long is harmful.', zh: '规律运动对心脏有益，久坐则有害。' },
         ],
       },
+    ],
+    keyPoints: [
+      '合成名词复数只变主体词：passers-by、sons-in-law',
+      '名词可直接作动词：shoulder 表扛、water 表浇水，按谓语位置判断',
+      'has 后填过去分词：modern 先加 ize 变动词再变 modernized',
+      '作文用 beneficial 替 good，numerous 替 many，提升书面度',
     ],
     pitfall: '合成形容词里的名词不带复数：a five-years-old boy 是错的，要写 a five-year-old boy。加后缀时也常丢字母：hope 加 less 是 hopeless 不是 hopless，care 加 less 是 careless，-ful 只有一个 l。',
     quiz: [
@@ -2115,6 +2315,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      '眼前有证据推测过去的事，填 must have done，如地湿推夜里下过雨',
+      '把握不大的过去推测用 might have done，线索常在前句的结果里',
+      'should have done 本该做却没做，could have done 本可做成',
+      'needn\'t have done 表做了没必要，didn\'t need to 表没做',
+    ],
     pitfall: '把 mustn’t have done 当成“一定没做过”是错的：否定过去的推测要用 can’t 或 couldn’t have done。另外 must have done 是“我猜他做过”，should have done 是“他本该做却没做”，差一个词，事实正好相反。',
     quiz: [
       {
@@ -2189,6 +2395,12 @@ export const grammarLessons = [
         ],
       },
     ],
+    keyPoints: [
+      'all morning 加眼前痕迹，填 have been doing 强调过程',
+      'this time next Sunday 等将来时刻点，填 will be doing',
+      'by the end of 加将来时间，填 will have done 表到那时已完成',
+      'promised 后从句用 would do；were going to 表本打算却未成',
+    ],
     pitfall: '两个高频错：一是把瞬间动词放进完成进行时，写出 He has been dying for two years，应改为 He has been dead for two years；二是看到 by the end of last term 还用将来完成，那是过去的时间点，要用过去完成时。',
     quiz: [
       {
@@ -2262,6 +2474,12 @@ export const grammarLessons = [
           { en: 'Kate said she would return my dictionary as soon as she finished the paper.', zh: '凯特说论文一写完就把我的词典还给我。' },
         ],
       },
+    ],
+    keyPoints: [
+      'as soon as、until、unless 从句填一般现在时表将来',
+      '从句主语是动作承受者，填一般现在时被动，如 are approved',
+      '主句过去时从句退一档：will 变 would，现在完成变过去完成',
+      '客观真理不受主句过去时影响，earth is round 永远用一般现在时',
     ],
     pitfall: '看到 when 就套主将从现最容易翻车：Do you know when he will arrive? 里的 when 从句是宾语从句，will 不能改成 arrives。同理 if 表“是否”时也保留 will：I wonder if it will snow tomorrow.',
     quiz: [
