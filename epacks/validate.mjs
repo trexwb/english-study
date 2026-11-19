@@ -30,6 +30,58 @@ function load(rel, names) {
   return new Function(body)();
 }
 
+// 解析点名了某个选项、却不是标记为正确的那个：说明 a 下标或解析写错了。
+const AUX_PREFIX = /^(?:to|am|is|are|was|were|be|been|being|have|has|had|having|will|would|shall|should|can|could|may|might|must|need|not)\s+/;
+// 解析里常写词干（see / visit / modern）或带助动词的完整形式，比较前先归一到词干。
+function lemma(t) {
+  let s = String(t).toLowerCase().replace(/[’']/g, "'").replace(/n't/g, '').replace(/\s+/g, ' ').trim();
+  let prev;
+  do { prev = s; s = s.replace(AUX_PREFIX, ''); } while (s !== prev);
+  s = s.replace(/(ing|ed|en|es|s)$/, '');
+  if (/([bdgklmnprstv])\1$/.test(s)) s = s.slice(0, -1);
+  return s;
+}
+const REJECT_MARK = /相反|不符|不对|不是|而非|排除|不合|对照|对比|错误|干扰/;
+function answerMismatch(opts, a, explain) {
+  if (!Array.isArray(opts) || !explain || !Number.isInteger(a) || !opts[a]) return null;
+  const norm = (t) => String(t).toLowerCase().replace(/[’']/g, "'").replace(/\s+/g, ' ').trim();
+  const text = norm(explain);
+  const right = lemma(opts[a]);
+  const sameFamily = (o) => {
+    const l = lemma(o);
+    return l === right || (Math.min(l.length, right.length) >= 3 && (l.startsWith(right) || right.startsWith(l)));
+  };
+  if (text.includes(norm(opts[a])) || sameFamily(opts[a])) return null;
+  // 解析明确把某选项判为错项时，点名它不算答案不一致。
+  if (REJECT_MARK.test(explain)) return null;
+  const named = opts.filter((o, i) => i !== a && norm(o).length > 2 && text.includes(norm(o)) && !sameFamily(o));
+  return named.length ? named.join(' / ') : null;
+}
+
+// 例句必须真的用到这个词（含常见变形与不规则三态），否则学生背不到语境。
+const IRREGULAR_EXTRA = {
+  be: ['am', 'is', 'are', 'was', 'were', 'been', 'being'],
+  have: ['has', 'had', 'having'],
+  do: ['does', 'did', 'done', 'doing'],
+  go: ['goes', 'went', 'gone', 'going'],
+  can: ['could'],
+  will: ['would'],
+  shall: ['should'],
+  may: ['might'],
+};
+function exampleForms(w, verbs) {
+  const forms = new Set([w, `${w}s`, `${w}es`, `${w}ed`, `${w}d`, `${w}ing`,
+    w.replace(/e$/, '') + 'ing', w.replace(/y$/, 'ied'), w.replace(/([^aeiou])y$/, '$1ies')]);
+  if (/[^aeiou][aeiou][^aeiouwxy]$/.test(w)) {
+    forms.add(w + w.slice(-1) + 'ing');
+    forms.add(w + w.slice(-1) + 'ed');
+  }
+  for (const extra of IRREGULAR_EXTRA[w] || []) forms.add(extra);
+  const verb = verbs && verbs[w];
+  if (verb) for (const f of [...String(verb.past).split('/'), ...String(verb.pp).split('/')]) forms.add(f.trim());
+  return [...forms].filter(Boolean);
+}
+
 const data = {};
 for (const [rel, names] of Object.entries(MODULES)) {
   try {
@@ -47,6 +99,8 @@ const ZH_END = /[。！？]["'”’]?$/;
 const BLANK_RE = /___(\d+)___/g;
 
 /* ---------- words ---------- */
+// 不规则三态供例句变形校验使用
+const verbForms = Object.fromEntries((data['data/knowledge.js'].irregularVerbs || []).map((v) => [v.base, v]));
 {
   const { decks = [], words = [] } = data['data/words.js'];
   const deckIds = new Set(decks.map((d) => d.id));
@@ -64,6 +118,9 @@ const BLANK_RE = /___(\d+)___/g;
     if (word.ex && !EN_END.test(word.ex)) fail('words.js', `${at} 的 ex 结尾没有标点`);
     if (word.exZh && !ZH_END.test(word.exZh)) fail('words.js', `${at} 的 exZh 结尾没有中文标点`);
     if (word.ex && cjk.test(word.ex)) fail('words.js', `${at} 的英文例句里混进了中文，朗读会读错`);
+    if (word.w && word.ex && !exampleForms(word.w, verbForms).some((f) => new RegExp(`\\b${f}\\b`, 'i').test(word.ex))) {
+      fail('words.js', `${at} 的例句里没有出现 ${word.w} 或其变形，语境与词条脱节`);
+    }
     if (word.w) {
       if (seen.has(word.w)) fail('words.js', `重复词条 ${word.w}（第 ${seen.get(word.w)} 与 ${index} 条，Object.fromEntries 会静默丢一条）`);
       else seen.set(word.w, index);
@@ -141,6 +198,8 @@ const BLANK_RE = /___(\d+)___/g;
       if (!Number.isInteger(q.a) || q.a < 0 || q.a >= (q.opts || []).length) fail('grammar.js', `${qat} 的答案下标 a=${q.a} 越界`);
       if (!q.explain) fail('grammar.js', `${qat} 缺 explain`);
       if (q.q && !q.q.includes('____') && !/[?？]/.test(q.q)) fail('grammar.js', `${qat} 题干里既没有空格 ____ 也不是问句`);
+      const mismatch = answerMismatch(q.opts, q.a, q.explain);
+      if (mismatch) fail('grammar.js', `${qat} 解析点名的是「${mismatch}」，但正确项标的是「${(q.opts || [])[q.a]}」`);
     });
   });
   notes.push(`语法课 ${grammarLessons.length} 节 / 练习 ${quizzes} 题`);
@@ -298,6 +357,8 @@ const BLANK_RE = /___(\d+)___/g;
       else if (new Set(q.opts).size !== q.opts.length) fail('examTypes.js', `${at} 第 ${q.n} 题选项文本重复（React key 冲突）`);
       if (!Number.isInteger(q.a) || q.a < 0 || q.a >= (q.opts || []).length) fail('examTypes.js', `${at} 第 ${q.n} 题 a=${q.a} 越界`);
       if (!q.explain) fail('examTypes.js', `${at} 第 ${q.n} 题缺 explain`);
+      const mismatch = answerMismatch(q.opts, q.a, q.explain);
+      if (mismatch) fail('examTypes.js', `${at} 第 ${q.n} 题解析点名「${mismatch}」，正确项却是「${(q.opts || [])[q.a]}」`);
     });
     const positions = (item.questions || []).map((q) => q.a);
     if (positions.length > 3 && new Set(positions).size < 2) notes.push(`${at} 正确答案全落在同一个下标，学生可能蒙对`);

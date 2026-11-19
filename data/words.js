@@ -786,7 +786,7 @@ export const words = [
   { w: 'litter', p: '/ˈlɪtər/', pos: 'n. / v.', zh: '垃圾；乱扔垃圾', deck: 'senior', ex: 'Small signs asking visitors not to litter now stand at every trail corner.', exZh: '每条山路转角如今都立着提醒游客勿乱扔垃圾的小牌子。' },
   { w: 'greenhouse', p: '/ˈɡriːnhaʊs/', pos: 'n.', zh: '温室；暖房', deck: 'senior', ex: 'The farmers built a glass greenhouse to grow vegetables through the cold winter.', exZh: '农户搭起玻璃温室，好在严冬里种菜。' },
   { w: 'ecosystem', p: '/ˈiːkoʊsɪstəm/', pos: 'n.', zh: '生态系统', deck: 'senior', ex: 'Removing one small fish can quietly upset the balance of the whole lake ecosystem.', exZh: '移除一种小鱼，就可能悄悄打乱整个湖泊生态系统的平衡。' },
-  { w: 'biodiversity', p: '/ˌbaɪoʊdaɪˈvɜːrsəti/', pos: 'n.', zh: '生物多样性', deck: 'senior', ex: 'The reserve protects kinds of plants that grow nowhere else on earth.', exZh: '这片保护区保护着地球上别处都不生长的多种植物。' },
+  { w: 'biodiversity', p: '/ˌbaɪoʊdaɪˈvɜːrsəti/', pos: 'n.', zh: '生物多样性', deck: 'senior', ex: 'The reserve protects biodiversity by saving plants that grow nowhere else on earth.', exZh: '这片保护区通过拯救地球上别处都不生长的植物来保护生物多样性。' },
   { w: 'consequently', p: '/ˈkɑːnsɪkwentli/', pos: 'adv.', zh: '因此；所以', deck: 'senior', ex: 'The river froze very early; consequently, the fishing village earned nothing that winter.', exZh: '河面封冻得极早，因此那个冬天渔村分文未收。' },
   { w: 'species', p: '/ˈspiːʃiːz/', pos: 'n.', zh: '物种；种类', deck: 'senior', ex: 'This rare species of crane returns to exactly the same lake every spring.', exZh: '这种珍稀的鹤每年春天都回到同一片湖泊。' },
   { w: 'habitat', p: '/ˈhæbɪtæt/', pos: 'n.', zh: '栖息地；产地', deck: 'senior', ex: 'Building new roads often cuts a habitat into pieces that animals cannot cross.', exZh: '修新路常把栖息地切成动物无法穿越的碎块。' },

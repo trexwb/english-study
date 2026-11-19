@@ -470,6 +470,7 @@ export const grammarLessons = [
         body: '从句用 had + 过去分词，主句用 would have + 过去分词，表示对过去的遗憾或假设。',
         examples: [
           { en: 'If she had studied harder, she would have passed.', zh: '如果她当时更努力，她本可以通过。' },
+          { en: 'If they had brought a map, they would not have lost their way.', zh: '如果他们当时带了地图，就不会迷路。' },
         ],
       },
       {
@@ -477,6 +478,7 @@ export const grammarLessons = [
         body: 'wish 后接过去式表示与现在相反，接 had done 表示与过去相反。suggest / insist / demand 后的 that 从句常用动词原形。',
         examples: [
           { en: 'I wish I knew the answer.', zh: '我真希望我知道答案。' },
+          { en: 'I wish I had taken her advice.', zh: '我真希望当时听了她的建议。' },
           { en: 'The doctor suggested that he rest for a week.', zh: '医生建议他休息一周。' },
         ],
       },

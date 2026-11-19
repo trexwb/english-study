@@ -422,7 +422,7 @@ export const modelEssays = [
       '这个习惯也给了我一种不与他人比较的进步尺度。一年十页的夜晚累积起来，超过二十本书。没有一本是靠一次爆发式动力读完的。',
       '回头看，我意识到这个习惯有效，是因为它足够小，能在忙碌的生活里活下来。巨大的改变很少大声宣告自己，更多时候，它从安静的一页开始。',
     ],
-    expressions: ['It was not a dramatic resolution.', 'The point was not to..., but to...', 'What surprised me was...', 'added up to', 'Looking back, I realize that...'],
+    expressions: ['It was not a dramatic resolution.', 'The point was not to... The point was to...', 'What surprised me was...', 'added up to', 'Looking back, I realize that...'],
   },
   {
     id: 'm4',
@@ -445,7 +445,7 @@ export const modelEssays = [
       '因此，关键不是用不用 AI，而是怎么用。学生应该用它提出更好的问题、检查自己的推理、修改自己的作品，而不是替代初稿。学校可以通过明确规则、教学生核实信息来提供帮助。',
       '有纪律地使用，AI 是有用的助手；不加思考地使用，它就成了通向虚无的捷径。差别在于握着工具的那只手。',
     ],
-    expressions: ['As with any powerful tool...', 'The benefits are clear.', 'Yet there are real dangers.', 'The key is not whether..., but how.', 'Used with discipline, ...'],
+    expressions: ['As with any powerful tool...', 'The benefits are clear.', 'Yet there are real dangers.', 'The key, then, is not whether... but how.', 'Used with discipline, ...'],
   },
   {
     id: 'm5',

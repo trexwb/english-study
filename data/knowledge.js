@@ -38,6 +38,7 @@ export const irregularVerbs = [
   { base: 'dream', past: 'dreamt / dreamed', pp: 'dreamt / dreamed', zh: '做梦；梦想', exam: '中考' },
   { base: 'drink', past: 'drank', pp: 'drunk', zh: '喝', exam: '中考' },
   { base: 'drive', past: 'drove', pp: 'driven', zh: '开车；驱使', exam: '中考' },
+  { base: 'dwell', past: 'dwelt', pp: 'dwelt', zh: '居住；栖身', exam: '高考' },
   { base: 'eat', past: 'ate', pp: 'eaten', zh: '吃', exam: '中考' },
   { base: 'fall', past: 'fell', pp: 'fallen', zh: '落下；跌落', exam: '中考' },
   { base: 'feed', past: 'fed', pp: 'fed', zh: '喂养', exam: '高考' },

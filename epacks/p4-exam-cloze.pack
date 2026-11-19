@@ -13,7 +13,7 @@
       { n: 6, opts: ['manners', 'profit', 'trouble', 'weather'], a: 1, explain: '词义辨析题。祖母谈的是生意，not only 后接赚钱这一层，与 welcome 构成对比。' },
       { n: 7, opts: ['corner', 'window', 'chair', 'office'], a: 2, explain: '复现题。前文写我坐在桌后，末句又回到 plastic chair，人没走我只能继续坐着。' },
       { n: 8, opts: ['owe', 'punish', 'trust', 'suspect'], a: 2, explain: '上下文题。餐馆老板要找长期供货的人，关键在可靠；suspect 与 punish 与语境相反。' },
-      { n: 9, opts: ['bill', 'order', 'menu', 'dish'], a: 1, explain: '词义辨析题。整篮蔬菜被买走，这是我第一次接到大批“订货”；bill 与 menu 属于餐馆端。' },
+      { n: 9, opts: ['bill', 'order', 'menu', 'dish'], a: 1, explain: '词义辨析题。整篮蔬菜被买走，说明这是我第一次接到大批 order（订货）；bill 是账单、menu 是菜单，都不合语境。' },
       { n: 10, opts: ['heavy', 'light', 'cold', 'slow'], a: 1, explain: '词义辨析题。车已卖空却“奇怪地轻”，strangely 提示与前文的沉重形成反差。' },
       { n: 11, opts: ['problem', 'feeling', 'strength', 'secret'], a: 2, explain: '逻辑关系题。not…but 把耐心与善意从“软素质”翻转为一种真正的力量。' },
       { n: 12, opts: ['break', 'ignore', 'keep', 'change'], a: 2, explain: '固定搭配题。keep the rules 遵守规则，冒号后是她留下的两条规矩。' },
