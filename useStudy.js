@@ -1,5 +1,6 @@
 import { useEffect, useMemo, useState } from 'react';
 import { words } from './data/words.js';
+import { normalizeWord } from './enrich.js';
 import { addDays, dayKey, EMPTY_DAY } from './utils.js';
 
 const STORAGE_KEY = 'english-study-v1';
@@ -21,7 +22,31 @@ const initialData = {
   reading: {},
   drafts: {},
   writingDone: {},
+  customWords: [],
 };
+
+// 录入词的兜底清洗：逐条校验 w 形态、剔除与内置词库重复的条目，再按 w 去重（保留首条），
+// 字符串字段统一兜底为 ''——防手工改动存储产出重复 w（撞 React key、due/learning 双计数）或渲染 undefined。
+function sanitizeCustomWords(list) {
+  if (!Array.isArray(list)) return [];
+  const seen = new Set();
+  const result = [];
+  for (const item of list) {
+    if (!item || typeof item.w !== 'string' || !/^[a-z]+$/.test(item.w) || seen.has(item.w)) continue;
+    if (words.some((word) => word.w === item.w)) continue;
+    seen.add(item.w);
+    result.push({
+      ...item,
+      deck: 'custom',
+      p: typeof item.p === 'string' ? item.p : '',
+      pos: typeof item.pos === 'string' ? item.pos : '',
+      zh: typeof item.zh === 'string' ? item.zh : '',
+      ex: typeof item.ex === 'string' ? item.ex : '',
+      exZh: typeof item.exZh === 'string' ? item.exZh : '',
+    });
+  }
+  return result;
+}
 
 function loadData() {
   try {
@@ -39,6 +64,7 @@ function loadData() {
       reading: parsed.reading || {},
       drafts: parsed.drafts || {},
       writingDone: parsed.writingDone || {},
+      customWords: sanitizeCustomWords(parsed.customWords),
     };
   } catch {
     return initialData;
@@ -185,11 +211,47 @@ export function useStudy() {
     setData((prev) => ({ ...prev, settings: { ...prev.settings, ...patch } }));
   }
 
+  // 清除学习记录保留设置和自己录入的词——录入的词是内容资产而非进度。
   function resetProgress() {
     setData((prev) => ({
       ...initialData,
       settings: prev.settings,
+      customWords: prev.customWords,
     }));
+  }
+
+  function addCustomWord(entry) {
+    setData((prev) => {
+      const w = normalizeWord(entry?.w);
+      if (!w) return prev;
+      if (words.some((item) => item.w === w) || prev.customWords.some((item) => item.w === w)) return prev;
+      return { ...prev, customWords: [...prev.customWords, { ...entry, w, deck: 'custom', added: dayKey() }] };
+    });
+  }
+
+  function updateCustomWord(oldW, entry) {
+    setData((prev) => {
+      const w = normalizeWord(entry?.w);
+      const target = prev.customWords.find((item) => item.w === oldW);
+      if (!w || !target) return prev;
+      if (w !== oldW && (words.some((item) => item.w === w) || prev.customWords.some((item) => item.w === w))) return prev;
+      const customWords = prev.customWords.map((item) => (
+        item.w === oldW ? { ...item, ...entry, w, deck: 'custom', added: item.added } : item
+      ));
+      if (w === oldW) return { ...prev, customWords };
+      // 改名视为新词：旧拼写的进度清掉，从零开始学。
+      const wordProgress = { ...prev.wordProgress };
+      delete wordProgress[oldW];
+      return { ...prev, customWords, wordProgress };
+    });
+  }
+
+  function deleteCustomWord(w) {
+    setData((prev) => {
+      const wordProgress = { ...prev.wordProgress };
+      delete wordProgress[w];
+      return { ...prev, customWords: prev.customWords.filter((item) => item.w !== w), wordProgress };
+    });
   }
 
   const today = dayKey();
@@ -213,11 +275,22 @@ export function useStudy() {
     saveDraft,
     updateSettings,
     resetProgress,
+    addCustomWord,
+    updateCustomWord,
+    deleteCustomWord,
   };
 }
 
+// 词池统一出口：custom 是用户录入的词，all 是内置 + 录入，其余按 deck 过滤。
+export function poolFor(data, deckId = 'all') {
+  const custom = Array.isArray(data?.customWords) ? data.customWords : [];
+  if (deckId === 'custom') return custom;
+  if (deckId === 'all') return [...words, ...custom];
+  return words.filter((word) => word.deck === deckId);
+}
+
 export function wordCounts(data, deckId = 'all') {
-  const pool = deckId === 'all' ? words : words.filter((word) => word.deck === deckId);
+  const pool = poolFor(data, deckId);
   const today = dayKey();
   let due = 0;
   let fresh = 0;
@@ -236,7 +309,7 @@ export function wordCounts(data, deckId = 'all') {
 }
 
 export function buildWordQueue(data, deckId = 'all', limit = 10) {
-  const pool = deckId === 'all' ? words : words.filter((word) => word.deck === deckId);
+  const pool = poolFor(data, deckId);
   const today = dayKey();
   const due = [];
   const fresh = [];
@@ -253,7 +326,7 @@ export function buildWordQueue(data, deckId = 'all', limit = 10) {
 }
 
 export function dictationQueue(data, deckId = 'all', limit = 10) {
-  const pool = deckId === 'all' ? words : words.filter((word) => word.deck === deckId);
+  const pool = poolFor(data, deckId);
   const today = dayKey();
   const due = [];
   const fresh = [];

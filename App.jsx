@@ -71,6 +71,7 @@ function Settings({ open, onClose, data, actions }) {
           </div>
           <div className="data-grid">
             <div><strong>{learned}</strong><span>学过的词</span></div>
+            <div><strong>{data.customWords.length}</strong><span>我的词库</span></div>
             <div><strong>{grammar}</strong><span>语法课</span></div>
             <div><strong>{phraseCount}</strong><span>短语</span></div>
             <div><strong>{reading}</strong><span>阅读段落</span></div>
@@ -81,21 +82,21 @@ function Settings({ open, onClose, data, actions }) {
 
         <div className="about-block">
           <p><strong>英语小站</strong> · 离线可用</p>
-          <p>内置 {words.length} 个单词、{grammarLessons.length} 节语法、{phrases.length} 个短语、{irregularVerbs.length + affixes.length + confusables.length + wordForms.length} 条知识速查、{grammarFills.length + clozes.length + sevenFives.length + errorFixes.length} 篇题型练习、{stories.length} 篇原著选段。发音由系统语音提供，离线时也能朗读。</p>
+          <p>内置 {words.length} 个单词、{grammarLessons.length} 节语法、{phrases.length} 个短语、{irregularVerbs.length + affixes.length + confusables.length + wordForms.length} 条知识速查、{grammarFills.length + clozes.length + sevenFives.length + errorFixes.length} 篇题型练习、{stories.length} 篇原著选段。发音由系统语音提供，离线时也能朗读。另可把遇到的生词录入「我的词库」，和内置词一起学习、默写与复习。</p>
         </div>
 
         <button
           type="button"
           className="danger-button"
           onClick={() => {
-            if (window.confirm('确定要清除全部学习记录吗？单词进度、草稿和统计都会删除，这个操作不能撤销。')) {
+            if (window.confirm('确定要清除全部学习记录吗？单词进度、草稿和统计都会删除，自己录入的单词会保留，这个操作不能撤销。')) {
               actions.resetProgress();
             }
           }}
         >
           <Icon name="trash" size={17} /> 清除学习记录
         </button>
-        <p className="form-note">清除后设置会保留，学习内容会重新开始。</p>
+        <p className="form-note">清除后设置和自己录入的单词会保留，学习内容会重新开始。</p>
       </div>
     </Sheet>
   );

@@ -1,10 +1,15 @@
 import { useEffect, useMemo, useRef, useState } from 'react';
 import { decks, words } from '../data/words.js';
-import { buildWordQueue, dictationQueue, wordCounts } from '../useStudy.js';
+import { affixes } from '../data/knowledge.js';
+import { stories } from '../data/reading.js';
+import { breakdownWord, guessPos, isDuplicate, lookupWord, normalizeWord } from '../enrich.js';
+import { buildWordQueue, dictationQueue, poolFor, wordCounts } from '../useStudy.js';
 import { speak } from '../utils.js';
-import { Chip, Icon, ScreenHeader, Segmented, SpeakButton } from '../ui.jsx';
+import { Chip, EmptyState, Icon, ScreenHeader, Segmented, SpeakButton } from '../ui.jsx';
 
 const LIST_PAGE = 80;
+const EMPTY_ENTRY_FORM = { p: '', pos: '', zh: '', ex: '', exZh: '' };
+const POS_CHIPS = ['n.', 'v.', 'adj.', 'adv.'];
 
 const statusFor = (progress, today) => {
   if (!progress) return { label: '新词', tone: 'new' };
@@ -17,6 +22,18 @@ const todayKey = () => {
   const d = new Date();
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 };
+
+// 识别预填：内置命中全字段按词条，原著词表只有 p/zh（词性按词尾推测），未命中全靠推测。
+function recognizeForm(word) {
+  const { entry } = lookupWord(word, { words, stories });
+  return {
+    p: entry.p,
+    pos: entry.pos || guessPos(word),
+    zh: entry.zh,
+    ex: entry.ex,
+    exZh: entry.exZh,
+  };
+}
 
 function DeckPicker({ value, onChange, counts }) {
   return (
@@ -74,10 +91,12 @@ function StudyCard({ word, progress, revealed, onReveal, onRate, index, total })
         ) : (
           <div className="study-answer">
             <p className="study-zh">{word.zh}</p>
-            <div className="study-example">
-              <p>{word.ex}</p>
-              <p className="example-zh">{word.exZh}</p>
-            </div>
+            {(word.ex || word.exZh) && (
+              <div className="study-example">
+                {word.ex && <p>{word.ex}</p>}
+                {word.exZh && <p className="example-zh">{word.exZh}</p>}
+              </div>
+            )}
             <div className="study-tip">
               <Icon name="sparkle" size={15} />
               想到意思就点“记得”，不必追求逐字翻译。
@@ -132,7 +151,7 @@ function StudySummary({ results, onRestart, onList, onDictation }) {
   );
 }
 
-function DictationSetup({ length, setLength, mode, setMode, deck, setDeck, onStart, counts }) {
+function DictationSetup({ length, setLength, mode, setMode, deck, setDeck, onStart, counts, notice }) {
   return (
     <div className="dict-setup">
       <div className="dict-hero">
@@ -178,6 +197,8 @@ function DictationSetup({ length, setLength, mode, setMode, deck, setDeck, onSta
         </div>
       </div>
 
+      {notice && <p className="input-error">{notice}</p>}
+
       <button type="button" className="primary-button wide-button" onClick={onStart}>
         开始默写 <Icon name="arrow" size={18} />
       </button>
@@ -201,7 +222,14 @@ export default function Words({ data, actions, intent }) {
   const [checked, setChecked] = useState(false);
   const [hint, setHint] = useState(false);
   const [emptyError, setEmptyError] = useState(false);
+  const [entryInput, setEntryInput] = useState('');
+  const [entryQuery, setEntryQuery] = useState('');
+  const [entryForm, setEntryForm] = useState(EMPTY_ENTRY_FORM);
+  const [entryEditing, setEntryEditing] = useState(null);
+  const [entrySaved, setEntrySaved] = useState(null);
+  const [dictNotice, setDictNotice] = useState('');
   const inputRef = useRef(null);
+  const entryInputRef = useRef(null);
 
   const counts = wordCounts(data, deck);
   const byDeck = useMemo(() => {
@@ -223,6 +251,25 @@ export default function Words({ data, actions, intent }) {
     if (intent.mode === 'dictation') setDictation(null);
     window.scrollTo({ top: 0, behavior: 'smooth' });
   }, [intent?.nonce]);
+
+  // 录入识别走 250ms 防抖；normalizeWord 是同步的，防抖只挡住后续识别计算。
+  useEffect(() => {
+    const timer = setTimeout(() => setEntryQuery(normalizeWord(entryInput)), 250);
+    return () => clearTimeout(timer);
+  }, [entryInput]);
+
+  // 识别结果变化时预填表单；编辑态的词条以存储内容为准，改拼写则按新词重新识别。
+  useEffect(() => {
+    if (!entryQuery) return;
+    if (entryEditing) {
+      const item = data.customWords.find((word) => word.w === entryEditing);
+      setEntryForm(item && entryQuery === entryEditing
+        ? { p: item.p || '', pos: item.pos || '', zh: item.zh || '', ex: item.ex || '', exZh: item.exZh || '' }
+        : recognizeForm(entryQuery));
+      return;
+    }
+    setEntryForm(recognizeForm(entryQuery));
+  }, [entryQuery]);
 
   const current = session && session.index < session.queue.length ? session.queue[session.index] : null;
   const finished = session && session.index >= session.queue.length;
@@ -251,6 +298,11 @@ export default function Words({ data, actions, intent }) {
 
   function startDictation() {
     const items = dictationQueue(data, dictDeck, dictLength);
+    if (items.length === 0) {
+      setDictNotice('这个词库还没有词，先去「录入」添加。');
+      return;
+    }
+    setDictNotice('');
     setDictation({ items, index: 0, results: [] });
     setValue('');
     setChecked(false);
@@ -297,13 +349,112 @@ export default function Words({ data, actions, intent }) {
   }
 
   const filteredWords = useMemo(() => {
-    const pool = deck === 'all' ? words : words.filter((word) => word.deck === deck);
+    const pool = poolFor(data, deck);
     const query = search.trim().toLowerCase();
     if (!query) return pool;
     return pool.filter((word) => word.w.toLowerCase().includes(query) || word.zh.includes(query));
-  }, [deck, search]);
+  }, [data, deck, search]);
 
   const visibleWords = filteredWords.slice(0, shown);
+
+  // —— 录入视图的派生状态：五态状态条 + 禁用条件，均与 enrich.js 同源。
+  const entryWord = entryQuery;
+  const entryLookup = entryWord ? lookupWord(entryWord, { words, stories }) : null;
+  const entryBuiltinHit = Boolean(entryWord && words.some((item) => item.w === entryWord));
+  const entryDuplicate = Boolean(entryWord && isDuplicate(entryWord, words, data.customWords, entryEditing || ''));
+  const entryBreakdown = useMemo(() => (entryWord ? breakdownWord(entryWord, affixes) : null), [entryWord]);
+  const entrySaveDisabled = !entryWord || entryWord.length > 30 || entryDuplicate || !entryForm.zh.trim();
+  // 拆解卡只在「原著词表命中/未命中」两态显示；重复态（含内置词）与编辑自身词条时不显示。
+  const showBreakdown = Boolean(entryWord) && !entryDuplicate && !(entryEditing && entryWord === entryEditing);
+  const entryCtaWord = normalizeWord(search);
+  const studyEmpty = deck === 'custom' && counts.total === 0;
+
+  let entryStatus = null;
+  if (entryInput.trim() && !entrySaved) {
+    if (!entryWord) {
+      entryStatus = { tone: 'guess', text: '暂不识别：目前只支持单个纯字母单词——多词短语、连字符、撇号和数字都不支持。' };
+    } else if (entryWord.length > 30) {
+      entryStatus = { tone: 'guess', text: `单词太长：目前最多支持 30 个字母（当前 ${entryWord.length} 个）。` };
+    } else if (entryEditing && entryWord === entryEditing) {
+      entryStatus = { tone: 'guess', text: '正在编辑你录入的词，下面按保存的内容预填，改完保存即可。' };
+    } else if (entryDuplicate) {
+      // 内置词命中必然带出重复分支（isDuplicate 对内置词不可排除），按来源给差异化文案。
+      entryStatus = entryBuiltinHit
+        ? { tone: 'error', text: `「${entryWord}」是内置词库里的词，直接去学习吧。` }
+        : { tone: 'error', text: `「${entryWord}」已经在你的词库里了（你录入过），直接去学习吧。` };
+    } else if (entryLookup.found) {
+      entryStatus = { tone: 'glossary', text: '只在原著词表里找到读音和释义（没有词性和例句）；词性是按词尾推测的。' };
+    } else {
+      entryStatus = { tone: 'guess', text: '词库里没有这个词：释义需要你自己填；音标拿不到，发音按钮始终可用；下面的拆解和词性是按词尾推测的，仅供参考。' };
+    }
+  }
+
+  function openEntryView(prefill = '') {
+    setEntryEditing(null);
+    setEntrySaved(null);
+    setEntryInput(prefill);
+    setEntryForm(prefill ? recognizeForm(normalizeWord(prefill)) : EMPTY_ENTRY_FORM);
+    setMode('entry');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function openEdit(word) {
+    setEntryEditing(word.w);
+    setEntrySaved(null);
+    setEntryInput(word.w);
+    setEntryForm({ p: word.p || '', pos: word.pos || '', zh: word.zh || '', ex: word.ex || '', exZh: word.exZh || '' });
+    setMode('entry');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function cancelEntryEdit() {
+    setEntryEditing(null);
+    setEntrySaved(null);
+    setEntryInput('');
+    setEntryForm(EMPTY_ENTRY_FORM);
+    setMode('list');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function saveEntry() {
+    if (entrySaveDisabled) return;
+    const payload = {
+      w: entryWord,
+      p: entryForm.p.trim(),
+      pos: entryForm.pos.trim(),
+      zh: entryForm.zh.trim(),
+      ex: entryForm.ex.trim(),
+      exZh: entryForm.exZh.trim(),
+    };
+    if (entryEditing) {
+      actions.updateCustomWord(entryEditing, payload);
+      cancelEntryEdit();
+      return;
+    }
+    actions.addCustomWord(payload);
+    setEntrySaved(payload);
+  }
+
+  function studySavedWord() {
+    setDeck('custom');
+    setSession(null);
+    setMode('study');
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  }
+
+  function dictateSavedWord() {
+    setDictDeck('custom');
+    setDictation(null);
+    setDictNotice('');
+    setMode('dictation');
+  }
+
+  function continueEntry() {
+    setEntrySaved(null);
+    setEntryInput('');
+    setEntryForm(EMPTY_ENTRY_FORM);
+    setTimeout(() => entryInputRef.current?.focus(), 80);
+  }
 
   return (
     <div className="screen words-screen">
@@ -320,6 +471,7 @@ export default function Words({ data, actions, intent }) {
           { value: 'study', label: '学习' },
           { value: 'list', label: '词库' },
           { value: 'dictation', label: '默写' },
+          { value: 'entry', label: '录入' },
         ]}
       />
 
@@ -327,39 +479,53 @@ export default function Words({ data, actions, intent }) {
         <>
           {!session && (
             <div className="study-setup">
-              <div className="study-overview">
-                <div>
-                  <p className="eyebrow">TODAY'S PLAN</p>
-                  <h2>{counts.due + counts.fresh} 个待学</h2>
-                  <p>{counts.due} 个待复习 · {counts.fresh} 个新词</p>
+              {studyEmpty ? (
+                <EmptyState
+                  icon="pen"
+                  title="我的词库还是空的"
+                  action={<button type="button" className="primary-button" onClick={() => openEntryView()}>去录入第一个单词</button>}
+                >
+                  录入的生词会自动排进学习、默写和复习计划。
+                </EmptyState>
+              ) : (
+                <div className="study-overview">
+                  <div>
+                    <p className="eyebrow">TODAY'S PLAN</p>
+                    <h2>{counts.due + counts.fresh} 个待学</h2>
+                    <p>{counts.due} 个待复习 · {counts.fresh} 个新词</p>
+                  </div>
+                  <div className="overview-ring">
+                    <strong>{counts.mastered}</strong>
+                    <span>已掌握</span>
+                  </div>
                 </div>
-                <div className="overview-ring">
-                  <strong>{counts.mastered}</strong>
-                  <span>已掌握</span>
-                </div>
-              </div>
+              )}
 
               <DeckPicker value={deck} onChange={setDeck} counts={allCounts} />
 
-              <div className="mastery-line">
-                <div className="mastery-copy">
-                  <span>本词库掌握度</span>
-                  <strong>{counts.total ? Math.round((counts.mastered / counts.total) * 100) : 0}%</strong>
-                </div>
-                <div className="mastery-track"><span style={{ width: `${counts.total ? (counts.mastered / counts.total) * 100 : 0}%` }} /></div>
-              </div>
+              {!studyEmpty && (
+                <>
+                  <div className="mastery-line">
+                    <div className="mastery-copy">
+                      <span>本词库掌握度</span>
+                      <strong>{counts.total ? Math.round((counts.mastered / counts.total) * 100) : 0}%</strong>
+                    </div>
+                    <div className="mastery-track"><span style={{ width: `${counts.total ? (counts.mastered / counts.total) * 100 : 0}%` }} /></div>
+                  </div>
 
-              <button type="button" className="primary-button wide-button" onClick={startSession}>
-                开始学习 {Math.min(goal, counts.total)} 个单词 <Icon name="arrow" size={18} />
-              </button>
+                  <button type="button" className="primary-button wide-button" onClick={startSession}>
+                    开始学习 {Math.min(goal, counts.total)} 个单词 <Icon name="arrow" size={18} />
+                  </button>
 
-              <div className="srs-note">
-                <Icon name="rotate" size={18} />
-                <div>
-                  <strong>复习节奏</strong>
-                  <p>1 天 → 3 天 → 7 天 → 21 天。选“忘记”会从今天重新开始。</p>
-                </div>
-              </div>
+                  <div className="srs-note">
+                    <Icon name="rotate" size={18} />
+                    <div>
+                      <strong>复习节奏</strong>
+                      <p>1 天 → 3 天 → 7 天 → 21 天。选“忘记”会从今天重新开始。</p>
+                    </div>
+                  </div>
+                </>
+              )}
             </div>
           )}
 
@@ -436,19 +602,50 @@ export default function Words({ data, actions, intent }) {
                   </div>
                   {open && (
                     <div className="word-expand">
-                      <p>{word.ex}</p>
-                      <p className="example-zh">{word.exZh}</p>
+                      {word.ex && <p>{word.ex}</p>}
+                      {word.exZh && <p className="example-zh">{word.exZh}</p>}
                       <p className="next-review">
                         {progress ? `下次复习：${progress.due}` : '还没有学习过，去“学习”里认识它。'}
                       </p>
+                      {word.deck === 'custom' && (
+                        <div className="custom-word-actions">
+                          <span className="custom-added">{word.added ? `录入于 ${word.added}` : '自己录入的词'}</span>
+                          <button type="button" className="text-button" onClick={() => openEdit(word)}>编辑</button>
+                          <button
+                            type="button"
+                            className="text-button"
+                            onClick={() => {
+                              if (window.confirm('删除这个词？它的学习进度也会一起删除。')) actions.deleteCustomWord(word.w);
+                            }}
+                          >
+                            删除
+                          </button>
+                        </div>
+                      )}
                     </div>
                   )}
                 </div>
               );
             })}
-            {filteredWords.length === 0 && (
+            {filteredWords.length === 0 && !search.trim() && (
+              <EmptyState
+                icon={deck === 'custom' ? 'pen' : 'search'}
+                title={deck === 'custom' ? '我的词库还是空的' : '这个词库暂时没有词'}
+                action={deck === 'custom' ? (
+                  <button type="button" className="primary-button" onClick={() => openEntryView()}>去录入</button>
+                ) : null}
+              >
+                {deck === 'custom' ? '遇到的生词录进来，就能一起学习、默写和复习。' : '换一个词库看看，或在「录入」里添加。'}
+              </EmptyState>
+            )}
+            {filteredWords.length === 0 && search.trim() !== '' && (
               <div className="no-result">
                 <p>没有找到这个词。</p>
+                {entryCtaWord && !isDuplicate(entryCtaWord, words, data.customWords) && (
+                  <button type="button" className="text-button" onClick={() => openEntryView(entryCtaWord)}>
+                    录入「{entryCtaWord}」
+                  </button>
+                )}
                 <button type="button" className="text-button" onClick={() => { setSearch(''); setDeck('all'); }}>清空筛选</button>
               </div>
             )}
@@ -469,9 +666,10 @@ export default function Words({ data, actions, intent }) {
           mode={dictMode}
           setMode={setDictMode}
           deck={dictDeck}
-          setDeck={setDictDeck}
+          setDeck={(id) => { setDictDeck(id); setDictNotice(''); }}
           onStart={startDictation}
           counts={allCounts}
+          notice={dictNotice}
         />
       )}
 
@@ -543,9 +741,9 @@ export default function Words({ data, actions, intent }) {
                 {!dictation.results[dictation.results.length - 1]?.correct && (
                   <p className="feedback-answer">{dictCurrent.w}</p>
                 )}
-                <p className="feedback-meta">{dictCurrent.p} · {dictCurrent.pos} · {dictCurrent.zh}</p>
-                <p className="feedback-ex">{dictCurrent.ex}</p>
-                <p className="feedback-ex-zh">{dictCurrent.exZh}</p>
+                <p className="feedback-meta">{[dictCurrent.p, dictCurrent.pos, dictCurrent.zh].filter(Boolean).join(' · ')}</p>
+                {dictCurrent.ex && <p className="feedback-ex">{dictCurrent.ex}</p>}
+                {dictCurrent.exZh && <p className="feedback-ex-zh">{dictCurrent.exZh}</p>}
                 <button type="button" className="primary-button wide-button" onClick={nextDictation}>
                   {dictation.index + 1 >= dictation.items.length ? '查看结果' : '下一题'} <Icon name="arrow" size={17} />
                 </button>
@@ -582,6 +780,134 @@ export default function Words({ data, actions, intent }) {
             <button type="button" className="secondary-button" onClick={() => setDictation(null)}>返回设置</button>
             <button type="button" className="ghost-button" onClick={() => setMode('study')}>去背单词</button>
           </div>
+        </div>
+      )}
+
+      {mode === 'entry' && (
+        <div className="entry-setup">
+          <div className="entry-head">
+            <h2>{entryEditing ? '编辑生词' : '录入生词'}</h2>
+            <p>{entryEditing ? '改拼写会当作新词从头学；只改释义不影响进度。' : '识别和拆解只是参考，释义用你自己的话写最记得住。'}</p>
+          </div>
+
+          <div className="search-box">
+            <Icon name="edit" size={18} />
+            <input
+              ref={entryInputRef}
+              value={entryInput}
+              onChange={(event) => { setEntryInput(event.target.value); setEntrySaved(null); }}
+              placeholder="输入一个英文单词，如 weary"
+              aria-label="输入要录入的单词"
+              autoCapitalize="none"
+              autoCorrect="off"
+              spellCheck="false"
+            />
+            {entryInput && (
+              <button
+                type="button"
+                className="icon-button tiny-button"
+                onClick={() => { setEntryInput(''); setEntryForm(EMPTY_ENTRY_FORM); setEntrySaved(null); }}
+                aria-label="清空输入"
+              >
+                <Icon name="close" size={15} />
+              </button>
+            )}
+            {entryWord && <SpeakButton text={entryWord} small />}
+          </div>
+
+          {entryStatus && <div className={`entry-status ${entryStatus.tone}`}>{entryStatus.text}</div>}
+
+          {showBreakdown && entryBreakdown && (
+            <div className="entry-parts-card">
+              <p className="entry-parts-title">词根拆解（推测）</p>
+              <div className="entry-parts">
+                {entryBreakdown.parts.map((part, index) => (
+                  <span key={`${part}-${index}`} className={`part-chip ${part.includes('-') ? 'affix' : ''}`}>{part}</span>
+                ))}
+              </div>
+              <p className="entry-parts-note">{entryBreakdown.note}</p>
+              {entryBreakdown.related.length > 0 && (
+                <p className="entry-related">同根词：{entryBreakdown.related.join('、')}</p>
+              )}
+            </div>
+          )}
+
+          {entrySaved ? (
+            <div className="entry-done">
+              <div className="entry-done-icon"><Icon name="check" size={22} /></div>
+              <p className="entry-done-title">已加入「我的词库」</p>
+              <p className="entry-done-sub">「{entrySaved.w}」已排进下一轮学习计划，之后随时可以回词库编辑。</p>
+              <div className="entry-done-actions">
+                <button type="button" className="primary-button" onClick={studySavedWord}>去学习它 <Icon name="arrow" size={17} /></button>
+                <button type="button" className="secondary-button" onClick={dictateSavedWord}>去默写</button>
+                <button type="button" className="text-button" onClick={continueEntry}>继续录入</button>
+              </div>
+            </div>
+          ) : (
+            <div className="entry-form">
+              <div className="entry-field">
+                <span className="entry-label">音标</span>
+                <input
+                  value={entryForm.p}
+                  onChange={(event) => setEntryForm((prev) => ({ ...prev, p: event.target.value }))}
+                  placeholder={entryLookup?.found ? '按词表预填，可改' : '没有现成音标，可留空——发音按钮始终可用'}
+                  aria-label="音标"
+                />
+              </div>
+
+              <div className="entry-field">
+                <span className="entry-label">{entryBuiltinHit || entryEditing ? '词性' : '词性（按词尾推测，可改）'}</span>
+                <input
+                  value={entryForm.pos}
+                  onChange={(event) => setEntryForm((prev) => ({ ...prev, pos: event.target.value }))}
+                  placeholder="如 n. / v. / adj. / adv."
+                  aria-label="词性"
+                />
+                <div className="chip-row entry-pos-chips">
+                  {POS_CHIPS.map((pos) => (
+                    <Chip key={pos} active={entryForm.pos === pos} onClick={() => setEntryForm((prev) => ({ ...prev, pos }))}>{pos}</Chip>
+                  ))}
+                </div>
+              </div>
+
+              <div className="entry-field">
+                <span className="entry-label">释义（必填）</span>
+                <input
+                  value={entryForm.zh}
+                  onChange={(event) => setEntryForm((prev) => ({ ...prev, zh: event.target.value }))}
+                  placeholder="必填：用你自己的话写释义"
+                  aria-label="释义"
+                />
+              </div>
+
+              <div className="entry-field">
+                <span className="entry-label">例句（选填）</span>
+                <input
+                  value={entryForm.ex}
+                  onChange={(event) => setEntryForm((prev) => ({ ...prev, ex: event.target.value }))}
+                  placeholder="一句你记得住的英文例句"
+                  aria-label="例句"
+                />
+              </div>
+
+              <div className="entry-field">
+                <span className="entry-label">例句译文（选填）</span>
+                <input
+                  value={entryForm.exZh}
+                  onChange={(event) => setEntryForm((prev) => ({ ...prev, exZh: event.target.value }))}
+                  placeholder="例句的中文翻译"
+                  aria-label="例句译文"
+                />
+              </div>
+
+              <button type="button" className="primary-button wide-button" disabled={entrySaveDisabled} onClick={saveEntry}>
+                {entryEditing ? '保存修改' : '保存到我的词库'} <Icon name="arrow" size={17} />
+              </button>
+              {entryEditing && (
+                <button type="button" className="secondary-button wide-button" onClick={cancelEntryEdit}>取消</button>
+              )}
+            </div>
+          )}
         </div>
       )}
     </div>

@@ -1663,6 +1663,202 @@ textarea:focus-visible {
   gap: 8px;
 }
 
+/* Word entry */
+.entry-setup {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-head h2 {
+  font-family: var(--serif);
+  font-size: 24px;
+  font-weight: 500;
+  letter-spacing: 0.01em;
+}
+
+.entry-head p {
+  font-size: 11.5px;
+  color: var(--muted);
+  margin-top: 3px;
+}
+
+.entry-status {
+  padding: 11px 13px;
+  border-radius: 14px;
+  font-size: 11.5px;
+  line-height: 1.6;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  color: var(--ink-soft);
+}
+
+.entry-status.glossary {
+  background: var(--amber-soft);
+  border-color: color-mix(in srgb, var(--amber) 24%, transparent);
+  color: var(--amber);
+}
+
+.entry-status.error {
+  background: var(--rose-soft);
+  border-color: color-mix(in srgb, var(--rose) 24%, transparent);
+  color: var(--rose);
+}
+
+.entry-parts-card {
+  padding: 13px 14px;
+  border-radius: 15px;
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+}
+
+.entry-parts-title {
+  font-size: 10px;
+  font-weight: 700;
+  letter-spacing: 0.06em;
+  color: var(--muted);
+  margin-bottom: 8px;
+}
+
+.entry-parts {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.part-chip {
+  padding: 4px 9px;
+  border-radius: 9px;
+  background: var(--surface-2);
+  border: 1px solid var(--line);
+  font-family: var(--serif);
+  font-size: 13.5px;
+  color: var(--ink-soft);
+}
+
+.part-chip.affix {
+  background: var(--green-soft);
+  border-color: color-mix(in srgb, var(--green) 24%, transparent);
+  color: var(--green-deep);
+  font-weight: 600;
+}
+
+.entry-parts-note {
+  margin-top: 9px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.entry-related {
+  margin-top: 4px;
+  font-size: 11px;
+  line-height: 1.6;
+  color: var(--muted);
+}
+
+.entry-form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+.entry-field {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+}
+
+.entry-label {
+  font-size: 10.5px;
+  font-weight: 700;
+  color: var(--muted);
+}
+
+.entry-field input {
+  height: 42px;
+  padding: 0 12px;
+  border-radius: 12px;
+  border: 1px solid var(--line);
+  background: var(--surface);
+  font-size: 13px;
+  outline: none;
+  transition: border-color 0.18s ease;
+}
+
+.entry-field input:focus {
+  border-color: var(--green);
+}
+
+.entry-field input::placeholder {
+  color: var(--muted);
+  opacity: 0.7;
+}
+
+.entry-pos-chips {
+  margin-top: 2px;
+}
+
+.custom-word-actions {
+  display: flex;
+  align-items: center;
+  gap: 14px;
+  margin-top: 10px;
+  padding-top: 9px;
+  border-top: 1px dashed var(--line);
+}
+
+.custom-added {
+  font-size: 10px;
+  color: var(--muted);
+  margin-right: auto;
+}
+
+.entry-done {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 7px;
+  padding: 24px 18px;
+  border-radius: var(--radius);
+  background: var(--surface);
+  border: 1px solid var(--line);
+  box-shadow: var(--shadow-soft);
+  text-align: center;
+}
+
+.entry-done-icon {
+  width: 44px;
+  height: 44px;
+  border-radius: 999px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--green-soft);
+  color: var(--green-deep);
+}
+
+.entry-done-title {
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.entry-done-sub {
+  font-size: 11.5px;
+  line-height: 1.6;
+  color: var(--muted);
+  max-width: 260px;
+}
+
+.entry-done-actions {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 9px;
+  margin-top: 10px;
+}
+
 /* Dictation */
 .dict-hero {
   display: flex;

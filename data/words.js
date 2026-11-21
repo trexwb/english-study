@@ -5,6 +5,7 @@ export const decks = [
   { id: 'classic', name: '原著精读', note: '文学作品里的词', icon: '🕯️' },
   { id: 'junior', name: '初中核心', note: '中考大纲高频词', icon: '🌱' },
   { id: 'senior', name: '高中核心', note: '高考大纲高频词', icon: '🎓' },
+  { id: 'custom', name: '我的词库', note: '自己录入的生词', icon: '📒' },
 ];
 
 export const words = [
