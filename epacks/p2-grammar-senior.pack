@@ -4,6 +4,7 @@
     en: 'Non-restrictive Relative Clauses',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '逗号一加，从句就从“限定身份”变成“补充说明”。这种从句有三条硬规矩：不用 that，不省关系词，which 还能指代前面整句话。',
     sections: [
@@ -84,6 +85,7 @@
     en: 'Appositive Clauses vs Relative Clauses',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '两种从句都能跟在名词后面，区别只看一件事：从句里缺不缺成分。缺成分的是定语从句，不缺的是同位语从句。',
     sections: [
@@ -164,6 +166,7 @@
     en: 'Ellipsis',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 7,
     intro: '省略不是偷懒，而是把重复的部分删掉。三条底线：主语必须与主句一致，be 动词要在场，答句里的 to 不能丢。',
     sections: [
@@ -244,6 +247,7 @@
     en: 'Word Formation I: Prefixes and Suffixes',
     level: '进阶',
     exam: '高考',
+    stage: '九年级',
     mins: 6,
     intro: '生词不查词典也能猜个大概：前缀给方向，后缀给词性，中间是词根。阅读时把这三块拆开，意思就露出来了。',
     sections: [
@@ -324,6 +328,7 @@
     en: 'Word Formation II: Compounds and Conversion',
     level: '进阶',
     exam: '高考',
+    stage: '九年级',
     mins: 6,
     intro: '把两个现成的词拼在一起，或者让名词直接当动词用，是英语造新词最常用的两招，也是作文里让用词升一级的入口。',
     sections: [
@@ -404,8 +409,9 @@
     en: 'Modals for Deduction',
     level: '高阶',
     exam: '高考',
+    stage: '九年级',
     mins: 8,
-    intro: '推测题只看两件事：把握有多大，推测的是现在还是过去。把握从大到小是 must、will、may / might；有把握地否定，只能交给 can’t。',
+    intro: '推测题只看两件事：把握有多大，推测的是现在还是过去。把握从大到小是 must、may / might、could；有把握地否定，只能交给 can’t。第一节人教九年级教材系统讲，后两节推测过去与“与事实相反”属高中拓展。',
     sections: [
       {
         h: '对现在：must be / can’t be / may be',
@@ -480,10 +486,11 @@
   },
   {
     id: 'g35',
-    title: '时态补全：完成进行时、过去将来与将来两处时限',
+    title: '时态补全：完成进行时、过去将来时、将来进行与将来完成',
     en: 'Further Tenses: Perfect Continuous and Future Forms',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 9,
     intro: '这四个时态都能靠时间词认出来：for 和 since 找完成进行时，by 加将来时间找将来完成，this time tomorrow 找将来进行。',
     sections: [
@@ -564,6 +571,7 @@
     en: 'Future in the Main Clause, Present in the Subordinate Clause',
     level: '进阶',
     exam: '高考',
+    stage: '八年级',
     mins: 7,
     intro: '时间、条件状语从句里不出现 will，这就是主将从现。但 when 引导宾语从句、if 表示“是否”时 will 必须留着，所以先判断从句种类，再动时态。',
     sections: [

@@ -4,6 +4,7 @@
     en: 'Adjectives or Adverbs: Decide by What They Modify',
     level: '进阶',
     exam: '中考',
+    stage: '八年级',
     mins: 6,
     intro: '别急着背“形容词修饰名词、副词修饰动词”的口诀，先看空格在修饰谁：跟在系动词后面说状态，用形容词；跟在实义动词后面说“怎么做”，用副词。',
     sections: [
@@ -73,6 +74,7 @@
     en: 'Nouns: Countability, Plurals and Possessives',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 7,
     intro: '名词题分三步：先判断能不能数，再决定复数怎么变，最后看是谁的东西——用 ’s 还是 of。',
     sections: [
@@ -142,6 +144,7 @@
     en: 'Possessive and Reflexive Pronouns',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 5,
     intro: '物主代词先看空格后有没有名词：有，用 my 这一套；没有，用 mine 这一套。反身代词则跟着主语照镜子，主语是谁就反射回谁。',
     sections: [

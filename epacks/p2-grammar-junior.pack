@@ -4,6 +4,7 @@
     en: 'Questions: Yes/No Forms and Wh- Word Order',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: '疑问句只看一件事：疑问词或助动词站在句首之后，剩下的还要不要倒装。先判断你在问主语，还是问动作的对象。',
     sections: [
@@ -84,6 +85,7 @@
     en: 'Question Tags',
     level: '基础',
     exam: '中考',
+    stage: '九年级',
     mins: 6,
     intro: '反意疑问句就是把句子切成两半：前面陈述，后面小声确认。助动词照抄前面，否定只放在其中一半。',
     sections: [
@@ -164,6 +166,7 @@
     en: 'Imperatives and Exclamations',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: '祈使句从动词原形开始，感叹句只看一个位置：感叹词后面紧跟的是名词还是形容词。',
     sections: [
@@ -244,6 +247,7 @@
     en: 'Pronouns: Some, Any, One, Both',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 7,
     intro: '代词题先问两句：范围是两个还是三个以上？指的是同一个东西还是同类里的另一个？',
     sections: [
@@ -324,6 +328,7 @@
     en: 'Numbers, Fractions and Time',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 7,
     intro: '数词的坑集中在两处：拼写变化和主谓一致。数字本身不决定动词，后面的名词才决定。',
     sections: [
@@ -400,10 +405,11 @@
   },
   {
     id: 'g26',
-    title: 'There be 句型与存现句',
+    title: 'There be 句型与 have 的区别',
     en: 'There Be and Existential Sentences',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: 'There be 的真主语在后面，所以动词的单复数、时态和尾巴都跟着后面那个最近的名词走。',
     sections: [
@@ -462,7 +468,7 @@
         q: 'There ____ a speech contest in the hall next Monday afternoon.',
         opts: ['will be', 'will have', 'is going to have', 'are'],
         a: 0,
-        explain: '存现句的将来时用 There will be，不能用 have 表示“有”。',
+        explain: 'There be 句型的将来时用 There will be，不能用 have 表示“有”。',
       },
       {
         q: 'There is nothing left in the fridge for dinner, ____?',
@@ -480,10 +486,11 @@
   },
   {
     id: 'g27',
-    title: '并列句：and / but / or / so 与关联连词',
+    title: '并列复合句：and / but / or / so 与 both...and 等并列结构',
     en: 'Coordinate Clauses and Paired Conjunctions',
     level: '进阶',
     exam: '中考',
+    stage: '九年级',
     mins: 7,
     intro: '并列句先看两个句子的关系，再选连词；连词决定不了的事，主谓一致由离动词最近的主语决定。',
     sections: [
@@ -564,6 +571,7 @@
     en: 'Future Forms, Frequency Adverbs and Time Markers',
     level: '进阶',
     exam: '中考',
+    stage: '八年级',
     mins: 8,
     intro: '这一课补三个空：将来还不止 will 一种写法，频率副词有固定位置，ago 与 already 属于两条不同的时间线。',
     sections: [

@@ -1,4 +1,6 @@
 .build/
 .build-previous/
+.build-data/
 .DS_Store
 node_modules/
+__pycache__/

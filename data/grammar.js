@@ -5,6 +5,7 @@ export const grammarLessons = [
     en: 'Simple Present vs Present Continuous',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: '一个讲“常态”，一个讲“此刻”。先问自己：这是长期事实，还是正在发生？',
     sections: [
@@ -25,7 +26,7 @@ export const grammarLessons = [
         ],
       },
       {
-        h: '这些动词通常不用进行时',
+        h: '状态动词通常不用进行时',
         body: '表示状态而非动作的动词，如 know、believe、belong、need、prefer、seem，通常用一般现在时。但当词义变成“动作”时可以例外：I’m thinking about it.（我正在考虑。）',
         examples: [
           { en: 'I know the answer.', zh: '我知道答案。' },
@@ -67,6 +68,7 @@ export const grammarLessons = [
     en: 'Past Simple vs Present Perfect',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 7,
     intro: '关键不在“过去”，而在“和现在有没有关系”。有明确过去时间，用一般过去时。',
     sections: [
@@ -80,7 +82,7 @@ export const grammarLessons = [
       },
       {
         h: '现在完成时：过去的事，现在的结果',
-        body: '结构是 have / has + done。它不关心动作发生的确切时间，而关心经历、结果或持续到现在。常与 already、yet、ever、never、just、for、since 连用。',
+        body: '结构是 have / has + 过去分词。它不关心动作发生的确切时间，而关心经历、结果或持续到现在。常与 already、yet、ever、never、just、for、since 连用。',
         examples: [
           { en: 'I have finished the book, so I can lend it to you.', zh: '我已经读完这本书了，可以借给你。' },
           { en: 'She has lived in Paris for three years.', zh: '她已在巴黎住了三年。（现在仍住）' },
@@ -98,7 +100,7 @@ export const grammarLessons = [
     keyPoints: [
       'yesterday、last week、ago 等明确过去时间出现，动词用过去式',
       'already、yet、ever、never、since、for 是现在完成时的标志词',
-      'three times 表经历次数、强调对现在的影响，用 have/has 加 done',
+      'three times 表经历次数、强调对现在的影响，用 have/has + 过去分词',
       'for 接时间段，since 接时间点或从句，回答 How long 问句常用',
     ],
     pitfall: '不要写 I have seen him yesterday. 有了 yesterday 这个明确过去时间，就该用 I saw him yesterday.',
@@ -129,6 +131,7 @@ export const grammarLessons = [
     en: 'Articles: A, An, The',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: 'a/an 是“任意一个”，the 是“我们都指得出来的那个”。零冠词则常表示泛指。',
     sections: [
@@ -191,6 +194,7 @@ export const grammarLessons = [
     en: 'Prepositions of Time and Place',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: '把时间想成容器、平面和点：in 大容器，on 具体一天，at 一个点。',
     sections: [
@@ -254,6 +258,7 @@ export const grammarLessons = [
     en: 'Subject–Verb Agreement',
     level: '进阶',
     exam: '中考',
+    stage: '九年级',
     mins: 7,
     intro: '先删掉插在主语和动词之间的修饰语，再决定动词单复数。',
     sections: [
@@ -316,6 +321,7 @@ export const grammarLessons = [
     en: 'Relative Clauses',
     level: '进阶',
     exam: '中考',
+    stage: '九年级',
     mins: 8,
     intro: '定语从句就是放在名词后面的一整个形容词。先判断先行词是人还是物，再看它在从句里做什么成分。',
     sections: [
@@ -378,6 +384,7 @@ export const grammarLessons = [
     en: 'Noun Clauses: That vs What',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '从句在句中当名词用：作主语、宾语、表语或同位语。that 不充当成分，what 必须在从句里充当主语或宾语。',
     sections: [
@@ -440,6 +447,7 @@ export const grammarLessons = [
     en: 'To do, Doing, Done',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 9,
     intro: '一个句子里已经有谓语，其他动词就要“降级”成非谓语。先看它和逻辑主语是主动、被动，还是目的。',
     sections: [
@@ -502,6 +510,7 @@ export const grammarLessons = [
     en: 'The Subjunctive Mood',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 9,
     intro: '虚拟语气不是“更客气”，而是明确告诉对方：这件事与现在或过去的事实相反。',
     sections: [
@@ -565,6 +574,7 @@ export const grammarLessons = [
     en: 'Inversion and Emphasis',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '把不常放在句首的成分提前，就会触发倒装。写作里偶尔用一次，重点立刻凸显。',
     sections: [
@@ -627,6 +637,7 @@ export const grammarLessons = [
     en: 'Comparison and Multiples',
     level: '进阶',
     exam: '中考',
+    stage: '八年级',
     mins: 7,
     intro: '比较必须有对象，最高级必须有范围。倍数表达则要记住“倍数 + as ... as”的骨架。',
     sections: [
@@ -689,6 +700,7 @@ export const grammarLessons = [
     en: 'Linking Words That Actually Work',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 7,
     intro: '连接词不是装饰，而是路标。先想清楚两个句子是什么关系，再选词。',
     sections: [
@@ -747,15 +759,16 @@ export const grammarLessons = [
   },
   {
     id: 'g13',
-    title: '被动语态：be + done',
+    title: '被动语态：be + 过去分词',
     en: 'The Passive Voice',
     level: '基础',
     exam: '中考',
+    stage: '九年级',
     mins: 6,
     intro: '把动作的承受者推上主语的位置，就是被动语态。结构只有一副骨架：be + 过去分词，be 负责时态和单复数。',
     sections: [
       {
-        h: '一般现在时的被动：am / is / are + done',
+        h: '一般现在时的被动：am / is / are + 过去分词',
         body: '当我们关心“发生了什么”而不关心或不知道“谁做的”，就用被动。主语是复数用 are，第三人称单数用 is；要点名执行者时再用 by 引出。',
         examples: [
           { en: 'English is spoken all over the world.', zh: '全世界都说英语。' },
@@ -763,7 +776,7 @@ export const grammarLessons = [
         ],
       },
       {
-        h: '一般过去时的被动：was / were + done',
+        h: '一般过去时的被动：was / were + 过去分词',
         body: '说过去发生的事，把 be 换成 was / were，其余不变。时间、地点通常放句末，by 短语只在想说清是谁做的时才出现。',
         examples: [
           { en: 'The school sports meeting was held last month.', zh: '学校运动会是上个月举行的。' },
@@ -771,8 +784,8 @@ export const grammarLessons = [
         ],
       },
       {
-        h: '含情态动词的被动：情态动词 + be + done',
-        body: '情态动词后面只跟动词原形，所以被动是 must / can / should + be + done。时态和语气信息全在情态动词上，be 不再变化。',
+        h: '含情态动词的被动：情态动词 + be + 过去分词',
+        body: '情态动词后面只跟动词原形，所以被动是 must / can / should + be + 过去分词。时态和语气信息全在情态动词上，be 不再变化。',
         examples: [
           { en: 'Books must be returned before the end of the month.', zh: '书必须在月底前归还。' },
           { en: 'The problem can be solved in more than one way.', zh: '这个问题可以用不止一种方法解决。' },
@@ -781,8 +794,8 @@ export const grammarLessons = [
     ],
     keyPoints: [
       '主语是动作承受者就用被动：be 加过去分词，be 随时态和主语变化',
-      'last month 等过去时间配 was/were done，主语复数用 were',
-      '情态动词后被动是 must/should/can 加 be done，be 不能丢',
+      'last month 等过去时间配 was/were + 过去分词，主语复数用 were',
+      '含情态动词的被动语态：must/should/can + be + 过去分词，be 不能丢',
       '被动题两步走：先由时间词定 be 的时态，再由主语单复数定 be 形式',
     ],
     pitfall: 'happen、take place 这类不及物动词没有被动语态：不要写 The accident was happened.，应为 The accident happened.',
@@ -813,6 +826,7 @@ export const grammarLessons = [
     en: 'Modal Verbs',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 6,
     intro: '情态动词给句子“调色”：can 讲能力，may 讲许可，must 讲必须，should 讲建议。记住一条铁律：后面只接动词原形。',
     sections: [
@@ -875,6 +889,7 @@ export const grammarLessons = [
     en: 'Conditionals: Real and Unreal',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '先问一句：这件事有没有可能发生？可能发生的用“主将从现”，与现实相反的才动用虚拟。分清这一步，条件句就完成了一半。',
     sections: [
@@ -937,6 +952,7 @@ export const grammarLessons = [
     en: 'Past Continuous and Past Perfect',
     level: '进阶',
     exam: '高考',
+    stage: '九年级',
     mins: 8,
     intro: '一个管“过去那会儿正在进行”，一个管“在那之前早已完成”。把过去想成一条线，这两个时态都藏在线的更深处。',
     sections: [
@@ -995,10 +1011,11 @@ export const grammarLessons = [
   },
   {
     id: 'g17',
-    title: '表达将来：will 与 be going to',
+    title: '一般将来时：will 与 be going to',
     en: 'Talking About the Future',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 6,
     intro: '说将来不止 will 一个选项：打算好的用 be going to，排进日程的用现在进行时，固定时刻表反而用一般现在时。先想清楚这件事是怎么定下来的。',
     sections: [
@@ -1061,6 +1078,7 @@ export const grammarLessons = [
     en: 'Object Clauses and Reported Speech',
     level: '进阶',
     exam: '高考',
+    stage: '九年级',
     mins: 8,
     intro: '把别人的一句话装进自己的句子里当宾语，就是宾语从句。盯住三件事：连接词、陈述语序、时态呼应。',
     sections: [
@@ -1123,6 +1141,7 @@ export const grammarLessons = [
     en: 'Gerund or Infinitive',
     level: '进阶',
     exam: '高考',
+    stage: '八年级',
     mins: 7,
     intro: '动词后面跟 doing 还是 to do，不是随机的：有的动词只认一个，有的换形式就换意思。先记住最常用的那几个“死规矩”。',
     sections: [
@@ -1181,10 +1200,11 @@ export const grammarLessons = [
   },
   {
     id: 'g20',
-    title: '状语从句与让步',
+    title: '时间、结果与让步状语从句：when / while / as、so / such、although',
     en: 'Adverbial Clauses and Concession',
     level: '高阶',
     exam: '高考',
+    stage: '八年级',
     mins: 8,
     intro: '状语从句给主句补上时间、结果、让步这些背景。写对的关键只有一条：连接词后面必须接完整的句子，除非它本来就不是连词。',
     sections: [
@@ -1247,6 +1267,7 @@ export const grammarLessons = [
     en: 'Questions: Yes/No Forms and Wh- Word Order',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: '疑问句只看一件事：疑问词或助动词站在句首之后，剩下的还要不要倒装。先判断你在问主语，还是问动作的对象。',
     sections: [
@@ -1327,6 +1348,7 @@ export const grammarLessons = [
     en: 'Question Tags',
     level: '基础',
     exam: '中考',
+    stage: '九年级',
     mins: 6,
     intro: '反意疑问句就是把句子切成两半：前面陈述，后面小声确认。助动词照抄前面，否定只放在其中一半。',
     sections: [
@@ -1407,6 +1429,7 @@ export const grammarLessons = [
     en: 'Imperatives and Exclamations',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: '祈使句从动词原形开始，感叹句只看一个位置：感叹词后面紧跟的是名词还是形容词。',
     sections: [
@@ -1487,6 +1510,7 @@ export const grammarLessons = [
     en: 'Pronouns: Some, Any, One, Both',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 7,
     intro: '代词题先问两句：范围是两个还是三个以上？指的是同一个东西还是同类里的另一个？',
     sections: [
@@ -1567,6 +1591,7 @@ export const grammarLessons = [
     en: 'Numbers, Fractions and Time',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 7,
     intro: '数词的坑集中在两处：拼写变化和主谓一致。数字本身不决定动词，后面的名词才决定。',
     sections: [
@@ -1643,10 +1668,11 @@ export const grammarLessons = [
   },
   {
     id: 'g26',
-    title: 'There be 句型与存现句',
+    title: 'There be 句型与 have 的区别',
     en: 'There Be and Existential Sentences',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 6,
     intro: 'There be 的真主语在后面，所以动词的单复数、时态和尾巴都跟着后面那个最近的名词走。',
     sections: [
@@ -1705,7 +1731,7 @@ export const grammarLessons = [
         q: 'There ____ a speech contest in the hall next Monday afternoon.',
         opts: ['will be', 'will have', 'is going to have', 'are'],
         a: 0,
-        explain: '存现句的将来时用 There will be，不能用 have 表示“有”。',
+        explain: 'There be 句型的将来时用 There will be，不能用 have 表示“有”。',
       },
       {
         q: 'There is nothing left in the fridge for dinner, ____?',
@@ -1723,10 +1749,11 @@ export const grammarLessons = [
   },
   {
     id: 'g27',
-    title: '并列句：and / but / or / so 与关联连词',
+    title: '并列复合句：and / but / or / so 与 both...and 等并列结构',
     en: 'Coordinate Clauses and Paired Conjunctions',
     level: '进阶',
     exam: '中考',
+    stage: '九年级',
     mins: 7,
     intro: '并列句先看两个句子的关系，再选连词；连词决定不了的事，主谓一致由离动词最近的主语决定。',
     sections: [
@@ -1807,6 +1834,7 @@ export const grammarLessons = [
     en: 'Future Forms, Frequency Adverbs and Time Markers',
     level: '进阶',
     exam: '中考',
+    stage: '八年级',
     mins: 8,
     intro: '这一课补三个空：将来还不止 will 一种写法，频率副词有固定位置，ago 与 already 属于两条不同的时间线。',
     sections: [
@@ -1887,6 +1915,7 @@ export const grammarLessons = [
     en: 'Non-restrictive Relative Clauses',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '逗号一加，从句就从“限定身份”变成“补充说明”。这种从句有三条硬规矩：不用 that，不省关系词，which 还能指代前面整句话。',
     sections: [
@@ -1967,6 +1996,7 @@ export const grammarLessons = [
     en: 'Appositive Clauses vs Relative Clauses',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '两种从句都能跟在名词后面，区别只看一件事：从句里缺不缺成分。缺成分的是定语从句，不缺的是同位语从句。',
     sections: [
@@ -2047,6 +2077,7 @@ export const grammarLessons = [
     en: 'Ellipsis',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 7,
     intro: '省略不是偷懒，而是把重复的部分删掉。三条底线：主语必须与主句一致，be 动词要在场，答句里的 to 不能丢。',
     sections: [
@@ -2127,6 +2158,7 @@ export const grammarLessons = [
     en: 'Word Formation I: Prefixes and Suffixes',
     level: '进阶',
     exam: '高考',
+    stage: '九年级',
     mins: 6,
     intro: '生词不查词典也能猜个大概：前缀给方向，后缀给词性，中间是词根。阅读时把这三块拆开，意思就露出来了。',
     sections: [
@@ -2207,6 +2239,7 @@ export const grammarLessons = [
     en: 'Word Formation II: Compounds and Conversion',
     level: '进阶',
     exam: '高考',
+    stage: '九年级',
     mins: 6,
     intro: '把两个现成的词拼在一起，或者让名词直接当动词用，是英语造新词最常用的两招，也是作文里让用词升一级的入口。',
     sections: [
@@ -2287,8 +2320,9 @@ export const grammarLessons = [
     en: 'Modals for Deduction',
     level: '高阶',
     exam: '高考',
+    stage: '九年级',
     mins: 8,
-    intro: '推测题只看两件事：把握有多大，推测的是现在还是过去。把握从大到小是 must、will、may / might；有把握地否定，只能交给 can’t。',
+    intro: '推测题只看两件事：把握有多大，推测的是现在还是过去。把握从大到小是 must、may / might、could；有把握地否定，只能交给 can’t。第一节人教九年级教材系统讲，后两节推测过去与“与事实相反”属高中拓展。',
     sections: [
       {
         h: '对现在：must be / can’t be / may be',
@@ -2363,10 +2397,11 @@ export const grammarLessons = [
   },
   {
     id: 'g35',
-    title: '时态补全：完成进行时、过去将来与将来两处时限',
+    title: '时态补全：完成进行时、过去将来时、将来进行与将来完成',
     en: 'Further Tenses: Perfect Continuous and Future Forms',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 9,
     intro: '这四个时态都能靠时间词认出来：for 和 since 找完成进行时，by 加将来时间找将来完成，this time tomorrow 找将来进行。',
     sections: [
@@ -2447,6 +2482,7 @@ export const grammarLessons = [
     en: 'Future in the Main Clause, Present in the Subordinate Clause',
     level: '进阶',
     exam: '高考',
+    stage: '八年级',
     mins: 7,
     intro: '时间、条件状语从句里不出现 will，这就是主将从现。但 when 引导宾语从句、if 表示“是否”时 will 必须留着，所以先判断从句种类，再动时态。',
     sections: [
@@ -2527,6 +2563,7 @@ export const grammarLessons = [
     en: 'Adjectives or Adverbs: Decide by What They Modify',
     level: '进阶',
     exam: '中考',
+    stage: '八年级',
     mins: 6,
     intro: '别急着背“形容词修饰名词、副词修饰动词”的口诀，先看空格在修饰谁：跟在系动词后面说状态，用形容词；跟在实义动词后面说“怎么做”，用副词。',
     sections: [
@@ -2595,6 +2632,7 @@ export const grammarLessons = [
     en: 'Nouns: Countability, Plurals and Possessives',
     level: '基础',
     exam: '中考',
+    stage: '七年级',
     mins: 7,
     intro: '名词题分三步：先判断能不能数，再决定复数怎么变，最后看是谁的东西——用 ’s 还是 of。',
     sections: [
@@ -2663,6 +2701,7 @@ export const grammarLessons = [
     en: 'Possessive and Reflexive Pronouns',
     level: '基础',
     exam: '中考',
+    stage: '八年级',
     mins: 5,
     intro: '物主代词先看空格后有没有名词：有，用 my 这一套；没有，用 mine 这一套。反身代词则跟着主语照镜子，主语是谁就反射回谁。',
     sections: [
@@ -2731,6 +2770,7 @@ export const grammarLessons = [
     en: 'Absolute Construction and the with Compound',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 9,
     intro: '一个句子只能有一套谓语。当另一个动作自带主语、又想挂进主句时，就轮到独立主格和 with 复合结构出场。',
     sections: [
@@ -2800,6 +2840,7 @@ export const grammarLessons = [
     en: 'Inversion Variants: Full Inversion, Not until, as',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '否定词提前的部分倒装，前面倒装与强调一课已经讲过；这一课补齐其余触发器：完全倒装、not until、hardly...when、so...that 与让步 as。',
     sections: [
@@ -2871,6 +2912,7 @@ export const grammarLessons = [
     en: 'It as Formal Subject and Formal Object',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 7,
     intro: '真正的主语或宾语太长时，it 先站出来占位，真身随后补上。语法填空的无提示词空，很多就落在这个 it 上。',
     sections: [
@@ -2933,6 +2975,497 @@ export const grammarLessons = [
         opts: ['I find hard to wake up early.', 'I find that hard to wake up early.', 'I find it hard to wake up early.', 'I find this hard to wake up early.'],
         a: 2,
         explain: 'find 接“形容词 + 不定式”作宾语时必须先用 it 占位，真宾语 to wake up early 后置；that 与 this 都不能承担占位作用。',
+      },
+    ],
+  },
+  {
+    id: 'g43',
+    title: '人称代词与指示代词：I 还是 me',
+    en: 'Personal and Demonstrative Pronouns',
+    level: '基础',
+    exam: '中考',
+    stage: '七年级',
+    mins: 6,
+    intro: '代词题先看岗位：发出动作用主格，挨动作用宾格；指认事物先数单复数，再分远近。',
+    sections: [
+      {
+        h: '主格扛主语，宾格扛宾语',
+        body: '先看代词在句中的岗位：发出动作的人站在主语位置，用主格 I、he、she、we、they；被动作“砸中”的人或介词后面的，一律用宾格 me、him、her、us、them。介词是重灾区：between you and me、for us、with them 都是固定说法，介词后面不认主格。两人并列作主语最容易错：要说 My cousin and I are...，不说 My cousin and me are...。',
+        examples: [
+          { en: 'My deskmate and I clean the blackboard after class.', zh: '我和同桌课后擦黑板。' },
+          { en: 'Miss Gao divides the sweets between you and me.', zh: '高老师把糖果分给你和我。' },
+        ],
+      },
+      {
+        h: 'this / that / these / those：先数单复，再分远近',
+        body: '近处的单数用 this，复数用 these；远处的单数用 that，复数用 those，后面接的动词跟着单复数变：This is my seat，These are our books。打电话介绍自己不说 I am...，固定说 This is...，问对方用 Is that...。指代前文提过的事物时，单数用 it 顶替，复数用 they 或 them 顶替。',
+        examples: [
+          { en: 'These are the photos we took at the sports meet.', zh: '这些是我们在运动会上拍的照片。' },
+          { en: 'Hello? This is Wang Lin speaking. Is that Mr. Hu?', zh: '喂？我是王林。您是胡老师吗？' },
+        ],
+      },
+      {
+        h: '高频错项：三个坑一次填平',
+        body: '坑一：he / him 混用。作主语用 he，作宾语用 him，Him and me went 是双重错误，要说 He and I went。坑二：these、those 后面必须接复数名词，this、that 接单数或不可数名词，如 these books、that milk。坑三：What’s this / that? 的回答固定用 It’s a / an...，不用 This is...；问 What are these / those? 才用 They’re...。',
+        examples: [
+          { en: 'He and I are in the same reading club.', zh: '他和我在同一个读书社。' },
+          { en: 'What are those on the teacher’s desk? They’re new dictionaries.', zh: '讲台上那些是什么？是新词典。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '先看岗位：主语用主格，动词和介词的宾语用宾格',
+      '介词后面一律用宾格：between you and me 是固定说法',
+      'these、those 后接复数名词，this、that 接单数或不可数',
+      'What’s this? 固定答 It’s...，电话里用 This is 介绍自己',
+    ],
+    pitfall: '并列主语最容易连错两处：Him and me went to the library 应改成 He and I went to the library；并列时习惯把对方放在前面，说 you and I、my cousin and I。另外电话里问对方是谁用 Is that...?，不说 Are you...?',
+    quiz: [
+      {
+        q: 'Miss Yang will show the photos to you and ____ after the class meeting.',
+        opts: ['me', 'I', 'my', 'mine'],
+        a: 0,
+        explain: '介词 to 后面的并列宾语也要用宾格：to you and me；my、mine 是物主代词，排除。',
+      },
+      {
+        q: '— Hello! ____ is Li Ming speaking. May I speak to Mr. Zhang? — Hold on, please.',
+        opts: ['That', 'This', 'It', 'He'],
+        a: 1,
+        explain: '电话里介绍自己固定说 This is...；that 用于问对方 Is that...，it、he 都不能这样自报家门，排除。',
+      },
+      {
+        q: 'Look at ____ robots over there. They were made by our robotics club.',
+        opts: ['that', 'this', 'those', 'them'],
+        a: 2,
+        explain: 'over there 表远指，后句 They were made 提示复数，用 those；that、this 都是单数，排除。',
+      },
+      {
+        q: '— What’s this in English? — ____ a school ID card.',
+        opts: ['They’re', 'That’s', 'This is', 'It’s'],
+        a: 3,
+        explain: 'What’s this? 的回答固定用 It’s a...；They’re 只用来回答 these、those 的提问，排除。',
+      },
+    ],
+  },
+  {
+    id: 'g44',
+    title: '复合不定代词：no one、none 与部分否定',
+    en: 'Compound Indefinite Pronouns: No One, None and Partial Negation',
+    level: '基础',
+    exam: '中考',
+    stage: '八年级',
+    mins: 6,
+    intro: '上一课讲过 some / any 的语气分工与修饰词后置，这里补齐剩下三组：no one 与 none 怎么选，everything 与 all 怎么搭，部分否定与全否定差在哪。',
+    sections: [
+      {
+        h: 'no one / nobody 只指人，none 指人也能指物',
+        body: 'no one 与 nobody 只指人，后面不能接 of；none 既可指人也可指物，习惯与 of 连用：none of them、none of the answers。回答 Who 问句用 No one 或 Nobody，回答 How many、How much 问句才用 None。另外 no one 分开写成两个单词，nobody 连写，两者意思相同，谓语都用单数。',
+        examples: [
+          { en: 'None of the four choices is right, so the question must be wrong.', zh: '四个选项没有一个是对的，所以这道题肯定出错了。' },
+          { en: '— How many clubs did you join this term? — None. I only stayed in the chess club.', zh: '——这学期你加了几个社团？——一个也没加，我只留在国际象棋社。' },
+        ],
+      },
+      {
+        h: 'everything 不接 of，all 要接名词或 all of',
+        body: 'everything 把“一切”看成一个整体，后面不接 of，作主语时谓语用单数：Everything goes well。all 泛指时后面必须先接 the、these 这类限定词再接名词，或写成 all of 加限定词：all the students、all of the students。光说 all students 不符合习惯，all of students 又丢了 the，两处都要留意。',
+        examples: [
+          { en: 'Everything goes well with the school open day.', zh: '校园开放日一切顺利。' },
+          { en: 'All of the students joined the reading club this term.', zh: '这学期所有学生都加入了读书社。' },
+        ],
+      },
+      {
+        h: 'not 与 every 系连用是部分否定',
+        body: 'not 与 every 系复合代词或 every、all 连用时是部分否定，意思是“并非都”：Not everything expensive is good、Not everybody agrees。要一口咬定“全都没有”，才换成 no 系：Nothing、Nobody、No one。下手先问否定的是“一部分”还是“全部”，再决定用 not 加 every 系，还是直接用 no 系。',
+        examples: [
+          { en: 'Not everything expensive is good, so think twice before buying.', zh: '贵的东西并非都好，所以购买前要三思。' },
+          { en: 'Not everybody in our class likes physics, but we all work hard at it.', zh: '并不是班里每个人都喜欢物理，但我们都在努力学。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'no one 只指人不带 of，none 指人指物常与 of 连用',
+      'How many 问数量答 None，Who 问人答 No one',
+      'everything 不接 of 且谓语三单，all 要接名词或 all of',
+      'not everything 是部分否定，全否定换 Nothing 或 Nobody',
+    ],
+    pitfall: 'none of 后面的谓语单复数都可以，考试常取单数：None of them knows the answer。另外部分否定别写成全否定：Not everything is good 不等于 Nothing is good，前者留了余地，后者一票否决。',
+    quiz: [
+      {
+        q: '— Who did you invite to the open day? — ____; everyone was busy that day.',
+        opts: ['Nobody', 'None', 'Nothing', 'No one of them'],
+        a: 0,
+        explain: 'Who 问的是人，全否定答 Nobody 或 No one；None 回答 How many 或 How much，no one of them 的搭配不存在，排除。',
+      },
+      {
+        q: '____ of the answers was correct, so Mr. Li went over them again.',
+        opts: ['No one', 'Nobody', 'None', 'Nothing'],
+        a: 2,
+        explain: 'none of 既能指人也能指物；no one、nobody 不能与 of 连用，nothing 不与 of 连用且只指物，排除。',
+      },
+      {
+        q: '____ went well at the sports meet, but the relay race was put off by the rain.',
+        opts: ['Nothing', 'Everything', 'No one', 'Nobody'],
+        a: 1,
+        explain: '后半句只说接力赛延期，整体是顺利的，用 everything 表“一切”，谓语按三单处理；nothing 全否定与语境矛盾，no one、nobody 只指人，排除。',
+      },
+      {
+        q: '____ agrees with the plan, so we will vote again next week.',
+        opts: ['Not everybody', 'Nobody', 'Everybody', 'No one'],
+        a: 0,
+        explain: '后半句“下周再投一次票”说明反对的只是一部分人，部分否定用 Not everybody；nobody、no one 是全否定，everybody 是全肯定，都与“再投票”矛盾，排除。',
+      },
+    ],
+  },
+  {
+    id: 'g45',
+    title: '宾语补足语：ask sb. to do 还是 make sb. do',
+    en: 'Object Complements: with or without to',
+    level: '进阶',
+    exam: '中考',
+    stage: '八年级',
+    mins: 7,
+    intro: '宾语后面还缺一块意思时，宾补来补齐。先看动词归哪一派：多数动词的宾补带 to，使役和感官动词不带 to。',
+    sections: [
+      {
+        h: '带 to 一派：ask / tell / allow / warn sb. to do',
+        body: 'ask、tell、want、allow、warn、invite、teach、encourage 这类动词的宾补必须带 to，构成“动词 + 宾语 + to do”：ask us to arrive early、teach him to paint、allow her to keep the pet。下手判断：这类动词的宾语接下来要亲自做那件事，宾补就写 sb. to do。',
+        examples: [
+          { en: 'The teacher asked us to hand in the posters before Friday.', zh: '老师要求我们在周五前交海报。' },
+          { en: 'Mum warned me not to swim in the river alone.', zh: '妈妈警告我不要独自去河里游泳。' },
+        ],
+      },
+      {
+        h: '不带 to 一派：使役与感官动词接原形',
+        body: '使役动词 make、let、have 和感官动词 feel、hear、see、watch、notice 后面接不带 to 的动词原形，口诀“一感二听三让四看”：一感 feel，二听 hear、listen to，三让 make、let、have，四看 see、watch、notice、look at。listen to、look at 里的 to 是短语动词的一部分，不是不定式符号，别混进带 to 一派。',
+        examples: [
+          { en: 'The funny sketch made the whole class laugh.', zh: '那个滑稽的小品逗得全班大笑。' },
+          { en: 'I often hear my neighbour practise the violin in the evening.', zh: '我常在傍晚听到邻居练习小提琴。' },
+        ],
+      },
+      {
+        h: '被动补回 to，doing 看片段',
+        body: '省略句一课已经讲过 make sb. do 变被动后要补回 to；hear、see 这类感官动词的被动同样补：People often saw him draw by the lake. 变成 He was often seen to draw by the lake。let 一般改用 be allowed to do。感官动词后接 do 还是 doing，看动作有没有看全：see sb. do 看到全过程或反复发生，see sb. doing 只看到进行中的一幕。',
+        examples: [
+          { en: 'He was often seen to draw pictures by the lake after school.', zh: '放学后常有人看见他在湖边画画。' },
+          { en: 'I saw Lily rehearsing her dance for the art festival.', zh: '我看见莉莉正在为艺术节排练舞蹈。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'ask、tell、allow、warn 后的宾补带 to，构成 sb. to do',
+      'make、let、have 与 see、hear 后接不带 to 的动词原形',
+      'hear、see 的被动也补回 to：He was often seen to draw',
+      'see sb. do 看全程，see sb. doing 只看进行中的一幕',
+    ],
+    pitfall: '否定宾补的 not 放在 to 之前，是 not to do，不写 to not do。另外 make 作“制作”讲时不是使役用法：make model planes 后面没有宾补，别一见 make 就去找动词原形。',
+    quiz: [
+      {
+        q: 'The PE teacher asked us ____ some warm-up exercises before the relay race.',
+        opts: ['do', 'to do', 'doing', 'did'],
+        a: 1,
+        explain: 'ask sb. to do sth. 是固定结构，宾补必须带 to，填 to do；ask 后不接动词原形，排除。',
+      },
+      {
+        q: 'The documentary made everyone ____ about saving food at school.',
+        opts: ['to think', 'thinking', 'think', 'thought'],
+        a: 2,
+        explain: '使役动词 make 后接不带 to 的原形：made everyone think；只有被动句才把 to 补回来，排除。',
+      },
+      {
+        q: 'People often saw him draw by the lake. (变为被动语态) He was often ____ by the lake.',
+        opts: ['saw draw', 'seen draw', 'seen to draw', 'saw to draw'],
+        a: 2,
+        explain: 'see 的宾补不带 to，变被动后要补回 to：was often seen to draw；主动句的 saw 不能带进被动句，排除。',
+      },
+      {
+        q: 'When I walked past the playground, I saw some boys ____ basketball.',
+        opts: ['to play', 'played', 'play', 'playing'],
+        a: 3,
+        explain: 'walked past 说明只瞥见进行中的一幕，用 see sb. doing；看到动作全程才用原形 play，排除。',
+      },
+    ],
+  },
+  {
+    id: 'g46',
+    title: '现在完成时三大去向：have been to / have gone to / have been in',
+    en: 'Have Been to, Have Gone to and Have Been in',
+    level: '进阶',
+    exam: '中考',
+    stage: '八年级',
+    mins: 6,
+    intro: '三个短语都从 have 出发，差别只在“人现在在哪”：回来了用 been to，还没回来用 gone to，一直待着用 been in。先问回没回来，再问待了多久。',
+    sections: [
+      {
+        h: 'been to 与 been in：去过还是一直待着',
+        body: 'have/has been to + 地点 表示“去过”，人已经回来了，所以能谈感受、能数次数，常与 ever、never、once、twice 连用。have/has been in + 地点 表示“一直待在”，人至今还在那里，后面常接 for 一段时间或 since 时间点。判断时先想：这件事讲的是“到过”，还是“待着没走”。',
+        examples: [
+          { en: 'I have been to the Great Wall twice, and I still remember the long stone steps.', zh: '我去过长城两次，还记得那长长的石阶。' },
+          { en: 'Has she ever been to a science museum before?', zh: '她以前去过科技馆吗？' },
+          { en: 'His family has been in Nanjing for five years, so the city feels like home.', zh: '他们一家在南京待了五年，这座城市就像家一样。' },
+        ],
+      },
+      {
+        h: 'gone to：去了，人还没回来',
+        body: 'have/has gone to + 地点 表示“去了”，人还在路上或在那边，没回到说话的地方。它一般只用于第三人称：爸爸、老师、同学可以“去了没回”，但说话人自己不能说 I have gone to...，因为“我”此刻就在现场。对话里先看提问是不是 Where is...?，人不在场、要等他回来，就选 gone to。',
+        examples: [
+          { en: '— Where is our monitor? — He has gone to the teachers’ office for the test papers.', zh: '我们班长去老师办公室拿试卷了。' },
+          { en: 'The twins have gone to the school library, so their seats are empty now.', zh: '这对双胞胎去学校图书馆了，所以他们的座位现在空着。' },
+        ],
+      },
+      {
+        h: 'How long 问答与 for/since 综合',
+        body: 'How long 问的是持续多久，主句要用延续性的 have been in，答语配 for 或 since；问次数用 How many times，答语用 have been to 加次数。口诀：问多久、说一直，用 been in；问去过、数次数，用 been to。做题时先把答语里的 for、since、次数圈出来，再回头选短语。',
+        examples: [
+          { en: '— How long have you been in this school? — Since I started Grade Seven.', zh: '你在这所学校多久了？从上七年级开始。' },
+          { en: 'I have been to Hangzhou twice, but my aunt has been in Hangzhou for ten years.', zh: '我去过杭州两次，而姑姑已经在杭州住了十年。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'been to 是去过已回，可与 once、twice 等次数连用',
+      'gone to 是去了未回，对话里问 Where is 就选它',
+      'been in 是一直待在某地，常与 for、since 引导的时间连用',
+      'How long 问持续多久，答语用 been in 加 for/since',
+    ],
+    pitfall: '主语是我时不能用 have gone to：说话这一刻“我”就在现场，不可能去了没回来。做题先看人回没回来，再看主语是不是说话人自己，两步都过再落笔。',
+    quiz: [
+      {
+        q: '— Where is our English teacher? — She ____ the teachers’ office for our test papers.',
+        opts: ['has been to', 'has gone to', 'has been in', 'went to'],
+        a: 1,
+        explain: '问 Where is 说明老师此刻不在场、还没回来，用 has gone to；has been to 变成“去过已回”，与语境不符。',
+      },
+      {
+        q: 'I ____ that science museum three times, and I still remember the robot show.',
+        opts: ['have gone to', 'have been to', 'have been in', 'will go to'],
+        a: 1,
+        explain: 'three times 是到目前为止的次数，人已经回来了，用 have been to；have gone to 表“去了未回”，不能与次数连用。',
+      },
+      {
+        q: '— How long ____ in this city? — Since I came here in Grade Seven.',
+        opts: ['have you gone', 'did you go', 'have you been', 'will you be'],
+        a: 2,
+        explain: 'How long 问持续到现在的时间，答语 since 提示用延续性的 have you been；gone to 表“去了未回”，没法谈“待了多久”。',
+      },
+      {
+        q: 'My cousin ____ Nanjing for three years, so he knows every street there.',
+        opts: ['has been to', 'has gone to', 'went to', 'has been in'],
+        a: 3,
+        explain: 'for three years 是延续的时间段，说明人一直待在那里，用 has been in；has been to 只表去过，不与 for 连用。',
+      },
+    ],
+  },
+  {
+    id: 'g47',
+    title: '简单句的五种基本句型',
+    en: 'The Five Basic Sentence Patterns',
+    level: '基础',
+    exam: '中考',
+    stage: '八年级',
+    mins: 7,
+    intro: '所有英文句子拆到最简，只剩五种骨架。判断句型只问一句：谓语动词后面跟了什么？什么都没跟、跟一个、跟两个，还是补一句说明。',
+    sections: [
+      {
+        h: '前三种句型：主谓、主谓宾、主系表',
+        body: '主谓结构里动词自身意思完整，后面不接宾语，如 laugh、arrive、sleep。主谓宾结构里动作要落到对象上，动词后必须带宾语，少了句子就不完整。主系表结构用 be、look、smell、taste、sound、feel、become、keep 等连系动词，后面接形容词或名词作表语，说明主语“是什么、怎么样”；表语用形容词，不用副词。',
+        examples: [
+          { en: 'Everyone laughed loudly when the teacher told the joke.', zh: '老师讲笑话时，大家都大声笑了。' },
+          { en: 'We clean the blackboard and tidy the desks after every class.', zh: '每节课后我们擦黑板、整理课桌。' },
+          { en: 'The milk in the bottle smells sour; don’t drink it.', zh: '瓶里的牛奶闻起来酸了，别喝。' },
+        ],
+      },
+      {
+        h: '后两种句型：双宾语与宾语 + 宾补',
+        body: '主谓双宾是“给谁 + 给什么”：give、show、send、teach、tell、buy 后面跟两个宾语，两个宾语之间没有说明关系。主谓宾 + 宾补是在宾语后面补一句“它是什么、让它怎样”：keep the classroom clean、make us laugh、call him Xiao Ming。区分方法：宾补说的正是宾语自己，而双宾的第二个宾语说的不是第一个宾语。',
+        examples: [
+          { en: 'Mom bought me a new schoolbag before the school trip.', zh: '学校春游前，妈妈给我买了一个新书包。' },
+          { en: 'Our English teacher keeps the classroom clean and tidy.', zh: '英语老师把教室保持得干净整洁。' },
+          { en: 'The story about the clever rabbit made us laugh for minutes.', zh: '那只聪明兔子的故事让我们笑了好一阵。' },
+        ],
+      },
+      {
+        h: '句型判断：完成句子与写作纠错',
+        body: '下手点固定：先找谓语动词，再数动词后面跟了什么、补了什么。完成句子时先定骨架再填词；写作纠错盯两类错——动词后缺宾语（I like very much 要补成 I like it very much），以及连系动词和宾补位置误用副词（说 tastes good，不说 tastes well；说 keep quiet，不说 keep quietly）。',
+        examples: [
+          { en: 'I like the new song very much.', zh: '我非常喜欢这首新歌。（like 后必须带宾语）' },
+          { en: 'The soup tastes good, so Dad asks for another bowl.', zh: '汤味道不错，爸爸又要了一碗。' },
+          { en: 'Grandpa gave each of us a red envelope at Spring Festival.', zh: '春节时爷爷给了我们每人一个红包。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '主谓动词自身意思完整，主谓宾动词后必须带宾语',
+      '连系动词 look、smell、keep、become 后接形容词或名词作表语',
+      'give sb. sth. 是双宾语，keep/make + 宾补说的是宾语的状态',
+      '判断句型先找谓语动词，再数动词后面跟了什么成分',
+    ],
+    pitfall: '双宾语和宾补最容易被混为一谈：give me a book 里 a book 不是在说 me，而 make us laugh 里 laugh 说的正是 us。写作时 like 后面不能没有宾语，I like very much 是错句，要补出 it。',
+    quiz: [
+      {
+        q: 'Which sentence uses the “主 + 谓 + 宾 + 宾补” structure?',
+        opts: ['She sent me a postcard.', 'The kids keep the room tidy.', 'My grandpa grows vegetables.', 'The leaves turn yellow.'],
+        a: 1,
+        explain: 'tidy 是在说 the room 的状态，属于宾补；sent me a postcard 是双宾语，turn yellow 是主系表，都不是宾补结构。',
+      },
+      {
+        q: 'The soup on the stove ____ a bit strange; don’t drink it.',
+        opts: ['smells', 'smell', 'is smelled', 'smelling'],
+        a: 0,
+        explain: 'smell 是连系动词，后面直接接形容词作表语，主语 the soup 是三单，所以用 smells。',
+      },
+      {
+        q: 'Our English teacher often ____ funny stories to make the class lively.',
+        opts: ['tells to us', 'tells for us', 'tells us', 'tell us'],
+        a: 2,
+        explain: 'tell 后接双宾语，直接说 tell sb. sth.，主语三单用 tells us，中间不加 to 或 for。',
+      },
+      {
+        q: 'Which sentence is NOT correct?',
+        opts: ['The flowers smell sweet.', 'Grandpa gave me a model plane.', 'She made me happily.', 'Please keep the door open.'],
+        a: 2,
+        explain: '宾补要用形容词或动词原形：made me happily 是错误写法，应说 made me happy；其余三句分别是主系表、双宾语和宾补，都成立。',
+      },
+    ],
+  },
+  {
+    id: 'g48',
+    title: 'used to do：过去常常与今昔对比',
+    en: 'Used to Do: Past Habits and Changes',
+    level: '进阶',
+    exam: '中考',
+    stage: '九年级',
+    mins: 6,
+    intro: 'used to 只拍过去：从前常常怎样，现在不了。分清它的三张面孔，“今昔对比”类作文就有骨架了。',
+    sections: [
+      {
+        h: 'used to + 原形：肯定、否定与疑问',
+        body: 'used to do 表示“过去常常、从前有”，只谈过去，暗示现在不是这样了。否定和疑问都要借 did，借了 did，used 就还原成 use：didn’t use to do、Did you use to do...? 它没有现在时——说“现在习惯于”要用 be used to doing，说“现在常常”直接用一般现在时。',
+        examples: [
+          { en: 'I used to be afraid of the dark, so I slept with the light on.', zh: '我过去怕黑，所以睡觉时开着灯。' },
+          { en: 'She didn’t use to like maths, but now she solves hard problems for fun.', zh: '她以前不喜欢数学，现在却以解难题为乐。' },
+          { en: 'Did you use to play badminton after school?', zh: '你以前放学后常打羽毛球吗？' },
+        ],
+      },
+      {
+        h: '三辨：used to do / be used to doing / be used to do',
+        body: '判断只看两处：有没有 be，后面接什么。没有 be，used to do 是“过去常常”；有 be 且后接 doing，to 是介词，be used to doing 是“习惯于”，主语多为人；有 be 且后接原形，to 是不定式，be used to do 是“被用来做”，主语多是物。三句并排记：过去常常没 be，习惯于有 be 接 doing，被用来有 be 接原形。',
+        examples: [
+          { en: 'Grandpa is used to getting up at five and walking by the river.', zh: '爷爷习惯五点起床，再到河边散步。' },
+          { en: 'Bamboo is used to make baskets, chopsticks and even small houses.', zh: '竹子被用来做篮子、筷子，甚至小屋。' },
+        ],
+      },
+      {
+        h: '今昔对比：but now 与一般过去时共现',
+        body: '今昔对比的骨架是 I used to..., but now...：前半句用 used to 讲过去的习惯或状态，but now 之后换一般现在时讲现在。与一般过去时共现时要分清：used to 说笼统的“过去常常”，具体某一次的事只用过去式，如 I was late yesterday。写作时先用 used to 铺垫过去，再转折到 now，对比自然拉开。',
+        examples: [
+          { en: 'He used to spend hours on mobile games, but now he only plays at weekends.', zh: '他以前常花几小时玩手机游戏，现在只在周末玩。' },
+          { en: 'There used to be a small shop near our school, but it closed last winter.', zh: '我们学校附近以前有家小店，去年冬天关了。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'used to 后接动词原形，表过去的习惯或状态，如今已不然',
+      '否定与疑问借 did，used 还原成 use：didn’t use to do',
+      '有 be 接 doing 是习惯于，接原形是被用来，没 be 是过去常常',
+      '今昔对比写 I used to..., but now...，now 后换一般现在时',
+    ],
+    pitfall: '不要漏掉 be 或多写 be：过去常常说 used to get up，写成 I used to getting up early 就错了；说“习惯于”才用 be used to getting up。判断时先问讲过去还是讲习惯，再决定用不用 be。',
+    quiz: [
+      {
+        q: 'My grandmother ____ live in a small village, but now she lives with us in the city.',
+        opts: ['is used to', 'used to', 'was used to', 'use to'],
+        a: 1,
+        explain: 'but now 提示今昔对比，“过去常常”用 used to 加动词原形，即 used to live。',
+      },
+      {
+        q: 'Bamboo ____ make baskets, chopsticks and even small houses.',
+        opts: ['used to', 'is used to', 'is used to making', 'used to making'],
+        a: 1,
+        explain: '主语 bamboo 是物，“被用来做某事”用 be used to do，即 is used to make；be used to doing 的主语多是人。',
+      },
+      {
+        q: 'My deskmate ____ reading before bed, so she reads even on busy days.',
+        opts: ['used to', 'is used to read', 'used to reading', 'is used to'],
+        a: 3,
+        explain: '人做主语、后面接 doing 表“习惯于”，用 is used to reading；used to 后面要接动词原形。',
+      },
+      {
+        q: '— ____ play badminton when you were in primary school? — Yes, almost every weekend.',
+        opts: ['Did you use to', 'Did you used to', 'Are you used to', 'Do you use to'],
+        a: 0,
+        explain: '疑问句借 did，used 还原成 use：Did you use to play...?；答语 almost every weekend 也印证这是问过去的习惯。',
+      },
+    ],
+  },
+  {
+    id: 'g49',
+    title: '疑问词 + to do 与 by + doing：学习策略表达',
+    en: 'Question Words + to do and by + doing',
+    level: '进阶',
+    exam: '中考',
+    stage: '九年级',
+    mins: 7,
+    intro: '疑问词后加 to do，等于把一个宾语从句压成短语；by 后加 doing，回答的是“用什么方法”。学英语的方法怎么表达，是中考单选和书面表达的常客。',
+    sections: [
+      {
+        h: '疑问词 + to do：把宾语从句压成短语',
+        body: 'know、decide、tell、ask、learn、forget 这些动词后面，可以接“疑问词 + to do”作宾语。下手就两步：先看主句和从句的主语是不是同一个，一致才能互换；再检查从句是不是陈述语序。I don’t know how I can learn English well. 主语都是 I，压成 I don’t know how to learn English well.；主语不同，如 I don’t know how she learns it so well.，就不能压。否定式把 not 放到 to 前面：He told me how not to make the same mistakes.',
+        examples: [
+          { en: 'I don’t know how to learn English well.', zh: '我不知道怎样才能学好英语。' },
+          { en: 'He didn’t know what to say at the class meeting.', zh: '他不知道在班会上该说什么。' },
+          { en: 'We haven’t decided where to go for the class trip.', zh: '我们还没决定班级郊游去哪儿。' },
+        ],
+      },
+      {
+        h: 'by + doing：回答用什么方法',
+        body: 'by + doing 表示“通过……方式、手段”，回答 How do you...? 这类问句时，可以直接以 By doing 开头。判断口诀：by 后面只要接动词，一律变 doing，不看人称和时态。和 in、with 分清：in + 语言、声音、书写方式，如 in English、in a low voice；with + 具体工具，如 with a pen、with a knife；表手段才用 by + doing。另外 by 还能表“不迟于”，如 by 9:00 p.m.，见到 by 先看后面接的是 doing、名词还是时间。',
+        examples: [
+          { en: 'How do you study for a test? By working with friends.', zh: '你怎样为考试复习？通过和朋友一起学习。' },
+          { en: 'Li Ming improved his pronunciation by reading aloud every morning.', zh: '李明通过每天早晨大声朗读提高了发音。' },
+          { en: 'Our English teacher often explains the rules in simple English.', zh: '我们的英语老师常用简单的英语讲解规则。' },
+        ],
+      },
+      {
+        h: '学习方法综合：advice on how to...',
+        body: '请求建议的常用句型是 Could you give us some advice on how to improve...? 两个坑：advice 是不可数名词，不可以说 an advice，一条建议要说 a piece of advice；on 是介词，后面接“疑问词 + to do”或 doing，如 Thanks for your advice on learning English.。回答方法时用 By doing...，给建议时用 You’d better...、Why not...、What about doing...? 写“我的学习方法”就用三件套：by doing 点方法，疑问词 + to do 说打算，I think it’s useful to do 表看法。',
+        examples: [
+          { en: 'Could you give us some advice on how to remember new words?', zh: '你能给我们一些关于如何记新单词的建议吗？' },
+          { en: 'You’d better go over your notes by making word cards.', zh: '你最好通过做单词卡片来复习笔记。' },
+          { en: 'Thanks for your advice on learning English.', zh: '谢谢你在英语学习上给我的建议。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'know、decide、tell、ask 等动词后常接疑问词加 to do 作宾语',
+      '疑问词加 to do 与宾语从句互换的前提：主语一致，从句用陈述语序',
+      'by 后接动词一律加 doing，回答 How 问句常以 By doing 开头',
+      'in 后接语言或声音，with 后接具体工具，方式手段用 by doing',
+    ],
+    pitfall: '别把 by 用成 with：I learn English by making word cards. 是“通过做单词卡”这种方法，with 后只能接具体工具；by 后的动词必须变 doing，写成 by make word cards 就错了。',
+    quiz: [
+      {
+        q: 'Could you tell me ____ to improve my spoken English?',
+        opts: ['how', 'what', 'which', 'where'],
+        a: 0,
+        explain: 'improve my spoken English 问的是“用什么办法提高”，填 how to do；what、which 后要接名词或代词，where 表地点，都放不进这个空。',
+      },
+      {
+        q: '— ____ does your sister learn English so well? — By watching English movies.',
+        opts: ['Why', 'When', 'How', 'Where'],
+        a: 2,
+        explain: '答语 By watching... 说的是方式手段，问句要用 How；Why 问原因、When 问时间，与答语对不上。',
+      },
+      {
+        q: 'He made great progress in English ____ keeping a diary every day.',
+        opts: ['in', 'with', 'for', 'by'],
+        a: 3,
+        explain: 'keeping 是 doing 形式，“通过写日记”这种手段要用 by doing；with 后接具体工具，in 后接语言或声音，都不这样表手段。',
+      },
+      {
+        q: 'Which sentence is correct?',
+        opts: ['I don’t know how to answer this question.', 'I don’t know how answering this question.', 'I don’t know how do I answer this question.', 'I don’t know how that I answer this question.'],
+        a: 0,
+        explain: '疑问词 how 后直接加 to do 作 know 的宾语，相当于从句 how I can answer this question；其余三项不是疑问词加 to do 的正确形式。',
       },
     ],
   },

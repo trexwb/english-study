@@ -1,0 +1,712 @@
+[
+  {
+    "w": "riddle",
+    "ex": "Our teacher told us a funny riddle at the end of English class.",
+    "exZh": "英语课快结束时，老师给我们讲了一个有趣的谜语。"
+  },
+  {
+    "w": "handbag",
+    "ex": "Mum put her phone and keys into the handbag before leaving home.",
+    "exZh": "出门前，妈妈把手机和钥匙放进了手提包。"
+  },
+  {
+    "w": "teamwork",
+    "ex": "Good teamwork helped our class win the basketball match yesterday.",
+    "exZh": "良好的团队合作让我们班赢得了昨天的篮球比赛。"
+  },
+  {
+    "w": "untrue",
+    "ex": "The story about the ghost in our school is completely untrue.",
+    "exZh": "关于学校里有鬼的说法完全是不真实的。"
+  },
+  {
+    "w": "battleground",
+    "ex": "Our history teacher said this quiet valley was once an important battleground during the war.",
+    "exZh": "历史老师说，这片安静的山谷曾是战争中的一个重要战场。"
+  },
+  {
+    "w": "appendix",
+    "ex": "You can check the word list in the appendix at the back of the book.",
+    "exZh": "你可以在书末尾的附录里查词表。"
+  },
+  {
+    "w": "skillful",
+    "ex": "Our team won because Wang Lei is a skillful goalkeeper.",
+    "exZh": "我们队赢了，因为王磊是一名技术娴熟的守门员。"
+  },
+  {
+    "w": "crayon",
+    "ex": "The little girl drew a red sun with her new crayon.",
+    "exZh": "小女孩用她的新蜡笔画了一个红太阳。"
+  },
+  {
+    "w": "mop",
+    "ex": "After the art lesson, I used a mop to clean the wet floor.",
+    "exZh": "美术课后，我用拖把把湿地板拖干净了。"
+  },
+  {
+    "w": "firewood",
+    "ex": "Grandpa chopped some firewood outside before the cold winter arrived.",
+    "exZh": "寒冬到来之前，爷爷在外面劈了一些木柴。"
+  },
+  {
+    "w": "veal",
+    "ex": "At the western restaurant, Dad ordered veal while I chose fish and chips.",
+    "exZh": "在那家西餐厅，爸爸点了小牛肉，我选了炸鱼薯条。"
+  },
+  {
+    "w": "flaming",
+    "ex": "The firefighters put out the flaming grass before it reached the houses.",
+    "exZh": "消防员在火蔓延到房子之前扑灭了燃烧的草地。"
+  },
+  {
+    "w": "idiom",
+    "ex": "Our English teacher asked us to make a sentence with the idiom \"rain cats and dogs\".",
+    "exZh": "英语老师让我们用“倾盆大雨”这个习语造一个句子。"
+  },
+  {
+    "w": "unimportant",
+    "ex": "Don't waste time on unimportant things before the final exam.",
+    "exZh": "期末考试前，不要在不重要的事情上浪费时间。"
+  },
+  {
+    "w": "compulsory",
+    "ex": "Wearing the school uniform is compulsory on Mondays in our school.",
+    "exZh": "在我们学校，周一必须穿校服。"
+  },
+  {
+    "w": "algebra",
+    "ex": "I find algebra difficult, but my deskmate explains the problems patiently.",
+    "exZh": "我觉得代数很难，但同桌总是耐心地给我讲题。"
+  },
+  {
+    "w": "teapot",
+    "ex": "Grandma warmed the teapot with hot water before she made the tea.",
+    "exZh": "奶奶泡茶之前，先用热水把茶壶焐热了。"
+  },
+  {
+    "w": "loudspeaker",
+    "ex": "The loudspeaker asked every class to gather on the playground at once.",
+    "exZh": "扩音喇叭通知各班立刻到操场集合。"
+  },
+  {
+    "w": "reuse",
+    "ex": "We should reuse plastic bags instead of throwing them away at once.",
+    "exZh": "我们应该重复使用塑料袋，而不是随手就把它们扔掉。"
+  },
+  {
+    "w": "smog",
+    "ex": "The city issued a smog warning, so the football match was moved indoors.",
+    "exZh": "市里发布了雾霾预警，足球赛因此改在室内进行。"
+  },
+  {
+    "w": "gymnasium",
+    "ex": "All the students gathered in the gymnasium for the opening ceremony.",
+    "exZh": "全体学生在体育馆集合，参加开幕式。"
+  },
+  {
+    "w": "postage",
+    "ex": "I went to the post office to check the postage for this parcel.",
+    "exZh": "我去邮局查了这个包裹的邮资。"
+  },
+  {
+    "w": "tortoise",
+    "ex": "The tortoise moved slowly across the garden after the rain.",
+    "exZh": "雨后，乌龟慢悠悠地爬过花园。"
+  },
+  {
+    "w": "stout",
+    "ex": "The stout old doorkeeper stands at the gate and greets every student with a smile.",
+    "exZh": "那位矮胖的老门卫站在门口，微笑着迎接每一位学生。"
+  },
+  {
+    "w": "spade",
+    "ex": "Dad used a spade to dig a hole for the young apple tree.",
+    "exZh": "爸爸用铲子给小苹果树挖了一个坑。"
+  },
+  {
+    "w": "unfit",
+    "ex": "After the long holiday, I felt unfit and could not finish the 800-metre run.",
+    "exZh": "长假过后我体能跟不上，八百米都跑不下来了。"
+  },
+  {
+    "w": "bathrobe",
+    "ex": "After the shower, he put on his bathrobe and watched TV with the family.",
+    "exZh": "洗完澡后，他穿上浴衣，和家人一起看电视。"
+  },
+  {
+    "w": "snowball",
+    "ex": "The boys threw a snowball at each other and laughed loudly in the snow.",
+    "exZh": "男孩们互相扔雪球，在雪地里大声笑个不停。"
+  },
+  {
+    "w": "violinist",
+    "ex": "My sister is a young violinist who practises three hours every day.",
+    "exZh": "我姐姐是一位年轻的小提琴手，每天练习三个小时。"
+  },
+  {
+    "w": "brunch",
+    "ex": "On Sunday we had a late brunch of eggs, bread and milk at home.",
+    "exZh": "星期天，我们在家吃了迟来的早午餐，有鸡蛋、面包和牛奶。"
+  },
+  {
+    "w": "cooker",
+    "ex": "Mum bought a new gas cooker, and cooking now takes much less time.",
+    "exZh": "妈妈买了一台新燃气灶，现在做饭省时多了。"
+  },
+  {
+    "w": "toothbrush",
+    "ex": "The dentist told me to change my toothbrush every three months.",
+    "exZh": "牙医让我每三个月换一次牙刷。"
+  },
+  {
+    "w": "cheers",
+    "ex": "Everyone raised their glasses and shouted \"Cheers\" at the family dinner.",
+    "exZh": "家宴上，大家举起杯子，齐声喊了一声“干杯”。"
+  },
+  {
+    "w": "grocer",
+    "ex": "The grocer near our home sells fresh eggs and good rice at fair prices.",
+    "exZh": "我们家附近的食品店卖新鲜鸡蛋，大米的价格也公道。"
+  },
+  {
+    "w": "playmate",
+    "ex": "When I was six, my cousin in the countryside was my best playmate.",
+    "exZh": "我六岁的时候，乡下的表哥是我最好的玩伴。"
+  },
+  {
+    "w": "judgement",
+    "ex": "In that emergency, the young driver kept calm and made a wise judgement.",
+    "exZh": "紧急关头，那位年轻的司机保持冷静，做出了明智的判断。"
+  },
+  {
+    "w": "smelly",
+    "ex": "The smelly socks in his school bag made everyone in the dormitory laugh.",
+    "exZh": "他书包里的臭袜子把宿舍里的大家都逗笑了。"
+  },
+  {
+    "w": "ripen",
+    "ex": "The bananas in the bowl will ripen in two or three days.",
+    "exZh": "碗里的香蕉过两三天就会熟。"
+  },
+  {
+    "w": "spoonful",
+    "ex": "Grandma added a spoonful of honey to the warm water for my cough.",
+    "exZh": "我咳嗽，奶奶往温水里加了一勺蜂蜜。"
+  },
+  {
+    "w": "boating",
+    "ex": "We went boating on the lake and took photos of the old bridge.",
+    "exZh": "我们去湖上划船，还拍了那座古桥的照片。"
+  },
+  {
+    "w": "brewery",
+    "ex": "On the field trip we visited an old brewery that is now a city museum.",
+    "exZh": "实地考察时，我们参观了一家如今已变成城市博物馆的老啤酒厂。"
+  },
+  {
+    "w": "raincoat",
+    "ex": "Take your raincoat, because the radio says it will rain this afternoon.",
+    "exZh": "带上雨衣，广播说今天下午要下雨。"
+  },
+  {
+    "w": "bingo",
+    "ex": "At the school charity fair, we played bingo to raise money for the library.",
+    "exZh": "在学校义卖会上，我们玩宾戈游戏为图书馆筹款。"
+  },
+  {
+    "w": "locust",
+    "ex": "Farmers used nets and birds to fight the locusts eating their rice fields.",
+    "exZh": "农民们用网和鸟来对付啃食稻田的蝗虫。"
+  },
+  {
+    "w": "disobey",
+    "ex": "If you disobey the school rules, you will have to talk to the teacher.",
+    "exZh": "如果你违反校规，就得去和老师谈话。"
+  },
+  {
+    "w": "canteen",
+    "ex": "The new canteen serves noodles, rice and dumplings at lunchtime.",
+    "exZh": "新食堂午饭供应面条、米饭和饺子。"
+  },
+  {
+    "w": "kangaroo",
+    "ex": "The kangaroo jumped across the grass with its baby in the pouch.",
+    "exZh": "袋鼠带着育儿袋里的宝宝跳过草地。"
+  },
+  {
+    "w": "chairwoman",
+    "ex": "Miss Yang, the chairwoman of the student union, opened the meeting with a short speech.",
+    "exZh": "学生会主席杨女士用一段简短的发言为会议开场。"
+  },
+  {
+    "w": "cordless",
+    "ex": "This cordless telephone still works well, though we mostly use mobile phones now.",
+    "exZh": "虽然我们现在大多用手机，这台无绳电话仍然很好用。"
+  },
+  {
+    "w": "noisily",
+    "ex": "The children ran noisily down the stairs to the playground after class.",
+    "exZh": "下课后，孩子们吵吵闹闹地跑下楼去操场。"
+  },
+  {
+    "w": "airspace",
+    "ex": "Because of the military exercise, all the planes had to fly around that airspace.",
+    "exZh": "由于军事演习，所有飞机都不得不绕开那片空域飞行。"
+  },
+  {
+    "w": "irrigate",
+    "ex": "The villagers dug channels to irrigate the dry fields before the rice season.",
+    "exZh": "插秧季节之前，村民们挖了水渠来灌溉干涸的田地。"
+  },
+  {
+    "w": "moustache",
+    "ex": "The man with a thick moustache is our new PE teacher from the north.",
+    "exZh": "那个留着浓密小胡子的男人是我们从北方来的新体育老师。"
+  },
+  {
+    "w": "goldfish",
+    "ex": "My little sister feeds the goldfish every morning before she goes to school.",
+    "exZh": "妹妹每天早上上学前都要先喂金鱼。"
+  },
+  {
+    "w": "headmaster",
+    "ex": "The headmaster praised our class for keeping the classroom clean all week.",
+    "exZh": "校长表扬我们班整个星期都把教室保持得很干净。"
+  },
+  {
+    "w": "madam",
+    "ex": "Madam, your table by the window is ready now.",
+    "exZh": "夫人，您靠窗的餐桌现在准备好了。"
+  },
+  {
+    "w": "necktie",
+    "ex": "Father knotted his necktie carefully before the important meeting in the morning.",
+    "exZh": "早上参加重要会议前，父亲仔细地打好了领带。"
+  },
+  {
+    "w": "considerate",
+    "ex": "It was considerate of you to bring me an umbrella in the rain.",
+    "exZh": "下雨天你给我送伞，真是体贴。"
+  },
+  {
+    "w": "stewardess",
+    "ex": "The stewardess showed us how to wear the seatbelt before the plane took off.",
+    "exZh": "飞机起飞前，空姐教我们怎样系好安全带。"
+  },
+  {
+    "w": "seaman",
+    "ex": "My uncle worked as a seaman for ten years and sailed to many countries.",
+    "exZh": "我叔叔当过十年海员，航行去过许多国家。"
+  },
+  {
+    "w": "wayside",
+    "ex": "On the way up the mountain, we drank tea at a small wayside teahouse.",
+    "exZh": "上山的路上，我们在路边一家小茶馆喝了茶。"
+  },
+  {
+    "w": "merciful",
+    "ex": "The merciful old doctor often treated poor patients without asking for any money.",
+    "exZh": "那位仁慈的老医生常给穷苦病人看病，从不收钱。"
+  },
+  {
+    "w": "tasteless",
+    "ex": "The boiled vegetables were tasteless until Mum added a little salt.",
+    "exZh": "妈妈加了一点盐之前，煮出来的青菜一点儿味道都没有。"
+  },
+  {
+    "w": "beehive",
+    "ex": "On the farm, the keeper opened a beehive and showed us the honey inside.",
+    "exZh": "在农场，养蜂人打开一个蜂箱，给我们看里面的蜂蜜。"
+  },
+  {
+    "w": "biochemistry",
+    "ex": "My cousin studies biochemistry at university and often stays in the lab until late.",
+    "exZh": "我表姐在大学学生物化学，常常在实验室待到很晚。"
+  },
+  {
+    "w": "yummy",
+    "ex": "Grandma's dumplings are so yummy that I always ask for more.",
+    "exZh": "奶奶包的饺子太好吃了，我总是还要再添一些。"
+  },
+  {
+    "w": "seagull",
+    "ex": "A hungry seagull flew down and took the bread from my hand at the beach.",
+    "exZh": "在海边，一只饥饿的海鸥飞下来，叼走了我手里的面包。"
+  },
+  {
+    "w": "granny",
+    "ex": "Granny makes sweet rice cakes for us every Spring Festival.",
+    "exZh": "每年春节，奶奶都会给我们做甜甜的年糕。"
+  },
+  {
+    "w": "windbreaker",
+    "ex": "It is windy on the top of the mountain, so take your windbreaker.",
+    "exZh": "山顶上风很大，带上你的防风衣吧。"
+  },
+  {
+    "w": "attentively",
+    "ex": "The students listened attentively while the guide told the story of the old tower.",
+    "exZh": "导游讲古塔的故事时，学生们听得非常专心。"
+  },
+  {
+    "w": "semicircle",
+    "ex": "The children sat in a semicircle around the teacher to listen to the story.",
+    "exZh": "孩子们围成半圆形，坐在老师身边听故事。"
+  },
+  {
+    "w": "businesswoman",
+    "ex": "My aunt is a busy businesswoman, but she calls me every weekend.",
+    "exZh": "姑姑是个忙碌的女商人，但她每个周末都会给我打电话。"
+  },
+  {
+    "w": "hibernation",
+    "ex": "Our science book says some animals go into hibernation to survive the cold winter.",
+    "exZh": "科学书上讲，有些动物会进入冬眠来熬过寒冷的冬天。"
+  },
+  {
+    "w": "lavatory",
+    "ex": "On the plane, the green light above the lavatory shows that it is free.",
+    "exZh": "飞机上，洗手间上方的绿灯表示现在里面没人。"
+  },
+  {
+    "w": "superman",
+    "ex": "My little brother wears his red coat like a cape and pretends to be Superman.",
+    "exZh": "弟弟把红外套当披风披在身上，假装自己是超人。"
+  },
+  {
+    "w": "postman",
+    "ex": "The postman rides his green bike and brings letters to our door every morning.",
+    "exZh": "邮递员每天早上骑着绿色的自行车，把信送到我们家门口。"
+  },
+  {
+    "w": "rewind",
+    "ex": "Please rewind the tape to the beginning so we can hear the dialogue again.",
+    "exZh": "请把磁带倒回开头，我们好再听一遍这段对话。"
+  },
+  {
+    "w": "undivided",
+    "ex": "During the exam, you should give the questions your undivided attention.",
+    "exZh": "考试时，你应该把注意力完全集中在题目上。"
+  },
+  {
+    "w": "botany",
+    "ex": "In botany class, we learned why leaves turn yellow and fall in autumn.",
+    "exZh": "在植物学课上，我们学习了树叶为什么在秋天变黄、飘落。"
+  },
+  {
+    "w": "saleswoman",
+    "ex": "The saleswoman in the shoe shop helped me find size thirty-seven shoes.",
+    "exZh": "鞋店的女店员帮我找到了三十七码的鞋。"
+  },
+  {
+    "w": "stopwatch",
+    "ex": "The PE teacher used a stopwatch to record our times in the 100-metre race.",
+    "exZh": "体育老师用秒表记录我们百米赛跑的成绩。"
+  },
+  {
+    "w": "bookmark",
+    "ex": "My deskmate made a beautiful bookmark with a dried leaf for my birthday.",
+    "exZh": "同桌用一片干树叶做了一张漂亮的书签，当作我的生日礼物。"
+  },
+  {
+    "w": "changeable",
+    "ex": "The weather here is changeable, so take a coat even on warm days.",
+    "exZh": "这里天气多变，即使天暖也要带件外套。"
+  },
+  {
+    "w": "defence",
+    "ex": "The coach taught us how to improve our defence in the basketball game.",
+    "exZh": "教练教我们如何在篮球比赛中加强防守。"
+  },
+  {
+    "w": "roundabout",
+    "ex": "He told me the news in a roundabout way, so I did not understand at first.",
+    "exZh": "他拐弯抹角地告诉我这个消息，所以我一开始没听明白。"
+  },
+  {
+    "w": "hibernate",
+    "ex": "Some snakes hibernate under the ground when the winter becomes too cold.",
+    "exZh": "冬天太冷的时候，有些蛇会在地下冬眠。"
+  },
+  {
+    "w": "subtraction",
+    "ex": "In the maths test, I made a small mistake in a subtraction problem.",
+    "exZh": "数学考试中，我在一道减法题上出了个小错。"
+  },
+  {
+    "w": "offence",
+    "ex": "In football, pushing a player from behind is a serious offence.",
+    "exZh": "足球比赛中，从背后推人是严重的犯规。"
+  },
+  {
+    "w": "mutton",
+    "ex": "In Xi'an, we enjoyed noodles with mutton after visiting the old city wall.",
+    "exZh": "游览完古城墙，我们在西安吃了羊肉面。"
+  },
+  {
+    "w": "omelette",
+    "ex": "Mum taught me how to make a simple omelette with eggs and tomatoes.",
+    "exZh": "妈妈教我用鸡蛋和西红柿做简单的煎蛋卷。"
+  },
+  {
+    "w": "microcomputer",
+    "ex": "In the computer museum, we saw a microcomputer that is older than our parents.",
+    "exZh": "在电脑博物馆里，我们看到了一台比父母年纪还大的微型计算机。"
+  },
+  {
+    "w": "drier",
+    "ex": "Our old drier stopped working, so Mum hung the wet clothes outside.",
+    "exZh": "旧烘干机坏了，妈妈只好把湿衣服晾到了外面。"
+  },
+  {
+    "w": "typist",
+    "ex": "My aunt worked as a typist before computers became common in offices.",
+    "exZh": "在电脑普及到办公室之前，我姑姑做过打字员。"
+  },
+  {
+    "w": "motherland",
+    "ex": "In the National Day concert, every class sang a song for our motherland.",
+    "exZh": "国庆音乐会上，每个班都为祖国唱了一首歌。"
+  },
+  {
+    "w": "hooray",
+    "ex": "Hooray! Our team scored again in the last minute of the match.",
+    "exZh": "好耶！我们队在比赛最后一分钟又进了一球。"
+  },
+  {
+    "w": "forgetful",
+    "ex": "Mum says Dad is forgetful, because he always leaves his keys in the office.",
+    "exZh": "妈妈说爸爸健忘，因为他总把钥匙忘在办公室。"
+  },
+  {
+    "w": "bridegroom",
+    "ex": "At the wedding, the bridegroom thanked everyone with a short and funny speech.",
+    "exZh": "婚礼上，新郎用一段简短而风趣的话感谢了大家。"
+  },
+  {
+    "w": "enquiry",
+    "ex": "At the station, my father made an enquiry about the train to Shanghai.",
+    "exZh": "在车站，爸爸询问了开往上海的火车的情况。"
+  },
+  {
+    "w": "washroom",
+    "ex": "The washroom on this floor is being cleaned, so please use the one upstairs.",
+    "exZh": "这一层的洗手间正在打扫，请大家用楼上的。"
+  },
+  {
+    "w": "lorry",
+    "ex": "A big lorry carried the new desks to our school this morning.",
+    "exZh": "今天早上，一辆大卡车把新课桌运到了我们学校。"
+  },
+  {
+    "w": "neighbourhood",
+    "ex": "In our neighbourhood, there is a small park where old people dance every evening.",
+    "exZh": "我们小区有个小公园，老人们每天傍晚在那里跳舞。"
+  },
+  {
+    "w": "graph",
+    "ex": "The teacher asked us to draw a graph of this week's temperature.",
+    "exZh": "老师让我们画出这一周气温的曲线图。"
+  },
+  {
+    "w": "telegraph",
+    "ex": "Before mobile phones, people sent important news by telegraph across the country.",
+    "exZh": "在手机出现之前，人们靠电报在全国传递重要消息。"
+  },
+  {
+    "w": "headmistress",
+    "ex": "On the first day, the headmistress welcomed every new student at the gate.",
+    "exZh": "开学第一天，女校长在校门口迎接每一位新生。"
+  },
+  {
+    "w": "videophone",
+    "ex": "Grandpa says he never imagined that a videophone would become so common.",
+    "exZh": "爷爷说他从未想过可视电话会变得这么常见。"
+  },
+  {
+    "w": "minibus",
+    "ex": "Our class took a minibus to the science museum on Friday morning.",
+    "exZh": "星期五上午，我们班坐小巴去科学博物馆。"
+  },
+  {
+    "w": "dustbin",
+    "ex": "Please put the paper into the dustbin, not on the desk.",
+    "exZh": "请把纸扔进垃圾箱，不要放在课桌上。"
+  },
+  {
+    "w": "sharpener",
+    "ex": "My pencil is broken, so I need to borrow your sharpener for a minute.",
+    "exZh": "我的铅笔断了，得借你的卷笔刀用一下。"
+  },
+  {
+    "w": "backache",
+    "ex": "Dad got a backache after moving all those heavy boxes upstairs.",
+    "exZh": "把那些重箱子全搬上楼之后，爸爸背痛了起来。"
+  },
+  {
+    "w": "salesgirl",
+    "ex": "The salesgirl smiled and showed me several cheaper school bags.",
+    "exZh": "女店员微笑着给我看了几款更便宜的书包。"
+  },
+  {
+    "w": "radium",
+    "ex": "Marie Curie spent years in a small shed, studying the strange metal radium.",
+    "exZh": "居里夫人花了好几年时间，在一间小棚屋里研究奇特的金属——镭。"
+  },
+  {
+    "w": "aeroplane",
+    "ex": "From the aeroplane window, I saw yellow fields and long rivers below.",
+    "exZh": "从飞机舷窗望出去，我看见了下面金黄的田野和长长的河流。"
+  },
+  {
+    "w": "greengrocer",
+    "ex": "The greengrocer near our school always keeps the freshest tomatoes for us.",
+    "exZh": "学校附近那家果蔬店总是把最新鲜的西红柿留给我们。"
+  },
+  {
+    "w": "honour",
+    "ex": "It is a great honour for me to speak at the closing ceremony.",
+    "exZh": "能在闭幕式上发言，我深感荣幸。"
+  },
+  {
+    "w": "birdcage",
+    "ex": "Every morning, Grandpa hangs the birdcage under the big tree in the park.",
+    "exZh": "每天早晨，爷爷都把鸟笼挂在公园的大树下。"
+  },
+  {
+    "w": "aluminium",
+    "ex": "Aluminium cans are light, so many drinks are packed in them.",
+    "exZh": "铝罐很轻，所以许多饮料都用铝罐来包装。"
+  },
+  {
+    "w": "labourer",
+    "ex": "His father works as a labourer on the building site and sends money home every month.",
+    "exZh": "他父亲在工地上做劳工，每个月都往家里寄钱。"
+  },
+  {
+    "w": "skipping",
+    "ex": "Skipping is my favourite exercise, and I can keep going for ten minutes without stopping.",
+    "exZh": "跳绳是我最喜欢的运动，我可以连续跳十分钟都不停。"
+  },
+  {
+    "w": "sceptical",
+    "ex": "I was sceptical when my friend said he could teach me swimming in one week.",
+    "exZh": "朋友说他一个星期就能教会我游泳，我当时是持怀疑态度的。"
+  },
+  {
+    "w": "glasshouse",
+    "ex": "In the glasshouse, the tomatoes grow well even when it snows outside.",
+    "exZh": "在玻璃温室里，即使外面下雪，西红柿也长得很好。"
+  },
+  {
+    "w": "yoghurt",
+    "ex": "For breakfast I usually have bread, an egg and a cup of yoghurt.",
+    "exZh": "早餐我通常吃面包、一个鸡蛋，再喝一杯酸奶。"
+  },
+  {
+    "w": "northwards",
+    "ex": "In spring, the birds fly northwards back to their homes in the mountains.",
+    "exZh": "春天，鸟儿向北飞回山里的家。"
+  },
+  {
+    "w": "metre",
+    "ex": "The swimming pool in our school is twenty-five metres long.",
+    "exZh": "我们学校的游泳池长二十五米。"
+  },
+  {
+    "w": "pence",
+    "ex": "The old stamp costs only a few pence, but Grandpa keeps it carefully.",
+    "exZh": "那枚旧邮票只值几便士，爷爷却把它保存得很仔细。"
+  },
+  {
+    "w": "litre",
+    "ex": "Please buy a litre of milk and two eggs on your way home.",
+    "exZh": "回家路上请买一升牛奶和两个鸡蛋。"
+  },
+  {
+    "w": "gallon",
+    "ex": "The car stopped because it had used almost every gallon of petrol in the tank.",
+    "exZh": "车子抛锚了，因为油箱里的汽油几乎一滴不剩。"
+  },
+  {
+    "w": "franc",
+    "ex": "In the museum, I saw old franc notes that people used before the euro.",
+    "exZh": "在博物馆里，我看到了人们使用欧元之前的法郎纸币。"
+  },
+  {
+    "w": "centimetre",
+    "ex": "The fish my brother caught in the river was thirty centimetres long.",
+    "exZh": "哥哥在河里钓到的那条鱼有三十厘米长。"
+  },
+  {
+    "w": "gram",
+    "ex": "Add just one gram of salt, or the soup will be too salty.",
+    "exZh": "只加一克盐就行，不然汤会太咸。"
+  },
+  {
+    "w": "headteacher",
+    "ex": "The headteacher told us that the sports meeting would start next Monday.",
+    "exZh": "校长告诉我们，运动会将于下周一举行。"
+  },
+  {
+    "w": "westwards",
+    "ex": "We cycled westwards along the river and reached the old bridge at noon.",
+    "exZh": "我们沿河向西骑行，中午到达了那座古桥。"
+  },
+  {
+    "w": "eastwards",
+    "ex": "The train runs eastwards through several tunnels before it reaches the sea.",
+    "exZh": "火车向东穿过几条隧道，才抵达海边。"
+  },
+  {
+    "w": "postcode",
+    "ex": "Please write the postcode in the bottom left corner of the envelope.",
+    "exZh": "请把邮政编码写在信封的左下角。"
+  },
+  {
+    "w": "congratulation",
+    "ex": "People sent messages of congratulation after our team won the city football final.",
+    "exZh": "我们队赢得全市足球决赛后，人们纷纷发来祝贺。"
+  },
+  {
+    "w": "oilfield",
+    "ex": "The new oilfield in the north gives many young people jobs near their hometown.",
+    "exZh": "北部的新油田让许多年轻人能在家乡附近找到工作。"
+  },
+  {
+    "w": "centigrade",
+    "ex": "Water freezes at zero degrees centigrade, as we learned in physics class.",
+    "exZh": "正如物理课上所学的，水在零摄氏度结冰。"
+  },
+  {
+    "w": "postbox",
+    "ex": "I dropped the birthday card into the postbox at the street corner.",
+    "exZh": "我把生日贺卡投进了街角的邮筒。"
+  },
+  {
+    "w": "beancurd",
+    "ex": "The beancurd soup that Grandma makes is soft, fresh and full of flavour.",
+    "exZh": "奶奶做的豆腐汤又软又鲜，味道十足。"
+  },
+  {
+    "w": "bedclothes",
+    "ex": "At the weekend, Mum washes all the bedclothes and hangs them in the sun.",
+    "exZh": "周末，妈妈把所有铺盖都洗干净，晾在太阳底下。"
+  },
+  {
+    "w": "beddings",
+    "ex": "Before the new term, the school changed all the beddings in the dormitory.",
+    "exZh": "新学期开始前，学校把宿舍里的床上用品全部换新了。"
+  },
+  {
+    "w": "handtruck",
+    "ex": "A worker pushed a handtruck full of fresh vegetables into the school kitchen.",
+    "exZh": "一名工人推着装满新鲜蔬菜的手推车进了学校厨房。"
+  },
+  {
+    "w": "sideway",
+    "ex": "We took a quiet sideway behind the school to avoid the busy road.",
+    "exZh": "我们绕到学校后面一条安静的小路上，避开了繁忙的大道。"
+  }
+]

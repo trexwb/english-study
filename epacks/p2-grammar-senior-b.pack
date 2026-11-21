@@ -4,6 +4,7 @@
     en: 'Absolute Construction and the with Compound',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 9,
     intro: '一个句子只能有一套谓语。当另一个动作自带主语、又想挂进主句时，就轮到独立主格和 with 复合结构出场。',
     sections: [
@@ -74,6 +75,7 @@
     en: 'Inversion Variants: Full Inversion, Not until, as',
     level: '高阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 8,
     intro: '否定词提前的部分倒装，前面倒装与强调一课已经讲过；这一课补齐其余触发器：完全倒装、not until、hardly...when、so...that 与让步 as。',
     sections: [
@@ -146,6 +148,7 @@
     en: 'It as Formal Subject and Formal Object',
     level: '进阶',
     exam: '高考',
+    stage: '高中拓展',
     mins: 7,
     intro: '真正的主语或宾语太长时，it 先站出来占位，真身随后补上。语法填空的无提示词空，很多就落在这个 it 上。',
     sections: [

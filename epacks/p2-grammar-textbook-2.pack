@@ -1,0 +1,212 @@
+  {
+    id: 'g46',
+    title: '现在完成时三大去向：have been to / have gone to / have been in',
+    en: 'Have Been to, Have Gone to and Have Been in',
+    level: '进阶',
+    exam: '中考',
+    stage: '八年级',
+    mins: 6,
+    intro: '三个短语都从 have 出发，差别只在“人现在在哪”：回来了用 been to，还没回来用 gone to，一直待着用 been in。先问回没回来，再问待了多久。',
+    sections: [
+      {
+        h: 'been to 与 been in：去过还是一直待着',
+        body: 'have/has been to + 地点 表示“去过”，人已经回来了，所以能谈感受、能数次数，常与 ever、never、once、twice 连用。have/has been in + 地点 表示“一直待在”，人至今还在那里，后面常接 for 一段时间或 since 时间点。判断时先想：这件事讲的是“到过”，还是“待着没走”。',
+        examples: [
+          { en: 'I have been to the Great Wall twice, and I still remember the long stone steps.', zh: '我去过长城两次，还记得那长长的石阶。' },
+          { en: 'Has she ever been to a science museum before?', zh: '她以前去过科技馆吗？' },
+          { en: 'His family has been in Nanjing for five years, so the city feels like home.', zh: '他们一家在南京待了五年，这座城市就像家一样。' },
+        ],
+      },
+      {
+        h: 'gone to：去了，人还没回来',
+        body: 'have/has gone to + 地点 表示“去了”，人还在路上或在那边，没回到说话的地方。它一般只用于第三人称：爸爸、老师、同学可以“去了没回”，但说话人自己不能说 I have gone to...，因为“我”此刻就在现场。对话里先看提问是不是 Where is...?，人不在场、要等他回来，就选 gone to。',
+        examples: [
+          { en: '— Where is our monitor? — He has gone to the teachers’ office for the test papers.', zh: '我们班长去老师办公室拿试卷了。' },
+          { en: 'The twins have gone to the school library, so their seats are empty now.', zh: '这对双胞胎去学校图书馆了，所以他们的座位现在空着。' },
+        ],
+      },
+      {
+        h: 'How long 问答与 for/since 综合',
+        body: 'How long 问的是持续多久，主句要用延续性的 have been in，答语配 for 或 since；问次数用 How many times，答语用 have been to 加次数。口诀：问多久、说一直，用 been in；问去过、数次数，用 been to。做题时先把答语里的 for、since、次数圈出来，再回头选短语。',
+        examples: [
+          { en: '— How long have you been in this school? — Since I started Grade Seven.', zh: '你在这所学校多久了？从上七年级开始。' },
+          { en: 'I have been to Hangzhou twice, but my aunt has been in Hangzhou for ten years.', zh: '我去过杭州两次，而姑姑已经在杭州住了十年。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'been to 是去过已回，可与 once、twice 等次数连用',
+      'gone to 是去了未回，对话里问 Where is 就选它',
+      'been in 是一直待在某地，常与 for、since 引导的时间连用',
+      'How long 问持续多久，答语用 been in 加 for/since',
+    ],
+    pitfall: '主语是我时不能用 have gone to：说话这一刻“我”就在现场，不可能去了没回来。做题先看人回没回来，再看主语是不是说话人自己，两步都过再落笔。',
+    quiz: [
+      {
+        q: '— Where is our English teacher? — She ____ the teachers’ office for our test papers.',
+        opts: ['has been to', 'has gone to', 'has been in', 'went to'],
+        a: 1,
+        explain: '问 Where is 说明老师此刻不在场、还没回来，用 has gone to；has been to 变成“去过已回”，与语境不符。',
+      },
+      {
+        q: 'I ____ that science museum three times, and I still remember the robot show.',
+        opts: ['have gone to', 'have been to', 'have been in', 'will go to'],
+        a: 1,
+        explain: 'three times 是到目前为止的次数，人已经回来了，用 have been to；have gone to 表“去了未回”，不能与次数连用。',
+      },
+      {
+        q: '— How long ____ in this city? — Since I came here in Grade Seven.',
+        opts: ['have you gone', 'did you go', 'have you been', 'will you be'],
+        a: 2,
+        explain: 'How long 问持续到现在的时间，答语 since 提示用延续性的 have you been；gone to 表“去了未回”，没法谈“待了多久”。',
+      },
+      {
+        q: 'My cousin ____ Nanjing for three years, so he knows every street there.',
+        opts: ['has been to', 'has gone to', 'went to', 'has been in'],
+        a: 3,
+        explain: 'for three years 是延续的时间段，说明人一直待在那里，用 has been in；has been to 只表去过，不与 for 连用。',
+      },
+    ],
+  },
+  {
+    id: 'g47',
+    title: '简单句的五种基本句型',
+    en: 'The Five Basic Sentence Patterns',
+    level: '基础',
+    exam: '中考',
+    stage: '八年级',
+    mins: 7,
+    intro: '所有英文句子拆到最简，只剩五种骨架。判断句型只问一句：谓语动词后面跟了什么？什么都没跟、跟一个、跟两个，还是补一句说明。',
+    sections: [
+      {
+        h: '前三种句型：主谓、主谓宾、主系表',
+        body: '主谓结构里动词自身意思完整，后面不接宾语，如 laugh、arrive、sleep。主谓宾结构里动作要落到对象上，动词后必须带宾语，少了句子就不完整。主系表结构用 be、look、smell、taste、sound、feel、become、keep 等连系动词，后面接形容词或名词作表语，说明主语“是什么、怎么样”；表语用形容词，不用副词。',
+        examples: [
+          { en: 'Everyone laughed loudly when the teacher told the joke.', zh: '老师讲笑话时，大家都大声笑了。' },
+          { en: 'We clean the blackboard and tidy the desks after every class.', zh: '每节课后我们擦黑板、整理课桌。' },
+          { en: 'The milk in the bottle smells sour; don’t drink it.', zh: '瓶里的牛奶闻起来酸了，别喝。' },
+        ],
+      },
+      {
+        h: '后两种句型：双宾语与宾语 + 宾补',
+        body: '主谓双宾是“给谁 + 给什么”：give、show、send、teach、tell、buy 后面跟两个宾语，两个宾语之间没有说明关系。主谓宾 + 宾补是在宾语后面补一句“它是什么、让它怎样”：keep the classroom clean、make us laugh、call him Xiao Ming。区分方法：宾补说的正是宾语自己，而双宾的第二个宾语说的不是第一个宾语。',
+        examples: [
+          { en: 'Mom bought me a new schoolbag before the school trip.', zh: '学校春游前，妈妈给我买了一个新书包。' },
+          { en: 'Our English teacher keeps the classroom clean and tidy.', zh: '英语老师把教室保持得干净整洁。' },
+          { en: 'The story about the clever rabbit made us laugh for minutes.', zh: '那只聪明兔子的故事让我们笑了好一阵。' },
+        ],
+      },
+      {
+        h: '句型判断：完成句子与写作纠错',
+        body: '下手点固定：先找谓语动词，再数动词后面跟了什么、补了什么。完成句子时先定骨架再填词；写作纠错盯两类错——动词后缺宾语（I like very much 要补成 I like it very much），以及连系动词和宾补位置误用副词（说 tastes good，不说 tastes well；说 keep quiet，不说 keep quietly）。',
+        examples: [
+          { en: 'I like the new song very much.', zh: '我非常喜欢这首新歌。（like 后必须带宾语）' },
+          { en: 'The soup tastes good, so Dad asks for another bowl.', zh: '汤味道不错，爸爸又要了一碗。' },
+          { en: 'Grandpa gave each of us a red envelope at Spring Festival.', zh: '春节时爷爷给了我们每人一个红包。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '主谓动词自身意思完整，主谓宾动词后必须带宾语',
+      '连系动词 look、smell、keep、become 后接形容词或名词作表语',
+      'give sb. sth. 是双宾语，keep/make + 宾补说的是宾语的状态',
+      '判断句型先找谓语动词，再数动词后面跟了什么成分',
+    ],
+    pitfall: '双宾语和宾补最容易被混为一谈：give me a book 里 a book 不是在说 me，而 make us laugh 里 laugh 说的正是 us。写作时 like 后面不能没有宾语，I like very much 是错句，要补出 it。',
+    quiz: [
+      {
+        q: 'Which sentence uses the “主 + 谓 + 宾 + 宾补” structure?',
+        opts: ['She sent me a postcard.', 'The kids keep the room tidy.', 'My grandpa grows vegetables.', 'The leaves turn yellow.'],
+        a: 1,
+        explain: 'tidy 是在说 the room 的状态，属于宾补；sent me a postcard 是双宾语，turn yellow 是主系表，都不是宾补结构。',
+      },
+      {
+        q: 'The soup on the stove ____ a bit strange; don’t drink it.',
+        opts: ['smells', 'smell', 'is smelled', 'smelling'],
+        a: 0,
+        explain: 'smell 是连系动词，后面直接接形容词作表语，主语 the soup 是三单，所以用 smells。',
+      },
+      {
+        q: 'Our English teacher often ____ funny stories to make the class lively.',
+        opts: ['tells to us', 'tells for us', 'tells us', 'tell us'],
+        a: 2,
+        explain: 'tell 后接双宾语，直接说 tell sb. sth.，主语三单用 tells us，中间不加 to 或 for。',
+      },
+      {
+        q: 'Which sentence is NOT correct?',
+        opts: ['The flowers smell sweet.', 'Grandpa gave me a model plane.', 'She made me happily.', 'Please keep the door open.'],
+        a: 2,
+        explain: '宾补要用形容词或动词原形：made me happily 是错误写法，应说 made me happy；其余三句分别是主系表、双宾语和宾补，都成立。',
+      },
+    ],
+  },
+  {
+    id: 'g48',
+    title: 'used to do：过去常常与今昔对比',
+    en: 'Used to Do: Past Habits and Changes',
+    level: '进阶',
+    exam: '中考',
+    stage: '九年级',
+    mins: 6,
+    intro: 'used to 只拍过去：从前常常怎样，现在不了。分清它的三张面孔，“今昔对比”类作文就有骨架了。',
+    sections: [
+      {
+        h: 'used to + 原形：肯定、否定与疑问',
+        body: 'used to do 表示“过去常常、从前有”，只谈过去，暗示现在不是这样了。否定和疑问都要借 did，借了 did，used 就还原成 use：didn’t use to do、Did you use to do...? 它没有现在时——说“现在习惯于”要用 be used to doing，说“现在常常”直接用一般现在时。',
+        examples: [
+          { en: 'I used to be afraid of the dark, so I slept with the light on.', zh: '我过去怕黑，所以睡觉时开着灯。' },
+          { en: 'She didn’t use to like maths, but now she solves hard problems for fun.', zh: '她以前不喜欢数学，现在却以解难题为乐。' },
+          { en: 'Did you use to play badminton after school?', zh: '你以前放学后常打羽毛球吗？' },
+        ],
+      },
+      {
+        h: '三辨：used to do / be used to doing / be used to do',
+        body: '判断只看两处：有没有 be，后面接什么。没有 be，used to do 是“过去常常”；有 be 且后接 doing，to 是介词，be used to doing 是“习惯于”，主语多为人；有 be 且后接原形，to 是不定式，be used to do 是“被用来做”，主语多是物。三句并排记：过去常常没 be，习惯于有 be 接 doing，被用来有 be 接原形。',
+        examples: [
+          { en: 'Grandpa is used to getting up at five and walking by the river.', zh: '爷爷习惯五点起床，再到河边散步。' },
+          { en: 'Bamboo is used to make baskets, chopsticks and even small houses.', zh: '竹子被用来做篮子、筷子，甚至小屋。' },
+        ],
+      },
+      {
+        h: '今昔对比：but now 与一般过去时共现',
+        body: '今昔对比的骨架是 I used to..., but now...：前半句用 used to 讲过去的习惯或状态，but now 之后换一般现在时讲现在。与一般过去时共现时要分清：used to 说笼统的“过去常常”，具体某一次的事只用过去式，如 I was late yesterday。写作时先用 used to 铺垫过去，再转折到 now，对比自然拉开。',
+        examples: [
+          { en: 'He used to spend hours on mobile games, but now he only plays at weekends.', zh: '他以前常花几小时玩手机游戏，现在只在周末玩。' },
+          { en: 'There used to be a small shop near our school, but it closed last winter.', zh: '我们学校附近以前有家小店，去年冬天关了。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'used to 后接动词原形，表过去的习惯或状态，如今已不然',
+      '否定与疑问借 did，used 还原成 use：didn’t use to do',
+      '有 be 接 doing 是习惯于，接原形是被用来，没 be 是过去常常',
+      '今昔对比写 I used to..., but now...，now 后换一般现在时',
+    ],
+    pitfall: '不要漏掉 be 或多写 be：过去常常说 used to get up，写成 I used to getting up early 就错了；说“习惯于”才用 be used to getting up。判断时先问讲过去还是讲习惯，再决定用不用 be。',
+    quiz: [
+      {
+        q: 'My grandmother ____ live in a small village, but now she lives with us in the city.',
+        opts: ['is used to', 'used to', 'was used to', 'use to'],
+        a: 1,
+        explain: 'but now 提示今昔对比，“过去常常”用 used to 加动词原形，即 used to live。',
+      },
+      {
+        q: 'Bamboo ____ make baskets, chopsticks and even small houses.',
+        opts: ['used to', 'is used to', 'is used to making', 'used to making'],
+        a: 1,
+        explain: '主语 bamboo 是物，“被用来做某事”用 be used to do，即 is used to make；be used to doing 的主语多是人。',
+      },
+      {
+        q: 'My deskmate ____ reading before bed, so she reads even on busy days.',
+        opts: ['used to', 'is used to read', 'used to reading', 'is used to'],
+        a: 3,
+        explain: '人做主语、后面接 doing 表“习惯于”，用 is used to reading；used to 后面要接动词原形。',
+      },
+      {
+        q: '— ____ play badminton when you were in primary school? — Yes, almost every weekend.',
+        opts: ['Did you use to', 'Did you used to', 'Are you used to', 'Do you use to'],
+        a: 0,
+        explain: '疑问句借 did，used 还原成 use：Did you use to play...?；答语 almost every weekend 也印证这是问过去的习惯。',
+      },
+    ],
+  },

@@ -1,0 +1,207 @@
+  {
+    id: 'g43',
+    title: '人称代词与指示代词：I 还是 me',
+    en: 'Personal and Demonstrative Pronouns',
+    level: '基础',
+    exam: '中考',
+    stage: '七年级',
+    mins: 6,
+    intro: '代词题先看岗位：发出动作用主格，挨动作用宾格；指认事物先数单复数，再分远近。',
+    sections: [
+      {
+        h: '主格扛主语，宾格扛宾语',
+        body: '先看代词在句中的岗位：发出动作的人站在主语位置，用主格 I、he、she、we、they；被动作“砸中”的人或介词后面的，一律用宾格 me、him、her、us、them。介词是重灾区：between you and me、for us、with them 都是固定说法，介词后面不认主格。两人并列作主语最容易错：要说 My cousin and I are...，不说 My cousin and me are...。',
+        examples: [
+          { en: 'My deskmate and I clean the blackboard after class.', zh: '我和同桌课后擦黑板。' },
+          { en: 'Miss Gao divides the sweets between you and me.', zh: '高老师把糖果分给你和我。' },
+        ],
+      },
+      {
+        h: 'this / that / these / those：先数单复，再分远近',
+        body: '近处的单数用 this，复数用 these；远处的单数用 that，复数用 those，后面接的动词跟着单复数变：This is my seat，These are our books。打电话介绍自己不说 I am...，固定说 This is...，问对方用 Is that...。指代前文提过的事物时，单数用 it 顶替，复数用 they 或 them 顶替。',
+        examples: [
+          { en: 'These are the photos we took at the sports meet.', zh: '这些是我们在运动会上拍的照片。' },
+          { en: 'Hello? This is Wang Lin speaking. Is that Mr. Hu?', zh: '喂？我是王林。您是胡老师吗？' },
+        ],
+      },
+      {
+        h: '高频错项：三个坑一次填平',
+        body: '坑一：he / him 混用。作主语用 he，作宾语用 him，Him and me went 是双重错误，要说 He and I went。坑二：these、those 后面必须接复数名词，this、that 接单数或不可数名词，如 these books、that milk。坑三：What’s this / that? 的回答固定用 It’s a / an...，不用 This is...；问 What are these / those? 才用 They’re...。',
+        examples: [
+          { en: 'He and I are in the same reading club.', zh: '他和我在同一个读书社。' },
+          { en: 'What are those on the teacher’s desk? They’re new dictionaries.', zh: '讲台上那些是什么？是新词典。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '先看岗位：主语用主格，动词和介词的宾语用宾格',
+      '介词后面一律用宾格：between you and me 是固定说法',
+      'these、those 后接复数名词，this、that 接单数或不可数',
+      'What’s this? 固定答 It’s...，电话里用 This is 介绍自己',
+    ],
+    pitfall: '并列主语最容易连错两处：Him and me went to the library 应改成 He and I went to the library；并列时习惯把对方放在前面，说 you and I、my cousin and I。另外电话里问对方是谁用 Is that...?，不说 Are you...?',
+    quiz: [
+      {
+        q: 'Miss Yang will show the photos to you and ____ after the class meeting.',
+        opts: ['me', 'I', 'my', 'mine'],
+        a: 0,
+        explain: '介词 to 后面的并列宾语也要用宾格：to you and me；my、mine 是物主代词，排除。',
+      },
+      {
+        q: '— Hello! ____ is Li Ming speaking. May I speak to Mr. Zhang? — Hold on, please.',
+        opts: ['That', 'This', 'It', 'He'],
+        a: 1,
+        explain: '电话里介绍自己固定说 This is...；that 用于问对方 Is that...，it、he 都不能这样自报家门，排除。',
+      },
+      {
+        q: 'Look at ____ robots over there. They were made by our robotics club.',
+        opts: ['that', 'this', 'those', 'them'],
+        a: 2,
+        explain: 'over there 表远指，后句 They were made 提示复数，用 those；that、this 都是单数，排除。',
+      },
+      {
+        q: '— What’s this in English? — ____ a school ID card.',
+        opts: ['They’re', 'That’s', 'This is', 'It’s'],
+        a: 3,
+        explain: 'What’s this? 的回答固定用 It’s a...；They’re 只用来回答 these、those 的提问，排除。',
+      },
+    ],
+  },
+  {
+    id: 'g44',
+    title: '复合不定代词：no one、none 与部分否定',
+    en: 'Compound Indefinite Pronouns: No One, None and Partial Negation',
+    level: '基础',
+    exam: '中考',
+    stage: '八年级',
+    mins: 6,
+    intro: '上一课讲过 some / any 的语气分工与修饰词后置，这里补齐剩下三组：no one 与 none 怎么选，everything 与 all 怎么搭，部分否定与全否定差在哪。',
+    sections: [
+      {
+        h: 'no one / nobody 只指人，none 指人也能指物',
+        body: 'no one 与 nobody 只指人，后面不能接 of；none 既可指人也可指物，习惯与 of 连用：none of them、none of the answers。回答 Who 问句用 No one 或 Nobody，回答 How many、How much 问句才用 None。另外 no one 分开写成两个单词，nobody 连写，两者意思相同，谓语都用单数。',
+        examples: [
+          { en: 'None of the four choices is right, so the question must be wrong.', zh: '四个选项没有一个是对的，所以这道题肯定出错了。' },
+          { en: '— How many clubs did you join this term? — None. I only stayed in the chess club.', zh: '——这学期你加了几个社团？——一个也没加，我只留在国际象棋社。' },
+        ],
+      },
+      {
+        h: 'everything 不接 of，all 要接名词或 all of',
+        body: 'everything 把“一切”看成一个整体，后面不接 of，作主语时谓语用单数：Everything goes well。all 泛指时后面必须先接 the、these 这类限定词再接名词，或写成 all of 加限定词：all the students、all of the students。光说 all students 不符合习惯，all of students 又丢了 the，两处都要留意。',
+        examples: [
+          { en: 'Everything goes well with the school open day.', zh: '校园开放日一切顺利。' },
+          { en: 'All of the students joined the reading club this term.', zh: '这学期所有学生都加入了读书社。' },
+        ],
+      },
+      {
+        h: 'not 与 every 系连用是部分否定',
+        body: 'not 与 every 系复合代词或 every、all 连用时是部分否定，意思是“并非都”：Not everything expensive is good、Not everybody agrees。要一口咬定“全都没有”，才换成 no 系：Nothing、Nobody、No one。下手先问否定的是“一部分”还是“全部”，再决定用 not 加 every 系，还是直接用 no 系。',
+        examples: [
+          { en: 'Not everything expensive is good, so think twice before buying.', zh: '贵的东西并非都好，所以购买前要三思。' },
+          { en: 'Not everybody in our class likes physics, but we all work hard at it.', zh: '并不是班里每个人都喜欢物理，但我们都在努力学。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'no one 只指人不带 of，none 指人指物常与 of 连用',
+      'How many 问数量答 None，Who 问人答 No one',
+      'everything 不接 of 且谓语三单，all 要接名词或 all of',
+      'not everything 是部分否定，全否定换 Nothing 或 Nobody',
+    ],
+    pitfall: 'none of 后面的谓语单复数都可以，考试常取单数：None of them knows the answer。另外部分否定别写成全否定：Not everything is good 不等于 Nothing is good，前者留了余地，后者一票否决。',
+    quiz: [
+      {
+        q: '— Who did you invite to the open day? — ____; everyone was busy that day.',
+        opts: ['Nobody', 'None', 'Nothing', 'No one of them'],
+        a: 0,
+        explain: 'Who 问的是人，全否定答 Nobody 或 No one；None 回答 How many 或 How much，no one of them 的搭配不存在，排除。',
+      },
+      {
+        q: '____ of the answers was correct, so Mr. Li went over them again.',
+        opts: ['No one', 'Nobody', 'None', 'Nothing'],
+        a: 2,
+        explain: 'none of 既能指人也能指物；no one、nobody 不能与 of 连用，nothing 不与 of 连用且只指物，排除。',
+      },
+      {
+        q: '____ went well at the sports meet, but the relay race was put off by the rain.',
+        opts: ['Nothing', 'Everything', 'No one', 'Nobody'],
+        a: 1,
+        explain: '后半句只说接力赛延期，整体是顺利的，用 everything 表“一切”，谓语按三单处理；nothing 全否定与语境矛盾，no one、nobody 只指人，排除。',
+      },
+      {
+        q: '____ agrees with the plan, so we will vote again next week.',
+        opts: ['Not everybody', 'Nobody', 'Everybody', 'No one'],
+        a: 0,
+        explain: '后半句“下周再投一次票”说明反对的只是一部分人，部分否定用 Not everybody；nobody、no one 是全否定，everybody 是全肯定，都与“再投票”矛盾，排除。',
+      },
+    ],
+  },
+  {
+    id: 'g45',
+    title: '宾语补足语：ask sb. to do 还是 make sb. do',
+    en: 'Object Complements: with or without to',
+    level: '进阶',
+    exam: '中考',
+    stage: '八年级',
+    mins: 7,
+    intro: '宾语后面还缺一块意思时，宾补来补齐。先看动词归哪一派：多数动词的宾补带 to，使役和感官动词不带 to。',
+    sections: [
+      {
+        h: '带 to 一派：ask / tell / allow / warn sb. to do',
+        body: 'ask、tell、want、allow、warn、invite、teach、encourage 这类动词的宾补必须带 to，构成“动词 + 宾语 + to do”：ask us to arrive early、teach him to paint、allow her to keep the pet。下手判断：这类动词的宾语接下来要亲自做那件事，宾补就写 sb. to do。',
+        examples: [
+          { en: 'The teacher asked us to hand in the posters before Friday.', zh: '老师要求我们在周五前交海报。' },
+          { en: 'Mum warned me not to swim in the river alone.', zh: '妈妈警告我不要独自去河里游泳。' },
+        ],
+      },
+      {
+        h: '不带 to 一派：使役与感官动词接原形',
+        body: '使役动词 make、let、have 和感官动词 feel、hear、see、watch、notice 后面接不带 to 的动词原形，口诀“一感二听三让四看”：一感 feel，二听 hear、listen to，三让 make、let、have，四看 see、watch、notice、look at。listen to、look at 里的 to 是短语动词的一部分，不是不定式符号，别混进带 to 一派。',
+        examples: [
+          { en: 'The funny sketch made the whole class laugh.', zh: '那个滑稽的小品逗得全班大笑。' },
+          { en: 'I often hear my neighbour practise the violin in the evening.', zh: '我常在傍晚听到邻居练习小提琴。' },
+        ],
+      },
+      {
+        h: '被动补回 to，doing 看片段',
+        body: '省略句一课已经讲过 make sb. do 变被动后要补回 to；hear、see 这类感官动词的被动同样补：People often saw him draw by the lake. 变成 He was often seen to draw by the lake。let 一般改用 be allowed to do。感官动词后接 do 还是 doing，看动作有没有看全：see sb. do 看到全过程或反复发生，see sb. doing 只看到进行中的一幕。',
+        examples: [
+          { en: 'He was often seen to draw pictures by the lake after school.', zh: '放学后常有人看见他在湖边画画。' },
+          { en: 'I saw Lily rehearsing her dance for the art festival.', zh: '我看见莉莉正在为艺术节排练舞蹈。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'ask、tell、allow、warn 后的宾补带 to，构成 sb. to do',
+      'make、let、have 与 see、hear 后接不带 to 的动词原形',
+      'hear、see 的被动也补回 to：He was often seen to draw',
+      'see sb. do 看全程，see sb. doing 只看进行中的一幕',
+    ],
+    pitfall: '否定宾补的 not 放在 to 之前，是 not to do，不写 to not do。另外 make 作“制作”讲时不是使役用法：make model planes 后面没有宾补，别一见 make 就去找动词原形。',
+    quiz: [
+      {
+        q: 'The PE teacher asked us ____ some warm-up exercises before the relay race.',
+        opts: ['do', 'to do', 'doing', 'did'],
+        a: 1,
+        explain: 'ask sb. to do sth. 是固定结构，宾补必须带 to，填 to do；ask 后不接动词原形，排除。',
+      },
+      {
+        q: 'The documentary made everyone ____ about saving food at school.',
+        opts: ['to think', 'thinking', 'think', 'thought'],
+        a: 2,
+        explain: '使役动词 make 后接不带 to 的原形：made everyone think；只有被动句才把 to 补回来，排除。',
+      },
+      {
+        q: 'People often saw him draw by the lake. (变为被动语态) He was often ____ by the lake.',
+        opts: ['saw draw', 'seen draw', 'seen to draw', 'saw to draw'],
+        a: 2,
+        explain: 'see 的宾补不带 to，变被动后要补回 to：was often seen to draw；主动句的 saw 不能带进被动句，排除。',
+      },
+      {
+        q: 'When I walked past the playground, I saw some boys ____ basketball.',
+        opts: ['to play', 'played', 'play', 'playing'],
+        a: 3,
+        explain: 'walked past 说明只瞥见进行中的一幕，用 see sb. doing；看到动作全程才用原形 play，排除。',
+      },
+    ],
+  },

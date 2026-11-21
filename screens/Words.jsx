@@ -23,7 +23,8 @@ const todayKey = () => {
   return `${d.getFullYear()}-${String(d.getMonth() + 1).padStart(2, '0')}-${String(d.getDate()).padStart(2, '0')}`;
 };
 
-// 识别预填：内置命中全字段按词条，原著词表只有 p/zh（词性按词尾推测），未命中全靠推测。
+// 识别预填：内置命中全字段按词条，原著词表只有 p/zh（词性按词尾推测），
+// 词典命中补音标/词性/释义并从例句库补例句，未命中全靠推测。
 function recognizeForm(word) {
   const { entry } = lookupWord(word, { words, stories });
   return {
@@ -357,10 +358,12 @@ export default function Words({ data, actions, intent }) {
 
   const visibleWords = filteredWords.slice(0, shown);
 
-  // —— 录入视图的派生状态：五态状态条 + 禁用条件，均与 enrich.js 同源。
+  // —— 录入视图的派生状态：六态状态条 + 禁用条件，均与 enrich.js 同源。
   const entryWord = entryQuery;
   const entryLookup = entryWord ? lookupWord(entryWord, { words, stories }) : null;
   const entryBuiltinHit = Boolean(entryWord && words.some((item) => item.w === entryWord));
+  // 词典命中（内置词典第三级）：状态条与词性标签按 origin 提示，词性/例句都可改。
+  const entryDictHit = entryLookup?.entry.origin === 'dictionary';
   const entryDuplicate = Boolean(entryWord && isDuplicate(entryWord, words, data.customWords, entryEditing || ''));
   const entryBreakdown = useMemo(() => (entryWord ? breakdownWord(entryWord, affixes) : null), [entryWord]);
   const entrySaveDisabled = !entryWord || entryWord.length > 30 || entryDuplicate || !entryForm.zh.trim();
@@ -382,6 +385,8 @@ export default function Words({ data, actions, intent }) {
       entryStatus = entryBuiltinHit
         ? { tone: 'error', text: `「${entryWord}」是内置词库里的词，直接去学习吧。` }
         : { tone: 'error', text: `「${entryWord}」已经在你的词库里了（你录入过），直接去学习吧。` };
+    } else if (entryDictHit) {
+      entryStatus = { tone: 'glossary', text: '已按内置词典识别：音标与释义来自词典数据，例句来自例句库，都可以改。' };
     } else if (entryLookup.found) {
       entryStatus = { tone: 'glossary', text: '只在原著词表里找到读音和释义（没有词性和例句）；词性是按词尾推测的。' };
     } else {
@@ -856,7 +861,7 @@ export default function Words({ data, actions, intent }) {
               </div>
 
               <div className="entry-field">
-                <span className="entry-label">{entryBuiltinHit || entryEditing ? '词性' : '词性（按词尾推测，可改）'}</span>
+                <span className="entry-label">{entryBuiltinHit || entryEditing ? '词性' : entryDictHit ? '词性（来自词典，可改）' : '词性（按词尾推测，可改）'}</span>
                 <input
                   value={entryForm.pos}
                   onChange={(event) => setEntryForm((prev) => ({ ...prev, pos: event.target.value }))}

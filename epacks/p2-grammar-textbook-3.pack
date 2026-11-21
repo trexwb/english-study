@@ -1,0 +1,72 @@
+  {
+    id: 'g49',
+    title: '疑问词 + to do 与 by + doing：学习策略表达',
+    en: 'Question Words + to do and by + doing',
+    level: '进阶',
+    exam: '中考',
+    stage: '九年级',
+    mins: 7,
+    intro: '疑问词后加 to do，等于把一个宾语从句压成短语；by 后加 doing，回答的是“用什么方法”。学英语的方法怎么表达，是中考单选和书面表达的常客。',
+    sections: [
+      {
+        h: '疑问词 + to do：把宾语从句压成短语',
+        body: 'know、decide、tell、ask、learn、forget 这些动词后面，可以接“疑问词 + to do”作宾语。下手就两步：先看主句和从句的主语是不是同一个，一致才能互换；再检查从句是不是陈述语序。I don’t know how I can learn English well. 主语都是 I，压成 I don’t know how to learn English well.；主语不同，如 I don’t know how she learns it so well.，就不能压。否定式把 not 放到 to 前面：He told me how not to make the same mistakes.',
+        examples: [
+          { en: 'I don’t know how to learn English well.', zh: '我不知道怎样才能学好英语。' },
+          { en: 'He didn’t know what to say at the class meeting.', zh: '他不知道在班会上该说什么。' },
+          { en: 'We haven’t decided where to go for the class trip.', zh: '我们还没决定班级郊游去哪儿。' },
+        ],
+      },
+      {
+        h: 'by + doing：回答用什么方法',
+        body: 'by + doing 表示“通过……方式、手段”，回答 How do you...? 这类问句时，可以直接以 By doing 开头。判断口诀：by 后面只要接动词，一律变 doing，不看人称和时态。和 in、with 分清：in + 语言、声音、书写方式，如 in English、in a low voice；with + 具体工具，如 with a pen、with a knife；表手段才用 by + doing。另外 by 还能表“不迟于”，如 by 9:00 p.m.，见到 by 先看后面接的是 doing、名词还是时间。',
+        examples: [
+          { en: 'How do you study for a test? By working with friends.', zh: '你怎样为考试复习？通过和朋友一起学习。' },
+          { en: 'Li Ming improved his pronunciation by reading aloud every morning.', zh: '李明通过每天早晨大声朗读提高了发音。' },
+          { en: 'Our English teacher often explains the rules in simple English.', zh: '我们的英语老师常用简单的英语讲解规则。' },
+        ],
+      },
+      {
+        h: '学习方法综合：advice on how to...',
+        body: '请求建议的常用句型是 Could you give us some advice on how to improve...? 两个坑：advice 是不可数名词，不可以说 an advice，一条建议要说 a piece of advice；on 是介词，后面接“疑问词 + to do”或 doing，如 Thanks for your advice on learning English.。回答方法时用 By doing...，给建议时用 You’d better...、Why not...、What about doing...? 写“我的学习方法”就用三件套：by doing 点方法，疑问词 + to do 说打算，I think it’s useful to do 表看法。',
+        examples: [
+          { en: 'Could you give us some advice on how to remember new words?', zh: '你能给我们一些关于如何记新单词的建议吗？' },
+          { en: 'You’d better go over your notes by making word cards.', zh: '你最好通过做单词卡片来复习笔记。' },
+          { en: 'Thanks for your advice on learning English.', zh: '谢谢你在英语学习上给我的建议。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'know、decide、tell、ask 等动词后常接疑问词加 to do 作宾语',
+      '疑问词加 to do 与宾语从句互换的前提：主语一致，从句用陈述语序',
+      'by 后接动词一律加 doing，回答 How 问句常以 By doing 开头',
+      'in 后接语言或声音，with 后接具体工具，方式手段用 by doing',
+    ],
+    pitfall: '别把 by 用成 with：I learn English by making word cards. 是“通过做单词卡”这种方法，with 后只能接具体工具；by 后的动词必须变 doing，写成 by make word cards 就错了。',
+    quiz: [
+      {
+        q: 'Could you tell me ____ to improve my spoken English?',
+        opts: ['how', 'what', 'which', 'where'],
+        a: 0,
+        explain: 'improve my spoken English 问的是“用什么办法提高”，填 how to do；what、which 后要接名词或代词，where 表地点，都放不进这个空。',
+      },
+      {
+        q: '— ____ does your sister learn English so well? — By watching English movies.',
+        opts: ['Why', 'When', 'How', 'Where'],
+        a: 2,
+        explain: '答语 By watching... 说的是方式手段，问句要用 How；Why 问原因、When 问时间，与答语对不上。',
+      },
+      {
+        q: 'He made great progress in English ____ keeping a diary every day.',
+        opts: ['in', 'with', 'for', 'by'],
+        a: 3,
+        explain: 'keeping 是 doing 形式，“通过写日记”这种手段要用 by doing；with 后接具体工具，in 后接语言或声音，都不这样表手段。',
+      },
+      {
+        q: 'Which sentence is correct?',
+        opts: ['I don’t know how to answer this question.', 'I don’t know how answering this question.', 'I don’t know how do I answer this question.', 'I don’t know how that I answer this question.'],
+        a: 0,
+        explain: '疑问词 how 后直接加 to do 作 know 的宾语，相当于从句 how I can answer this question；其余三项不是疑问词加 to do 的正确形式。',
+      },
+    ],
+  },

@@ -1,6 +1,19 @@
-// 录入生词的识别与预填：纯函数、零 import、无 React/DOM。
+// 录入生词的识别与预填：纯函数、无 React/DOM；静态依赖 data/ 下两份离线词典数据
+// （构建期产物，运行期纯本地读取，不触网）。
 // 契约：normalizeWord / lookupWord / breakdownWord / guessPos / isDuplicate 五个导出，
 // 拆解结果满足硬不变量 parts.join('').replace(/-/g, '') === word。
+// lookupWord 查找链：words → stories glossary → dictionary → examples；entry 恒为
+// 七个字段：w/p/pos/zh/ex/exZh 查不到一律 ''，origin 是运行期提示字段，取
+// 'builtin' | 'glossary' | 'dictionary' | 'none'，按音标/释义的实际命中来源标记
+// （examples 只补例句时 origin 不变），不随保存入库。
+
+import { dictionary } from './data/dictionary.js';
+import { wordExamples } from './data/examples.js';
+
+// 模块顶层用 Object.fromEntries 各建一张索引（与数据文件里的 *ById 同款），只建一次，
+// 不随每次查找重建。
+const DICTIONARY_BY_W = Object.fromEntries(dictionary.map((item) => [item.w, item]));
+const EXAMPLE_BY_W = Object.fromEntries(wordExamples.map((item) => [item.w, item]));
 
 const WORD_RE = /^[a-z]+$/;
 
@@ -12,8 +25,9 @@ export function normalizeWord(raw) {
   return WORD_RE.test(word) ? word : '';
 }
 
-// 词库查找：先内置词条（七字段），再原著 glossary（只有 w/p/zh）。
-// entry 恒为六个字符串字段，查不到的信息一律 ''，绝不返回 undefined。
+// 词库查找：先内置词条（全字段），再原著 glossary（只有 w/p/zh），前两级命中照旧返回；
+// 再查内置词典（音标/词性/释义），并接例句库补例句；词典也没有时例句库只补例句。
+// origin 按音标/释义的实际命中来源标记；查不到的信息一律 ''，绝不返回 undefined。
 export function lookupWord(word, sources) {
   const target = normalizeWord(word);
   const words = Array.isArray(sources?.words) ? sources.words : [];
@@ -29,6 +43,7 @@ export function lookupWord(word, sources) {
         zh: builtin.zh || '',
         ex: builtin.ex || '',
         exZh: builtin.exZh || '',
+        origin: 'builtin',
       },
     };
   }
@@ -38,11 +53,34 @@ export function lookupWord(word, sources) {
     if (item) {
       return {
         found: true,
-        entry: { w: target, p: item.p || '', pos: '', zh: item.zh || '', ex: '', exZh: '' },
+        entry: { w: target, p: item.p || '', pos: '', zh: item.zh || '', ex: '', exZh: '', origin: 'glossary' },
       };
     }
   }
-  return { found: false, entry: { w: target, p: '', pos: '', zh: '', ex: '', exZh: '' } };
+  const dictHit = DICTIONARY_BY_W[target];
+  if (dictHit) {
+    const example = EXAMPLE_BY_W[target];
+    return {
+      found: true,
+      entry: {
+        w: target,
+        p: dictHit.ipa || '',
+        pos: dictHit.pos || '',
+        zh: dictHit.zh || '',
+        ex: example?.en || '',
+        exZh: example?.zh || '',
+        origin: 'dictionary',
+      },
+    };
+  }
+  const exampleOnly = EXAMPLE_BY_W[target];
+  if (exampleOnly) {
+    return {
+      found: true,
+      entry: { w: target, p: '', pos: '', zh: '', ex: exampleOnly.en || '', exZh: exampleOnly.zh || '', origin: 'none' },
+    };
+  }
+  return { found: false, entry: { w: target, p: '', pos: '', zh: '', ex: '', exZh: '', origin: 'none' } };
 }
 
 // 组合项（如 '-mit- / -miss-'）按 ' / ' 拆成变体各自匹配；

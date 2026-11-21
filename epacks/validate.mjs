@@ -16,6 +16,8 @@ const MODULES = {
   'data/writing.js': ['essayStructures', 'modelEssays', 'writingPrompts'],
   'data/knowledge.js': ['knowledgeTabs', 'irregularVerbs', 'affixes', 'confusables', 'wordForms'],
   'data/examTypes.js': ['examTabs', 'grammarFills', 'clozes', 'sevenFives', 'errorFixes'],
+  'data/dictionary.js': ['dictionary', 'dictionaryById'],
+  'data/examples.js': ['wordExamples', 'wordExampleById'],
 };
 
 const errors = [];
@@ -162,6 +164,7 @@ const verbForms = Object.fromEntries((data['data/knowledge.js'].irregularVerbs |
   const { grammarLessons = [] } = data['data/grammar.js'];
   const levels = new Set(['基础', '进阶', '高阶']);
   const exams = new Set(['中考', '高考', '通用']);
+  const stages = new Set(['七年级', '八年级', '九年级', '高中拓展']);
   const ids = new Set();
   let quizzes = 0;
   grammarLessons.forEach((lesson, index) => {
@@ -173,6 +176,7 @@ const verbForms = Object.fromEntries((data['data/knowledge.js'].irregularVerbs |
     ids.add(lesson.id);
     if (lesson.level && !levels.has(lesson.level)) fail('grammar.js', `${at} 的 level='${lesson.level}' 不在筛选条里（基础/进阶/高阶）`);
     if (lesson.exam && !exams.has(lesson.exam)) fail('grammar.js', `${at} 的 exam='${lesson.exam}' 不在筛选条里（中考/高考/通用）`);
+    if (!stages.has(lesson.stage)) fail('grammar.js', `${at} 的 stage='${lesson.stage}' 不在筛选条里（七年级/八年级/九年级/高中拓展）`);
     if (!Array.isArray(lesson.keyPoints) || lesson.keyPoints.length < 3 || lesson.keyPoints.length > 4) {
       fail('grammar.js', `${at} keyPoints 应为 3-4 条，实际 ${Array.isArray(lesson.keyPoints) ? lesson.keyPoints.length : '无'}`);
     } else {
@@ -444,6 +448,71 @@ const verbForms = Object.fromEntries((data['data/knowledge.js'].irregularVerbs |
     if ((item.fixes || []).length !== 10) fail('examTypes.js', `${at} 有 ${(item.fixes || []).length} 处错误，短文改错标准是 10 处`);
   });
   notes.push(`题型专项：语法填空 ${grammarFills.length} / 完形 ${clozes.length} / 七选五 ${sevenFives.length} / 改错 ${errorFixes.length}`);
+}
+
+/* ---------- dictionary ---------- */
+// 内置词典（ECDICT 中高考大纲词，录入链第三级命中源）：只供展示预填，缺字段会在录入表单显示空。
+{
+  const { dictionary = [] } = data['data/dictionary.js'];
+  const seen = new Map();
+  dictionary.forEach((item, index) => {
+    const at = `dictionary[${index}] ${item.w || '?'}`;
+    for (const k of ['w', 'ipa', 'zh']) {
+      if (typeof item[k] !== 'string' || !item[k]) fail('dictionary.js', `${at} 缺字段 ${k}（录入预填会显示空）`);
+    }
+    // pos 允许空串：build_dictionary.py 对 pos 列与 translation 前缀都缺的词文档化为空串兜底，
+    // Words.jsx recognizeForm 用 entry.pos || guessPos 回退，两处契约一致，这里只挡非字符串。
+    if (typeof item.pos !== 'string') fail('dictionary.js', `${at} 的 pos 不是字符串（词性标签会显示 undefined）`);
+    if (item.w && !/^[a-z]+$/.test(item.w)) fail('dictionary.js', `${at} 的 w 不是纯小写单词`);
+    if (item.ipa && !/^\/.+\/$/.test(item.ipa)) fail('dictionary.js', `${at} 的音标没被斜杠包住：${item.ipa}`);
+    if (item.zh && !cjk.test(item.zh)) fail('dictionary.js', `${at} 的 zh 不含中文`);
+    if (item.w) {
+      if (seen.has(item.w)) fail('dictionary.js', `重复词条 ${item.w}（第 ${seen.get(item.w)} 与 ${index} 条，dictionaryById 会静默丢一条）`);
+      else seen.set(item.w, index);
+    }
+  });
+  notes.push(`词典 ${dictionary.length} 词`);
+}
+
+/* ---------- examples ---------- */
+// 词典例句（Tatoeba 配句 + 缺口补写）：录入链的例句补充源，例句必须真的用到词头或其常见变形，
+// 否则学生预填到的例句和词条脱节。
+{
+  const { wordExamples = [] } = data['data/examples.js'];
+  // exampleForms 的双写启发式与考纲 irregularVerbs 覆盖不到的常见变形：
+  // arose/arisen（arise 不在考纲动词表）、bacteria（拉丁复数）、housewives（f/fe→ves）、
+  // equipped/equipping（重读闭音节双写，u 是元音所以启发式不触发）。都是词头本身的变形。
+  const EXTRA_FORMS = {
+    arise: ['arose', 'arisen'],
+    bacterium: ['bacteria'],
+    equip: ['equipped', 'equipping'],
+  };
+  const forms = (w) => {
+    const set = new Set(exampleForms(w, verbForms));
+    for (const f of EXTRA_FORMS[w] || []) set.add(f);
+    if (/fe$/.test(w)) set.add(w.replace(/fe$/, 'ves'));
+    if (/f$/.test(w)) set.add(w.replace(/f$/, 'ves'));
+    return [...set];
+  };
+  const seen = new Map();
+  wordExamples.forEach((item, index) => {
+    const at = `wordExamples[${index}] ${item.w || '?'}`;
+    for (const k of ['w', 'en', 'zh']) {
+      if (typeof item[k] !== 'string' || !item[k]) fail('examples.js', `${at} 缺字段 ${k}`);
+    }
+    if (item.en && cjk.test(item.en)) fail('examples.js', `${at} 的 en 含中文，朗读会读错`);
+    if (item.en && !EN_END.test(item.en.trim())) fail('examples.js', `${at} 的 en 结尾没有标点`);
+    if (item.zh && !cjk.test(item.zh)) fail('examples.js', `${at} 的 zh 不含中文`);
+    if (item.zh && !ZH_END.test(item.zh.trim())) fail('examples.js', `${at} 的 zh 结尾没有中文标点`);
+    if (item.w && item.en && !forms(item.w).some((f) => new RegExp(`\\b${f}\\b`, 'i').test(item.en))) {
+      fail('examples.js', `${at} 的例句里没有出现 ${item.w} 或其变形，语境与词条脱节`);
+    }
+    if (item.w) {
+      if (seen.has(item.w)) fail('examples.js', `重复词条 ${item.w}（第 ${seen.get(item.w)} 与 ${index} 条，wordExampleById 会静默丢一条）`);
+      else seen.set(item.w, index);
+    }
+  });
+  notes.push(`例句 ${wordExamples.length} 词`);
 }
 
 /* ---------- cross-module ---------- */

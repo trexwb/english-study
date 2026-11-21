@@ -3,10 +3,12 @@ import { grammarLessons, grammarById } from '../data/grammar.js';
 import { Chip, Icon, LevelBadge, ScreenHeader, SpeakButton } from '../ui.jsx';
 
 const levels = ['全部', '基础', '进阶', '高阶'];
+const stages = ['全部', '七年级', '八年级', '九年级', '高中拓展'];
 const exams = ['全部', '中考', '高考'];
 
 export default function Grammar({ data, actions }) {
   const [level, setLevel] = useState('全部');
+  const [stage, setStage] = useState('全部');
   const [exam, setExam] = useState('全部');
   const [selectedId, setSelectedId] = useState(null);
   const [step, setStep] = useState(0);
@@ -16,7 +18,8 @@ export default function Grammar({ data, actions }) {
 
   const selected = selectedId ? grammarById[selectedId] : null;
   const byLevel = level === '全部' ? grammarLessons : grammarLessons.filter((lesson) => lesson.level === level);
-  const filtered = exam === '全部' ? byLevel : byLevel.filter((lesson) => (lesson.exam || '通用') === exam);
+  const byStage = stage === '全部' ? byLevel : byLevel.filter((lesson) => lesson.stage === stage);
+  const filtered = exam === '全部' ? byStage : byStage.filter((lesson) => (lesson.exam || '通用') === exam);
   const doneCount = Object.keys(data.grammarDone).length;
 
   useEffect(() => {
@@ -76,6 +79,7 @@ export default function Grammar({ data, actions }) {
         <header className="lesson-header">
           <div className="lesson-tags">
             <LevelBadge tone={selected.level === '基础' ? 'green' : selected.level === '进阶' ? 'amber' : 'rose'}>{selected.level}</LevelBadge>
+            {selected.stage && <LevelBadge tone="violet">{selected.stage}</LevelBadge>}
             <span className="lesson-meta"><Icon name="clock" size={14} /> {selected.mins} 分钟</span>
             <span className="lesson-meta">{selected.quiz.length} 道练习</span>
           </div>
@@ -218,9 +222,20 @@ export default function Grammar({ data, actions }) {
       </div>
 
       <div className="chip-row exam-chips">
+        {stages.map((item) => <Chip key={item} active={stage === item} onClick={() => setStage(item)}>{item === '全部' ? '全部学段' : item}</Chip>)}
+      </div>
+
+      <div className="chip-row exam-chips">
         {exams.map((item) => <Chip key={item} active={exam === item} onClick={() => setExam(item)}>{item === '全部' ? '全部考段' : `冲刺${item}`}</Chip>)}
         <span className="chip-hint">{filtered.length} 节</span>
       </div>
+
+      {filtered.length === 0 && (
+        <div className="grammar-note">
+          <Icon name="leaf" size={20} />
+          <p>没有符合当前学段 / 考段 / 难度组合的课程，试试放宽筛选。</p>
+        </div>
+      )}
 
       <div className="lesson-list">
         {filtered.map((lesson) => {
@@ -231,6 +246,7 @@ export default function Grammar({ data, actions }) {
               <span className="lesson-card-copy">
                 <span className="lesson-card-top">
                   <LevelBadge tone={lesson.level === '基础' ? 'green' : lesson.level === '进阶' ? 'amber' : 'rose'}>{lesson.level}</LevelBadge>
+                  {lesson.stage && <LevelBadge tone="violet">{lesson.stage}</LevelBadge>}
                   {lesson.exam && lesson.exam !== '通用' && <LevelBadge tone={lesson.exam === '中考' ? 'teal' : 'blue'}>{lesson.exam}</LevelBadge>}
                   <span className="muted tiny"><Icon name="clock" size={13} /> {lesson.mins} 分钟</span>
                   {record && <span className="done-mark"><Icon name="check" size={13} /> {record.score}/{record.total}</span>}
