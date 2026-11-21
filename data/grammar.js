@@ -486,7 +486,7 @@ export const grammarLessons = [
         q: '____ from the hill, the village looks beautiful.',
         opts: ['Seeing', 'Seen', 'To see', 'See'],
         a: 1,
-        explain: '村庄是被看的，逻辑主语 village 与 see 是被动关系，用过去分词。',
+        explain: '村庄是被看的，逻辑主语 village 与 see 是被动关系，用过去分词 Seen。',
       },
       {
         q: 'He saved money ____ a new laptop.',
@@ -2277,7 +2277,7 @@ export const grammarLessons = [
         q: 'The town has ____ its old market twice since 2010.',
         opts: ['modern', 'modernized', 'modernization', 'modernise'],
         a: 1,
-        explain: 'has 后面要用过去分词，-ize 让 modern 变成“使……现代化”的动词；modernise 是原形，接在 has 后不成立。',
+        explain: 'has 后面要用过去分词，-ize 让 modern 变成“使……现代化”的动词，此处填 modernized；modernise 是原形，接在 has 后不成立。',
       },
     ],
   },
@@ -2351,7 +2351,7 @@ export const grammarLessons = [
         q: 'We carried six bottles of water for a ten-minute walk. We ____ them.',
         opts: ['mustn’t have taken', 'can’t have taken', 'needn’t have taken', 'shouldn’t take'],
         a: 2,
-        explain: '水确实带了，只是本无必要，用 needn’t have done；can’t have taken 会否认真带过这件事。',
+        explain: '水确实带了，只是本无必要，用 needn’t have taken；can’t have taken 会否认真带过这件事。',
       },
       {
         q: 'You had the whole afternoon free. You ____ me a hand, but you went out to play football.',
@@ -2518,6 +2518,421 @@ export const grammarLessons = [
         opts: ['goes', 'went', 'will go', 'go'],
         a: 2,
         explain: 'if 在这句里是“是否”，引导宾语从句而不是条件从句，下周的事要用 will go。',
+      },
+    ],
+  },
+  {
+    id: 'g37',
+    title: '形容词还是副词：看修饰对象下手',
+    en: 'Adjectives or Adverbs: Decide by What They Modify',
+    level: '进阶',
+    exam: '中考',
+    mins: 6,
+    intro: '别急着背“形容词修饰名词、副词修饰动词”的口诀，先看空格在修饰谁：跟在系动词后面说状态，用形容词；跟在实义动词后面说“怎么做”，用副词。',
+    sections: [
+      {
+        h: '系动词后面接形容词',
+        body: 'look、sound、taste、smell、feel、seem、become、get、keep、stay 这些系动词描述主语的状态，后面一律用形容词：The soup tastes good.（不说 tastes well）。判断办法：系动词后面接的是“主语怎么样”，不是动作的对象。',
+        examples: [
+          { en: 'The song sounds wonderful.', zh: '这首歌听起来很棒。' },
+          { en: 'Please stay quiet in the reading room.', zh: '请在阅览室里保持安静。' },
+        ],
+      },
+      {
+        h: '实义动词后面接副词',
+        body: '要把动作“怎么做”说清楚，就用副词，多数由形容词加 -ly 构成，位置通常在实义动词后面，也可以放句首或句末。注意 friendly、lovely、lively 虽然 -ly 结尾，其实是形容词，不能当副词用。',
+        examples: [
+          { en: 'Please speak more slowly so that we can follow you.', zh: '请说得再慢一点，好让我们跟上。' },
+          { en: 'Lucy sings beautifully at the school talent show.', zh: '露西在校园才艺表演上唱得很动听。' },
+        ],
+      },
+      {
+        h: '两个细节：enough 的位置与 -ing / -ed',
+        body: 'enough 修饰形容词或副词时要后置：old enough；修饰名词时要前置：enough time。-ing 形容词说事物本身的性质，-ed 形容词说人的感受：The film is moving, so the audience was moved. 另外 hard 本身就是副词（study hard），hardly 反而表示“几乎不”，别按 -ly 的老套路去猜。',
+        examples: [
+          { en: 'He is old enough to ride a shared bike to school.', zh: '他已经到了能自己骑共享单车上学的年纪。' },
+          { en: 'The report is boring, so the audience looked bored.', zh: '报告很乏味，所以听众看起来很无聊。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'look、sound、taste 等系动词后接形容词，不说 taste well',
+      '修饰实义动词用副词，多数由形容词加 ly 构成',
+      'enough 修饰形容词副词要后置，修饰名词要前置',
+      'friendly、lovely 加了 ly 仍是形容词，别当副词用',
+    ],
+    pitfall: '最容易混淆的是 look：look + 形容词是“看起来”（She looks happy），look + 副词是“看的方式”（look carefully）；She looks happily 是典型错误。',
+    quiz: [
+      {
+        q: 'This T-shirt feels ____ and sells well in our school shop.',
+        opts: ['soft', 'softly', 'softer', 'softness'],
+        a: 0,
+        explain: 'feels 是系动词，后面接形容词 soft 说 T 恤摸起来的状态；softly 是副词，不能作表语。',
+      },
+      {
+        q: 'The boys are playing ____ on the playground after class.',
+        opts: ['happy', 'happily', 'happiness', 'more happily'],
+        a: 1,
+        explain: 'playing 是实义动词，要用副词 happily 修饰动作；happy 是形容词，不能直接修饰动词。',
+      },
+      {
+        q: 'We got ____ near the end of the long class and began to draw pictures in our notebooks.',
+        opts: ['boring', 'bored', 'bore', 'boredom'],
+        a: 1,
+        explain: '主语 We 是人，说“感到无聊”用 -ed 形容词 bored；-ing 形容词 boring 说事物本身令人乏味。',
+      },
+      {
+        q: 'My cousin is ____ to join the school basketball team this term.',
+        opts: ['enough tall', 'tall enough', 'too tall', 'so tall'],
+        a: 1,
+        explain: 'enough 修饰形容词要后置：tall enough；too tall to do 表示“太……而不能”，与“能加入球队”的句意相反。',
+      },
+    ],
+  },
+  {
+    id: 'g38',
+    title: '名词：可数与不可数、复数与所有格',
+    en: 'Nouns: Countability, Plurals and Possessives',
+    level: '基础',
+    exam: '中考',
+    mins: 7,
+    intro: '名词题分三步：先判断能不能数，再决定复数怎么变，最后看是谁的东西——用 ’s 还是 of。',
+    sections: [
+      {
+        h: '可数与不可数：数不出来的名词不加 s、不加 a',
+        body: 'advice、news、information、furniture、music、homework、weather 这些名词数不出来，没有复数形式，前面也不能加 a / an。要表达“一条、一件”，把数词放在量词上：a piece of advice、two pieces of news；两杯水说 two cups of water。',
+        examples: [
+          { en: 'The coach gave us two pieces of advice before the final.', zh: '决赛前教练给了我们两条建议。' },
+          { en: 'That is a piece of good news for the whole class.', zh: '对全班来说，那是一条好消息。' },
+        ],
+      },
+      {
+        h: '复数怎么变：规则加 s，几组不规则要背',
+        body: '一般直接加 s；以 s、x、ch、sh 结尾的加 es：boxes、watches；辅音字母加 y 结尾变 ies：stories；以 o 结尾有的加 es：tomatoes、potatoes，有的只加 s：photos、pianos。不规则的按组记：child→children、foot→feet、tooth→teeth、mouse→mice、man→men；sheep、deer 单复数同形。',
+        examples: [
+          { en: 'Two babies are playing with toy sheep on the carpet.', zh: '两个婴儿在地毯上玩玩具羊。' },
+          { en: 'The dentist says I should brush my teeth twice a day.', zh: '牙医说我应该一天刷两次牙。' },
+        ],
+      },
+      {
+        h: '所有格：’s、of 短语与双重所有格',
+        body: '表示“某人的”，人用 ’s：my aunt’s home；以 s 结尾的复数只加撇号：the teachers’ office；无生命的东西用 of 短语：the window of the classroom。双重所有格 a friend of my uncle’s 指“我叔叔朋友中的一位”，比 of my uncle 更地道，也常是单选的考点。',
+        examples: [
+          { en: 'The teachers’ office is next to the library on the second floor.', zh: '教师办公室在二楼，紧挨着图书馆。' },
+          { en: 'Wang Ping is a friend of my sister’s from the choir.', zh: '王平是我姐姐在合唱团的一位朋友。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      'advice、news、information 等不可数，量词用 a piece of',
+      'child 变 children、mouse 变 mice，不规则复数要背',
+      '复数以 s 结尾的所有格只加撇号，如 the teachers’ office',
+      'a friend of my uncle’s 是双重所有格，表“朋友中的一位”',
+    ],
+    pitfall: '不可数名词别加复数：不要写 advices、informations 或 a news；数量交给量词，两条建议要说 two pieces of advice，数词加在量词上。',
+    quiz: [
+      {
+        q: 'Mum bought ____ for my new desk yesterday.',
+        opts: ['two piece of furniture', 'two pieces of furnitures', 'two pieces of furniture', 'two furniture'],
+        a: 2,
+        explain: 'furniture 不可数，没有复数形式；数量由量词表达，说 two pieces of furniture。',
+      },
+      {
+        q: 'The little girl has two ____ and loves eating apples with them.',
+        opts: ['tooth', 'toothes', 'teeth', 'tooths'],
+        a: 2,
+        explain: 'tooth 的复数是不规则变化 teeth，“两颗牙”要说 two teeth，不能加 s 或 es。',
+      },
+      {
+        q: '— Whose phone is this? — It is ____.',
+        opts: ['Lily', 'Lily’s', 'of Lily', 'Lilys'],
+        a: 1,
+        explain: '问是谁的东西，人名后加 ’s 构成所有格：It is Lily’s；of 短语要跟在名词后面（如 the phone of Lily），不能单独作表语，Lilys 漏了撇号。',
+      },
+      {
+        q: 'Uncle Li is ____ who often takes me fishing at the weekend.',
+        opts: ['a friend of my father', 'a father’s friend', 'a friend of my father’s', 'my father’s a friend'],
+        a: 2,
+        explain: '双重所有格 a friend of my father’s 指“我父亲朋友中的一位”，结构是 a friend of + ’s 所有格。',
+      },
+    ],
+  },
+  {
+    id: 'g39',
+    title: '物主代词与反身代词：my 还是 mine',
+    en: 'Possessive and Reflexive Pronouns',
+    level: '基础',
+    exam: '中考',
+    mins: 5,
+    intro: '物主代词先看空格后有没有名词：有，用 my 这一套；没有，用 mine 这一套。反身代词则跟着主语照镜子，主语是谁就反射回谁。',
+    sections: [
+      {
+        h: '空后有没有名词：my 一套，mine 一套',
+        body: 'my、your、her、our、their 后面必须跟名词：my schoolbag。mine、yours、hers、ours、theirs 独立使用，相当于“形容词性物主代词 + 名词”：This umbrella is mine。his 和 its 前后两种形式相同，不用变化。做题先看空格后有没有名词：有，选形容词性；没有，选名词性。',
+        examples: [
+          { en: 'Her idea about the class newspaper was better than ours.', zh: '她关于班报的点子比我们的更好。' },
+          { en: 'That blue bike in the rack is his, not mine.', zh: '车棚里那辆蓝自行车是他的，不是我的。' },
+        ],
+      },
+      {
+        h: '反身代词：跟着主语照镜子',
+        body: '反身代词按主语配对：I→myself、you→yourself（复数 yourselves）、he→himself、she→herself、we→ourselves、they→themselves、it→itself。动作回到主语自己身上时用它，固定搭配要背：enjoy oneself 玩得开心、by oneself 独自、teach oneself 自学、help oneself to 随便吃。',
+        examples: [
+          { en: 'We enjoyed ourselves at the school art festival last Friday.', zh: '上周五我们在校园艺术节玩得很开心。' },
+          { en: 'My brother taught himself to play the guitar from online videos.', zh: '我哥哥跟着网上视频自学弹吉他。' },
+        ],
+      },
+      {
+        h: '两条边界：别当主语，别乱替宾格',
+        body: '反身代词不能单独作主语，Myself finished the cleaning. 是错的，主语位置要用 I。宾语要用反身代词，前提是主语和宾语指同一个人——She looked at herself in the mirror（照镜子的是她自己）；如果看的是别人，就用宾格 her。',
+        examples: [
+          { en: 'I made this model plane all by myself over the weekend.', zh: '这个周末我完全靠自己做好了这架飞机模型。' },
+          { en: 'The little robot turns itself off when the battery runs low.', zh: '小机器人电量低时会自动关机。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '空后接名词用 my、your、her，独立使用选 mine、yours、hers',
+      'enjoy oneself、by oneself、teach oneself 是固定搭配',
+      '反身代词跟主语配对：we 用 ourselves，they 用 themselves',
+      '反身代词不能单独作主语，主语位置要用 I、she 等人称代词',
+    ],
+    pitfall: '主语和宾语指同一个人时才用反身代词：She bought herself a new diary.（给自己买）；给别人买要说 She bought her a diary，这里的 her 指“她”以外的另一个人。',
+    quiz: [
+      {
+        q: '— Whose chemistry notes are these? — They are ____.',
+        opts: ['my', 'me', 'mine', 'myself'],
+        a: 2,
+        explain: '空后没有名词，要用名词性物主代词 mine 独立作表语，相当于 my notes；myself 是反身代词，不能这样用。',
+      },
+      {
+        q: 'Nobody helped Lily with the poster. She finished it all by ____.',
+        opts: ['herself', 'her', 'hers', 'she'],
+        a: 0,
+        explain: 'by oneself 表示“独自”，主语是 She，反身代词用 herself；hers 是名词性物主代词，意思不通。',
+      },
+      {
+        q: 'The two exchange students introduced ____ to the whole class at the morning meeting.',
+        opts: ['theirself', 'theirselves', 'them', 'themselves'],
+        a: 3,
+        explain: '主语 the two exchange students 是复数，动作回到自己身上，用 themselves 作 introduced 的宾语；没有 theirselves 这种拼写。',
+      },
+      {
+        q: 'Please help ____ to some fruit salad, boys and girls.',
+        opts: ['yourself', 'yourselves', 'your', 'you'],
+        a: 1,
+        explain: 'boys and girls 是一群人，you 表复数，反身代词用 yourselves；help oneself to 表示“随便吃”。',
+      },
+    ],
+  },
+  {
+    id: 'g40',
+    title: '独立主格与 with 复合结构',
+    en: 'Absolute Construction and the with Compound',
+    level: '高阶',
+    exam: '高考',
+    mins: 9,
+    intro: '一个句子只能有一套谓语。当另一个动作自带主语、又想挂进主句时，就轮到独立主格和 with 复合结构出场。',
+    sections: [
+      {
+        h: '先数谓语，再找逻辑主语',
+        body: '拿到动词提示先做三步：第一步数谓语，句中已有谓语又没有连词，这个动词就不能再用谓语形式；第二步找它前面的名词，主句主语和它一致就只写 doing 或 done，动作有自己的主语才把名词补出来；第三步定形式，主动进行用 doing，被动或已完成用 done。with 或 without 引出的名词短语走 with 复合结构，没有 with 的名词短语直接站出来，就是独立主格，两者都作原因、伴随或条件。',
+        examples: [
+          { en: 'The sun having set, we switched on the torches and kept walking.', zh: '太阳落山了，我们打开手电筒继续赶路。' },
+          { en: 'With the exams over, the whole class headed straight for the playground.', zh: '考试一结束，全班径直朝操场走去。' },
+        ],
+      },
+      {
+        h: 'with 复合结构：宾语后跟四种补语',
+        body: 'with + 宾语 + 补语，补语有四种：doing 表主动进行，done 表被动或已经完成，to do 表还没发生的动作，介词短语或形容词直接表状态。语法填空里 with 后给出动词提示时，只看宾语与动词的关系：She sat with her eyes fixed on the screen，眼睛是被“固定”住的，填过去分词 fixed；动作还没发生就填 to do。',
+        examples: [
+          { en: 'She sat with her eyes fixed on the screen, forgetting the time.', zh: '她坐在那里，双眼盯着屏幕，忘了时间。' },
+          { en: 'With two tests waiting for us next week, nobody is in the mood for a party.', zh: '下周还有两场考试等着我们，谁都没心思开派对。' },
+          { en: 'He fell asleep with the lamp still on.', zh: '他睡着了，灯还亮着。' },
+        ],
+      },
+      {
+        h: '独立主格：名词自己站出来',
+        body: '没有 with，名词直接加非谓语、形容词或介词短语，用逗号挂在主句上，就是独立主格：Weather permitting、The ground covered with pine needles。there be 变独立主格时写作 there being，常表原因。判断口诀是“名词与非谓语成对出现”：只写 doing 不带名词，那是分词作状语，属于前面非谓语一课的考点，别混。',
+        examples: [
+          { en: 'Weather permitting, the sports meeting will be held next Friday.', zh: '天气允许的话，运动会下周五举行。' },
+          { en: 'The ground covered with pine needles, the trail was hard to follow in the dark.', zh: '地面铺满松针，这条小路在黑暗里很难辨认。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '已有谓语且无连词，提示词动词降级为非谓语或独立主格',
+      'with 后动作主动进行填 doing，被动或完成填 done',
+      '还没发生的动作用 to do，如 with two tests to prepare',
+      '动作有自己的名词主语才是独立主格，主语一致只用 doing',
+    ],
+    pitfall: 'with 后的宾语不是主句主语：With the temperature rising fast, we cut the run short. 里 rising 的是 the temperature，不是 we。改错时先核对名词与动词的关系，少了名词就成了垂悬结构，多了一套谓语就成了两个句子。',
+    quiz: [
+      {
+        q: '____ no bus that evening, the whole team walked back to the school gate.',
+        opts: ['Being', 'There was', 'There being', 'It was'],
+        a: 2,
+        explain: '前面已有谓语 walked，逗号前不能再出现第二套谓语；“没有车”要说成 there being no bus，there 的 be 变成非谓语就是 being。',
+      },
+      {
+        q: 'The classroom was silent, with every eye ____ on the blackboard.',
+        opts: ['fixing', 'fixed', 'was fixing', 'to fix'],
+        a: 1,
+        explain: 'eye 是被“固定”住的一方，with 后表被动或已完成用过去分词 fixed；填 fixing 会变成目光自己去固定，was fixing 更是多出了一套谓语。',
+      },
+      {
+        q: 'The meeting ____ over, we poured out of the hall and ran to the playground.',
+        opts: ['was', 'being', 'been', 'is'],
+        a: 1,
+        explain: '主句谓语是 poured 和 ran，逗号前的 be 只能变非谓语 being，构成独立主格表原因；选 was 会多出第二套谓语。',
+      },
+      {
+        q: 'With so much homework ____ over the weekend, several students stayed behind in the classroom.',
+        opts: ['to finish', 'finishing', 'finished', 'finish'],
+        a: 0,
+        explain: '作业还没做，“有作业要做”用 to finish 表将来未发生；finished 会把作业说成已经完成，与留下补作业矛盾。',
+      },
+    ],
+  },
+  {
+    id: 'g41',
+    title: '倒装的变体：完全倒装与 not until 句式',
+    en: 'Inversion Variants: Full Inversion, Not until, as',
+    level: '高阶',
+    exam: '高考',
+    mins: 8,
+    intro: '否定词提前的部分倒装，前面倒装与强调一课已经讲过；这一课补齐其余触发器：完全倒装、not until、hardly...when、so...that 与让步 as。',
+    sections: [
+      {
+        h: '完全倒装：动词整个搬家',
+        body: 'here、there、out、in、up、down、now、then 这类副词打头，或 South of the village 这样的方位介词短语提前，谓语又是不及物动词（come、go、stand、lie、live）时，动词整个提到主语前，不借助助动词帮忙：Here comes the bus。主语是代词时不倒装，要说 Here it comes。这与否定词提前、只把助动词提前的部分倒装正好相对。',
+        examples: [
+          { en: 'South of the village lies a small lake, where the swans spend every winter.', zh: '村子南面有一个小湖，天鹅每年冬天都在那里过冬。' },
+          { en: 'The door burst open and in rushed the football team, still in their kit.', zh: '门猛地被推开，足球队冲了进来，队服还没换下。' },
+          { en: 'Here comes the bus; we can take the front seats.', zh: '公交车来了，我们可以坐前排。' },
+        ],
+      },
+      {
+        h: 'not until 与 hardly / no sooner 句式',
+        body: 'Not until + 时间放到句首，倒装发生在主句，until 从句保持正常语序：Not until the last guest had left did the host sit down。hardly...when 与 no sooner...than 都表“刚……就……”，hardly 或 no sooner 在句首时，所在分句用过去完成时并倒装，when / than 引导的分句用一般过去时。语法填空里 not until 多以从句形式出现，此时主句并不倒装，只有 not until 整体提前才需要动语序。',
+        examples: [
+          { en: 'Not until the last guest had left did the host sit down to rest.', zh: '直到最后一位客人离开，主人才坐下歇了歇。' },
+          { en: 'Hardly had the striker touched the ball when the whistle blew.', zh: '前锋刚碰到球，哨声就响了。' },
+          { en: 'No sooner had the train stopped than the passengers crowded to the doors.', zh: '火车刚一停稳，乘客就涌向车门。' },
+        ],
+      },
+      {
+        h: 'so...that 与让步 as 的倒装',
+        body: 'so + 形容词或副词提到句首，主句倒装：So excited were the fans that they lined the street。这是 so...that 的倒装变体，so 与 such 的基本选择在状语从句一课，本课不重复。让步句把名词、形容词、副词或动词原形提到 as 或 though 前：Tired as she was、Child as she is，名词提前时冠词省掉。这些都是书面表达的加分句型，但前提是后面的结构完整，不为炫技而倒装。',
+        examples: [
+          { en: 'So excited were the fans that they lined the street for two hours.', zh: '球迷们太兴奋了，在街边守了两个小时。' },
+          { en: 'Tired as she was after the relay race, she stayed to cheer for the next heat.', zh: '接力赛之后她虽然很累，还是留下来为下一组加油。' },
+          { en: 'Try as they might, the visitors could not break through the home defence.', zh: '客队尽管想尽办法，还是攻不破主队的防线。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '方位词或介词短语提前且主语是名词，动词整个前移，不借助助动词',
+      'not until 放句首只倒装主句，until 从句保持正常语序',
+      'hardly had done when 前句过去完成时，when 分句用过去时',
+      'so 提前后助动词跟主语一致；as 让步句名词提前省冠词',
+    ],
+    pitfall: '完全倒装遇到代词主语就失效：Here comes the bus 对，Here comes it 错，要说 Here it comes。not until 后的主句倒装用 did + 动词原形，不要再把动词变回过去式。',
+    quiz: [
+      {
+        q: 'From behind the bookshelf ____ a grey cat we had never seen before.',
+        opts: ['jumped', 'did jump', 'had jumped', 'did the cat jump'],
+        a: 0,
+        explain: '方位介词短语 from behind the bookshelf 提前、主语是名词，构成完全倒装，谓语 jumped 整个前移，不需要任何助动词。',
+      },
+      {
+        q: 'Not until the fog lifted ____ the mountain road again.',
+        opts: ['the trucks left', 'left the trucks', 'did the trucks leave', 'the trucks did leave'],
+        a: 2,
+        explain: 'not until 放句首只倒装主句：助动词 did 提到主语 the trucks 前，动词回到原形 leave；until 从句本身保持正常语序。',
+      },
+      {
+        q: 'Hardly ____ the shuttlecock out when the players began to argue about the line call.',
+        opts: ['did the referee call', 'the referee had called', 'had the referee called', 'the referee called'],
+        a: 2,
+        explain: 'hardly 置于句首要用过去完成时并部分倒装：had the referee called；when 引导的分句保持一般过去时 began。',
+      },
+      {
+        q: 'Child ____ she is, she can already repair a bike on her own.',
+        opts: ['although', 'as', 'because', 'if'],
+        a: 1,
+        explain: '“名词 + as + 主谓”是让步倒装：Child as she is 表示“她虽然是个孩子”，名词提前后不再用 although。',
+      },
+    ],
+  },
+  {
+    id: 'g42',
+    title: 'it 作形式主语与形式宾语',
+    en: 'It as Formal Subject and Formal Object',
+    level: '进阶',
+    exam: '高考',
+    mins: 7,
+    intro: '真正的主语或宾语太长时，it 先站出来占位，真身随后补上。语法填空的无提示词空，很多就落在这个 it 上。',
+    sections: [
+      {
+        h: '形式主语的三个常用骨架',
+        body: '三个骨架要背牢：It is no use / no good doing（做……没有用）、It takes sb 一段时间 to do（做某事花了谁多久）、It is said / reported / believed that...（据说、据报道）。it 不指任何具体事物，只是把真正的主语——doing、to do 或 that 从句——顶到句尾。语法填空遇到句首无提示词、后面接 is 或 was 的空，先考虑 it，再用“去掉 It is...that 句子是否完整”排除强调句。',
+        examples: [
+          { en: 'It is no use copying the answers; you will forget them the next day.', zh: '抄答案没有用，第二天你就会忘光。' },
+          { en: 'It took the whole class ten minutes to calm down after the fire drill.', zh: '消防演练结束后，全班花了十分钟才安静下来。' },
+          { en: 'It is said that the new gym will open to students this December.', zh: '据说新体育馆今年十二月对学生开放。' },
+        ],
+      },
+      {
+        h: '形式宾语：动词后先用 it 占位',
+        body: 'find、think、feel、make、consider 后面要接“宾补 + 宾语”时，先用 it 占位，真正的宾语是不定式或 that 从句，放在补语后面：I find it hard to get up early、We thought it our duty to return the wallet。这个 it 不能漏，也不能换成 that 或 this，是短文改错的高频设错点。',
+        examples: [
+          { en: 'She finds it relaxing to sketch the lake after dinner.', zh: '她发现晚饭后去湖边画素描很放松。' },
+          { en: 'We thought it our duty to return the wallet to its owner.', zh: '我们认为把钱包交还失主是自己的本分。' },
+          { en: 'The heavy rain made it impossible for us to hold the open-air concert.', zh: '大雨让我们无法举行露天音乐会。' },
+        ],
+      },
+      {
+        h: '改错与写作里的三个落点',
+        body: '第一落点：动词接“形容词 + to do”时 it 必须在场，漏了按“增”来改。第二落点：It is no use / no good 后面接 doing，写成 to argue 就错了。第三落点：区分形式主语与强调句——It was on the school bus that Li first heard about the program 去掉框架后句子完整，是强调句；It is clear that practice matters 去掉框架后不完整，是形式主语，that 从句才是真主语。',
+        examples: [
+          { en: 'It is no good arguing with the referee once the whistle has gone.', zh: '哨声一响，再跟裁判争辩也没有用。' },
+          { en: 'It was on the school bus that Li first heard about the volunteer program.', zh: '李正是在校车上第一次听说这个志愿项目的。' },
+          { en: 'It is clear that the road to success is paved with small habits.', zh: '很明显，成功之路是由一个个小习惯铺成的。' },
+        ],
+      },
+    ],
+    keyPoints: [
+      '无提示词空在句首且后接 is/was，优先考虑形式主语 it',
+      'find、think、make 后接形容词加 to do，必须先用 it 占位',
+      'It is no use 后接 doing，不接不定式',
+      '去掉 It is 和 that 后句子完整是强调句，否则是形式主语',
+    ],
+    pitfall: '形式主语的 it 不是代词，不指前文任何东西：It is helpful to read widely 里的 it 只是占位。写作和改错里最常见的错是漏掉它——I find hard to believe 必须改成 I find it hard to believe。',
+    quiz: [
+      {
+        q: '____ is no use waiting for the perfect moment; start with the first question.',
+        opts: ['That', 'It', 'This', 'What'],
+        a: 1,
+        explain: '“做某事没有用”的固定骨架是 It is no use doing：it 作形式主语，真正的主语是动名词 waiting。',
+      },
+      {
+        q: 'The coach made ____ clear that anyone late twice sits out the next match.',
+        opts: ['it', 'this', 'that', 'him'],
+        a: 0,
+        explain: '真正的宾语是后面的 that 从句，太长要先由 it 占位，构成 make it clear that 的固定写法；this 与 that 不能这样占位。',
+      },
+      {
+        q: 'It took the volunteers nearly two hours ____ the fallen books back onto the shelves.',
+        opts: ['to put', 'putting', 'put', 'putted'],
+        a: 0,
+        explain: 'It takes sb 一段时间 to do 是固定骨架，“花了近两小时”要用不定式 to put；put 的过去式和过去分词仍是 put，不存在 putted。',
+      },
+      {
+        q: 'Which sentence is correct?',
+        opts: ['I find hard to wake up early.', 'I find that hard to wake up early.', 'I find it hard to wake up early.', 'I find this hard to wake up early.'],
+        a: 2,
+        explain: 'find 接“形容词 + 不定式”作宾语时必须先用 it 占位，真宾语 to wake up early 后置；that 与 this 都不能承担占位作用。',
       },
     ],
   },

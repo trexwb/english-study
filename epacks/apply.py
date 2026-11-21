@@ -27,23 +27,33 @@ CONFIG = {
         ("p2-words-junior-a.pack", "];\n\nexport const wordById", r"w: '([^']+)'"),
         ("p2-words-junior-b.pack", "];\n\nexport const wordById", r"w: '([^']+)'"),
         ("p2-words-senior.pack", "];\n\nexport const wordById", r"w: '([^']+)'"),
+        ("p2-words-senior-b.pack", "];\n\nexport const wordById", r"w: '([^']+)'"),
+        ("p2-words-junior-c.pack", "];\n\nexport const wordById", r"w: '([^']+)'"),
     ],
     "phrases.js": [
         ("p2-phrases-exam.pack", "];\n\nexport const phraseById", r"id: '([^']+)'"),
         ("p2-phrases-writing.pack", "];\n\nexport const phraseById", r"id: '([^']+)'"),
+        ("p2-phrases-exam2.pack", "];\n\nexport const phraseById", r"id: '([^']+)'"),
+        ("p2-phrases-quotes.pack", "];\n\nexport const phraseById", r"id: '([^']+)'"),
     ],
     "grammar.js": [
         ("p2-grammar-junior.pack", "];\n\nexport const grammarById", r"id: '([^']+)'"),
         ("p2-grammar-senior.pack", "];\n\nexport const grammarById", r"id: '([^']+)'"),
+        ("p2-grammar-junior-b.pack", "];\n\nexport const grammarById", r"id: '([^']+)'"),
+        ("p2-grammar-senior-b.pack", "];\n\nexport const grammarById", r"id: '([^']+)'"),
     ],
     "writing.js": [
         ("p3-writing-templates.pack", "];\n\nexport const modelEssays", r"id: '(s[^']+)'"),
         ("p3-writing-essays.pack", "];\n\nexport const writingPrompts", r"id: '(m[^']+)'"),
         ("p3-writing-prompts.pack", "EOF", r"id: '(w[^']+)'"),
+        ("p3-writing-templates-b.pack", "];\n\nexport const modelEssays", r"id: '(s[^']+)'"),
+        ("p3-writing-essays-b.pack", "];\n\nexport const writingPrompts", r"id: '(m[^']+)'"),
+        ("p3-writing-prompts-b.pack", "EOF", r"id: '(w[^']+)'"),
     ],
     "knowledge.js": [
         ("p5-wordform-a.pack", "];\n\nexport const wordFormById", r"id: '(wf[^']+)'"),
         ("p5-wordform-b.pack", "];\n\nexport const wordFormById", r"id: '(wf[^']+)'"),
+        ("p5-wordform-c.pack", "];\n\nexport const wordFormById", r"id: '(wf[^']+)'"),
     ],
     "examTypes.js": [
         ("p4-exam-gfill.pack", "];\n\nexport const clozes = [", r"id: '(gf[^']+)'"),

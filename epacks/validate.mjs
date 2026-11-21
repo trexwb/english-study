@@ -51,7 +51,7 @@ function answerMismatch(opts, a, explain) {
     const l = lemma(o);
     return l === right || (Math.min(l.length, right.length) >= 3 && (l.startsWith(right) || right.startsWith(l)));
   };
-  if (text.includes(norm(opts[a])) || sameFamily(opts[a])) return null;
+  if (text.includes(norm(opts[a]))) return null;
   // 解析明确把某选项判为错项时，点名它不算答案不一致。
   if (REJECT_MARK.test(explain)) return null;
   const named = opts.filter((o, i) => i !== a && norm(o).length > 2 && text.includes(norm(o)) && !sameFamily(o));

@@ -79,7 +79,7 @@
     sections: [
       {
         h: '完全倒装：动词整个搬家',
-        body: 'here、there、out、in、up、down、now、then 这类副词打头，或 South of the village 这样的方位介词短语提前，谓语又是不及物动词（come、go、stand、lie、live）时，动词整个提到主语前，不借助动词帮忙：Here comes the bus。主语是代词时不倒装，要说 Here it comes。这与否定词提前、只把助动词提前的部分倒装正好相对。',
+        body: 'here、there、out、in、up、down、now、then 这类副词打头，或 South of the village 这样的方位介词短语提前，谓语又是不及物动词（come、go、stand、lie、live）时，动词整个提到主语前，不借助助动词帮忙：Here comes the bus。主语是代词时不倒装，要说 Here it comes。这与否定词提前、只把助动词提前的部分倒装正好相对。',
         examples: [
           { en: 'South of the village lies a small lake, where the swans spend every winter.', zh: '村子南面有一个小湖，天鹅每年冬天都在那里过冬。' },
           { en: 'The door burst open and in rushed the football team, still in their kit.', zh: '门猛地被推开，足球队冲了进来，队服还没换下。' },
@@ -106,7 +106,7 @@
       },
     ],
     keyPoints: [
-      '方位词或介词短语提前且主语是名词，动词整个前移，不借助动词',
+      '方位词或介词短语提前且主语是名词，动词整个前移，不借助助动词',
       'not until 放句首只倒装主句，until 从句保持正常语序',
       'hardly had done when 前句过去完成时，when 分句用过去时',
       'so 提前后助动词跟主语一致；as 让步句名词提前省冠词',
@@ -126,7 +126,7 @@
         explain: 'not until 放句首只倒装主句：助动词 did 提到主语 the trucks 前，动词回到原形 leave；until 从句本身保持正常语序。',
       },
       {
-        q: 'Hardly ____ the shuttlecock down when the players began to argue about the line call.',
+        q: 'Hardly ____ the shuttlecock out when the players began to argue about the line call.',
         opts: ['did the referee call', 'the referee had called', 'had the referee called', 'the referee called'],
         a: 2,
         explain: 'hardly 置于句首要用过去完成时并部分倒装：had the referee called；when 引导的分句保持一般过去时 began。',
@@ -187,7 +187,7 @@
     quiz: [
       {
         q: '____ is no use waiting for the perfect moment; start with the first question.',
-        opts: ['That', 'It', 'This', 'There'],
+        opts: ['That', 'It', 'This', 'What'],
         a: 1,
         explain: '“做某事没有用”的固定骨架是 It is no use doing：it 作形式主语，真正的主语是动名词 waiting。',
       },

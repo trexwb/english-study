@@ -12,7 +12,7 @@
         body: 'look、sound、taste、smell、feel、seem、become、get、keep、stay 这些系动词描述主语的状态，后面一律用形容词：The soup tastes good.（不说 tastes well）。判断办法：系动词后面接的是“主语怎么样”，不是动作的对象。',
         examples: [
           { en: 'The song sounds wonderful.', zh: '这首歌听起来很棒。' },
-          { en: 'Keep the classroom clean after the art lesson.', zh: '美术课后保持教室干净。' },
+          { en: 'Please stay quiet in the reading room.', zh: '请在阅览室里保持安静。' },
         ],
       },
       {
@@ -53,7 +53,7 @@
         explain: 'playing 是实义动词，要用副词 happily 修饰动作；happy 是形容词，不能直接修饰动词。',
       },
       {
-        q: 'We got ____ halfway through the two-hour lecture and began to doodle in our notebooks.',
+        q: 'We got ____ near the end of the long class and began to draw pictures in our notebooks.',
         opts: ['boring', 'bored', 'bore', 'boredom'],
         a: 1,
         explain: '主语 We 是人，说“感到无聊”用 -ed 形容词 bored；-ing 形容词 boring 说事物本身令人乏味。',
@@ -125,7 +125,7 @@
         q: '— Whose phone is this? — It is ____.',
         opts: ['Lily', 'Lily’s', 'of Lily', 'Lilys'],
         a: 1,
-        explain: '问是谁的东西，人名后加 ’s 构成所有格：It is Lily’s；of Lily 语序不对，Lilys 漏了撇号。',
+        explain: '问是谁的东西，人名后加 ’s 构成所有格：It is Lily’s；of 短语要跟在名词后面（如 the phone of Lily），不能单独作表语，Lilys 漏了撇号。',
       },
       {
         q: 'Uncle Li is ____ who often takes me fishing at the weekend.',
@@ -171,7 +171,7 @@
       },
     ],
     keyPoints: [
-      '空后接名词用 my、your、her，独立使用用 mine、yours、hers',
+      '空后接名词用 my、your、her，独立使用选 mine、yours、hers',
       'enjoy oneself、by oneself、teach oneself 是固定搭配',
       '反身代词跟主语配对：we 用 ourselves，they 用 themselves',
       '反身代词不能单独作主语，主语位置要用 I、she 等人称代词',

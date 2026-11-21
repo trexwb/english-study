@@ -394,7 +394,7 @@
         q: 'The town has ____ its old market twice since 2010.',
         opts: ['modern', 'modernized', 'modernization', 'modernise'],
         a: 1,
-        explain: 'has 后面要用过去分词，-ize 让 modern 变成“使……现代化”的动词；modernise 是原形，接在 has 后不成立。',
+        explain: 'has 后面要用过去分词，-ize 让 modern 变成“使……现代化”的动词，此处填 modernized；modernise 是原形，接在 has 后不成立。',
       },
     ],
   },
@@ -468,7 +468,7 @@
         q: 'We carried six bottles of water for a ten-minute walk. We ____ them.',
         opts: ['mustn’t have taken', 'can’t have taken', 'needn’t have taken', 'shouldn’t take'],
         a: 2,
-        explain: '水确实带了，只是本无必要，用 needn’t have done；can’t have taken 会否认真带过这件事。',
+        explain: '水确实带了，只是本无必要，用 needn’t have taken；can’t have taken 会否认真带过这件事。',
       },
       {
         q: 'You had the whole afternoon free. You ____ me a hand, but you went out to play football.',

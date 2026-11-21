@@ -1,7 +1,7 @@
   { w: 'term', p: '/tɜːrm/', pos: 'n.', zh: '学期；任期', deck: 'junior', ex: 'Our school holds two big exams every term.', exZh: '我们学校每学期举行两次大考。' },
   { w: 'project', p: '/ˈprɑːdʒekt/', pos: 'n.', zh: '课题；项目；方案', deck: 'junior', ex: 'Our science group is making a project about protecting rivers.', exZh: '我们的科学小组正在做一个关于保护河流的课题。' },
   { w: 'notice', p: '/ˈnoʊtɪs/', pos: 'n. / v.', zh: '通知；布告；注意到', deck: 'junior', ex: 'There is a notice about the school trip on the board.', exZh: '布告栏里贴着一张关于学校出游的通知。' },
-  { w: 'monitor', p: '/ˈmɑːnɪtər/', pos: 'n.', zh: '班长；显示器', deck: 'junior', ex: 'As monitor, he hands in our homework every morning.', exZh: '作为班长，他每天早上收我们的作业。' },
+  { w: 'monitor', p: '/ˈmɑːnɪtər/', pos: 'n.', zh: '班长；显示器', deck: 'junior', ex: 'As monitor, he hands in our homework every morning.', exZh: '作为班长，他每天早上把我们的作业收齐后交给老师。' },
   { w: 'duty', p: '/ˈduːti/', pos: 'n.', zh: '责任；职责；值日', deck: 'junior', ex: 'It is my duty to water the plants in our classroom this week.', exZh: '这周给教室里的植物浇水是我的职责。' },
   { w: 'report', p: '/rɪˈpɔːrt/', pos: 'n. / v.', zh: '报告；汇报；成绩单', deck: 'junior', ex: 'My school report shows my progress in every subject.', exZh: '我的成绩单显示了我在每一门科目上的进步。' },
   { w: 'spell', p: '/spel/', pos: 'v.', zh: '拼写；用字母拼', deck: 'junior', ex: 'Can you spell your full name in English, please?', exZh: '请你用英语拼一下自己的全名。' },
